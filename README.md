@@ -1,8 +1,4 @@
-restapi-java-sdk
-================
-
-
-IS24 API SDK v0.1a
+IS24 API SDK v0.1a (restapi-java-sdk)
 ==========================
 Author:     Martin Flügge
 Copyright:  Immobilien Scout GmbH
