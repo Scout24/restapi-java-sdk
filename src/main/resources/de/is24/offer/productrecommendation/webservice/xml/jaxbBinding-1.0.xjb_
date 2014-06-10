@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jxb:bindings xmlns:jxb="http://java.sun.com/xml/ns/jaxb" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+              version="2.0" jxb:extensionBindingPrefixes="ai"
+              xmlns:ai="http://jaxb.dev.java.net/plugin/if_insertion"
+        >
+
+
+    <!-- <jxb:bindings schemaLocation="realestatestock-1.0.xsd" node="/xs:schema">
+        <jxb:schemaBindings>
+            <jxb:package name="de.is24.offer.productrecommendation.webservice.xml.realestatestock"/>
+            <jxb:nameXmlTransform>
+                <jxb:elementName suffix="VO"/>
+                <jxb:typeName suffix="VO"/>
+            </jxb:nameXmlTransform>
+        </jxb:schemaBindings>
+    </jxb:bindings>
+
+    <jxb:bindings schemaLocation="productrecommendation-1.0.xsd" node="/xs:schema">
+        <jxb:schemaBindings>
+            <jxb:package name="de.is24.offer.productrecommendation.webservice.xml.productrecommendation"/>
+            <jxb:nameXmlTransform>
+                <jxb:elementName suffix="VO"/>
+                <jxb:typeName suffix="VO"/>
+            </jxb:nameXmlTransform>
+        </jxb:schemaBindings>
+    </jxb:bindings>
+
+    <jxb:bindings schemaLocation="zipandlocationtoregion-1.0.xsd" node="/xs:schema">
+        <jxb:schemaBindings>
+            <jxb:package name="de.is24.offer.productrecommendation.webservice.xml.zipandlocationtoregion"/>
+            <jxb:nameXmlTransform>
+                <jxb:elementName suffix="VO"/>
+                <jxb:typeName suffix="VO"/>
+            </jxb:nameXmlTransform>
+        </jxb:schemaBindings>
+    </jxb:bindings>
+
+    <jxb:bindings schemaLocation="bookingoverview-1.0.xsd" node="/xs:schema">
+        <jxb:schemaBindings>
+            <jxb:package name="de.is24.offer.productrecommendation.webservice.xml.bookingoverview"/>
+            <jxb:nameXmlTransform>
+                <jxb:elementName suffix="VO"/>
+                <jxb:typeName suffix="VO"/>
+            </jxb:nameXmlTransform>
+        </jxb:schemaBindings>
+    </jxb:bindings>
+
+    <jxb:bindings schemaLocation="alterationdate-1.0.xsd" node="/xs:schema">
+        <jxb:schemaBindings>
+            <jxb:package name="de.is24.offer.productrecommendation.webservice.xml.alterationdate"/>
+            <jxb:nameXmlTransform>
+                <jxb:elementName suffix="VO"/>
+                <jxb:typeName suffix="VO"/>
+            </jxb:nameXmlTransform>
+        </jxb:schemaBindings>
+    </jxb:bindings>-->
+</jxb:bindings>

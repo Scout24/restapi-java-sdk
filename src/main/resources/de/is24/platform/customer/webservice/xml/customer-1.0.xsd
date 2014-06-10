@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema targetNamespace="http://rest.immobilienscout24.de/schema/customer/1.0"
+           xmlns="http://rest.immobilienscout24.de/schema/customer/1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:common="http://rest.immobilienscout24.de/schema/common/1.0"
+           elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+
+    <xs:import namespace="http://rest.immobilienscout24.de/schema/common/1.0"/>
+
+    <xs:element name="customer" type="CustomerType">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">Represents one customer.</xs:documentation>
+            <xs:documentation xml:lang="de-DE">Repräsentiert einen Kunden.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+
+    <xs:complexType name="CustomerType">
+        <xs:sequence>
+            <xs:element name="contractContactDetails" type="common:MasterDataContactDetailsType" minOccurs="0"/>
+            <xs:element name="differingBillingContactDetails" type="common:MasterDataContactDetailsType" minOccurs="0"/>
+            <xs:element name="billingDetails" type="BillingDetailsType"/>
+            <xs:element name="customerNumber" type="xs:string" minOccurs="0"/>
+            <xs:element name="commercial" type="xs:boolean"/>
+            <xs:element name="professional" type="xs:boolean" minOccurs="0"/>
+            <xs:element name="companyWideId" type="common:OIDType" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>the cwid.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="accountManager" type="AccountManagerType" minOccurs="0"/>
+          <xs:element name="users">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="username" type="common:TextField" maxOccurs="unbounded"/>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="BillingDetailsType">
+        <xs:sequence>
+            <xs:element name="taxNumber" type="common:TextField" minOccurs="0"/>
+            <xs:element name="paymentMethod" type="PaymentMethodType"/>
+            <xs:element name="bankAccount" type="BankAccountType" minOccurs="0"/>
+            <xs:element name="collectiveBilling" type="xs:boolean" minOccurs="0"/>
+            <xs:element name="emailBilling" type="xs:boolean" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="AccountManagerType">
+        <xs:sequence>
+            <xs:element name="number" type="xs:long"/>
+            <xs:element name="description" type="common:TextField" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="BankAccountType">
+        <xs:sequence>
+            <xs:element name="accountNumber" type="common:TextField" minOccurs="0"/>
+            <xs:element name="bankCode" type="common:TextField" minOccurs="0"/>
+            <xs:element name="iban" type="common:TextField" minOccurs="0"/>
+            <xs:element name="bic" type="common:TextField" minOccurs="0"/>
+            <xs:element name="accountHolder" type="common:TextField" minOccurs="0"/>
+            <xs:element name="bankName" type="common:TextField" minOccurs="0"/>
+            <xs:element name="validated" type="xs:boolean" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+	<xs:simpleType name="PaymentMethodType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">
+				Pattern used to identify payment method types.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="INVOICE"/>
+			<xs:enumeration value="DEBIT"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+</xs:schema>

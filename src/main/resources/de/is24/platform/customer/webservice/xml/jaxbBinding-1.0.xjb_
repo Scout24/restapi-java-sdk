@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jxb:bindings schemaLocation="customer-1.0.xsd" node="/xs:schema" xmlns:jxb="http://java.sun.com/xml/ns/jaxb" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  version="2.0">
+  <jxb:schemaBindings>
+    <jxb:package name="de.is24.platform.customer.webservice.xml" />
+    <jxb:nameXmlTransform>
+      <jxb:typeName suffix="VO" />
+      <jxb:elementName suffix="VOE"/>
+    </jxb:nameXmlTransform>
+  </jxb:schemaBindings>
+</jxb:bindings>

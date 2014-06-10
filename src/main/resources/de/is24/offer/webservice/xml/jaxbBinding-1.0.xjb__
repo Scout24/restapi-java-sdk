@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jxb:bindings xmlns:jxb="http://java.sun.com/xml/ns/jaxb" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="2.0" jxb:extensionBindingPrefixes="ai" xmlns:ai="http://jaxb.dev.java.net/plugin/if_insertion">
+
+ <jxb:globalBindings localScoping="toplevel"/>
+	<jxb:bindings schemaLocation="realestates-1.0.xsd" node="/xs:schema">
+	
+		<!-- GarageRent realEstate type -->
+		<jxb:bindings node="/xs:schema/xs:complexType[@name='GarageRent']">
+			<jxb:class name="GarageRent" />
+		</jxb:bindings>
+
+	</jxb:bindings>
+
+</jxb:bindings>
+		

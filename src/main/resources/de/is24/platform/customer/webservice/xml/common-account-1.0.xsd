@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns="http://rest.immobilienscout24.de/schema/account/common/1.0"
+           targetNamespace="http://rest.immobilienscout24.de/schema/account/common/1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:common="http://rest.immobilienscout24.de/schema/common/1.0"
+           xmlns:xlink="http://www.w3.org/1999/xlink"
+           elementFormDefault="unqualified" attributeFormDefault="unqualified" version="1.0">
+
+  <xs:import namespace="http://rest.immobilienscout24.de/schema/common/1.0"/>
+  <xs:import namespace="http://www.w3.org/1999/xlink"/>
+
+
+
+</xs:schema>

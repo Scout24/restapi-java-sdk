@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jxb:bindings xmlns:jxb="http://java.sun.com/xml/ns/jaxb" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  version="2.0" jxb:extensionBindingPrefixes="ai"
+  xmlns:ai="http://jaxb.dev.java.net/plugin/if_insertion"
+  >
+
+
+  <jxb:bindings schemaLocation="realtor-1.0.xsd" node="/xs:schema">
+    <jxb:schemaBindings>
+      <jxb:package name="de.is24.offer.webservice.xml.realtor" />
+      <jxb:nameXmlTransform>
+        <jxb:typeName suffix="VO" />
+        <jxb:elementName suffix="VOE"/>
+      </jxb:nameXmlTransform>
+    </jxb:schemaBindings>
+  </jxb:bindings>
+
+  <jxb:bindings schemaLocation="realestates-1.0.xsd" node="/xs:schema">
+    <jxb:schemaBindings>
+      <jxb:package name="de.is24.offer.realestates.webservice.xml"/>
+      <jxb:nameXmlTransform>
+        <jxb:typeName suffix="VO" />
+        <jxb:elementName suffix="VOE"/>
+      </jxb:nameXmlTransform>
+    </jxb:schemaBindings>
+    <jxb:bindings node="/xs:schema/xs:complexType[@name='HouseBuy']">
+      <ai:interfaces check="false">
+            de.is24.offer.realestates.webservice.xml.common.LivingInformationVO
+            de.is24.offer.realestates.webservice.xml.common.LivingBuyInformationVO
+      </ai:interfaces>
+    </jxb:bindings>
+    <jxb:bindings node="/xs:schema/xs:complexType[@name='HouseRent']">
+      <ai:interfaces check="false">
+            de.is24.offer.realestates.webservice.xml.common.LivingInformationVO
+            de.is24.offer.realestates.webservice.xml.common.LivingRentInformationVO
+      </ai:interfaces>
+    </jxb:bindings>
+	<!-- GarageRent realEstate type -->
+    <jxb:bindings node="/xs:schema/xs:complexType[@name='GarageRent']">
+      <ai:interfaces check="false">
+            de.is24.offer.realestates.webservice.xml.common.GarageInformationVO
+      </ai:interfaces>
+    </jxb:bindings>
+	<!-- GarageBuy realEstate type -->
+    <jxb:bindings node="/xs:schema/xs:complexType[@name='GarageBuy']">
+      <ai:interfaces check="false">
+            de.is24.offer.realestates.webservice.xml.common.GarageInformationVO
+      </ai:interfaces>
+    </jxb:bindings>
+	<!-- SeniorCare realEstate type -->
+    <jxb:bindings node="/xs:schema/xs:complexType[@name='SeniorCare']">
+      <ai:interfaces check="false">
+            de.is24.offer.realestates.webservice.xml.common.AssistedLivingInformationVO
+      </ai:interfaces>
+    </jxb:bindings>
+	<!-- AssistedLiving realEstate type -->
+    <jxb:bindings node="/xs:schema/xs:complexType[@name='AssistedLiving']">
+      <ai:interfaces check="false">
+            de.is24.offer.realestates.webservice.xml.common.AssistedLivingInformationVO
+      </ai:interfaces>
+    </jxb:bindings>
+	<!-- ApartmentRent realEstate type -->
+    <jxb:bindings node="/xs:schema/xs:complexType[@name='ApartmentRent']">
+      <ai:interfaces check="false">
+            de.is24.offer.realestates.webservice.xml.common.LivingInformationVO
+            de.is24.offer.realestates.webservice.xml.common.ApartmentInformationVO
+            de.is24.offer.realestates.webservice.xml.common.LivingRentInformationVO
+      </ai:interfaces>
+    </jxb:bindings>
+	<!-- ApartmentBuy realEstate type -->
+    <jxb:bindings node="/xs:schema/xs:complexType[@name='ApartmentBuy']">
+      <ai:interfaces check="false">
+            de.is24.offer.realestates.webservice.xml.common.LivingInformationVO
+            de.is24.offer.realestates.webservice.xml.common.ApartmentInformationVO
+            de.is24.offer.realestates.webservice.xml.common.LivingBuyInformationVO
+      </ai:interfaces>
+    </jxb:bindings>
+	<!-- Investment realEstate type -->
+    <jxb:bindings node="/xs:schema/xs:complexType[@name='Investment']">
+      <ai:interfaces check="false">
+            de.is24.offer.realestates.webservice.xml.common.CommercialInformationVO
+      </ai:interfaces>
+    </jxb:bindings>
+	<!-- Office realEstate type -->
+    <jxb:bindings node="/xs:schema/xs:complexType[@name='Office']">
+      <ai:interfaces check="false">
+            de.is24.offer.realestates.webservice.xml.common.CommercialInformationVO
+            de.is24.offer.realestates.webservice.xml.common.BaseCommercialVO
+      </ai:interfaces>
+    </jxb:bindings>
+	<!-- Store realEstate type -->
+    <jxb:bindings node="/xs:schema/xs:complexType[@name='Store']">
+      <ai:interfaces check="false">
+            de.is24.offer.realestates.webservice.xml.common.CommercialInformationVO
+            de.is24.offer.realestates.webservice.xml.common.BaseCommercialVO
+      </ai:interfaces>
+    </jxb:bindings>
+	<!-- Gastronomy realEstate type -->
+    <jxb:bindings node="/xs:schema/xs:complexType[@name='Gastronomy']">
+      <ai:interfaces check="false">
+            de.is24.offer.realestates.webservice.xml.common.CommercialInformationVO
+            de.is24.offer.realestates.webservice.xml.common.BaseCommercialVO
+      </ai:interfaces>
+    </jxb:bindings>
+	<!-- Industry realEstate type -->
+    <jxb:bindings node="/xs:schema/xs:complexType[@name='Industry']">
+      <ai:interfaces check="false">
+            de.is24.offer.realestates.webservice.xml.common.CommercialInformationVO
+            de.is24.offer.realestates.webservice.xml.common.BaseCommercialVO
+      </ai:interfaces>
+    </jxb:bindings>
+	<!-- SpecialPurpose realEstate type -->
+    <jxb:bindings node="/xs:schema/xs:complexType[@name='SpecialPurpose']">
+      <ai:interfaces check="false">
+            de.is24.offer.realestates.webservice.xml.common.CommercialInformationVO
+            de.is24.offer.realestates.webservice.xml.common.BaseCommercialVO
+      </ai:interfaces>
+    </jxb:bindings>
+	<!-- LivingRentSite realEstate type -->
+    <jxb:bindings node="/xs:schema/xs:complexType[@name='LivingRentSite']">
+      <ai:interfaces check="false">
+            de.is24.offer.realestates.webservice.xml.common.SiteInformationVO
+      </ai:interfaces>
+    </jxb:bindings>
+	<!-- LivingBuySite realEstate type -->
+    <jxb:bindings node="/xs:schema/xs:complexType[@name='LivingBuySite']">
+      <ai:interfaces check="false">
+            de.is24.offer.realestates.webservice.xml.common.SiteInformationVO
+      </ai:interfaces>
+    </jxb:bindings>
+	<!-- TradeSite realEstate type -->
+    <jxb:bindings node="/xs:schema/xs:complexType[@name='TradeSite']">
+      <ai:interfaces check="false">
+            de.is24.offer.realestates.webservice.xml.common.SiteInformationVO
+      </ai:interfaces>
+    </jxb:bindings>
+
+         <!--  <jxb:bindings schemaLocation="attachmentsorder-1.0.xsd" node="/xs:schema">
+          <jxb:schemaBindings>
+              <jxb:package name="de.is24.offer.attachmentsorder.webservice.xml" />
+              <jxb:nameXmlTransform>
+                  <jxb:typeName suffix="VO"/>
+                  <jxb:elementName suffix="VOE"/>
+              </jxb:nameXmlTransform>
+          </jxb:schemaBindings>
+      </jxb:bindings>
+
+      <jxb:bindings schemaLocation="offerUser-1.0.xsd" node="/xs:schema">
+          <jxb:schemaBindings>
+              <jxb:package name="de.is24.offer.user.webservice.xml" />
+              <jxb:nameXmlTransform>
+                  <jxb:typeName suffix="VO"/>
+                  <jxb:elementName suffix="VOE"/>
+              </jxb:nameXmlTransform>
+          </jxb:schemaBindings>
+      </jxb:bindings>
+
+  <jxb:bindings schemaLocation="offerListElement-1.0.xsd" node="/xs:schema">
+          <jxb:schemaBindings>
+              <jxb:package name="de.is24.offer.listElement.webservice.xml" />
+              <jxb:nameXmlTransform>
+                  <jxb:typeName suffix="VO"/>
+                  <jxb:elementName suffix="VOE"/>
+              </jxb:nameXmlTransform>
+          </jxb:schemaBindings>
+      </jxb:bindings>
+
+      <jxb:bindings schemaLocation="realEstateCounts-1.0.xsd" node="/xs:schema">
+          <jxb:schemaBindings>
+              <jxb:package name="de.is24.offer.realEstate.counts.webservice.xml" />
+              <jxb:nameXmlTransform>
+                  <jxb:typeName suffix="VO"/>
+                  <jxb:elementName suffix="VOE"/>
+              </jxb:nameXmlTransform>
+          </jxb:schemaBindings>
+      </jxb:bindings>
+
+      <jxb:bindings schemaLocation="videoupload-1.0.xsd" node="/xs:schema">
+          <jxb:schemaBindings>
+              <jxb:package name="de.is24.offer.videoupload.webservice" />
+              <jxb:nameXmlTransform>
+                  <jxb:typeName suffix="VO"/>
+                  <jxb:elementName suffix="VOE"/>
+              </jxb:nameXmlTransform>
+          </jxb:schemaBindings>
+      </jxb:bindings>
+
+      <jxb:bindings schemaLocation="toplisting-1.0.xsd" node="/xs:schema">
+          <jxb:schemaBindings>
+              <jxb:package name="de.is24.offer.user.toplisting.webservice.xml" />
+              <jxb:nameXmlTransform>
+                  <jxb:typeName suffix="VO"/>
+                  <jxb:elementName suffix="VOE"/>
+              </jxb:nameXmlTransform>
+          </jxb:schemaBindings>
+      </jxb:bindings>-->
+
+
+  </jxb:bindings>
+
+</jxb:bindings>

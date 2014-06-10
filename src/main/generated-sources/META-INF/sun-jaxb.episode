@@ -1,0 +1,739 @@
+<?xml version="1.0" encoding="UTF-8"?><jaxb:bindings xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" version="2.1">
+  <!--
+
+Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.7 generiert 
+Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+Änderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
+Generiert: 2014.04.11 um 01:54:30 PM CEST 
+
+  -->
+  <jaxb:bindings xmlns:tns="http://rest.immobilienscout24.de/schema/offer/zipandlocationtoregion/1.0" if-exists="" scd="x-schema::tns">
+    <jaxb:schemaBindings map="false">
+      <jaxb:package name="de.immobilienscout24.rest.schema.offer.zipandlocationtoregion._1"/>
+    </jaxb:schemaBindings>
+    <jaxb:bindings scd="~tns:priceRegionAssignment">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.offer.zipandlocationtoregion._1.PriceRegionAssignment"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:priceRegion">
+      <jaxb:typesafeEnumClass ref="de.immobilienscout24.rest.schema.offer.zipandlocationtoregion._1.PriceRegion"/>
+    </jaxb:bindings>
+  </jaxb:bindings>
+  <jaxb:bindings xmlns:tns="http://rest.immobilienscout24.de/schema/offer/realestatestock/1.0" if-exists="" scd="x-schema::tns">
+    <jaxb:schemaBindings map="false">
+      <jaxb:package name="de.immobilienscout24.rest.schema.offer.realestatestock._1"/>
+    </jaxb:schemaBindings>
+    <jaxb:bindings scd="~tns:priceRegionRealEstateStock">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.offer.realestatestock._1.PriceRegionRealEstateStock"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="tns:realEstateStock">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.offer.realestatestock._1.RealEstateStock"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:priceRegion">
+      <jaxb:typesafeEnumClass ref="de.immobilienscout24.rest.schema.offer.realestatestock._1.PriceRegion"/>
+    </jaxb:bindings>
+  </jaxb:bindings>
+  <jaxb:bindings xmlns:tns="http://rest.immobilienscout24.de/schema/offer/toplisting/1.0" if-exists="" scd="x-schema::tns">
+    <jaxb:schemaBindings map="false">
+      <jaxb:package name="de.immobilienscout24.rest.schema.offer.toplisting._1"/>
+    </jaxb:schemaBindings>
+    <jaxb:bindings scd="~tns:Toplisting">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.offer.toplisting._1.Toplisting"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:Toplistings">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.offer.toplisting._1.Toplistings"/>
+    </jaxb:bindings>
+  </jaxb:bindings>
+  <jaxb:bindings xmlns:tns="http://rest.immobilienscout24.de/schema/customer/1.0" if-exists="" scd="x-schema::tns">
+    <jaxb:schemaBindings map="false">
+      <jaxb:package name="de.immobilienscout24.rest.schema.customer._1"/>
+    </jaxb:schemaBindings>
+    <jaxb:bindings scd="~tns:CustomerType">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.customer._1.CustomerType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:BankAccountType">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.customer._1.BankAccountType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:AccountManagerType">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.customer._1.AccountManagerType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:BillingDetailsType">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.customer._1.BillingDetailsType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:PaymentMethodType">
+      <jaxb:typesafeEnumClass ref="de.immobilienscout24.rest.schema.customer._1.PaymentMethodType"/>
+    </jaxb:bindings>
+  </jaxb:bindings>
+  <jaxb:bindings xmlns:tns="http://rest.immobilienscout24.de/schema/realestate/counts/1.0" if-exists="" scd="x-schema::tns">
+    <jaxb:schemaBindings map="false">
+      <jaxb:package name="de.immobilienscout24.rest.schema.realestate.counts._1"/>
+    </jaxb:schemaBindings>
+    <jaxb:bindings scd="tns:realEstateCounts">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.realestate.counts._1.RealEstateCounts"/>
+    </jaxb:bindings>
+  </jaxb:bindings>
+  <jaxb:bindings xmlns:tns="http://rest.immobilienscout24.de/schema/offer/productrecommondation/1.0" if-exists="" scd="x-schema::tns">
+    <jaxb:schemaBindings map="false">
+      <jaxb:package name="de.immobilienscout24.rest.schema.offer.productrecommondation._1"/>
+    </jaxb:schemaBindings>
+    <jaxb:bindings scd="~tns:productRecommendation">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.offer.productrecommondation._1.ProductRecommendation"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:product">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.offer.productrecommondation._1.Product"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:priceRegion">
+      <jaxb:typesafeEnumClass ref="de.immobilienscout24.rest.schema.offer.productrecommondation._1.PriceRegion"/>
+    </jaxb:bindings>
+  </jaxb:bindings>
+  <jaxb:bindings if-exists="" scd="x-schema::">
+    <jaxb:schemaBindings map="false">
+      <jaxb:package name="generated"/>
+    </jaxb:schemaBindings>
+    <jaxb:bindings scd="messages">
+      <jaxb:class ref="generated.Messages"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~Message">
+      <jaxb:class ref="generated.Message"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~MessageCode">
+      <jaxb:typesafeEnumClass ref="generated.MessageCode"/>
+    </jaxb:bindings>
+  </jaxb:bindings>
+  <jaxb:bindings xmlns:tns="http://rest.immobilienscout24.de/schema/offer/realestates/1.0" if-exists="" scd="x-schema::tns">
+    <jaxb:schemaBindings map="false">
+      <jaxb:package name="de.immobilienscout24.rest.schema.offer.realestates._1"/>
+    </jaxb:schemaBindings>
+    <jaxb:bindings scd="~tns:RealEstate">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.offer.realestates._1.RealEstate"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:Office">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.offer.realestates._1.Office"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:SpecialPurpose">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.offer.realestates._1.SpecialPurpose"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:LivingRentSite">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.offer.realestates._1.LivingRentSite"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:Store">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.offer.realestates._1.Store"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:GarageRent">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.offer.realestates._1.GarageRent"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:Gastronomy">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.offer.realestates._1.Gastronomy"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:ApartmentBuy">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.offer.realestates._1.ApartmentBuy"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:HouseBuy">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.offer.realestates._1.HouseBuy"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:GarageBuy">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.offer.realestates._1.GarageBuy"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:Investment">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.offer.realestates._1.Investment"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="tns:realEstates">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.offer.realestates._1.RealEstates"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:FlatShareRoom">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.offer.realestates._1.FlatShareRoom"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:ApartmentRent">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.offer.realestates._1.ApartmentRent"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:CompulsoryAuction">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.offer.realestates._1.CompulsoryAuction"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:LivingBuySite">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.offer.realestates._1.LivingBuySite"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:SeniorCare">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.offer.realestates._1.SeniorCare"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:HouseType">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.offer.realestates._1.HouseType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:ShortTermAccommodation">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.offer.realestates._1.ShortTermAccommodation"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:Industry">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.offer.realestates._1.Industry"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:AssistedLiving">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.offer.realestates._1.AssistedLiving"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:TradeSite">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.offer.realestates._1.TradeSite"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:HouseRent">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.offer.realestates._1.HouseRent"/>
+    </jaxb:bindings>
+  </jaxb:bindings>
+  <jaxb:bindings xmlns:tns="http://rest.immobilienscout24.de/schema/offer/alterationdate/1.0" if-exists="" scd="x-schema::tns">
+    <jaxb:schemaBindings map="false">
+      <jaxb:package name="de.immobilienscout24.rest.schema.offer.alterationdate._1"/>
+    </jaxb:schemaBindings>
+    <jaxb:bindings scd="~tns:possibleAlterationDate">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.offer.alterationdate._1.PossibleAlterationDate"/>
+    </jaxb:bindings>
+  </jaxb:bindings>
+  <jaxb:bindings xmlns:tns="http://rest.immobilienscout24.de/schema/videoupload/1.0" if-exists="" scd="x-schema::tns">
+    <jaxb:schemaBindings map="false">
+      <jaxb:package name="de.immobilienscout24.rest.schema.videoupload._1"/>
+    </jaxb:schemaBindings>
+    <jaxb:bindings scd="~tns:VideoUploadTicket">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.videoupload._1.VideoUploadTicket"/>
+    </jaxb:bindings>
+  </jaxb:bindings>
+  <jaxb:bindings xmlns:tns="http://rest.immobilienscout24.de/schema/offer/listelement/1.0" if-exists="" scd="x-schema::tns">
+    <jaxb:schemaBindings map="false">
+      <jaxb:package name="de.immobilienscout24.rest.schema.offer.listelement._1"/>
+    </jaxb:schemaBindings>
+    <jaxb:bindings scd="~tns:OfferRealEstateForList">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.offer.listelement._1.OfferRealEstateForList"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:OfferTradeSite">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.offer.listelement._1.OfferTradeSite"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:OfferHouseBuy">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.offer.listelement._1.OfferHouseBuy"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:OfferGarageRent">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.offer.listelement._1.OfferGarageRent"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:OfferSpecialPurpose">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.offer.listelement._1.OfferSpecialPurpose"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:OfferLivingRentSite">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.offer.listelement._1.OfferLivingRentSite"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:OfferGarageBuy">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.offer.listelement._1.OfferGarageBuy"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:OfferApartmentBuy">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.offer.listelement._1.OfferApartmentBuy"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:OfferStore">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.offer.listelement._1.OfferStore"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:OfferApartmentRent">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.offer.listelement._1.OfferApartmentRent"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:OfferFlatShareRoom">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.offer.listelement._1.OfferFlatShareRoom"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:OfferIndustry">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.offer.listelement._1.OfferIndustry"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:OfferCompulsoryAuction">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.offer.listelement._1.OfferCompulsoryAuction"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:OfferSeniorCare">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.offer.listelement._1.OfferSeniorCare"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:OfferAssistedLiving">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.offer.listelement._1.OfferAssistedLiving"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:OfferHouseType">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.offer.listelement._1.OfferHouseType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:OfferInvestment">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.offer.listelement._1.OfferInvestment"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:OfferHouseRent">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.offer.listelement._1.OfferHouseRent"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:OfferGastronomy">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.offer.listelement._1.OfferGastronomy"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:OfferShortTermAccommodation">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.offer.listelement._1.OfferShortTermAccommodation"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:OfferOffice">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.offer.listelement._1.OfferOffice"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:OfferLivingBuySite">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.offer.listelement._1.OfferLivingBuySite"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:realEstateList">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.offer.listelement._1.RealEstateList"/>
+    </jaxb:bindings>
+  </jaxb:bindings>
+  <jaxb:bindings xmlns:tns="http://rest.immobilienscout24.de/schema/attachmentsorder/1.0" if-exists="" scd="x-schema::tns">
+    <jaxb:schemaBindings map="false">
+      <jaxb:package name="de.immobilienscout24.rest.schema.attachmentsorder._1"/>
+    </jaxb:schemaBindings>
+    <jaxb:bindings scd="~tns:list">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.attachmentsorder._1.List"/>
+    </jaxb:bindings>
+  </jaxb:bindings>
+  <jaxb:bindings xmlns:tns="http://rest.immobilienscout24.de/schema/offer/user/1.0" if-exists="" scd="x-schema::tns">
+    <jaxb:schemaBindings map="false">
+      <jaxb:package name="de.immobilienscout24.rest.schema.offer.user._1"/>
+    </jaxb:schemaBindings>
+    <jaxb:bindings scd="~tns:offerUser">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.offer.user._1.OfferUser"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:customer">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.offer.user._1.Customer"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:contractContactDetails">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.offer.user._1.ContractContactDetails"/>
+    </jaxb:bindings>
+  </jaxb:bindings>
+  <jaxb:bindings xmlns:tns="http://rest.immobilienscout24.de/schema/common/1.0" if-exists="" scd="x-schema::tns">
+    <jaxb:schemaBindings map="false">
+      <jaxb:package name="de.immobilienscout24.rest.schema.common._1"/>
+    </jaxb:schemaBindings>
+    <jaxb:bindings scd="~tns:Picture">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.common._1.Picture"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:PublishObject">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.common._1.PublishObject"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="tns:realtorContactDetailsList">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.common._1.RealtorContactDetailsList"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:RealtorContactDetails">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.common._1.RealtorContactDetails"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="tns:publishChannels">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.common._1.PublishChannels"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:PublishChannel">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.common._1.PublishChannel"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:Attachment">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.common._1.Attachment"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="tns:messages">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.common._1.Messages"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:Message">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.common._1.Message"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="tns:geoHierarchyElementsStatistic">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.common._1.GeoHierarchyElementsStatistic"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:GeoHierarchyElement">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.common._1.GeoHierarchyElement"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:GeoHierarchyElements">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.common._1.GeoHierarchyElements"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="tns:publishObjects">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.common._1.PublishObjects"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:AutopilotSettings">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.common._1.AutopilotSettings"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="tns:strictList">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.common._1.StrictList"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:Paging">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.common._1.Paging"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:MatchCountList">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.common._1.MatchCountList"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:StrictEntry">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.common._1.StrictEntry"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:RealtorLogo">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.common._1.RealtorLogo"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:Attachments">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.common._1.Attachments"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:User">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.common._1.User"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:AbstractRealEstate">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.common._1.AbstractRealEstate"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:Neighbourhood">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.common._1.Neighbourhood"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:NumberOfRoomsRange">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.common._1.NumberOfRoomsRange"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:ExposeContactDetails">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.common._1.ExposeContactDetails"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:MatchCount">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.common._1.MatchCount"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:ExtendedAttachment">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.common._1.ExtendedAttachment"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:StreamingVideo">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.common._1.StreamingVideo"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:FloorRange">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.common._1.FloorRange"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:YearRange">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.common._1.YearRange"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:Wgs84Coordinate">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.common._1.Wgs84Coordinate"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:CourtageInfo">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.common._1.CourtageInfo"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:Country">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.common._1.Country"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:AreaRange">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.common._1.AreaRange"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:Price">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.common._1.Price"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:BaseContactDetails">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.common._1.BaseContactDetails"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:ForwardTracking">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.common._1.ForwardTracking"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:Money">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.common._1.Money"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:Wgs84Address">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.common._1.Wgs84Address"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:City">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.common._1.City"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:RadiusCriteria">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.common._1.RadiusCriteria"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:Link">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.common._1.Link"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:Imprint">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.common._1.Imprint"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:Address">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.common._1.Address"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:VideoFile">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.common._1.VideoFile"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:MasterDataContactDetailsType">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.common._1.MasterDataContactDetailsType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:GeoHierarchy">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.common._1.GeoHierarchy"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:GeoInfoNodeCriteria">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.common._1.GeoInfoNodeCriteria"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:ReferenceLink">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.common._1.ReferenceLink"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:AbstractRealEstateForList">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.common._1.AbstractRealEstateForList"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:PDFDocument">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.common._1.PDFDocument"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:EnergyPerformanceCertificate">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.common._1.EnergyPerformanceCertificate"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:Continent">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.common._1.Continent"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:DateRange">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.common._1.DateRange"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:FiringTypes">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.common._1.FiringTypes"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:CareTypes">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.common._1.CareTypes"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:SiteRecommendedUseTypes">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.common._1.SiteRecommendedUseTypes"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:ContactMailCustomStyle">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.common._1.ContactMailCustomStyle"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:ContactDetails">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.common._1.ContactDetails"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:RegionCriteria">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.common._1.RegionCriteria"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:EnergySourcesEnev2014">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.common._1.EnergySourcesEnev2014"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:AbstractGeoCriteria">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.common._1.AbstractGeoCriteria"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:CountyCourt">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.common._1.CountyCourt"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:SiteRecommendedUseForTradeTypes">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.common._1.SiteRecommendedUseForTradeTypes"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:CountryRegion">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.common._1.CountryRegion"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:Region">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.common._1.Region"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:GeoHierarchyStatistic">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.common._1.GeoHierarchyStatistic"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:Quarter">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.common._1.Quarter"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:Money13.2">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.common._1.Money132"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:ApiSearchData">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.common._1.ApiSearchData"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:Wgs84AddressDescription">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.common._1.Wgs84AddressDescription"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:ParkingSpaceRange">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.common._1.ParkingSpaceRange"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:PriceRange">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.common._1.PriceRange"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:GeoHierarchyStatistics">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.common._1.GeoHierarchyStatistics"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:BudgetPrice">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.common._1.BudgetPrice"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:RentScopeType">
+      <jaxb:typesafeEnumClass ref="de.immobilienscout24.rest.schema.common._1.RentScopeType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:HeatingTypeEnev2014">
+      <jaxb:typesafeEnumClass ref="de.immobilienscout24.rest.schema.common._1.HeatingTypeEnev2014"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:SpecialPurposeType">
+      <jaxb:typesafeEnumClass ref="de.immobilienscout24.rest.schema.common._1.SpecialPurposeType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:OfficeRentDuration">
+      <jaxb:typesafeEnumClass ref="de.immobilienscout24.rest.schema.common._1.OfficeRentDuration"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:InvestmentType">
+      <jaxb:typesafeEnumClass ref="de.immobilienscout24.rest.schema.common._1.InvestmentType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:ContactFormType">
+      <jaxb:typesafeEnumClass ref="de.immobilienscout24.rest.schema.common._1.ContactFormType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:SiteConstructibleType">
+      <jaxb:typesafeEnumClass ref="de.immobilienscout24.rest.schema.common._1.SiteConstructibleType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:Currency">
+      <jaxb:typesafeEnumClass ref="de.immobilienscout24.rest.schema.common._1.Currency"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:InteriorQuality">
+      <jaxb:typesafeEnumClass ref="de.immobilienscout24.rest.schema.common._1.InteriorQuality"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:GarageQueryType">
+      <jaxb:typesafeEnumClass ref="de.immobilienscout24.rest.schema.common._1.GarageQueryType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:PetsAllowedType">
+      <jaxb:typesafeEnumClass ref="de.immobilienscout24.rest.schema.common._1.PetsAllowedType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:FiringType">
+      <jaxb:typesafeEnumClass ref="de.immobilienscout24.rest.schema.common._1.FiringType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:PriceIntervalType">
+      <jaxb:typesafeEnumClass ref="de.immobilienscout24.rest.schema.common._1.PriceIntervalType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:GastronomyType">
+      <jaxb:typesafeEnumClass ref="de.immobilienscout24.rest.schema.common._1.GastronomyType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:HouseTypeConstructionMethodType">
+      <jaxb:typesafeEnumClass ref="de.immobilienscout24.rest.schema.common._1.HouseTypeConstructionMethodType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:OfficeType">
+      <jaxb:typesafeEnumClass ref="de.immobilienscout24.rest.schema.common._1.OfficeType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:ForwardTrackingType">
+      <jaxb:typesafeEnumClass ref="de.immobilienscout24.rest.schema.common._1.ForwardTrackingType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:MandatoryOptionalType">
+      <jaxb:typesafeEnumClass ref="de.immobilienscout24.rest.schema.common._1.MandatoryOptionalType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:GarageType">
+      <jaxb:typesafeEnumClass ref="de.immobilienscout24.rest.schema.common._1.GarageType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:LocationClassificationType">
+      <jaxb:typesafeEnumClass ref="de.immobilienscout24.rest.schema.common._1.LocationClassificationType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:CareType">
+      <jaxb:typesafeEnumClass ref="de.immobilienscout24.rest.schema.common._1.CareType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:RealEstateType">
+      <jaxb:typesafeEnumClass ref="de.immobilienscout24.rest.schema.common._1.RealEstateType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:RoomType">
+      <jaxb:typesafeEnumClass ref="de.immobilienscout24.rest.schema.common._1.RoomType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:StoreType">
+      <jaxb:typesafeEnumClass ref="de.immobilienscout24.rest.schema.common._1.StoreType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:CountryCode">
+      <jaxb:typesafeEnumClass ref="de.immobilienscout24.rest.schema.common._1.CountryCode"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:MessageCode">
+      <jaxb:typesafeEnumClass ref="de.immobilienscout24.rest.schema.common._1.MessageCode"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:SiteRecommendedUseForTradeType">
+      <jaxb:typesafeEnumClass ref="de.immobilienscout24.rest.schema.common._1.SiteRecommendedUseForTradeType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:DurationType">
+      <jaxb:typesafeEnumClass ref="de.immobilienscout24.rest.schema.common._1.DurationType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:FlatMateGenderType">
+      <jaxb:typesafeEnumClass ref="de.immobilienscout24.rest.schema.common._1.FlatMateGenderType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:YesNotApplicableType">
+      <jaxb:typesafeEnumClass ref="de.immobilienscout24.rest.schema.common._1.YesNotApplicableType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:ParkingSpaceType">
+      <jaxb:typesafeEnumClass ref="de.immobilienscout24.rest.schema.common._1.ParkingSpaceType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:SiteRecommendedUseType">
+      <jaxb:typesafeEnumClass ref="de.immobilienscout24.rest.schema.common._1.SiteRecommendedUseType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:BuildingEnergyRatingType">
+      <jaxb:typesafeEnumClass ref="de.immobilienscout24.rest.schema.common._1.BuildingEnergyRatingType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:UtilizationTradeSite">
+      <jaxb:typesafeEnumClass ref="de.immobilienscout24.rest.schema.common._1.UtilizationTradeSite"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:TelephoneConnectionType">
+      <jaxb:typesafeEnumClass ref="de.immobilienscout24.rest.schema.common._1.TelephoneConnectionType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:YesNoNotApplicableType">
+      <jaxb:typesafeEnumClass ref="de.immobilienscout24.rest.schema.common._1.YesNoNotApplicableType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:BalconyAvailableType">
+      <jaxb:typesafeEnumClass ref="de.immobilienscout24.rest.schema.common._1.BalconyAvailableType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:GeoCodingPrecisionType">
+      <jaxb:typesafeEnumClass ref="de.immobilienscout24.rest.schema.common._1.GeoCodingPrecisionType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:PictureScaleType">
+      <jaxb:typesafeEnumClass ref="de.immobilienscout24.rest.schema.common._1.PictureScaleType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:EnergyCertificateCreationDate">
+      <jaxb:typesafeEnumClass ref="de.immobilienscout24.rest.schema.common._1.EnergyCertificateCreationDate"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:CareLevelExpose">
+      <jaxb:typesafeEnumClass ref="de.immobilienscout24.rest.schema.common._1.CareLevelExpose"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:SiteDevelopmentType">
+      <jaxb:typesafeEnumClass ref="de.immobilienscout24.rest.schema.common._1.SiteDevelopmentType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:TvConnectionType">
+      <jaxb:typesafeEnumClass ref="de.immobilienscout24.rest.schema.common._1.TvConnectionType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:MarketingType">
+      <jaxb:typesafeEnumClass ref="de.immobilienscout24.rest.schema.common._1.MarketingType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:ParkingSituationType">
+      <jaxb:typesafeEnumClass ref="de.immobilienscout24.rest.schema.common._1.ParkingSituationType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:ApartmentType">
+      <jaxb:typesafeEnumClass ref="de.immobilienscout24.rest.schema.common._1.ApartmentType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:FlooringType">
+      <jaxb:typesafeEnumClass ref="de.immobilienscout24.rest.schema.common._1.FlooringType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:ConstructionPhaseType">
+      <jaxb:typesafeEnumClass ref="de.immobilienscout24.rest.schema.common._1.ConstructionPhaseType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:IndustryType">
+      <jaxb:typesafeEnumClass ref="de.immobilienscout24.rest.schema.common._1.IndustryType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:ItInfrastructureType">
+      <jaxb:typesafeEnumClass ref="de.immobilienscout24.rest.schema.common._1.ItInfrastructureType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:SmokingAllowedType">
+      <jaxb:typesafeEnumClass ref="de.immobilienscout24.rest.schema.common._1.SmokingAllowedType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:InternetConnectionType">
+      <jaxb:typesafeEnumClass ref="de.immobilienscout24.rest.schema.common._1.InternetConnectionType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:EnergySourceEnev2014">
+      <jaxb:typesafeEnumClass ref="de.immobilienscout24.rest.schema.common._1.EnergySourceEnev2014"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:PriceType">
+      <jaxb:typesafeEnumClass ref="de.immobilienscout24.rest.schema.common._1.PriceType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:HeatingType">
+      <jaxb:typesafeEnumClass ref="de.immobilienscout24.rest.schema.common._1.HeatingType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:AirConditioningType">
+      <jaxb:typesafeEnumClass ref="de.immobilienscout24.rest.schema.common._1.AirConditioningType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:HouseTypeBuildingType">
+      <jaxb:typesafeEnumClass ref="de.immobilienscout24.rest.schema.common._1.HouseTypeBuildingType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:LeaseIntervalType">
+      <jaxb:typesafeEnumClass ref="de.immobilienscout24.rest.schema.common._1.LeaseIntervalType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:YesNoBothType">
+      <jaxb:typesafeEnumClass ref="de.immobilienscout24.rest.schema.common._1.YesNoBothType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:CompulsoryAuctionType">
+      <jaxb:typesafeEnumClass ref="de.immobilienscout24.rest.schema.common._1.CompulsoryAuctionType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:ShortTermAccommodationType">
+      <jaxb:typesafeEnumClass ref="de.immobilienscout24.rest.schema.common._1.ShortTermAccommodationType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:RealEstateState">
+      <jaxb:typesafeEnumClass ref="de.immobilienscout24.rest.schema.common._1.RealEstateState"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:SupplyType">
+      <jaxb:typesafeEnumClass ref="de.immobilienscout24.rest.schema.common._1.SupplyType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:SalutationType">
+      <jaxb:typesafeEnumClass ref="de.immobilienscout24.rest.schema.common._1.SalutationType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:CareLevel">
+      <jaxb:typesafeEnumClass ref="de.immobilienscout24.rest.schema.common._1.CareLevel"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:HouseTypeEnergyStandardType">
+      <jaxb:typesafeEnumClass ref="de.immobilienscout24.rest.schema.common._1.HouseTypeEnergyStandardType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:FacilityType">
+      <jaxb:typesafeEnumClass ref="de.immobilienscout24.rest.schema.common._1.FacilityType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:CommercializationType">
+      <jaxb:typesafeEnumClass ref="de.immobilienscout24.rest.schema.common._1.CommercializationType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:RealEstateCondition">
+      <jaxb:typesafeEnumClass ref="de.immobilienscout24.rest.schema.common._1.RealEstateCondition"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:BuildingType">
+      <jaxb:typesafeEnumClass ref="de.immobilienscout24.rest.schema.common._1.BuildingType"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:HouseTypeStageOfCompletionType">
+      <jaxb:typesafeEnumClass ref="de.immobilienscout24.rest.schema.common._1.HouseTypeStageOfCompletionType"/>
+    </jaxb:bindings>
+  </jaxb:bindings>
+  <jaxb:bindings xmlns:tns="http://rest.immobilienscout24.de/schema/offer/realtor/1.0" if-exists="" scd="x-schema::tns">
+    <jaxb:schemaBindings map="false">
+      <jaxb:package name="de.immobilienscout24.rest.schema.offer.realtor._1"/>
+    </jaxb:schemaBindings>
+    <jaxb:bindings scd="~tns:Realtor">
+      <jaxb:class ref="de.immobilienscout24.rest.schema.offer.realtor._1.Realtor"/>
+    </jaxb:bindings>
+  </jaxb:bindings>
+</jaxb:bindings>

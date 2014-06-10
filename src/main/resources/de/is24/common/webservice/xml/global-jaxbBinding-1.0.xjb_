@@ -1,0 +1,34 @@
+<jxb:bindings xmlns:jxb="http://java.sun.com/xml/ns/jaxb" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+              xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
+              xmlns:annox="http://annox.dev.java.net"
+              version="2.0" jxb:extensionBindingPrefixes="xjc annox">
+
+
+    <jxb:globalBindings generateIsSetMethod="false" generateElementClass="true" generateValueClass="true">
+        <jxb:javaType name="org.joda.time.DateTime" xmlType="xs:dateTime"
+                      printMethod="de.is24.common.xml.JodaDateTimeXmlAdapter.marshal"
+                      parseMethod="de.is24.common.xml.JodaDateTimeXmlAdapter.unmarshal"/>
+        <jxb:javaType name="org.joda.time.LocalDate" xmlType="xs:date"
+                      printMethod="de.is24.common.xml.XmlLocalDateAdapter.marshalStatic"
+                      parseMethod="de.is24.common.xml.XmlLocalDateAdapter.unmarshalStatic"/>
+        <jxb:javaType name="java.lang.Long" xmlType="xs:long"
+                      printMethod="de.is24.common.xml.JavaTypeXmlAdapter.marshalLong"
+                      parseMethod="de.is24.common.xml.JavaTypeXmlAdapter.unmarshalLong"/>
+        <jxb:javaType name="java.lang.Integer" xmlType="xs:int"
+                      printMethod="de.is24.common.xml.JavaTypeXmlAdapter.marshalInteger"
+                      parseMethod="de.is24.common.xml.JavaTypeXmlAdapter.unmarshalInteger"/>
+        <jxb:javaType name="java.lang.Integer" xmlType="xs:positiveInteger"
+                      printMethod="de.is24.common.xml.JavaTypeXmlAdapter.marshalInteger"
+                      parseMethod="de.is24.common.xml.JavaTypeXmlAdapter.unmarshalInteger"/>
+        <jxb:javaType name="java.math.BigDecimal" xmlType="xs:double"
+                      printMethod="javax.xml.bind.DatatypeConverter.printDecimal"
+                      parseMethod="javax.xml.bind.DatatypeConverter.parseDecimal"/>
+        <jxb:javaType name="org.joda.time.LocalDate" xmlType="xs:gYearMonth"
+                      parseMethod="de.is24.common.xml.JodaLocalDateXmlAdapter.unmarshal"
+                      printMethod="de.is24.common.xml.JodaLocalDateXmlAdapter.marshal"/>
+        <jxb:javaType name="org.joda.time.ReadablePeriod" xmlType="xs:duration"
+                      parseMethod="de.is24.common.xml.PeriodXmlAdapter.parse"
+                      printMethod="de.is24.common.xml.PeriodXmlAdapter.print"/>
+        <xjc:simple/>
+    </jxb:globalBindings>
+</jxb:bindings>
