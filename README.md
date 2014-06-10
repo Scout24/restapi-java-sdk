@@ -1,4 +1,4 @@
-IS24 API SDK v0.1a (restapi-java-sdk)
+IS24 API SDK v0.1 beta (restapi-java-sdk)
 ==========================
 Author:     Martin Flügge
 
@@ -15,4 +15,5 @@ History
 
 Who  		  | When 		  | What
 ------------- | ------------- | ------------- 
-mfluegge  	  | 10th June 2014|Initial commit
+mfluegge  	  | 10th June 2014| initial commit
+mfluegge  	  | 10th June 2014| v0.1 beta
