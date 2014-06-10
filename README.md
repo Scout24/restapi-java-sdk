@@ -11,3 +11,6 @@ Das IS24 API SDK von ImmobilienScout24 steht unter der Apache Common License v2.
 
 History
 =======
+
+Who					When				What
+mfluegge			10.June 2014 		Initial commit 
