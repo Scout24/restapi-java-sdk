@@ -1,24 +1,22 @@
 //
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.7 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// �nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.04.11 um 01:54:30 PM CEST 
+// nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
+// Generiert: 2014.06.23 um 09:51:43 AM CEST 
 //
+
 
 package de.immobilienscout24.rest.schema.common._1;
 
 import javax.xml.bind.annotation.XmlEnum;
 import javax.xml.bind.annotation.XmlType;
 
+
 /**
- * <p>
- * Java-Klasse f�r InvestmentType.
+ * <p>Java-Klasse fr InvestmentType.
  * 
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser
- * Klasse enthalten ist.
- * <p>
- * 
  * <pre>
  * &lt;simpleType name="InvestmentType">
  *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
@@ -50,126 +48,127 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum InvestmentType {
 
-	/**
-	 * Einfamilienhaus
-	 * 
-	 */
-	SINGLE_FAMILY_HOUSE,
 
-	/**
-	 * Mehrfamilienhaus
-	 * 
-	 */
-	MULTI_FAMILY_HOUSE,
+    /**
+     * Einfamilienhaus
+     * 
+     */
+    SINGLE_FAMILY_HOUSE,
 
-	/**
-	 * Eigentumswohnung
-	 * 
-	 */
-	FREEHOLD_FLAT,
+    /**
+     * Mehrfamilienhaus
+     * 
+     */
+    MULTI_FAMILY_HOUSE,
 
-	/**
-	 * Einkaufszentrum
-	 * 
-	 */
-	SHOPPING_CENTRE,
+    /**
+     * Eigentumswohnung
+     * 
+     */
+    FREEHOLD_FLAT,
 
-	/**
-	 * Gastst�tte
-	 * 
-	 */
-	RESTAURANT,
+    /**
+     * Einkaufszentrum
+     * 
+     */
+    SHOPPING_CENTRE,
 
-	/**
-	 * Hotel
-	 * 
-	 */
-	HOTEL,
+    /**
+     * Gaststtte
+     * 
+     */
+    RESTAURANT,
 
-	/**
-	 * Freizeitanlage
-	 * 
-	 */
-	LEISURE_FACILITY,
+    /**
+     * Hotel
+     * 
+     */
+    HOTEL,
 
-	/**
-	 * Gewerbeeinheit
-	 * 
-	 */
-	COMMERCIAL_UNIT,
+    /**
+     * Freizeitanlage
+     * 
+     */
+    LEISURE_FACILITY,
 
-	/**
-	 * B�rogeb�ude
-	 * 
-	 */
-	OFFICE_BUILDING,
+    /**
+     * Gewerbeeinheit
+     * 
+     */
+    COMMERCIAL_UNIT,
 
-	/**
-	 * Gesch�ftshaus
-	 * 
-	 */
-	COMMERCIAL_BUILDING,
+    /**
+     * Brogebude
+     * 
+     */
+    OFFICE_BUILDING,
 
-	/**
-	 * Gewerbeanwesen
-	 * 
-	 */
-	COMMERCIAL_PROPERTY,
+    /**
+     * Geschftshaus
+     * 
+     */
+    COMMERCIAL_BUILDING,
 
-	/**
-	 * Halle/Lager
-	 * 
-	 */
-	HALL_STORAGE,
+    /**
+     * Gewerbeanwesen
+     * 
+     */
+    COMMERCIAL_PROPERTY,
 
-	/**
-	 * Industrieanwesen
-	 * 
-	 */
-	INDUSTRIAL_PROPERTY,
+    /**
+     * Halle/Lager
+     * 
+     */
+    HALL_STORAGE,
 
-	/**
-	 * Laden/Verkaufsfl�che
-	 * 
-	 */
-	SHOP_SALES_FLOOR,
+    /**
+     * Industrieanwesen
+     * 
+     */
+    INDUSTRIAL_PROPERTY,
 
-	/**
-	 * Servicecenter
-	 * 
-	 */
-	SERVICE_CENTRE,
+    /**
+     * Laden/Verkaufsflche
+     * 
+     */
+    SHOP_SALES_FLOOR,
 
-	/**
-	 * Sonstige
-	 * 
-	 */
-	OTHER,
+    /**
+     * Servicecenter
+     * 
+     */
+    SERVICE_CENTRE,
 
-	/**
-	 * Supermarkt
-	 * 
-	 */
-	SUPERMARKET,
+    /**
+     * Sonstige
+     * 
+     */
+    OTHER,
 
-	/**
-	 * Wohn-/ Gesch�ftshaus
-	 * 
-	 */
-	LIVING_BUSINESS_HOUSE,
+    /**
+     * Supermarkt
+     * 
+     */
+    SUPERMARKET,
 
-	/**
-	 * Wohnanlage
-	 * 
-	 */
-	HOUSING_ESTATE;
+    /**
+     * Wohn-/ Geschftshaus
+     * 
+     */
+    LIVING_BUSINESS_HOUSE,
 
-	public String value() {
-		return name();
-	}
+    /**
+     * Wohnanlage
+     * 
+     */
+    HOUSING_ESTATE;
 
-	public static InvestmentType fromValue(String v) {
-		return valueOf(v);
-	}
+    public String value() {
+        return name();
+    }
+
+    public static InvestmentType fromValue(String v) {
+        return valueOf(v);
+    }
 
 }

@@ -4,15 +4,14 @@ import de.immobilienscout24.rest.schema.common._1.CourtageInfo;
 import de.immobilienscout24.rest.schema.common._1.Price;
 import de.immobilienscout24.rest.schema.offer.realestates._1.RealEstate;
 
-
 public interface RealestateFacade {
-  RealEstate get();
+	RealEstate get();
 
-  void setCourtage(CourtageInfo courtageInfo);
+	void setCourtage(CourtageInfo courtageInfo);
 
-  CourtageInfo getCourtage();
+	CourtageInfo getCourtage();
 
-  void setPrice(Price price);
+	void setPrice(Price price);
 
-  Price getPrice();
+	Price getPrice();
 }

@@ -1,9 +1,10 @@
 //
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.7 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// �nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.04.11 um 01:54:30 PM CEST 
+// nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
+// Generiert: 2014.06.23 um 09:51:43 AM CEST 
 //
+
 
 package de.immobilienscout24.rest.schema.common._1;
 
@@ -13,17 +14,15 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
+
 /**
- * Kriterien f�r die Umkreissuche
+ * Kriterien fr die Umkreissuche
  * 
- * Generelles Element f�r die Geo Criterias
+ * Generelles Element fr die Geo Criterias
  * 
- * <p>
- * Java-Klasse f�r RadiusCriteria complex type.
+ * <p>Java-Klasse fr RadiusCriteria complex type.
  * 
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser
- * Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
  * <pre>
  * &lt;complexType name="RadiusCriteria">
@@ -49,93 +48,109 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "RadiusCriteria", propOrder = { "wgs84", "radiusKm", "label", "address" })
-public class RadiusCriteria extends AbstractGeoCriteria {
+@XmlType(name = "RadiusCriteria", propOrder = {
+    "wgs84",
+    "radiusKm",
+    "label",
+    "address"
+})
+public class RadiusCriteria
+    extends AbstractGeoCriteria
+{
 
-	@XmlElement(required = true)
-	protected Wgs84Coordinate wgs84;
-	protected double radiusKm;
-	@XmlJavaTypeAdapter(Adapter1.class)
-	protected String label;
-	protected Address address;
+    @XmlElement(required = true)
+    protected Wgs84Coordinate wgs84;
+    protected double radiusKm;
+    @XmlJavaTypeAdapter(Adapter1 .class)
+    protected String label;
+    protected Address address;
 
-	/**
-	 * Ruft den Wert der wgs84-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link Wgs84Coordinate }
-	 * 
-	 */
-	public Wgs84Coordinate getWgs84() {
-		return wgs84;
-	}
+    /**
+     * Ruft den Wert der wgs84-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Wgs84Coordinate }
+     *     
+     */
+    public Wgs84Coordinate getWgs84() {
+        return wgs84;
+    }
 
-	/**
-	 * Legt den Wert der wgs84-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link Wgs84Coordinate }
-	 * 
-	 */
-	public void setWgs84(Wgs84Coordinate value) {
-		this.wgs84 = value;
-	}
+    /**
+     * Legt den Wert der wgs84-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Wgs84Coordinate }
+     *     
+     */
+    public void setWgs84(Wgs84Coordinate value) {
+        this.wgs84 = value;
+    }
 
-	/**
-	 * Ruft den Wert der radiusKm-Eigenschaft ab.
-	 * 
-	 */
-	public double getRadiusKm() {
-		return radiusKm;
-	}
+    /**
+     * Ruft den Wert der radiusKm-Eigenschaft ab.
+     * 
+     */
+    public double getRadiusKm() {
+        return radiusKm;
+    }
 
-	/**
-	 * Legt den Wert der radiusKm-Eigenschaft fest.
-	 * 
-	 */
-	public void setRadiusKm(double value) {
-		this.radiusKm = value;
-	}
+    /**
+     * Legt den Wert der radiusKm-Eigenschaft fest.
+     * 
+     */
+    public void setRadiusKm(double value) {
+        this.radiusKm = value;
+    }
 
-	/**
-	 * Ruft den Wert der label-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link String }
-	 * 
-	 */
-	public String getLabel() {
-		return label;
-	}
+    /**
+     * Ruft den Wert der label-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getLabel() {
+        return label;
+    }
 
-	/**
-	 * Legt den Wert der label-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link String }
-	 * 
-	 */
-	public void setLabel(String value) {
-		this.label = value;
-	}
+    /**
+     * Legt den Wert der label-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setLabel(String value) {
+        this.label = value;
+    }
 
-	/**
-	 * Ruft den Wert der address-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link Address }
-	 * 
-	 */
-	public Address getAddress() {
-		return address;
-	}
+    /**
+     * Ruft den Wert der address-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Address }
+     *     
+     */
+    public Address getAddress() {
+        return address;
+    }
 
-	/**
-	 * Legt den Wert der address-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link Address }
-	 * 
-	 */
-	public void setAddress(Address value) {
-		this.address = value;
-	}
+    /**
+     * Legt den Wert der address-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Address }
+     *     
+     */
+    public void setAddress(Address value) {
+        this.address = value;
+    }
 
 }

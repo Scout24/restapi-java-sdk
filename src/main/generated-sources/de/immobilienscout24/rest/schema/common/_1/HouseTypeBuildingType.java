@@ -1,24 +1,22 @@
 //
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.7 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// �nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.04.11 um 01:54:30 PM CEST 
+// nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
+// Generiert: 2014.06.23 um 09:51:43 AM CEST 
 //
+
 
 package de.immobilienscout24.rest.schema.common._1;
 
 import javax.xml.bind.annotation.XmlEnum;
 import javax.xml.bind.annotation.XmlType;
 
+
 /**
- * <p>
- * Java-Klasse f�r HouseTypeBuildingType.
+ * <p>Java-Klasse fr HouseTypeBuildingType.
  * 
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser
- * Klasse enthalten ist.
- * <p>
- * 
  * <pre>
  * &lt;simpleType name="HouseTypeBuildingType">
  *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
@@ -45,96 +43,97 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum HouseTypeBuildingType {
 
-	/**
-	 * keine Angabe
-	 * 
-	 */
-	NO_INFORMATION,
 
-	/**
-	 * Blockhaus
-	 * 
-	 */
-	BLOCKHOUSE,
+    /**
+     * keine Angabe
+     * 
+     */
+    NO_INFORMATION,
 
-	/**
-	 * Bungalow
-	 * 
-	 */
-	BUNGALOW,
+    /**
+     * Blockhaus
+     * 
+     */
+    BLOCKHOUSE,
 
-	/**
-	 * Doppelhaushaelfte
-	 * 
-	 */
-	SEMI_DETACHED_HOUSE,
+    /**
+     * Bungalow
+     * 
+     */
+    BUNGALOW,
 
-	/**
-	 * Einfamilienhaus
-	 * 
-	 */
-	ONE_FAMILY_HOUSE,
+    /**
+     * Doppelhaushaelfte
+     * 
+     */
+    SEMI_DETACHED_HOUSE,
 
-	/**
-	 * Haus mit Einlegerwohnung
-	 * 
-	 */
-	FAMILY_HOUSE_WITH_LODGER_FLAT,
+    /**
+     * Einfamilienhaus
+     * 
+     */
+    ONE_FAMILY_HOUSE,
 
-	/**
-	 * Haus im Tudorstil
-	 * 
-	 */
-	TUDOR_HOUSE,
+    /**
+     * Haus mit Einlegerwohnung
+     * 
+     */
+    FAMILY_HOUSE_WITH_LODGER_FLAT,
 
-	/**
-	 * Holzhaus
-	 * 
-	 */
-	WOODEN_HOUSE,
+    /**
+     * Haus im Tudorstil
+     * 
+     */
+    TUDOR_HOUSE,
 
-	/**
-	 * Landhaus
-	 * 
-	 */
-	COUNTRY_HOUSE,
+    /**
+     * Holzhaus
+     * 
+     */
+    WOODEN_HOUSE,
 
-	/**
-	 * Appartment Geb�ude
-	 * 
-	 */
-	APARTMENT_BUILDING,
+    /**
+     * Landhaus
+     * 
+     */
+    COUNTRY_HOUSE,
 
-	/**
-	 * Freistehendes Haus
-	 * 
-	 */
-	NON_DETACHED_HOUSE,
+    /**
+     * Appartment Gebude
+     * 
+     */
+    APARTMENT_BUILDING,
 
-	/**
-	 * Stadtvilla
-	 * 
-	 */
-	CITY_VILLA,
+    /**
+     * Freistehendes Haus
+     * 
+     */
+    NON_DETACHED_HOUSE,
 
-	/**
-	 * Villa
-	 * 
-	 */
-	VILLA,
+    /**
+     * Stadtvilla
+     * 
+     */
+    CITY_VILLA,
 
-	/**
-	 * Doppelhaus
-	 * 
-	 */
-	SEMI_DETACHED_HOUSE_PAIR;
+    /**
+     * Villa
+     * 
+     */
+    VILLA,
 
-	public String value() {
-		return name();
-	}
+    /**
+     * Doppelhaus
+     * 
+     */
+    SEMI_DETACHED_HOUSE_PAIR;
 
-	public static HouseTypeBuildingType fromValue(String v) {
-		return valueOf(v);
-	}
+    public String value() {
+        return name();
+    }
+
+    public static HouseTypeBuildingType fromValue(String v) {
+        return valueOf(v);
+    }
 
 }

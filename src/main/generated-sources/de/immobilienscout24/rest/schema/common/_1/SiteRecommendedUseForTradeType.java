@@ -1,24 +1,22 @@
 //
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.7 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// �nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.04.11 um 01:54:30 PM CEST 
+// nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
+// Generiert: 2014.06.23 um 09:51:43 AM CEST 
 //
+
 
 package de.immobilienscout24.rest.schema.common._1;
 
 import javax.xml.bind.annotation.XmlEnum;
 import javax.xml.bind.annotation.XmlType;
 
+
 /**
- * <p>
- * Java-Klasse f�r SiteRecommendedUseForTradeType.
+ * <p>Java-Klasse fr SiteRecommendedUseForTradeType.
  * 
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser
- * Klasse enthalten ist.
- * <p>
- * 
  * <pre>
  * &lt;simpleType name="SiteRecommendedUseForTradeType">
  *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
@@ -53,144 +51,145 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum SiteRecommendedUseForTradeType {
 
-	/**
-	 * keine Angabe
-	 * 
-	 */
-	NO_INFORMATION,
 
-	/**
-	 * Ackerland
-	 * 
-	 */
-	FARMLAND,
+    /**
+     * keine Angabe
+     * 
+     */
+    NO_INFORMATION,
 
-	/**
-	 * Bauerwartungsland
-	 * 
-	 */
-	FUTURE_DEVELOPMENT_LAND,
+    /**
+     * Ackerland
+     * 
+     */
+    FARMLAND,
 
-	/**
-	 * Bootsstand
-	 * 
-	 */
-	MOORAGE,
+    /**
+     * Bauerwartungsland
+     * 
+     */
+    FUTURE_DEVELOPMENT_LAND,
 
-	/**
-	 * B�ro
-	 * 
-	 */
-	OFFICE,
+    /**
+     * Bootsstand
+     * 
+     */
+    MOORAGE,
 
-	/**
-	 * Camping
-	 * 
-	 */
-	CAMPING,
+    /**
+     * Bro
+     * 
+     */
+    OFFICE,
 
-	/**
-	 * Einzelhandel - gro�
-	 * 
-	 */
-	BIG_STORE,
+    /**
+     * Camping
+     * 
+     */
+    CAMPING,
 
-	/**
-	 * Einzelhandel - klein
-	 * 
-	 */
-	LITTLE_STORE,
+    /**
+     * Einzelhandel - gro
+     * 
+     */
+    BIG_STORE,
 
-	/**
-	 * Garage
-	 * 
-	 */
-	GARAGE,
+    /**
+     * Einzelhandel - klein
+     * 
+     */
+    LITTLE_STORE,
 
-	/**
-	 * Garten
-	 * 
-	 */
-	GARDEN,
+    /**
+     * Garage
+     * 
+     */
+    GARAGE,
 
-	/**
-	 * Gastronomie
-	 * 
-	 */
-	GASTRONOMY,
+    /**
+     * Garten
+     * 
+     */
+    GARDEN,
 
-	/**
-	 * Gewerbe
-	 * 
-	 */
-	BUSINESS,
+    /**
+     * Gastronomie
+     * 
+     */
+    GASTRONOMY,
 
-	/**
-	 * Hotel
-	 * 
-	 */
-	HOTEL,
+    /**
+     * Gewerbe
+     * 
+     */
+    BUSINESS,
 
-	/**
-	 * Industrie
-	 * 
-	 */
-	INDUSTRY,
+    /**
+     * Hotel
+     * 
+     */
+    HOTEL,
 
-	/**
-	 * Keine Bebauung
-	 * 
-	 */
-	NO_DEVELOPMENT,
+    /**
+     * Industrie
+     * 
+     */
+    INDUSTRY,
 
-	/**
-	 * Kleingewerbe
-	 * 
-	 */
-	SMALL_BUSINESS,
+    /**
+     * Keine Bebauung
+     * 
+     */
+    NO_DEVELOPMENT,
 
-	/**
-	 * Lager
-	 * 
-	 */
-	STOCK,
+    /**
+     * Kleingewerbe
+     * 
+     */
+    SMALL_BUSINESS,
 
-	/**
-	 * Obstpflanzung
-	 * 
-	 */
-	ORCHARD,
+    /**
+     * Lager
+     * 
+     */
+    STOCK,
 
-	/**
-	 * Parkhaus
-	 * 
-	 */
-	CAR_PARK,
+    /**
+     * Obstpflanzung
+     * 
+     */
+    ORCHARD,
 
-	/**
-	 * Produktion
-	 * 
-	 */
-	PRODUCTION,
+    /**
+     * Parkhaus
+     * 
+     */
+    CAR_PARK,
 
-	/**
-	 * Stellpl�tze
-	 * 
-	 */
-	PARKING_SPACE,
+    /**
+     * Produktion
+     * 
+     */
+    PRODUCTION,
 
-	/**
-	 * Wald
-	 * 
-	 */
-	FORREST;
+    /**
+     * Stellpltze
+     * 
+     */
+    PARKING_SPACE,
 
-	public String value() {
-		return name();
-	}
+    /**
+     * Wald
+     * 
+     */
+    FORREST;
 
-	public static SiteRecommendedUseForTradeType fromValue(String v) {
-		return valueOf(v);
-	}
+    public String value() {
+        return name();
+    }
+
+    public static SiteRecommendedUseForTradeType fromValue(String v) {
+        return valueOf(v);
+    }
 
 }

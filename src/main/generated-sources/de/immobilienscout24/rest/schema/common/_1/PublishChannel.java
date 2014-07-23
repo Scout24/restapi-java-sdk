@@ -1,9 +1,10 @@
 //
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.7 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// �nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.04.11 um 01:54:30 PM CEST 
+// nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
+// Generiert: 2014.06.23 um 09:51:43 AM CEST 
 //
+
 
 package de.immobilienscout24.rest.schema.common._1;
 
@@ -13,15 +14,13 @@ import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
+
 /**
- * Verweis auf einen Ver�ffentlichungskanal.
+ * Verweis auf einen Verffentlichungskanal.
  * 
- * <p>
- * Java-Klasse f�r PublishChannel complex type.
+ * <p>Java-Klasse fr PublishChannel complex type.
  * 
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser
- * Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
  * <pre>
  * &lt;complexType name="PublishChannel">
@@ -40,52 +39,58 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 @XmlType(name = "PublishChannel")
 public class PublishChannel {
 
-	@XmlAttribute(name = "id")
-	protected Long id;
-	@XmlAttribute(name = "title")
-	@XmlJavaTypeAdapter(Adapter1.class)
-	protected String title;
+    @XmlAttribute(name = "id")
+    protected Long id;
+    @XmlAttribute(name = "title")
+    @XmlJavaTypeAdapter(Adapter1 .class)
+    protected String title;
 
-	/**
-	 * Ruft den Wert der id-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link Long }
-	 * 
-	 */
-	public Long getId() {
-		return id;
-	}
+    /**
+     * Ruft den Wert der id-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Long }
+     *     
+     */
+    public Long getId() {
+        return id;
+    }
 
-	/**
-	 * Legt den Wert der id-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link Long }
-	 * 
-	 */
-	public void setId(Long value) {
-		this.id = value;
-	}
+    /**
+     * Legt den Wert der id-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Long }
+     *     
+     */
+    public void setId(Long value) {
+        this.id = value;
+    }
 
-	/**
-	 * Ruft den Wert der title-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link String }
-	 * 
-	 */
-	public String getTitle() {
-		return title;
-	}
+    /**
+     * Ruft den Wert der title-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getTitle() {
+        return title;
+    }
 
-	/**
-	 * Legt den Wert der title-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link String }
-	 * 
-	 */
-	public void setTitle(String value) {
-		this.title = value;
-	}
+    /**
+     * Legt den Wert der title-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setTitle(String value) {
+        this.title = value;
+    }
 
 }

@@ -37,5 +37,4 @@ public class UniversalObjectFactory {
 			throw new RuntimeException(e);
 		}
 	}
-
 }

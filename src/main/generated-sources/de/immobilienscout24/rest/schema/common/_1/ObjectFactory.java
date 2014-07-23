@@ -1,8 +1,8 @@
 //
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.7 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// �nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.04.11 um 01:54:30 PM CEST 
+// nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
+// Generiert: 2014.06.23 um 09:51:43 AM CEST 
 //
 
 package de.immobilienscout24.rest.schema.common._1;
@@ -381,6 +381,14 @@ public class ObjectFactory {
 	}
 
 	/**
+	 * Create an instance of {@link AreaRangeMandatory }
+	 * 
+	 */
+	public AreaRangeMandatory createAreaRangeMandatory() {
+		return new AreaRangeMandatory();
+	}
+
+	/**
 	 * Create an instance of {@link VideoFile }
 	 * 
 	 */
@@ -506,6 +514,22 @@ public class ObjectFactory {
 	 */
 	public EnergySourcesEnev2014 createEnergySourcesEnev2014() {
 		return new EnergySourcesEnev2014();
+	}
+
+	/**
+	 * Create an instance of {@link Contingent }
+	 * 
+	 */
+	public Contingent createContingent() {
+		return new Contingent();
+	}
+
+	/**
+	 * Create an instance of {@link PriceRangeMandatory }
+	 * 
+	 */
+	public PriceRangeMandatory createPriceRangeMandatory() {
+		return new PriceRangeMandatory();
 	}
 
 	/**

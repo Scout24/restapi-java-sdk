@@ -1,11 +1,16 @@
 package de.immobilienscout24.rest.facades.offer.realestates._1;
 
-import de.immobilienscout24.rest.schema.common._1.*;
+import de.immobilienscout24.rest.schema.common._1.BuildingType;
+import de.immobilienscout24.rest.schema.common._1.HeatingType;
+import de.immobilienscout24.rest.schema.common._1.InteriorQuality;
+import de.immobilienscout24.rest.schema.common._1.ParkingSpaceType;
+import de.immobilienscout24.rest.schema.common._1.RealEstateCondition;
+import de.immobilienscout24.rest.schema.common._1.YesNotApplicableType;
 
 /**
  * Created by rwill on 6/4/14.
  */
-public interface HouseFacade extends EnergySavingFacade {
+public interface HouseFacade extends RealestateFacade, EnergySavingFacade {
 	RealEstateCondition getCondition();
 
 	void setCondition(RealEstateCondition value);

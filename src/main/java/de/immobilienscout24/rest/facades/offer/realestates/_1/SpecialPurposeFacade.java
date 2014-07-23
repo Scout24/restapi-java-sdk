@@ -1,8 +1,16 @@
 package de.immobilienscout24.rest.facades.offer.realestates._1;
 
-import de.immobilienscout24.rest.schema.common._1.*;
+import de.immobilienscout24.rest.schema.common._1.BuildingEnergyRatingType;
+import de.immobilienscout24.rest.schema.common._1.CourtageInfo;
+import de.immobilienscout24.rest.schema.common._1.EnergyPerformanceCertificate;
+import de.immobilienscout24.rest.schema.common._1.EnergySourcesEnev2014;
+import de.immobilienscout24.rest.schema.common._1.FiringTypes;
+import de.immobilienscout24.rest.schema.common._1.HeatingTypeEnev2014;
+import de.immobilienscout24.rest.schema.common._1.InteriorQuality;
+import de.immobilienscout24.rest.schema.common._1.Price;
+import de.immobilienscout24.rest.schema.common._1.RealEstateCondition;
+import de.immobilienscout24.rest.schema.common._1.YesNotApplicableType;
 import de.immobilienscout24.rest.schema.offer.realestates._1.SpecialPurpose;
-
 
 public class SpecialPurposeFacade implements CommercialFacade {
 	final private SpecialPurpose realestate;
@@ -196,7 +204,7 @@ public class SpecialPurposeFacade implements CommercialFacade {
 	}
 
 	/*******************************************************************************************************
-	 ********************************         Energy Stuff           ***************************************
+	 ******************************** Energy Stuff ***************************************
 	 *******************************************************************************************************/
 
 	@Override
@@ -287,5 +295,15 @@ public class SpecialPurposeFacade implements CommercialFacade {
 	@Override
 	public void setConstructionYear(Integer value) {
 		realestate.setConstructionYear(value);
+	}
+
+	@Override
+	public String getFreeFrom() {
+		return realestate.getFreeFrom();
+	}
+
+	@Override
+	public void setFreeFrom(String value) {
+		realestate.setFreeFrom(value);
 	}
 }

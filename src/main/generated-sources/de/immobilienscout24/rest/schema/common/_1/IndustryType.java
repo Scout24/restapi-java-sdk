@@ -1,24 +1,22 @@
 //
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.7 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// �nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.04.11 um 01:54:30 PM CEST 
+// nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
+// Generiert: 2014.06.23 um 09:51:43 AM CEST 
 //
+
 
 package de.immobilienscout24.rest.schema.common._1;
 
 import javax.xml.bind.annotation.XmlEnum;
 import javax.xml.bind.annotation.XmlType;
 
+
 /**
- * <p>
- * Java-Klasse f�r IndustryType.
+ * <p>Java-Klasse fr IndustryType.
  * 
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser
- * Klasse enthalten ist.
- * <p>
- * 
  * <pre>
  * &lt;simpleType name="IndustryType">
  *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
@@ -44,90 +42,91 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum IndustryType {
 
-	/**
-	 * Ausstellungsfl�che
-	 * 
-	 */
-	SHOWROOM_SPACE,
 
-	/**
-	 * Halle
-	 * 
-	 */
-	HALL,
+    /**
+     * Ausstellungsflche
+     * 
+     */
+    SHOWROOM_SPACE,
 
-	/**
-	 * Hochregallager
-	 * 
-	 */
-	HIGH_LACK_STORAGE,
+    /**
+     * Halle
+     * 
+     */
+    HALL,
 
-	/**
-	 * Industriehalle
-	 * 
-	 */
-	INDUSTRY_HALL,
+    /**
+     * Hochregallager
+     * 
+     */
+    HIGH_LACK_STORAGE,
 
-	/**
-	 * Industriehalle mit Freifl�che
-	 * 
-	 */
-	INDUSTRY_HALL_WITH_OPEN_AREA,
+    /**
+     * Industriehalle
+     * 
+     */
+    INDUSTRY_HALL,
 
-	/**
-	 * K�hlhaus
-	 * 
-	 */
-	COLD_STORAGE,
+    /**
+     * Industriehalle mit Freiflche
+     * 
+     */
+    INDUSTRY_HALL_WITH_OPEN_AREA,
 
-	/**
-	 * K�hlregallager
-	 * 
-	 */
-	MULTIDECK_CABINET_STORAGE,
+    /**
+     * Khlhaus
+     * 
+     */
+    COLD_STORAGE,
 
-	/**
-	 * Lager mit Freifl�che
-	 * 
-	 */
-	STORAGE_WITH_OPEN_AREA,
+    /**
+     * Khlregallager
+     * 
+     */
+    MULTIDECK_CABINET_STORAGE,
 
-	/**
-	 * Lagerfl�che
-	 * 
-	 */
-	STORAGE_AREA,
+    /**
+     * Lager mit Freiflche
+     * 
+     */
+    STORAGE_WITH_OPEN_AREA,
 
-	/**
-	 * Lagerhalle
-	 * 
-	 */
-	STORAGE_HALL,
+    /**
+     * Lagerflche
+     * 
+     */
+    STORAGE_AREA,
 
-	/**
-	 * Servicefl�che
-	 * 
-	 */
-	SERVICE_AREA,
+    /**
+     * Lagerhalle
+     * 
+     */
+    STORAGE_HALL,
 
-	/**
-	 * Speditionslager
-	 * 
-	 */
-	SHIPPING_STORAGE,
+    /**
+     * Serviceflche
+     * 
+     */
+    SERVICE_AREA,
 
-	/**
-	 * Werkstatt
-	 * 
-	 */
-	REPAIR_SHOP;
+    /**
+     * Speditionslager
+     * 
+     */
+    SHIPPING_STORAGE,
 
-	public String value() {
-		return name();
-	}
+    /**
+     * Werkstatt
+     * 
+     */
+    REPAIR_SHOP;
 
-	public static IndustryType fromValue(String v) {
-		return valueOf(v);
-	}
+    public String value() {
+        return name();
+    }
+
+    public static IndustryType fromValue(String v) {
+        return valueOf(v);
+    }
 
 }

@@ -1,9 +1,10 @@
 //
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.7 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// �nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.04.11 um 01:54:30 PM CEST 
+// nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
+// Generiert: 2014.06.23 um 09:51:43 AM CEST 
 //
+
 
 package de.immobilienscout24.rest.schema.customer._1;
 
@@ -13,13 +14,11 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import de.immobilienscout24.rest.schema.common._1.Adapter1;
 
+
 /**
- * <p>
- * Java-Klasse f�r AccountManagerType complex type.
+ * <p>Java-Klasse fr AccountManagerType complex type.
  * 
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser
- * Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
  * <pre>
  * &lt;complexType name="AccountManagerType">
@@ -37,48 +36,54 @@ import de.immobilienscout24.rest.schema.common._1.Adapter1;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AccountManagerType", propOrder = { "number", "description" })
+@XmlType(name = "AccountManagerType", propOrder = {
+    "number",
+    "description"
+})
 public class AccountManagerType {
 
-	protected long number;
-	@XmlJavaTypeAdapter(Adapter1.class)
-	protected String description;
+    protected long number;
+    @XmlJavaTypeAdapter(Adapter1 .class)
+    protected String description;
 
-	/**
-	 * Ruft den Wert der number-Eigenschaft ab.
-	 * 
-	 */
-	public long getNumber() {
-		return number;
-	}
+    /**
+     * Ruft den Wert der number-Eigenschaft ab.
+     * 
+     */
+    public long getNumber() {
+        return number;
+    }
 
-	/**
-	 * Legt den Wert der number-Eigenschaft fest.
-	 * 
-	 */
-	public void setNumber(long value) {
-		this.number = value;
-	}
+    /**
+     * Legt den Wert der number-Eigenschaft fest.
+     * 
+     */
+    public void setNumber(long value) {
+        this.number = value;
+    }
 
-	/**
-	 * Ruft den Wert der description-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link String }
-	 * 
-	 */
-	public String getDescription() {
-		return description;
-	}
+    /**
+     * Ruft den Wert der description-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getDescription() {
+        return description;
+    }
 
-	/**
-	 * Legt den Wert der description-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link String }
-	 * 
-	 */
-	public void setDescription(String value) {
-		this.description = value;
-	}
+    /**
+     * Legt den Wert der description-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setDescription(String value) {
+        this.description = value;
+    }
 
 }

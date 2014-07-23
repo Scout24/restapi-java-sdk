@@ -1,9 +1,10 @@
 //
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.7 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// �nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.04.11 um 01:54:30 PM CEST 
+// nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
+// Generiert: 2014.06.23 um 09:51:43 AM CEST 
 //
+
 
 package de.immobilienscout24.rest.schema.offer.listelement._1;
 
@@ -13,15 +14,13 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 import de.immobilienscout24.rest.schema.common._1.Price;
 
+
 /**
  * Zwangsversteigerungsobjekte.
  * 
- * <p>
- * Java-Klasse f�r OfferCompulsoryAuction complex type.
+ * <p>Java-Klasse fr OfferCompulsoryAuction complex type.
  * 
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser
- * Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
  * <pre>
  * &lt;complexType name="OfferCompulsoryAuction">
@@ -36,76 +35,91 @@ import de.immobilienscout24.rest.schema.common._1.Price;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "OfferCompulsoryAuction", propOrder = { "marketValue", "lowestBid", "recurrenceAppointment" })
-public class OfferCompulsoryAuction extends OfferRealEstateForList {
+@XmlType(name = "OfferCompulsoryAuction", propOrder = {
+    "marketValue",
+    "lowestBid",
+    "recurrenceAppointment"
+})
+public class OfferCompulsoryAuction
+    extends OfferRealEstateForList
+{
 
-	@XmlElement(required = true)
-	protected Price marketValue;
-	protected Price lowestBid;
-	@XmlElement(defaultValue = "false")
-	protected Boolean recurrenceAppointment;
+    @XmlElement(required = true)
+    protected Price marketValue;
+    protected Price lowestBid;
+    @XmlElement(defaultValue = "false")
+    protected Boolean recurrenceAppointment;
 
-	/**
-	 * Ruft den Wert der marketValue-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link Price }
-	 * 
-	 */
-	public Price getMarketValue() {
-		return marketValue;
-	}
+    /**
+     * Ruft den Wert der marketValue-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Price }
+     *     
+     */
+    public Price getMarketValue() {
+        return marketValue;
+    }
 
-	/**
-	 * Legt den Wert der marketValue-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link Price }
-	 * 
-	 */
-	public void setMarketValue(Price value) {
-		this.marketValue = value;
-	}
+    /**
+     * Legt den Wert der marketValue-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Price }
+     *     
+     */
+    public void setMarketValue(Price value) {
+        this.marketValue = value;
+    }
 
-	/**
-	 * Ruft den Wert der lowestBid-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link Price }
-	 * 
-	 */
-	public Price getLowestBid() {
-		return lowestBid;
-	}
+    /**
+     * Ruft den Wert der lowestBid-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Price }
+     *     
+     */
+    public Price getLowestBid() {
+        return lowestBid;
+    }
 
-	/**
-	 * Legt den Wert der lowestBid-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link Price }
-	 * 
-	 */
-	public void setLowestBid(Price value) {
-		this.lowestBid = value;
-	}
+    /**
+     * Legt den Wert der lowestBid-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Price }
+     *     
+     */
+    public void setLowestBid(Price value) {
+        this.lowestBid = value;
+    }
 
-	/**
-	 * Ruft den Wert der recurrenceAppointment-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link Boolean }
-	 * 
-	 */
-	public Boolean isRecurrenceAppointment() {
-		return recurrenceAppointment;
-	}
+    /**
+     * Ruft den Wert der recurrenceAppointment-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
+     */
+    public Boolean isRecurrenceAppointment() {
+        return recurrenceAppointment;
+    }
 
-	/**
-	 * Legt den Wert der recurrenceAppointment-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link Boolean }
-	 * 
-	 */
-	public void setRecurrenceAppointment(Boolean value) {
-		this.recurrenceAppointment = value;
-	}
+    /**
+     * Legt den Wert der recurrenceAppointment-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
+     */
+    public void setRecurrenceAppointment(Boolean value) {
+        this.recurrenceAppointment = value;
+    }
 
 }

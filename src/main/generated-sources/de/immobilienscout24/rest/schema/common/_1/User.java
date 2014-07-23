@@ -1,9 +1,10 @@
 //
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.7 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// �nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.04.11 um 01:54:30 PM CEST 
+// nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
+// Generiert: 2014.06.23 um 09:51:43 AM CEST 
 //
+
 
 package de.immobilienscout24.rest.schema.common._1;
 
@@ -14,13 +15,11 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
+
 /**
- * <p>
- * Java-Klasse f�r User complex type.
+ * <p>Java-Klasse fr User complex type.
  * 
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser
- * Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
  * <pre>
  * &lt;complexType name="User">
@@ -41,123 +40,142 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "User", propOrder = { "contactDetails", "password", "sharedShortlistGroupId" })
+@XmlType(name = "User", propOrder = {
+    "contactDetails",
+    "password",
+    "sharedShortlistGroupId"
+})
 public class User {
 
-	@XmlElement(required = true)
-	protected ContactDetails contactDetails;
-	@XmlElement(required = true)
-	protected String password;
-	protected Long sharedShortlistGroupId;
-	@XmlAttribute(name = "id")
-	@XmlJavaTypeAdapter(Adapter1.class)
-	protected String id;
-	@XmlAttribute(name = "peid")
-	protected Long peid;
+    @XmlElement(required = true)
+    protected ContactDetails contactDetails;
+    @XmlElement(required = true)
+    protected String password;
+    protected Long sharedShortlistGroupId;
+    @XmlAttribute(name = "id")
+    @XmlJavaTypeAdapter(Adapter1 .class)
+    protected String id;
+    @XmlAttribute(name = "peid")
+    protected Long peid;
 
-	/**
-	 * Ruft den Wert der contactDetails-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link ContactDetails }
-	 * 
-	 */
-	public ContactDetails getContactDetails() {
-		return contactDetails;
-	}
+    /**
+     * Ruft den Wert der contactDetails-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link ContactDetails }
+     *     
+     */
+    public ContactDetails getContactDetails() {
+        return contactDetails;
+    }
 
-	/**
-	 * Legt den Wert der contactDetails-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link ContactDetails }
-	 * 
-	 */
-	public void setContactDetails(ContactDetails value) {
-		this.contactDetails = value;
-	}
+    /**
+     * Legt den Wert der contactDetails-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link ContactDetails }
+     *     
+     */
+    public void setContactDetails(ContactDetails value) {
+        this.contactDetails = value;
+    }
 
-	/**
-	 * Ruft den Wert der password-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link String }
-	 * 
-	 */
-	public String getPassword() {
-		return password;
-	}
+    /**
+     * Ruft den Wert der password-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getPassword() {
+        return password;
+    }
 
-	/**
-	 * Legt den Wert der password-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link String }
-	 * 
-	 */
-	public void setPassword(String value) {
-		this.password = value;
-	}
+    /**
+     * Legt den Wert der password-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setPassword(String value) {
+        this.password = value;
+    }
 
-	/**
-	 * Ruft den Wert der sharedShortlistGroupId-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link Long }
-	 * 
-	 */
-	public Long getSharedShortlistGroupId() {
-		return sharedShortlistGroupId;
-	}
+    /**
+     * Ruft den Wert der sharedShortlistGroupId-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Long }
+     *     
+     */
+    public Long getSharedShortlistGroupId() {
+        return sharedShortlistGroupId;
+    }
 
-	/**
-	 * Legt den Wert der sharedShortlistGroupId-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link Long }
-	 * 
-	 */
-	public void setSharedShortlistGroupId(Long value) {
-		this.sharedShortlistGroupId = value;
-	}
+    /**
+     * Legt den Wert der sharedShortlistGroupId-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Long }
+     *     
+     */
+    public void setSharedShortlistGroupId(Long value) {
+        this.sharedShortlistGroupId = value;
+    }
 
-	/**
-	 * Ruft den Wert der id-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link String }
-	 * 
-	 */
-	public String getId() {
-		return id;
-	}
+    /**
+     * Ruft den Wert der id-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getId() {
+        return id;
+    }
 
-	/**
-	 * Legt den Wert der id-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link String }
-	 * 
-	 */
-	public void setId(String value) {
-		this.id = value;
-	}
+    /**
+     * Legt den Wert der id-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setId(String value) {
+        this.id = value;
+    }
 
-	/**
-	 * Ruft den Wert der peid-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link Long }
-	 * 
-	 */
-	public Long getPeid() {
-		return peid;
-	}
+    /**
+     * Ruft den Wert der peid-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Long }
+     *     
+     */
+    public Long getPeid() {
+        return peid;
+    }
 
-	/**
-	 * Legt den Wert der peid-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link Long }
-	 * 
-	 */
-	public void setPeid(Long value) {
-		this.peid = value;
-	}
+    /**
+     * Legt den Wert der peid-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Long }
+     *     
+     */
+    public void setPeid(Long value) {
+        this.peid = value;
+    }
 
 }

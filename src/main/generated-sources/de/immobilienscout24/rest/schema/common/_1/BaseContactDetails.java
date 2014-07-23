@@ -1,9 +1,10 @@
 //
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.7 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// �nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.04.11 um 01:54:30 PM CEST 
+// nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
+// Generiert: 2014.06.23 um 09:51:43 AM CEST 
 //
+
 
 package de.immobilienscout24.rest.schema.common._1;
 
@@ -13,13 +14,11 @@ import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
+
 /**
- * <p>
- * Java-Klasse f�r BaseContactDetails complex type.
+ * <p>Java-Klasse fr BaseContactDetails complex type.
  * 
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser
- * Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
  * <pre>
  * &lt;complexType name="BaseContactDetails">
@@ -172,522 +171,616 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "BaseContactDetails", propOrder = { "email", "salutation", "firstname", "lastname", "faxNumberCountryCode", "faxNumberAreaCode", "faxNumberSubscriber", "faxNumber",
-		"phoneNumberCountryCode", "phoneNumberAreaCode", "phoneNumberSubscriber", "phoneNumber", "cellPhoneNumberCountryCode", "cellPhoneNumberAreaCode", "cellPhoneNumberSubscriber",
-		"cellPhoneNumber", "address", "countryCode", "title", "additionName", "company", "homepageUrl", "portraitUrl" })
-@XmlSeeAlso({ MasterDataContactDetailsType.class, ContactDetails.class })
+@XmlType(name = "BaseContactDetails", propOrder = {
+    "email",
+    "salutation",
+    "firstname",
+    "lastname",
+    "faxNumberCountryCode",
+    "faxNumberAreaCode",
+    "faxNumberSubscriber",
+    "faxNumber",
+    "phoneNumberCountryCode",
+    "phoneNumberAreaCode",
+    "phoneNumberSubscriber",
+    "phoneNumber",
+    "cellPhoneNumberCountryCode",
+    "cellPhoneNumberAreaCode",
+    "cellPhoneNumberSubscriber",
+    "cellPhoneNumber",
+    "address",
+    "countryCode",
+    "title",
+    "additionName",
+    "company",
+    "homepageUrl",
+    "portraitUrl"
+})
+@XmlSeeAlso({
+    MasterDataContactDetailsType.class,
+    ContactDetails.class
+})
 public class BaseContactDetails {
 
-	protected String email;
-	protected SalutationType salutation;
-	@XmlJavaTypeAdapter(Adapter1.class)
-	protected String firstname;
-	@XmlJavaTypeAdapter(Adapter1.class)
-	protected String lastname;
-	protected String faxNumberCountryCode;
-	protected String faxNumberAreaCode;
-	protected String faxNumberSubscriber;
-	protected String faxNumber;
-	protected String phoneNumberCountryCode;
-	protected String phoneNumberAreaCode;
-	protected String phoneNumberSubscriber;
-	protected String phoneNumber;
-	protected String cellPhoneNumberCountryCode;
-	protected String cellPhoneNumberAreaCode;
-	protected String cellPhoneNumberSubscriber;
-	protected String cellPhoneNumber;
-	protected Address address;
-	protected CountryCode countryCode;
-	@XmlJavaTypeAdapter(Adapter1.class)
-	protected String title;
-	@XmlJavaTypeAdapter(Adapter1.class)
-	protected String additionName;
-	@XmlJavaTypeAdapter(Adapter1.class)
-	protected String company;
-	protected String homepageUrl;
-	protected String portraitUrl;
+    protected String email;
+    protected SalutationType salutation;
+    @XmlJavaTypeAdapter(Adapter1 .class)
+    protected String firstname;
+    @XmlJavaTypeAdapter(Adapter1 .class)
+    protected String lastname;
+    protected String faxNumberCountryCode;
+    protected String faxNumberAreaCode;
+    protected String faxNumberSubscriber;
+    protected String faxNumber;
+    protected String phoneNumberCountryCode;
+    protected String phoneNumberAreaCode;
+    protected String phoneNumberSubscriber;
+    protected String phoneNumber;
+    protected String cellPhoneNumberCountryCode;
+    protected String cellPhoneNumberAreaCode;
+    protected String cellPhoneNumberSubscriber;
+    protected String cellPhoneNumber;
+    protected Address address;
+    protected CountryCode countryCode;
+    @XmlJavaTypeAdapter(Adapter1 .class)
+    protected String title;
+    @XmlJavaTypeAdapter(Adapter1 .class)
+    protected String additionName;
+    @XmlJavaTypeAdapter(Adapter1 .class)
+    protected String company;
+    protected String homepageUrl;
+    protected String portraitUrl;
 
-	/**
-	 * Ruft den Wert der email-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link String }
-	 * 
-	 */
-	public String getEmail() {
-		return email;
-	}
+    /**
+     * Ruft den Wert der email-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getEmail() {
+        return email;
+    }
 
-	/**
-	 * Legt den Wert der email-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link String }
-	 * 
-	 */
-	public void setEmail(String value) {
-		this.email = value;
-	}
+    /**
+     * Legt den Wert der email-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setEmail(String value) {
+        this.email = value;
+    }
 
-	/**
-	 * Ruft den Wert der salutation-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link SalutationType }
-	 * 
-	 */
-	public SalutationType getSalutation() {
-		return salutation;
-	}
+    /**
+     * Ruft den Wert der salutation-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link SalutationType }
+     *     
+     */
+    public SalutationType getSalutation() {
+        return salutation;
+    }
 
-	/**
-	 * Legt den Wert der salutation-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link SalutationType }
-	 * 
-	 */
-	public void setSalutation(SalutationType value) {
-		this.salutation = value;
-	}
+    /**
+     * Legt den Wert der salutation-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link SalutationType }
+     *     
+     */
+    public void setSalutation(SalutationType value) {
+        this.salutation = value;
+    }
 
-	/**
-	 * Ruft den Wert der firstname-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link String }
-	 * 
-	 */
-	public String getFirstname() {
-		return firstname;
-	}
+    /**
+     * Ruft den Wert der firstname-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getFirstname() {
+        return firstname;
+    }
 
-	/**
-	 * Legt den Wert der firstname-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link String }
-	 * 
-	 */
-	public void setFirstname(String value) {
-		this.firstname = value;
-	}
+    /**
+     * Legt den Wert der firstname-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setFirstname(String value) {
+        this.firstname = value;
+    }
 
-	/**
-	 * Ruft den Wert der lastname-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link String }
-	 * 
-	 */
-	public String getLastname() {
-		return lastname;
-	}
+    /**
+     * Ruft den Wert der lastname-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getLastname() {
+        return lastname;
+    }
 
-	/**
-	 * Legt den Wert der lastname-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link String }
-	 * 
-	 */
-	public void setLastname(String value) {
-		this.lastname = value;
-	}
+    /**
+     * Legt den Wert der lastname-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setLastname(String value) {
+        this.lastname = value;
+    }
 
-	/**
-	 * Ruft den Wert der faxNumberCountryCode-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link String }
-	 * 
-	 */
-	public String getFaxNumberCountryCode() {
-		return faxNumberCountryCode;
-	}
+    /**
+     * Ruft den Wert der faxNumberCountryCode-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getFaxNumberCountryCode() {
+        return faxNumberCountryCode;
+    }
 
-	/**
-	 * Legt den Wert der faxNumberCountryCode-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link String }
-	 * 
-	 */
-	public void setFaxNumberCountryCode(String value) {
-		this.faxNumberCountryCode = value;
-	}
+    /**
+     * Legt den Wert der faxNumberCountryCode-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setFaxNumberCountryCode(String value) {
+        this.faxNumberCountryCode = value;
+    }
 
-	/**
-	 * Ruft den Wert der faxNumberAreaCode-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link String }
-	 * 
-	 */
-	public String getFaxNumberAreaCode() {
-		return faxNumberAreaCode;
-	}
+    /**
+     * Ruft den Wert der faxNumberAreaCode-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getFaxNumberAreaCode() {
+        return faxNumberAreaCode;
+    }
 
-	/**
-	 * Legt den Wert der faxNumberAreaCode-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link String }
-	 * 
-	 */
-	public void setFaxNumberAreaCode(String value) {
-		this.faxNumberAreaCode = value;
-	}
+    /**
+     * Legt den Wert der faxNumberAreaCode-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setFaxNumberAreaCode(String value) {
+        this.faxNumberAreaCode = value;
+    }
 
-	/**
-	 * Ruft den Wert der faxNumberSubscriber-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link String }
-	 * 
-	 */
-	public String getFaxNumberSubscriber() {
-		return faxNumberSubscriber;
-	}
+    /**
+     * Ruft den Wert der faxNumberSubscriber-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getFaxNumberSubscriber() {
+        return faxNumberSubscriber;
+    }
 
-	/**
-	 * Legt den Wert der faxNumberSubscriber-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link String }
-	 * 
-	 */
-	public void setFaxNumberSubscriber(String value) {
-		this.faxNumberSubscriber = value;
-	}
+    /**
+     * Legt den Wert der faxNumberSubscriber-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setFaxNumberSubscriber(String value) {
+        this.faxNumberSubscriber = value;
+    }
 
-	/**
-	 * Ruft den Wert der faxNumber-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link String }
-	 * 
-	 */
-	public String getFaxNumber() {
-		return faxNumber;
-	}
+    /**
+     * Ruft den Wert der faxNumber-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getFaxNumber() {
+        return faxNumber;
+    }
 
-	/**
-	 * Legt den Wert der faxNumber-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link String }
-	 * 
-	 */
-	public void setFaxNumber(String value) {
-		this.faxNumber = value;
-	}
+    /**
+     * Legt den Wert der faxNumber-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setFaxNumber(String value) {
+        this.faxNumber = value;
+    }
 
-	/**
-	 * Ruft den Wert der phoneNumberCountryCode-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link String }
-	 * 
-	 */
-	public String getPhoneNumberCountryCode() {
-		return phoneNumberCountryCode;
-	}
+    /**
+     * Ruft den Wert der phoneNumberCountryCode-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getPhoneNumberCountryCode() {
+        return phoneNumberCountryCode;
+    }
 
-	/**
-	 * Legt den Wert der phoneNumberCountryCode-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link String }
-	 * 
-	 */
-	public void setPhoneNumberCountryCode(String value) {
-		this.phoneNumberCountryCode = value;
-	}
+    /**
+     * Legt den Wert der phoneNumberCountryCode-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setPhoneNumberCountryCode(String value) {
+        this.phoneNumberCountryCode = value;
+    }
 
-	/**
-	 * Ruft den Wert der phoneNumberAreaCode-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link String }
-	 * 
-	 */
-	public String getPhoneNumberAreaCode() {
-		return phoneNumberAreaCode;
-	}
+    /**
+     * Ruft den Wert der phoneNumberAreaCode-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getPhoneNumberAreaCode() {
+        return phoneNumberAreaCode;
+    }
 
-	/**
-	 * Legt den Wert der phoneNumberAreaCode-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link String }
-	 * 
-	 */
-	public void setPhoneNumberAreaCode(String value) {
-		this.phoneNumberAreaCode = value;
-	}
+    /**
+     * Legt den Wert der phoneNumberAreaCode-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setPhoneNumberAreaCode(String value) {
+        this.phoneNumberAreaCode = value;
+    }
 
-	/**
-	 * Ruft den Wert der phoneNumberSubscriber-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link String }
-	 * 
-	 */
-	public String getPhoneNumberSubscriber() {
-		return phoneNumberSubscriber;
-	}
+    /**
+     * Ruft den Wert der phoneNumberSubscriber-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getPhoneNumberSubscriber() {
+        return phoneNumberSubscriber;
+    }
 
-	/**
-	 * Legt den Wert der phoneNumberSubscriber-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link String }
-	 * 
-	 */
-	public void setPhoneNumberSubscriber(String value) {
-		this.phoneNumberSubscriber = value;
-	}
+    /**
+     * Legt den Wert der phoneNumberSubscriber-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setPhoneNumberSubscriber(String value) {
+        this.phoneNumberSubscriber = value;
+    }
 
-	/**
-	 * Ruft den Wert der phoneNumber-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link String }
-	 * 
-	 */
-	public String getPhoneNumber() {
-		return phoneNumber;
-	}
+    /**
+     * Ruft den Wert der phoneNumber-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
 
-	/**
-	 * Legt den Wert der phoneNumber-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link String }
-	 * 
-	 */
-	public void setPhoneNumber(String value) {
-		this.phoneNumber = value;
-	}
+    /**
+     * Legt den Wert der phoneNumber-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setPhoneNumber(String value) {
+        this.phoneNumber = value;
+    }
 
-	/**
-	 * Ruft den Wert der cellPhoneNumberCountryCode-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link String }
-	 * 
-	 */
-	public String getCellPhoneNumberCountryCode() {
-		return cellPhoneNumberCountryCode;
-	}
+    /**
+     * Ruft den Wert der cellPhoneNumberCountryCode-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getCellPhoneNumberCountryCode() {
+        return cellPhoneNumberCountryCode;
+    }
 
-	/**
-	 * Legt den Wert der cellPhoneNumberCountryCode-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link String }
-	 * 
-	 */
-	public void setCellPhoneNumberCountryCode(String value) {
-		this.cellPhoneNumberCountryCode = value;
-	}
+    /**
+     * Legt den Wert der cellPhoneNumberCountryCode-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setCellPhoneNumberCountryCode(String value) {
+        this.cellPhoneNumberCountryCode = value;
+    }
 
-	/**
-	 * Ruft den Wert der cellPhoneNumberAreaCode-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link String }
-	 * 
-	 */
-	public String getCellPhoneNumberAreaCode() {
-		return cellPhoneNumberAreaCode;
-	}
+    /**
+     * Ruft den Wert der cellPhoneNumberAreaCode-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getCellPhoneNumberAreaCode() {
+        return cellPhoneNumberAreaCode;
+    }
 
-	/**
-	 * Legt den Wert der cellPhoneNumberAreaCode-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link String }
-	 * 
-	 */
-	public void setCellPhoneNumberAreaCode(String value) {
-		this.cellPhoneNumberAreaCode = value;
-	}
+    /**
+     * Legt den Wert der cellPhoneNumberAreaCode-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setCellPhoneNumberAreaCode(String value) {
+        this.cellPhoneNumberAreaCode = value;
+    }
 
-	/**
-	 * Ruft den Wert der cellPhoneNumberSubscriber-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link String }
-	 * 
-	 */
-	public String getCellPhoneNumberSubscriber() {
-		return cellPhoneNumberSubscriber;
-	}
+    /**
+     * Ruft den Wert der cellPhoneNumberSubscriber-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getCellPhoneNumberSubscriber() {
+        return cellPhoneNumberSubscriber;
+    }
 
-	/**
-	 * Legt den Wert der cellPhoneNumberSubscriber-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link String }
-	 * 
-	 */
-	public void setCellPhoneNumberSubscriber(String value) {
-		this.cellPhoneNumberSubscriber = value;
-	}
+    /**
+     * Legt den Wert der cellPhoneNumberSubscriber-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setCellPhoneNumberSubscriber(String value) {
+        this.cellPhoneNumberSubscriber = value;
+    }
 
-	/**
-	 * Ruft den Wert der cellPhoneNumber-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link String }
-	 * 
-	 */
-	public String getCellPhoneNumber() {
-		return cellPhoneNumber;
-	}
+    /**
+     * Ruft den Wert der cellPhoneNumber-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getCellPhoneNumber() {
+        return cellPhoneNumber;
+    }
 
-	/**
-	 * Legt den Wert der cellPhoneNumber-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link String }
-	 * 
-	 */
-	public void setCellPhoneNumber(String value) {
-		this.cellPhoneNumber = value;
-	}
+    /**
+     * Legt den Wert der cellPhoneNumber-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setCellPhoneNumber(String value) {
+        this.cellPhoneNumber = value;
+    }
 
-	/**
-	 * Ruft den Wert der address-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link Address }
-	 * 
-	 */
-	public Address getAddress() {
-		return address;
-	}
+    /**
+     * Ruft den Wert der address-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Address }
+     *     
+     */
+    public Address getAddress() {
+        return address;
+    }
 
-	/**
-	 * Legt den Wert der address-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link Address }
-	 * 
-	 */
-	public void setAddress(Address value) {
-		this.address = value;
-	}
+    /**
+     * Legt den Wert der address-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Address }
+     *     
+     */
+    public void setAddress(Address value) {
+        this.address = value;
+    }
 
-	/**
-	 * Ruft den Wert der countryCode-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link CountryCode }
-	 * 
-	 */
-	public CountryCode getCountryCode() {
-		return countryCode;
-	}
+    /**
+     * Ruft den Wert der countryCode-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link CountryCode }
+     *     
+     */
+    public CountryCode getCountryCode() {
+        return countryCode;
+    }
 
-	/**
-	 * Legt den Wert der countryCode-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link CountryCode }
-	 * 
-	 */
-	public void setCountryCode(CountryCode value) {
-		this.countryCode = value;
-	}
+    /**
+     * Legt den Wert der countryCode-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link CountryCode }
+     *     
+     */
+    public void setCountryCode(CountryCode value) {
+        this.countryCode = value;
+    }
 
-	/**
-	 * Ruft den Wert der title-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link String }
-	 * 
-	 */
-	public String getTitle() {
-		return title;
-	}
+    /**
+     * Ruft den Wert der title-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getTitle() {
+        return title;
+    }
 
-	/**
-	 * Legt den Wert der title-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link String }
-	 * 
-	 */
-	public void setTitle(String value) {
-		this.title = value;
-	}
+    /**
+     * Legt den Wert der title-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setTitle(String value) {
+        this.title = value;
+    }
 
-	/**
-	 * Ruft den Wert der additionName-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link String }
-	 * 
-	 */
-	public String getAdditionName() {
-		return additionName;
-	}
+    /**
+     * Ruft den Wert der additionName-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getAdditionName() {
+        return additionName;
+    }
 
-	/**
-	 * Legt den Wert der additionName-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link String }
-	 * 
-	 */
-	public void setAdditionName(String value) {
-		this.additionName = value;
-	}
+    /**
+     * Legt den Wert der additionName-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setAdditionName(String value) {
+        this.additionName = value;
+    }
 
-	/**
-	 * Ruft den Wert der company-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link String }
-	 * 
-	 */
-	public String getCompany() {
-		return company;
-	}
+    /**
+     * Ruft den Wert der company-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getCompany() {
+        return company;
+    }
 
-	/**
-	 * Legt den Wert der company-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link String }
-	 * 
-	 */
-	public void setCompany(String value) {
-		this.company = value;
-	}
+    /**
+     * Legt den Wert der company-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setCompany(String value) {
+        this.company = value;
+    }
 
-	/**
-	 * Ruft den Wert der homepageUrl-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link String }
-	 * 
-	 */
-	public String getHomepageUrl() {
-		return homepageUrl;
-	}
+    /**
+     * Ruft den Wert der homepageUrl-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getHomepageUrl() {
+        return homepageUrl;
+    }
 
-	/**
-	 * Legt den Wert der homepageUrl-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link String }
-	 * 
-	 */
-	public void setHomepageUrl(String value) {
-		this.homepageUrl = value;
-	}
+    /**
+     * Legt den Wert der homepageUrl-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setHomepageUrl(String value) {
+        this.homepageUrl = value;
+    }
 
-	/**
-	 * Ruft den Wert der portraitUrl-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link String }
-	 * 
-	 */
-	public String getPortraitUrl() {
-		return portraitUrl;
-	}
+    /**
+     * Ruft den Wert der portraitUrl-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getPortraitUrl() {
+        return portraitUrl;
+    }
 
-	/**
-	 * Legt den Wert der portraitUrl-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link String }
-	 * 
-	 */
-	public void setPortraitUrl(String value) {
-		this.portraitUrl = value;
-	}
+    /**
+     * Legt den Wert der portraitUrl-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setPortraitUrl(String value) {
+        this.portraitUrl = value;
+    }
 
 }

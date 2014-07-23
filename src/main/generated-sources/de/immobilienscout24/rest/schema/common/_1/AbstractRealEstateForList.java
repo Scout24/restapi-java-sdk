@@ -1,9 +1,10 @@
 //
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.7 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// �nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.04.11 um 01:54:30 PM CEST 
+// nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
+// Generiert: 2014.06.23 um 09:51:43 AM CEST 
 //
+
 
 package de.immobilienscout24.rest.schema.common._1;
 
@@ -18,15 +19,13 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import javax.xml.datatype.XMLGregorianCalendar;
 import de.immobilienscout24.rest.schema.offer.listelement._1.OfferRealEstateForList;
 
+
 /**
- * Allgemeine Elemente f�r alle Immobilienarten.
+ * Allgemeine Elemente fr alle Immobilienarten.
  * 
- * <p>
- * Java-Klasse f�r AbstractRealEstateForList complex type.
+ * <p>Java-Klasse fr AbstractRealEstateForList complex type.
  * 
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser
- * Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
  * <pre>
  * &lt;complexType name="AbstractRealEstateForList">
@@ -56,192 +55,227 @@ import de.immobilienscout24.rest.schema.offer.listelement._1.OfferRealEstateForL
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AbstractRealEstateForList", propOrder = { "externalId", "title", "creationDate", "lastModificationDate", "address", "apiSearchData", "realEstateState" })
-@XmlSeeAlso({ OfferRealEstateForList.class, AbstractRealEstate.class })
+@XmlType(name = "AbstractRealEstateForList", propOrder = {
+    "externalId",
+    "title",
+    "creationDate",
+    "lastModificationDate",
+    "address",
+    "apiSearchData",
+    "realEstateState"
+})
+@XmlSeeAlso({
+    OfferRealEstateForList.class,
+    AbstractRealEstate.class
+})
 public abstract class AbstractRealEstateForList {
 
-	@XmlJavaTypeAdapter(Adapter1.class)
-	protected String externalId;
-	@XmlElement(required = true)
-	@XmlJavaTypeAdapter(Adapter1.class)
-	protected String title;
-	@XmlSchemaType(name = "dateTime")
-	protected XMLGregorianCalendar creationDate;
-	@XmlSchemaType(name = "dateTime")
-	protected XMLGregorianCalendar lastModificationDate;
-	@XmlElement(required = true)
-	protected Wgs84Address address;
-	protected ApiSearchData apiSearchData;
-	protected RealEstateState realEstateState;
-	@XmlAttribute(name = "id")
-	protected Long id;
+    @XmlJavaTypeAdapter(Adapter1 .class)
+    protected String externalId;
+    @XmlElement(required = true)
+    @XmlJavaTypeAdapter(Adapter1 .class)
+    protected String title;
+    @XmlSchemaType(name = "dateTime")
+    protected XMLGregorianCalendar creationDate;
+    @XmlSchemaType(name = "dateTime")
+    protected XMLGregorianCalendar lastModificationDate;
+    @XmlElement(required = true)
+    protected Wgs84Address address;
+    protected ApiSearchData apiSearchData;
+    protected RealEstateState realEstateState;
+    @XmlAttribute(name = "id")
+    protected Long id;
 
-	/**
-	 * Ruft den Wert der externalId-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link String }
-	 * 
-	 */
-	public String getExternalId() {
-		return externalId;
-	}
+    /**
+     * Ruft den Wert der externalId-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getExternalId() {
+        return externalId;
+    }
 
-	/**
-	 * Legt den Wert der externalId-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link String }
-	 * 
-	 */
-	public void setExternalId(String value) {
-		this.externalId = value;
-	}
+    /**
+     * Legt den Wert der externalId-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setExternalId(String value) {
+        this.externalId = value;
+    }
 
-	/**
-	 * Ruft den Wert der title-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link String }
-	 * 
-	 */
-	public String getTitle() {
-		return title;
-	}
+    /**
+     * Ruft den Wert der title-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getTitle() {
+        return title;
+    }
 
-	/**
-	 * Legt den Wert der title-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link String }
-	 * 
-	 */
-	public void setTitle(String value) {
-		this.title = value;
-	}
+    /**
+     * Legt den Wert der title-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setTitle(String value) {
+        this.title = value;
+    }
 
-	/**
-	 * Ruft den Wert der creationDate-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link XMLGregorianCalendar }
-	 * 
-	 */
-	public XMLGregorianCalendar getCreationDate() {
-		return creationDate;
-	}
+    /**
+     * Ruft den Wert der creationDate-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public XMLGregorianCalendar getCreationDate() {
+        return creationDate;
+    }
 
-	/**
-	 * Legt den Wert der creationDate-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link XMLGregorianCalendar }
-	 * 
-	 */
-	public void setCreationDate(XMLGregorianCalendar value) {
-		this.creationDate = value;
-	}
+    /**
+     * Legt den Wert der creationDate-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public void setCreationDate(XMLGregorianCalendar value) {
+        this.creationDate = value;
+    }
 
-	/**
-	 * Ruft den Wert der lastModificationDate-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link XMLGregorianCalendar }
-	 * 
-	 */
-	public XMLGregorianCalendar getLastModificationDate() {
-		return lastModificationDate;
-	}
+    /**
+     * Ruft den Wert der lastModificationDate-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public XMLGregorianCalendar getLastModificationDate() {
+        return lastModificationDate;
+    }
 
-	/**
-	 * Legt den Wert der lastModificationDate-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link XMLGregorianCalendar }
-	 * 
-	 */
-	public void setLastModificationDate(XMLGregorianCalendar value) {
-		this.lastModificationDate = value;
-	}
+    /**
+     * Legt den Wert der lastModificationDate-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public void setLastModificationDate(XMLGregorianCalendar value) {
+        this.lastModificationDate = value;
+    }
 
-	/**
-	 * Ruft den Wert der address-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link Wgs84Address }
-	 * 
-	 */
-	public Wgs84Address getAddress() {
-		return address;
-	}
+    /**
+     * Ruft den Wert der address-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Wgs84Address }
+     *     
+     */
+    public Wgs84Address getAddress() {
+        return address;
+    }
 
-	/**
-	 * Legt den Wert der address-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link Wgs84Address }
-	 * 
-	 */
-	public void setAddress(Wgs84Address value) {
-		this.address = value;
-	}
+    /**
+     * Legt den Wert der address-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Wgs84Address }
+     *     
+     */
+    public void setAddress(Wgs84Address value) {
+        this.address = value;
+    }
 
-	/**
-	 * Ruft den Wert der apiSearchData-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link ApiSearchData }
-	 * 
-	 */
-	public ApiSearchData getApiSearchData() {
-		return apiSearchData;
-	}
+    /**
+     * Ruft den Wert der apiSearchData-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link ApiSearchData }
+     *     
+     */
+    public ApiSearchData getApiSearchData() {
+        return apiSearchData;
+    }
 
-	/**
-	 * Legt den Wert der apiSearchData-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link ApiSearchData }
-	 * 
-	 */
-	public void setApiSearchData(ApiSearchData value) {
-		this.apiSearchData = value;
-	}
+    /**
+     * Legt den Wert der apiSearchData-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link ApiSearchData }
+     *     
+     */
+    public void setApiSearchData(ApiSearchData value) {
+        this.apiSearchData = value;
+    }
 
-	/**
-	 * Ruft den Wert der realEstateState-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link RealEstateState }
-	 * 
-	 */
-	public RealEstateState getRealEstateState() {
-		return realEstateState;
-	}
+    /**
+     * Ruft den Wert der realEstateState-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link RealEstateState }
+     *     
+     */
+    public RealEstateState getRealEstateState() {
+        return realEstateState;
+    }
 
-	/**
-	 * Legt den Wert der realEstateState-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link RealEstateState }
-	 * 
-	 */
-	public void setRealEstateState(RealEstateState value) {
-		this.realEstateState = value;
-	}
+    /**
+     * Legt den Wert der realEstateState-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link RealEstateState }
+     *     
+     */
+    public void setRealEstateState(RealEstateState value) {
+        this.realEstateState = value;
+    }
 
-	/**
-	 * Ruft den Wert der id-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link Long }
-	 * 
-	 */
-	public Long getId() {
-		return id;
-	}
+    /**
+     * Ruft den Wert der id-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Long }
+     *     
+     */
+    public Long getId() {
+        return id;
+    }
 
-	/**
-	 * Legt den Wert der id-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link Long }
-	 * 
-	 */
-	public void setId(Long value) {
-		this.id = value;
-	}
+    /**
+     * Legt den Wert der id-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Long }
+     *     
+     */
+    public void setId(Long value) {
+        this.id = value;
+    }
 
 }

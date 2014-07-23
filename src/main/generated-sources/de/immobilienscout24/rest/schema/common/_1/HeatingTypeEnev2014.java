@@ -1,24 +1,22 @@
 //
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.7 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// �nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.04.11 um 01:54:30 PM CEST 
+// nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
+// Generiert: 2014.06.23 um 09:51:43 AM CEST 
 //
+
 
 package de.immobilienscout24.rest.schema.common._1;
 
 import javax.xml.bind.annotation.XmlEnum;
 import javax.xml.bind.annotation.XmlType;
 
+
 /**
- * <p>
- * Java-Klasse f�r HeatingTypeEnev2014.
+ * <p>Java-Klasse fr HeatingTypeEnev2014.
  * 
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser
- * Klasse enthalten ist.
- * <p>
- * 
  * <pre>
  * &lt;simpleType name="HeatingTypeEnev2014">
  *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
@@ -45,96 +43,97 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum HeatingTypeEnev2014 {
 
-	/**
-	 * keine Angabe
-	 * 
-	 */
-	NO_INFORMATION,
 
-	/**
-	 * Etagenheizung
-	 * 
-	 */
-	SELF_CONTAINED_CENTRAL_HEATING,
+    /**
+     * keine Angabe
+     * 
+     */
+    NO_INFORMATION,
 
-	/**
-	 * Ofenheizung
-	 * 
-	 */
-	STOVE_HEATING,
+    /**
+     * Etagenheizung
+     * 
+     */
+    SELF_CONTAINED_CENTRAL_HEATING,
 
-	/**
-	 * Zentralheizung
-	 * 
-	 */
-	CENTRAL_HEATING,
+    /**
+     * Ofenheizung
+     * 
+     */
+    STOVE_HEATING,
 
-	/**
-	 * Blockheizkraftwerk
-	 * 
-	 */
-	COMBINED_HEAT_AND_POWER_PLANT,
+    /**
+     * Zentralheizung
+     * 
+     */
+    CENTRAL_HEATING,
 
-	/**
-	 * Elektro-Heizung
-	 * 
-	 */
-	ELECTRIC_HEATING,
+    /**
+     * Blockheizkraftwerk
+     * 
+     */
+    COMBINED_HEAT_AND_POWER_PLANT,
 
-	/**
-	 * Fernw�rmedampf
-	 * 
-	 */
-	DISTRICT_HEATING,
+    /**
+     * Elektro-Heizung
+     * 
+     */
+    ELECTRIC_HEATING,
 
-	/**
-	 * Fu�bodenheizung
-	 * 
-	 */
-	FLOOR_HEATING,
+    /**
+     * Fernwrmedampf
+     * 
+     */
+    DISTRICT_HEATING,
 
-	/**
-	 * Gas-Heizung
-	 * 
-	 */
-	GAS_HEATING,
+    /**
+     * Fubodenheizung
+     * 
+     */
+    FLOOR_HEATING,
 
-	/**
-	 * Holz-Pelletheizung
-	 * 
-	 */
-	WOOD_PELLET_HEATING,
+    /**
+     * Gas-Heizung
+     * 
+     */
+    GAS_HEATING,
 
-	/**
-	 * Nachtspeicherofen
-	 * 
-	 */
-	NIGHT_STORAGE_HEATER,
+    /**
+     * Holz-Pelletheizung
+     * 
+     */
+    WOOD_PELLET_HEATING,
 
-	/**
-	 * �lheizung
-	 * 
-	 */
-	OIL_HEATING,
+    /**
+     * Nachtspeicherofen
+     * 
+     */
+    NIGHT_STORAGE_HEATER,
 
-	/**
-	 * Solar-Heizung
-	 * 
-	 */
-	SOLAR_HEATING,
+    /**
+     * lheizung
+     * 
+     */
+    OIL_HEATING,
 
-	/**
-	 * W�rmepumpe
-	 * 
-	 */
-	HEAT_PUMP;
+    /**
+     * Solar-Heizung
+     * 
+     */
+    SOLAR_HEATING,
 
-	public String value() {
-		return name();
-	}
+    /**
+     * Wrmepumpe
+     * 
+     */
+    HEAT_PUMP;
 
-	public static HeatingTypeEnev2014 fromValue(String v) {
-		return valueOf(v);
-	}
+    public String value() {
+        return name();
+    }
+
+    public static HeatingTypeEnev2014 fromValue(String v) {
+        return valueOf(v);
+    }
 
 }

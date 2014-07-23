@@ -1,24 +1,22 @@
 //
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.7 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// �nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.04.11 um 01:54:30 PM CEST 
+// nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
+// Generiert: 2014.06.23 um 09:51:43 AM CEST 
 //
+
 
 package de.immobilienscout24.rest.schema.common._1;
 
 import javax.xml.bind.annotation.XmlEnum;
 import javax.xml.bind.annotation.XmlType;
 
+
 /**
- * <p>
- * Java-Klasse f�r OfficeType.
+ * <p>Java-Klasse fr OfficeType.
  * 
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser
- * Klasse enthalten ist.
- * <p>
- * 
  * <pre>
  * &lt;simpleType name="OfficeType">
  *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
@@ -44,90 +42,91 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum OfficeType {
 
-	/**
-	 * Loft
-	 * 
-	 */
-	LOFT,
 
-	/**
-	 * Atelier
-	 * 
-	 */
-	STUDIO,
+    /**
+     * Loft
+     * 
+     */
+    LOFT,
 
-	/**
-	 * B�ro
-	 * 
-	 */
-	OFFICE,
+    /**
+     * Atelier
+     * 
+     */
+    STUDIO,
 
-	/**
-	 * B�roetage
-	 * 
-	 */
-	OFFICE_FLOOR,
+    /**
+     * Bro
+     * 
+     */
+    OFFICE,
 
-	/**
-	 * B�rohaus
-	 * 
-	 */
-	OFFICE_BUILDING,
+    /**
+     * Broetage
+     * 
+     */
+    OFFICE_FLOOR,
 
-	/**
-	 * B�rozentrum
-	 * 
-	 */
-	OFFICE_CENTRE,
+    /**
+     * Brohaus
+     * 
+     */
+    OFFICE_BUILDING,
 
-	/**
-	 * B�ro-/ Lagergeb�ude
-	 * 
-	 */
-	OFFICE_STORAGE_BUILDING,
+    /**
+     * Brozentrum
+     * 
+     */
+    OFFICE_CENTRE,
 
-	/**
-	 * Praxis
-	 * 
-	 */
-	SURGERY,
+    /**
+     * Bro-/ Lagergebude
+     * 
+     */
+    OFFICE_STORAGE_BUILDING,
 
-	/**
-	 * Praxisetage
-	 * 
-	 */
-	SURGERY_FLOOR,
+    /**
+     * Praxis
+     * 
+     */
+    SURGERY,
 
-	/**
-	 * Praxishaus
-	 * 
-	 */
-	SURGERY_BUILDING,
+    /**
+     * Praxisetage
+     * 
+     */
+    SURGERY_FLOOR,
 
-	/**
-	 * Gewerbezentrum
-	 * 
-	 */
-	COMMERCIAL_CENTRE,
+    /**
+     * Praxishaus
+     * 
+     */
+    SURGERY_BUILDING,
 
-	/**
-	 * Wohn- und Gesch�ftsgeb�ude
-	 * 
-	 */
-	LIVING_AND_COMMERCIAL_BUILDING,
+    /**
+     * Gewerbezentrum
+     * 
+     */
+    COMMERCIAL_CENTRE,
 
-	/**
-	 * B�ro- und Gesch�ftsgeb�ude
-	 * 
-	 */
-	OFFICE_AND_COMMERCIAL_BUILDING;
+    /**
+     * Wohn- und Geschftsgebude
+     * 
+     */
+    LIVING_AND_COMMERCIAL_BUILDING,
 
-	public String value() {
-		return name();
-	}
+    /**
+     * Bro- und Geschftsgebude
+     * 
+     */
+    OFFICE_AND_COMMERCIAL_BUILDING;
 
-	public static OfficeType fromValue(String v) {
-		return valueOf(v);
-	}
+    public String value() {
+        return name();
+    }
+
+    public static OfficeType fromValue(String v) {
+        return valueOf(v);
+    }
 
 }

@@ -1,8 +1,16 @@
 package de.immobilienscout24.rest.facades.offer.realestates._1;
 
-import de.immobilienscout24.rest.schema.common._1.*;
+import de.immobilienscout24.rest.schema.common._1.BuildingEnergyRatingType;
+import de.immobilienscout24.rest.schema.common._1.CourtageInfo;
+import de.immobilienscout24.rest.schema.common._1.EnergyPerformanceCertificate;
+import de.immobilienscout24.rest.schema.common._1.EnergySourcesEnev2014;
+import de.immobilienscout24.rest.schema.common._1.FiringTypes;
+import de.immobilienscout24.rest.schema.common._1.HeatingTypeEnev2014;
+import de.immobilienscout24.rest.schema.common._1.InteriorQuality;
+import de.immobilienscout24.rest.schema.common._1.Price;
+import de.immobilienscout24.rest.schema.common._1.RealEstateCondition;
+import de.immobilienscout24.rest.schema.common._1.YesNotApplicableType;
 import de.immobilienscout24.rest.schema.offer.realestates._1.Gastronomy;
-
 
 public class GastronomyFacade implements CommercialFacade {
 	final private Gastronomy realestate;
@@ -195,9 +203,8 @@ public class GastronomyFacade implements CommercialFacade {
 		realestate.setCourtage(value);
 	}
 
-
 	/*******************************************************************************************************
-	 ********************************         Energy Stuff           ***************************************
+	 ******************************** Energy Stuff ***************************************
 	 *******************************************************************************************************/
 
 	@Override
@@ -288,5 +295,15 @@ public class GastronomyFacade implements CommercialFacade {
 	@Override
 	public void setConstructionYear(Integer value) {
 		realestate.setConstructionYear(value);
+	}
+
+	@Override
+	public String getFreeFrom() {
+		return realestate.getFreeFrom();
+	}
+
+	@Override
+	public void setFreeFrom(String value) {
+		realestate.setFreeFrom(value);
 	}
 }

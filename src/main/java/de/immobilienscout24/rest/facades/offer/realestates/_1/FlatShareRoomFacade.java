@@ -1,8 +1,14 @@
 package de.immobilienscout24.rest.facades.offer.realestates._1;
 
-import de.immobilienscout24.rest.schema.common._1.*;
+import de.immobilienscout24.rest.schema.common._1.BuildingEnergyRatingType;
+import de.immobilienscout24.rest.schema.common._1.CourtageInfo;
+import de.immobilienscout24.rest.schema.common._1.EnergyPerformanceCertificate;
+import de.immobilienscout24.rest.schema.common._1.EnergySourcesEnev2014;
+import de.immobilienscout24.rest.schema.common._1.FiringTypes;
+import de.immobilienscout24.rest.schema.common._1.HeatingTypeEnev2014;
+import de.immobilienscout24.rest.schema.common._1.Price;
+import de.immobilienscout24.rest.schema.common._1.YesNotApplicableType;
 import de.immobilienscout24.rest.schema.offer.realestates._1.FlatShareRoom;
-
 
 public class FlatShareRoomFacade implements RealestateFacade, EnergySavingFacade {
 	final private FlatShareRoom realestate;
@@ -35,7 +41,7 @@ public class FlatShareRoomFacade implements RealestateFacade, EnergySavingFacade
 	}
 
 	/*******************************************************************************************************
-	 ********************************         Energy Stuff           ***************************************
+	 ******************************** Energy Stuff ***************************************
 	 *******************************************************************************************************/
 
 	@Override
@@ -60,12 +66,15 @@ public class FlatShareRoomFacade implements RealestateFacade, EnergySavingFacade
 
 	@Override
 	public FiringTypes getFiringTypes() {
-		return realestate.getFiringTypes();
+		// return realestate.getFiringTypes();
+		return null;
+		// do nothing because this immotype has no firingTypes element
 	}
 
 	@Override
 	public void setFiringTypes(FiringTypes value) {
-		realestate.setFiringTypes(value);
+		// realestate.setFiringTypes(value);
+		// do nothing because this immotype has no firingTypes element
 	}
 
 	@Override

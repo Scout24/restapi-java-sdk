@@ -1004,7 +1004,7 @@ public interface ObjectApi {
 
 	public InputStream getAttachmentData(StreamingVideo pdf);
 
-	public InputStream getAttachmentData(VideoFile pdf);
+	public InputStream getAttachmentData(VideoFile video);
 
 	/**
 	 * 
@@ -1061,5 +1061,7 @@ public interface ObjectApi {
 	public static interface ObjectId {
 		public String getId();
 	}
+
+	List<RealEstate> getAllRealestates(String username, int pageSize, int pageNumber, boolean includeArchived);
 
 }

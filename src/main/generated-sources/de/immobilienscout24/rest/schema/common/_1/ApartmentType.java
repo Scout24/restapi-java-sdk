@@ -1,24 +1,22 @@
 //
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.7 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// �nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.04.11 um 01:54:30 PM CEST 
+// nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
+// Generiert: 2014.06.23 um 09:51:43 AM CEST 
 //
+
 
 package de.immobilienscout24.rest.schema.common._1;
 
 import javax.xml.bind.annotation.XmlEnum;
 import javax.xml.bind.annotation.XmlType;
 
+
 /**
- * <p>
- * Java-Klasse f�r ApartmentType.
+ * <p>Java-Klasse fr ApartmentType.
  * 
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser
- * Klasse enthalten ist.
- * <p>
- * 
  * <pre>
  * &lt;simpleType name="ApartmentType">
  *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
@@ -42,80 +40,81 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum ApartmentType {
 
-	/**
-	 * Dachgeschoss
-	 * 
-	 */
-	ROOF_STOREY,
 
-	/**
-	 * Loft
-	 * 
-	 */
-	LOFT,
+    /**
+     * Dachgeschoss
+     * 
+     */
+    ROOF_STOREY,
 
-	/**
-	 * Maisonette
-	 * 
-	 */
-	MAISONETTE,
+    /**
+     * Loft
+     * 
+     */
+    LOFT,
 
-	/**
-	 * Penthouse
-	 * 
-	 */
-	PENTHOUSE,
+    /**
+     * Maisonette
+     * 
+     */
+    MAISONETTE,
 
-	/**
-	 * Terrassenwohnung
-	 * 
-	 */
-	TERRACED_FLAT,
+    /**
+     * Penthouse
+     * 
+     */
+    PENTHOUSE,
 
-	/**
-	 * Erdgeschosswohnung
-	 * 
-	 */
-	GROUND_FLOOR,
+    /**
+     * Terrassenwohnung
+     * 
+     */
+    TERRACED_FLAT,
 
-	/**
-	 * Etagenwohnung
-	 * 
-	 */
-	APARTMENT,
+    /**
+     * Erdgeschosswohnung
+     * 
+     */
+    GROUND_FLOOR,
 
-	/**
-	 * Hochparterre
-	 * 
-	 */
-	RAISED_GROUND_FLOOR,
+    /**
+     * Etagenwohnung
+     * 
+     */
+    APARTMENT,
 
-	/**
-	 * Souterrain
-	 * 
-	 */
-	HALF_BASEMENT,
+    /**
+     * Hochparterre
+     * 
+     */
+    RAISED_GROUND_FLOOR,
 
-	/**
-	 * Sonstige
-	 * 
-	 */
-	OTHER,
+    /**
+     * Souterrain
+     * 
+     */
+    HALF_BASEMENT,
 
-	/**
-	 * Keine Angabe (wird zusammen mit OTHER verwendet)
-	 * 
-	 * 
-	 */
-	@Deprecated
-	NO_INFORMATION;
+    /**
+     * Sonstige
+     * 
+     */
+    OTHER,
 
-	public String value() {
-		return name();
-	}
+    /**
+     * Keine Angabe (wird zusammen mit OTHER verwendet)
+     *                     
+     * 
+     */
+    @Deprecated
+    NO_INFORMATION;
 
-	public static ApartmentType fromValue(String v) {
-		return valueOf(v);
-	}
+    public String value() {
+        return name();
+    }
+
+    public static ApartmentType fromValue(String v) {
+        return valueOf(v);
+    }
 
 }

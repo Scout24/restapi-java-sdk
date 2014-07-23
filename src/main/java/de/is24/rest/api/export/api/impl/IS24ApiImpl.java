@@ -18,7 +18,9 @@ import java.net.URLDecoder;
 import java.net.URLEncoder;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBElement;
@@ -37,6 +39,7 @@ import org.apache.commons.httpclient.methods.multipart.FilePart;
 import org.apache.commons.httpclient.methods.multipart.MultipartRequestEntity;
 import org.apache.commons.httpclient.methods.multipart.Part;
 import org.apache.commons.httpclient.methods.multipart.StringPart;
+import org.apache.commons.httpclient.util.URIUtil;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.jdom.Element;
@@ -104,16 +107,6 @@ public class IS24ApiImpl implements Is24Api, InternalObjectApi {
 		URL url;
 		url = createURL(baseUrl + "/search/v1.0/search/region?realestatetype=" + realestateType + "&geocodes=" + geoCodes);
 		return sendGetRequest(url);
-	}
-
-	public String getUserName() {
-
-		// URL url = createURL(baseUrl + "/search/v2.0/user/me");
-		Searcher searcher = getSearcher("me");
-		// URL url = createURL(baseUrl + "/search/v1.0/searcher/me");
-		// System.out.println(url);
-		// return sendGetRequest(url);
-		return searcher.getId();
 	}
 
 	public String createRealestate(String username, String xml) {
@@ -203,30 +196,55 @@ public class IS24ApiImpl implements Is24Api, InternalObjectApi {
 	@Override
 	public List<RealEstate> getAllRealestates(String username) {
 
-		List<RealEstate> ret = new ArrayList<>();
+		// List<RealEstate> ret = new ArrayList<>();
 		int pageNumber = 1;
 		int pageSize = 100;
 		List<RealEstate> allRealestates = new ArrayList<>();
 		int size = 100;
 
+		Map<Long, RealEstate> ret = new HashMap<Long, RealEstate>();
+
 		while (size == 100) {
 			allRealestates = getAllRealestates(username, pageSize, pageNumber++);
-			ret.addAll(allRealestates);
+
+			for (RealEstate realEstate : allRealestates) {
+
+				ret.put(realEstate.getId(), realEstate);
+			}
+
+			// ret.addAll(allRealestates);
 			size = allRealestates.size();
 		}
 
-		return ret;
+		return new ArrayList<>(ret.values());
+	}
+
+	private String encodeUserName(String username) {
+
+		try {
+			return URIUtil.encodeQuery(username, "UTF-8");
+			// return URIUtil.encodeQuery(username, "ISO-8859-1");
+
+		} catch (Exception e) {
+			throw new RuntimeException(e);
+		}
 	}
 
 	@Override
 	public List<RealEstate> getAllRealestates(String username, int pageSize, int pageNumber) {
+		return getAllRealestates(username, pageSize, pageNumber, true);
+	}
+
+	@Override
+	public List<RealEstate> getAllRealestates(String username, int pageSize, int pageNumber, boolean includeArchived) {
 		List<RealEstate> ret = new ArrayList<RealEstate>();
-		URL url = createURL(baseUrl + "/offer/v1.0/user/" + username + "/realestate?pagesize=" + pageSize + "&pagenumber=" + pageNumber);
+
+		URL url = createURL(baseUrl + "/offer/v1.0/user/" + encodeUserName(username) + "/realestate?pagesize=" + pageSize + "&pagenumber=" + pageNumber + "&archivedobjectsincluded="
+				+ (includeArchived ? "true" : "false"));
 
 		LOG.info(url);
 
 		String response = sendGetRequest(url);
-		// //LOG.info("getAllRealestates - response: " + response);
 		Element xmlRootElement = getXMLRootElement(response);
 
 		@SuppressWarnings("unchecked")
@@ -403,8 +421,9 @@ public class IS24ApiImpl implements Is24Api, InternalObjectApi {
 	@Override
 	public RealEstate getRealestate(String username, ObjectId realestateId) {
 
+		username = encodeUserName(username);
 		String realestateAsXml = getRealestateAsXml(username, realestateId.getId());
-		// //LOG.info("getRealestate from api: " + realestateAsXml);
+		// LOG.info("getRealestate from api: " + realestateAsXml);
 
 		RealEstate realestate = unmarshall(RealEstate.class, realestateAsXml);
 		String href = realestate.getAttachments().getHref();
@@ -469,6 +488,11 @@ public class IS24ApiImpl implements Is24Api, InternalObjectApi {
 
 	@Override
 	public List<RealtorContactDetails> getContacts(String username) {
+
+		username = encodeUserName(username);
+
+		System.out.println(username);
+
 		URL url = createURL(baseUrl + "/offer/v1.0/user/" + username + "/contact");
 		String xml = sendGetRequest(url);
 		LOG.info("getContacts xml: " + xml);
@@ -628,7 +652,7 @@ public class IS24ApiImpl implements Is24Api, InternalObjectApi {
 		System.out.println(xml);
 		URL url;
 		url = createURL(baseUrl + "/offer/v1.0/publish/");
-
+		System.out.println(url);
 		sendPostRequest(url, xml, new PublishRealestateResultParser());
 	}
 
@@ -1271,10 +1295,6 @@ public class IS24ApiImpl implements Is24Api, InternalObjectApi {
 		System.out.println(href);
 
 		try {
-			// System.out.println("-----------------------------------------------------------");
-			// String result = sendGetRequest(new URL(href));
-			// System.out.println(result);
-			// System.out.println("############################################################");
 
 			return getInputStream(new URL(href));
 		} catch (MalformedURLException e) {
@@ -1284,28 +1304,44 @@ public class IS24ApiImpl implements Is24Api, InternalObjectApi {
 
 	@Override
 	public InputStream getAttachmentData(PDFDocument pdf) {
-		throw new UnsupportedOperationException("Not yet implemented");
+		try {
+
+			return getInputStream(new URL(pdf.getUrl()));
+		} catch (MalformedURLException e) {
+			throw new RuntimeException(e);
+		}
 	}
 
-	public InputStream getAttachmentData(StreamingVideo pdf) {
-		throw new UnsupportedOperationException("Not yet implemented");
+	public InputStream getAttachmentData(StreamingVideo video) {
+		try {
+
+			String id = video.getVideoId();
+
+			URL url = createURL(baseUrl + "/search/v1.0/expose/62484060/video/" + id);
+
+			String xml = sendGetRequest(url);
+
+			System.out.println(xml);
+
+			return getInputStream(new URL(video.getHref()));
+		} catch (MalformedURLException e) {
+			throw new RuntimeException(e);
+		}
 	}
 
-	public InputStream getAttachmentData(VideoFile pdf) {
-		throw new UnsupportedOperationException("Not yet implemented");
+	public InputStream getAttachmentData(VideoFile video) {
+		try {
+
+			return getInputStream(new URL(video.getUrl()));
+		} catch (MalformedURLException e) {
+			throw new RuntimeException(e);
+		}
 	}
 
 	@Override
 	public CustomerType getCustomer(String customerId) {
-		// URL url = createURL(baseUrl + "/account/v1.0/customer?customerid=" +
-		// customerId);
 		URL url = createURL(baseUrl + "/account/v1.0/customer/" + customerId);
-		LOG.info("URL=" + url);
-		// http://rest.sandbox-immobilienscout24.de/restapi/api/account/v1.0/customer/10817842
-		// (Kundennummer
 		String result = sendGetRequest(url);
-
-		LOG.info("Customer=" + result);
 
 		return unmarshall(CustomerType.class, result);
 	}
@@ -1315,6 +1351,9 @@ public class IS24ApiImpl implements Is24Api, InternalObjectApi {
 		CustomerType customer = getCustomer(customerId);
 		Users users = customer.getUsers();
 		if (users != null) {
+
+			LOG.info("Usernames for customerId=" + customerId + " " + users.toString());
+
 			return users.getUsername();
 		}
 		return null;
@@ -1330,11 +1369,23 @@ public class IS24ApiImpl implements Is24Api, InternalObjectApi {
 		return null;
 	}
 
+	public String getUserName() {
+
+		// Searcher searcher = getSearcher("me");
+		// return searcher.getId();
+		User user = getUser();
+
+		if (user != null) {
+			return user.getUsername();
+		}
+		return null;
+	}
+
 	@Override
 	public User getUser() {
 		URL url = createURL(baseUrl + "/account/v2.0/user/me");
 		String xml = sendGetRequest(url);
-		System.out.println(xml);
+		LOG.info(xml);
 		return unmarshall(User.class, xml);
 	}
 

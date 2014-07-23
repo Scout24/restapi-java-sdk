@@ -1,9 +1,10 @@
 //
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.7 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// �nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.04.11 um 01:54:30 PM CEST 
+// nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
+// Generiert: 2014.06.23 um 09:51:43 AM CEST 
 //
+
 
 package de.immobilienscout24.rest.schema.customer._1;
 
@@ -14,13 +15,11 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import de.immobilienscout24.rest.schema.common._1.Adapter1;
 
+
 /**
- * <p>
- * Java-Klasse f�r BillingDetailsType complex type.
+ * <p>Java-Klasse fr BillingDetailsType complex type.
  * 
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser
- * Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
  * <pre>
  * &lt;complexType name="BillingDetailsType">
@@ -41,120 +40,141 @@ import de.immobilienscout24.rest.schema.common._1.Adapter1;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "BillingDetailsType", propOrder = { "taxNumber", "paymentMethod", "bankAccount", "collectiveBilling", "emailBilling" })
+@XmlType(name = "BillingDetailsType", propOrder = {
+    "taxNumber",
+    "paymentMethod",
+    "bankAccount",
+    "collectiveBilling",
+    "emailBilling"
+})
 public class BillingDetailsType {
 
-	@XmlJavaTypeAdapter(Adapter1.class)
-	protected String taxNumber;
-	@XmlElement(required = true)
-	protected PaymentMethodType paymentMethod;
-	protected BankAccountType bankAccount;
-	protected Boolean collectiveBilling;
-	protected Boolean emailBilling;
+    @XmlJavaTypeAdapter(Adapter1 .class)
+    protected String taxNumber;
+    @XmlElement(required = true)
+    protected PaymentMethodType paymentMethod;
+    protected BankAccountType bankAccount;
+    protected Boolean collectiveBilling;
+    protected Boolean emailBilling;
 
-	/**
-	 * Ruft den Wert der taxNumber-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link String }
-	 * 
-	 */
-	public String getTaxNumber() {
-		return taxNumber;
-	}
+    /**
+     * Ruft den Wert der taxNumber-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getTaxNumber() {
+        return taxNumber;
+    }
 
-	/**
-	 * Legt den Wert der taxNumber-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link String }
-	 * 
-	 */
-	public void setTaxNumber(String value) {
-		this.taxNumber = value;
-	}
+    /**
+     * Legt den Wert der taxNumber-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setTaxNumber(String value) {
+        this.taxNumber = value;
+    }
 
-	/**
-	 * Ruft den Wert der paymentMethod-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link PaymentMethodType }
-	 * 
-	 */
-	public PaymentMethodType getPaymentMethod() {
-		return paymentMethod;
-	}
+    /**
+     * Ruft den Wert der paymentMethod-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link PaymentMethodType }
+     *     
+     */
+    public PaymentMethodType getPaymentMethod() {
+        return paymentMethod;
+    }
 
-	/**
-	 * Legt den Wert der paymentMethod-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link PaymentMethodType }
-	 * 
-	 */
-	public void setPaymentMethod(PaymentMethodType value) {
-		this.paymentMethod = value;
-	}
+    /**
+     * Legt den Wert der paymentMethod-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link PaymentMethodType }
+     *     
+     */
+    public void setPaymentMethod(PaymentMethodType value) {
+        this.paymentMethod = value;
+    }
 
-	/**
-	 * Ruft den Wert der bankAccount-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link BankAccountType }
-	 * 
-	 */
-	public BankAccountType getBankAccount() {
-		return bankAccount;
-	}
+    /**
+     * Ruft den Wert der bankAccount-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link BankAccountType }
+     *     
+     */
+    public BankAccountType getBankAccount() {
+        return bankAccount;
+    }
 
-	/**
-	 * Legt den Wert der bankAccount-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link BankAccountType }
-	 * 
-	 */
-	public void setBankAccount(BankAccountType value) {
-		this.bankAccount = value;
-	}
+    /**
+     * Legt den Wert der bankAccount-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link BankAccountType }
+     *     
+     */
+    public void setBankAccount(BankAccountType value) {
+        this.bankAccount = value;
+    }
 
-	/**
-	 * Ruft den Wert der collectiveBilling-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link Boolean }
-	 * 
-	 */
-	public Boolean isCollectiveBilling() {
-		return collectiveBilling;
-	}
+    /**
+     * Ruft den Wert der collectiveBilling-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
+     */
+    public Boolean isCollectiveBilling() {
+        return collectiveBilling;
+    }
 
-	/**
-	 * Legt den Wert der collectiveBilling-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link Boolean }
-	 * 
-	 */
-	public void setCollectiveBilling(Boolean value) {
-		this.collectiveBilling = value;
-	}
+    /**
+     * Legt den Wert der collectiveBilling-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
+     */
+    public void setCollectiveBilling(Boolean value) {
+        this.collectiveBilling = value;
+    }
 
-	/**
-	 * Ruft den Wert der emailBilling-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link Boolean }
-	 * 
-	 */
-	public Boolean isEmailBilling() {
-		return emailBilling;
-	}
+    /**
+     * Ruft den Wert der emailBilling-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
+     */
+    public Boolean isEmailBilling() {
+        return emailBilling;
+    }
 
-	/**
-	 * Legt den Wert der emailBilling-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link Boolean }
-	 * 
-	 */
-	public void setEmailBilling(Boolean value) {
-		this.emailBilling = value;
-	}
+    /**
+     * Legt den Wert der emailBilling-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
+     */
+    public void setEmailBilling(Boolean value) {
+        this.emailBilling = value;
+    }
 
 }

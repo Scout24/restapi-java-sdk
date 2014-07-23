@@ -1,9 +1,10 @@
 //
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.7 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// �nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.04.11 um 01:54:30 PM CEST 
+// nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
+// Generiert: 2014.06.23 um 09:51:43 AM CEST 
 //
+
 
 package de.immobilienscout24.rest.schema.common._1;
 
@@ -11,15 +12,13 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
 
+
 /**
  * Bereich der Etage
  * 
- * <p>
- * Java-Klasse f�r FloorRange complex type.
+ * <p>Java-Klasse fr FloorRange complex type.
  * 
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser
- * Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
  * <pre>
  * &lt;complexType name="FloorRange">
@@ -56,49 +55,55 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class FloorRange {
 
-	protected Integer minimal;
-	protected Integer maximal;
+    protected Integer minimal;
+    protected Integer maximal;
 
-	/**
-	 * Ruft den Wert der minimal-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link Integer }
-	 * 
-	 */
-	public Integer getMinimal() {
-		return minimal;
-	}
+    /**
+     * Ruft den Wert der minimal-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
+     */
+    public Integer getMinimal() {
+        return minimal;
+    }
 
-	/**
-	 * Legt den Wert der minimal-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link Integer }
-	 * 
-	 */
-	public void setMinimal(Integer value) {
-		this.minimal = value;
-	}
+    /**
+     * Legt den Wert der minimal-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
+     */
+    public void setMinimal(Integer value) {
+        this.minimal = value;
+    }
 
-	/**
-	 * Ruft den Wert der maximal-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link Integer }
-	 * 
-	 */
-	public Integer getMaximal() {
-		return maximal;
-	}
+    /**
+     * Ruft den Wert der maximal-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
+     */
+    public Integer getMaximal() {
+        return maximal;
+    }
 
-	/**
-	 * Legt den Wert der maximal-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link Integer }
-	 * 
-	 */
-	public void setMaximal(Integer value) {
-		this.maximal = value;
-	}
+    /**
+     * Legt den Wert der maximal-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
+     */
+    public void setMaximal(Integer value) {
+        this.maximal = value;
+    }
 
 }

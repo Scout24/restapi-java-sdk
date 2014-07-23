@@ -1,9 +1,10 @@
 //
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.7 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// �nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.04.11 um 01:54:30 PM CEST 
+// nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
+// Generiert: 2014.06.23 um 09:51:43 AM CEST 
 //
+
 
 package de.immobilienscout24.rest.schema.common._1;
 
@@ -12,16 +13,14 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.bind.annotation.XmlType;
 
+
 /**
- * Definiert eine Region mit allen verf�gbaren Informationen.
+ * Definiert eine Region mit allen verfgbaren Informationen.
+ *             
  * 
+ * <p>Java-Klasse fr GeoHierarchyElement complex type.
  * 
- * <p>
- * Java-Klasse f�r GeoHierarchyElement complex type.
- * 
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser
- * Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
  * <pre>
  * &lt;complexType name="GeoHierarchyElement">
@@ -41,92 +40,113 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "GeoHierarchyElement", propOrder = { "name", "geoCodeId", "fullGeoCodeId", "statistics" })
-@XmlSeeAlso({ Neighbourhood.class, Country.class, City.class, Continent.class, Region.class, Quarter.class })
+@XmlType(name = "GeoHierarchyElement", propOrder = {
+    "name",
+    "geoCodeId",
+    "fullGeoCodeId",
+    "statistics"
+})
+@XmlSeeAlso({
+    Neighbourhood.class,
+    Country.class,
+    City.class,
+    Continent.class,
+    Region.class,
+    Quarter.class
+})
 public class GeoHierarchyElement {
 
-	protected String name;
-	protected long geoCodeId;
-	protected String fullGeoCodeId;
-	protected GeoHierarchyStatistics statistics;
+    protected String name;
+    protected long geoCodeId;
+    protected String fullGeoCodeId;
+    protected GeoHierarchyStatistics statistics;
 
-	/**
-	 * Ruft den Wert der name-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link String }
-	 * 
-	 */
-	public String getName() {
-		return name;
-	}
+    /**
+     * Ruft den Wert der name-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getName() {
+        return name;
+    }
 
-	/**
-	 * Legt den Wert der name-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link String }
-	 * 
-	 */
-	public void setName(String value) {
-		this.name = value;
-	}
+    /**
+     * Legt den Wert der name-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setName(String value) {
+        this.name = value;
+    }
 
-	/**
-	 * Ruft den Wert der geoCodeId-Eigenschaft ab.
-	 * 
-	 */
-	public long getGeoCodeId() {
-		return geoCodeId;
-	}
+    /**
+     * Ruft den Wert der geoCodeId-Eigenschaft ab.
+     * 
+     */
+    public long getGeoCodeId() {
+        return geoCodeId;
+    }
 
-	/**
-	 * Legt den Wert der geoCodeId-Eigenschaft fest.
-	 * 
-	 */
-	public void setGeoCodeId(long value) {
-		this.geoCodeId = value;
-	}
+    /**
+     * Legt den Wert der geoCodeId-Eigenschaft fest.
+     * 
+     */
+    public void setGeoCodeId(long value) {
+        this.geoCodeId = value;
+    }
 
-	/**
-	 * Ruft den Wert der fullGeoCodeId-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link String }
-	 * 
-	 */
-	public String getFullGeoCodeId() {
-		return fullGeoCodeId;
-	}
+    /**
+     * Ruft den Wert der fullGeoCodeId-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getFullGeoCodeId() {
+        return fullGeoCodeId;
+    }
 
-	/**
-	 * Legt den Wert der fullGeoCodeId-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link String }
-	 * 
-	 */
-	public void setFullGeoCodeId(String value) {
-		this.fullGeoCodeId = value;
-	}
+    /**
+     * Legt den Wert der fullGeoCodeId-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setFullGeoCodeId(String value) {
+        this.fullGeoCodeId = value;
+    }
 
-	/**
-	 * Ruft den Wert der statistics-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link GeoHierarchyStatistics }
-	 * 
-	 */
-	public GeoHierarchyStatistics getStatistics() {
-		return statistics;
-	}
+    /**
+     * Ruft den Wert der statistics-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link GeoHierarchyStatistics }
+     *     
+     */
+    public GeoHierarchyStatistics getStatistics() {
+        return statistics;
+    }
 
-	/**
-	 * Legt den Wert der statistics-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link GeoHierarchyStatistics }
-	 * 
-	 */
-	public void setStatistics(GeoHierarchyStatistics value) {
-		this.statistics = value;
-	}
+    /**
+     * Legt den Wert der statistics-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link GeoHierarchyStatistics }
+     *     
+     */
+    public void setStatistics(GeoHierarchyStatistics value) {
+        this.statistics = value;
+    }
 
 }

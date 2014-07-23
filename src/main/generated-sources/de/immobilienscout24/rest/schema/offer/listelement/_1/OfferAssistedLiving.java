@@ -1,9 +1,10 @@
 //
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.7 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// �nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.04.11 um 01:54:30 PM CEST 
+// nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
+// Generiert: 2014.06.23 um 09:51:43 AM CEST 
 //
+
 
 package de.immobilienscout24.rest.schema.offer.listelement._1;
 
@@ -18,15 +19,13 @@ import de.immobilienscout24.rest.schema.common._1.MarketingType;
 import de.immobilienscout24.rest.schema.common._1.PetsAllowedType;
 import de.immobilienscout24.rest.schema.common._1.YesNotApplicableType;
 
+
 /**
  * Seniorenwohnen
  * 
- * <p>
- * Java-Klasse f�r OfferAssistedLiving complex type.
+ * <p>Java-Klasse fr OfferAssistedLiving complex type.
  * 
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser
- * Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
  * <pre>
  * &lt;complexType name="OfferAssistedLiving">
@@ -43,163 +42,191 @@ import de.immobilienscout24.rest.schema.common._1.YesNotApplicableType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "OfferAssistedLiving", propOrder = { "shortDescription", "petsAllowed", "trialLivingPossible", "cookingPossibilty", "marketingType", "facilityType", "balcony" })
-public class OfferAssistedLiving extends OfferRealEstateForList {
+@XmlType(name = "OfferAssistedLiving", propOrder = {
+    "shortDescription",
+    "petsAllowed",
+    "trialLivingPossible",
+    "cookingPossibilty",
+    "marketingType",
+    "facilityType",
+    "balcony"
+})
+public class OfferAssistedLiving
+    extends OfferRealEstateForList
+{
 
-	@XmlJavaTypeAdapter(Adapter1.class)
-	protected String shortDescription;
-	@XmlElement(required = true)
-	protected PetsAllowedType petsAllowed;
-	@XmlElement(required = true)
-	protected YesNotApplicableType trialLivingPossible;
-	@XmlElement(required = true)
-	protected YesNotApplicableType cookingPossibilty;
-	@XmlElement(required = true)
-	protected MarketingType marketingType;
-	@XmlElement(required = true)
-	protected FacilityType facilityType;
-	protected boolean balcony;
+    @XmlJavaTypeAdapter(Adapter1 .class)
+    protected String shortDescription;
+    @XmlElement(required = true)
+    protected PetsAllowedType petsAllowed;
+    @XmlElement(required = true)
+    protected YesNotApplicableType trialLivingPossible;
+    @XmlElement(required = true)
+    protected YesNotApplicableType cookingPossibilty;
+    @XmlElement(required = true)
+    protected MarketingType marketingType;
+    @XmlElement(required = true)
+    protected FacilityType facilityType;
+    protected boolean balcony;
 
-	/**
-	 * Ruft den Wert der shortDescription-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link String }
-	 * 
-	 */
-	public String getShortDescription() {
-		return shortDescription;
-	}
+    /**
+     * Ruft den Wert der shortDescription-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getShortDescription() {
+        return shortDescription;
+    }
 
-	/**
-	 * Legt den Wert der shortDescription-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link String }
-	 * 
-	 */
-	public void setShortDescription(String value) {
-		this.shortDescription = value;
-	}
+    /**
+     * Legt den Wert der shortDescription-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setShortDescription(String value) {
+        this.shortDescription = value;
+    }
 
-	/**
-	 * Ruft den Wert der petsAllowed-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link PetsAllowedType }
-	 * 
-	 */
-	public PetsAllowedType getPetsAllowed() {
-		return petsAllowed;
-	}
+    /**
+     * Ruft den Wert der petsAllowed-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link PetsAllowedType }
+     *     
+     */
+    public PetsAllowedType getPetsAllowed() {
+        return petsAllowed;
+    }
 
-	/**
-	 * Legt den Wert der petsAllowed-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link PetsAllowedType }
-	 * 
-	 */
-	public void setPetsAllowed(PetsAllowedType value) {
-		this.petsAllowed = value;
-	}
+    /**
+     * Legt den Wert der petsAllowed-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link PetsAllowedType }
+     *     
+     */
+    public void setPetsAllowed(PetsAllowedType value) {
+        this.petsAllowed = value;
+    }
 
-	/**
-	 * Ruft den Wert der trialLivingPossible-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link YesNotApplicableType }
-	 * 
-	 */
-	public YesNotApplicableType getTrialLivingPossible() {
-		return trialLivingPossible;
-	}
+    /**
+     * Ruft den Wert der trialLivingPossible-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link YesNotApplicableType }
+     *     
+     */
+    public YesNotApplicableType getTrialLivingPossible() {
+        return trialLivingPossible;
+    }
 
-	/**
-	 * Legt den Wert der trialLivingPossible-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link YesNotApplicableType }
-	 * 
-	 */
-	public void setTrialLivingPossible(YesNotApplicableType value) {
-		this.trialLivingPossible = value;
-	}
+    /**
+     * Legt den Wert der trialLivingPossible-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link YesNotApplicableType }
+     *     
+     */
+    public void setTrialLivingPossible(YesNotApplicableType value) {
+        this.trialLivingPossible = value;
+    }
 
-	/**
-	 * Ruft den Wert der cookingPossibilty-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link YesNotApplicableType }
-	 * 
-	 */
-	public YesNotApplicableType getCookingPossibilty() {
-		return cookingPossibilty;
-	}
+    /**
+     * Ruft den Wert der cookingPossibilty-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link YesNotApplicableType }
+     *     
+     */
+    public YesNotApplicableType getCookingPossibilty() {
+        return cookingPossibilty;
+    }
 
-	/**
-	 * Legt den Wert der cookingPossibilty-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link YesNotApplicableType }
-	 * 
-	 */
-	public void setCookingPossibilty(YesNotApplicableType value) {
-		this.cookingPossibilty = value;
-	}
+    /**
+     * Legt den Wert der cookingPossibilty-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link YesNotApplicableType }
+     *     
+     */
+    public void setCookingPossibilty(YesNotApplicableType value) {
+        this.cookingPossibilty = value;
+    }
 
-	/**
-	 * Ruft den Wert der marketingType-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link MarketingType }
-	 * 
-	 */
-	public MarketingType getMarketingType() {
-		return marketingType;
-	}
+    /**
+     * Ruft den Wert der marketingType-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link MarketingType }
+     *     
+     */
+    public MarketingType getMarketingType() {
+        return marketingType;
+    }
 
-	/**
-	 * Legt den Wert der marketingType-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link MarketingType }
-	 * 
-	 */
-	public void setMarketingType(MarketingType value) {
-		this.marketingType = value;
-	}
+    /**
+     * Legt den Wert der marketingType-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link MarketingType }
+     *     
+     */
+    public void setMarketingType(MarketingType value) {
+        this.marketingType = value;
+    }
 
-	/**
-	 * Ruft den Wert der facilityType-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link FacilityType }
-	 * 
-	 */
-	public FacilityType getFacilityType() {
-		return facilityType;
-	}
+    /**
+     * Ruft den Wert der facilityType-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link FacilityType }
+     *     
+     */
+    public FacilityType getFacilityType() {
+        return facilityType;
+    }
 
-	/**
-	 * Legt den Wert der facilityType-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link FacilityType }
-	 * 
-	 */
-	public void setFacilityType(FacilityType value) {
-		this.facilityType = value;
-	}
+    /**
+     * Legt den Wert der facilityType-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link FacilityType }
+     *     
+     */
+    public void setFacilityType(FacilityType value) {
+        this.facilityType = value;
+    }
 
-	/**
-	 * Ruft den Wert der balcony-Eigenschaft ab.
-	 * 
-	 */
-	public boolean isBalcony() {
-		return balcony;
-	}
+    /**
+     * Ruft den Wert der balcony-Eigenschaft ab.
+     * 
+     */
+    public boolean isBalcony() {
+        return balcony;
+    }
 
-	/**
-	 * Legt den Wert der balcony-Eigenschaft fest.
-	 * 
-	 */
-	public void setBalcony(boolean value) {
-		this.balcony = value;
-	}
+    /**
+     * Legt den Wert der balcony-Eigenschaft fest.
+     * 
+     */
+    public void setBalcony(boolean value) {
+        this.balcony = value;
+    }
 
 }

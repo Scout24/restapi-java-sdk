@@ -72,4 +72,8 @@ public interface CommercialFacade extends RealestateFacade, EnergySavingFacade {
 	void setLift(YesNotApplicableType value);
 
 	YesNotApplicableType getLift();
+
+	String getFreeFrom();
+
+	void setFreeFrom(String value);
 }

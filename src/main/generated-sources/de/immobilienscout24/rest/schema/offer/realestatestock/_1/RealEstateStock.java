@@ -1,9 +1,10 @@
 //
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.7 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// �nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.04.11 um 01:54:30 PM CEST 
+// nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
+// Generiert: 2014.06.23 um 09:51:43 AM CEST 
 //
+
 
 package de.immobilienscout24.rest.schema.offer.realestatestock._1;
 
@@ -15,13 +16,11 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
+
 /**
- * <p>
- * Java-Klasse f�r anonymous complex type.
+ * <p>Java-Klasse fr anonymous complex type.
  * 
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser
- * Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
  * <pre>
  * &lt;complexType>
@@ -38,41 +37,42 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = { "priceRegionRealEstateStock" })
+@XmlType(name = "", propOrder = {
+    "priceRegionRealEstateStock"
+})
 @XmlRootElement(name = "realEstateStock")
 public class RealEstateStock {
 
-	@XmlElement(required = true)
-	protected List<PriceRegionRealEstateStock> priceRegionRealEstateStock;
+    @XmlElement(required = true)
+    protected List<PriceRegionRealEstateStock> priceRegionRealEstateStock;
 
-	/**
-	 * Gets the value of the priceRegionRealEstateStock property.
-	 * 
-	 * <p>
-	 * This accessor method returns a reference to the live list, not a
-	 * snapshot. Therefore any modification you make to the returned list will
-	 * be present inside the JAXB object. This is why there is not a
-	 * <CODE>set</CODE> method for the priceRegionRealEstateStock property.
-	 * 
-	 * <p>
-	 * For example, to add a new item, do as follows:
-	 * 
-	 * <pre>
-	 * getPriceRegionRealEstateStock().add(newItem);
-	 * </pre>
-	 * 
-	 * 
-	 * <p>
-	 * Objects of the following type(s) are allowed in the list
-	 * {@link PriceRegionRealEstateStock }
-	 * 
-	 * 
-	 */
-	public List<PriceRegionRealEstateStock> getPriceRegionRealEstateStock() {
-		if (priceRegionRealEstateStock == null) {
-			priceRegionRealEstateStock = new ArrayList<PriceRegionRealEstateStock>();
-		}
-		return this.priceRegionRealEstateStock;
-	}
+    /**
+     * Gets the value of the priceRegionRealEstateStock property.
+     * 
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the priceRegionRealEstateStock property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getPriceRegionRealEstateStock().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link PriceRegionRealEstateStock }
+     * 
+     * 
+     */
+    public List<PriceRegionRealEstateStock> getPriceRegionRealEstateStock() {
+        if (priceRegionRealEstateStock == null) {
+            priceRegionRealEstateStock = new ArrayList<PriceRegionRealEstateStock>();
+        }
+        return this.priceRegionRealEstateStock;
+    }
 
 }

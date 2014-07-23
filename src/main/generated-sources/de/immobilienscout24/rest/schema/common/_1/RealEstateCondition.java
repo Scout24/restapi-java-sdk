@@ -1,24 +1,22 @@
 //
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.7 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// �nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.04.11 um 01:54:30 PM CEST 
+// nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
+// Generiert: 2014.06.23 um 09:51:43 AM CEST 
 //
+
 
 package de.immobilienscout24.rest.schema.common._1;
 
 import javax.xml.bind.annotation.XmlEnum;
 import javax.xml.bind.annotation.XmlType;
 
+
 /**
- * <p>
- * Java-Klasse f�r RealEstateCondition.
+ * <p>Java-Klasse fr RealEstateCondition.
  * 
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser
- * Klasse enthalten ist.
- * <p>
- * 
  * <pre>
  * &lt;simpleType name="RealEstateCondition">
  *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
@@ -42,78 +40,79 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum RealEstateCondition {
 
-	/**
-	 * Keine Angabe
-	 * 
-	 */
-	NO_INFORMATION,
 
-	/**
-	 * Erstbezug
-	 * 
-	 */
-	FIRST_TIME_USE,
+    /**
+     * Keine Angabe
+     * 
+     */
+    NO_INFORMATION,
 
-	/**
-	 * Erstbezug nach Sanierung
-	 * 
-	 */
-	FIRST_TIME_USE_AFTER_REFURBISHMENT,
+    /**
+     * Erstbezug
+     * 
+     */
+    FIRST_TIME_USE,
 
-	/**
-	 * Neuwertig
-	 * 
-	 */
-	MINT_CONDITION,
+    /**
+     * Erstbezug nach Sanierung
+     * 
+     */
+    FIRST_TIME_USE_AFTER_REFURBISHMENT,
 
-	/**
-	 * Saniert
-	 * 
-	 */
-	REFURBISHED,
+    /**
+     * Neuwertig
+     * 
+     */
+    MINT_CONDITION,
 
-	/**
-	 * Modernisiert
-	 * 
-	 */
-	MODERNIZED,
+    /**
+     * Saniert
+     * 
+     */
+    REFURBISHED,
 
-	/**
-	 * Vollst�ndig renoviert
-	 * 
-	 */
-	FULLY_RENOVATED,
+    /**
+     * Modernisiert
+     * 
+     */
+    MODERNIZED,
 
-	/**
-	 * Gepflegt
-	 * 
-	 */
-	WELL_KEPT,
+    /**
+     * Vollstndig renoviert
+     * 
+     */
+    FULLY_RENOVATED,
 
-	/**
-	 * Renovierungsbed�rftig
-	 * 
-	 */
-	NEED_OF_RENOVATION,
+    /**
+     * Gepflegt
+     * 
+     */
+    WELL_KEPT,
 
-	/**
-	 * Nach Vereinbarung
-	 * 
-	 */
-	NEGOTIABLE,
+    /**
+     * Renovierungsbedrftig
+     * 
+     */
+    NEED_OF_RENOVATION,
 
-	/**
-	 * Abbruchreif
-	 * 
-	 */
-	RIPE_FOR_DEMOLITION;
+    /**
+     * Nach Vereinbarung
+     * 
+     */
+    NEGOTIABLE,
 
-	public String value() {
-		return name();
-	}
+    /**
+     * Abbruchreif
+     * 
+     */
+    RIPE_FOR_DEMOLITION;
 
-	public static RealEstateCondition fromValue(String v) {
-		return valueOf(v);
-	}
+    public String value() {
+        return name();
+    }
+
+    public static RealEstateCondition fromValue(String v) {
+        return valueOf(v);
+    }
 
 }

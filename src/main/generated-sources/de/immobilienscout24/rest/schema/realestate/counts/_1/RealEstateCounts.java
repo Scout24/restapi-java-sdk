@@ -1,9 +1,10 @@
 //
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.7 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// �nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.04.11 um 01:54:30 PM CEST 
+// nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
+// Generiert: 2014.06.23 um 09:51:43 AM CEST 
 //
+
 
 package de.immobilienscout24.rest.schema.realestate.counts._1;
 
@@ -13,13 +14,11 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
+
 /**
- * <p>
- * Java-Klasse f�r anonymous complex type.
+ * <p>Java-Klasse fr anonymous complex type.
  * 
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser
- * Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
  * <pre>
  * &lt;complexType>
@@ -43,41 +42,41 @@ import javax.xml.bind.annotation.XmlType;
 @XmlRootElement(name = "realEstateCounts")
 public class RealEstateCounts {
 
-	@XmlElement(name = "is24publishedRealEstatesCount")
-	protected long is24PublishedRealEstatesCount;
-	@XmlElement(name = "is24notPublishedRealEstatesCount")
-	protected long is24NotPublishedRealEstatesCount;
+    @XmlElement(name = "is24publishedRealEstatesCount")
+    protected long is24PublishedRealEstatesCount;
+    @XmlElement(name = "is24notPublishedRealEstatesCount")
+    protected long is24NotPublishedRealEstatesCount;
 
-	/**
-	 * Ruft den Wert der is24PublishedRealEstatesCount-Eigenschaft ab.
-	 * 
-	 */
-	public long getIs24PublishedRealEstatesCount() {
-		return is24PublishedRealEstatesCount;
-	}
+    /**
+     * Ruft den Wert der is24PublishedRealEstatesCount-Eigenschaft ab.
+     * 
+     */
+    public long getIs24PublishedRealEstatesCount() {
+        return is24PublishedRealEstatesCount;
+    }
 
-	/**
-	 * Legt den Wert der is24PublishedRealEstatesCount-Eigenschaft fest.
-	 * 
-	 */
-	public void setIs24PublishedRealEstatesCount(long value) {
-		this.is24PublishedRealEstatesCount = value;
-	}
+    /**
+     * Legt den Wert der is24PublishedRealEstatesCount-Eigenschaft fest.
+     * 
+     */
+    public void setIs24PublishedRealEstatesCount(long value) {
+        this.is24PublishedRealEstatesCount = value;
+    }
 
-	/**
-	 * Ruft den Wert der is24NotPublishedRealEstatesCount-Eigenschaft ab.
-	 * 
-	 */
-	public long getIs24NotPublishedRealEstatesCount() {
-		return is24NotPublishedRealEstatesCount;
-	}
+    /**
+     * Ruft den Wert der is24NotPublishedRealEstatesCount-Eigenschaft ab.
+     * 
+     */
+    public long getIs24NotPublishedRealEstatesCount() {
+        return is24NotPublishedRealEstatesCount;
+    }
 
-	/**
-	 * Legt den Wert der is24NotPublishedRealEstatesCount-Eigenschaft fest.
-	 * 
-	 */
-	public void setIs24NotPublishedRealEstatesCount(long value) {
-		this.is24NotPublishedRealEstatesCount = value;
-	}
+    /**
+     * Legt den Wert der is24NotPublishedRealEstatesCount-Eigenschaft fest.
+     * 
+     */
+    public void setIs24NotPublishedRealEstatesCount(long value) {
+        this.is24NotPublishedRealEstatesCount = value;
+    }
 
 }

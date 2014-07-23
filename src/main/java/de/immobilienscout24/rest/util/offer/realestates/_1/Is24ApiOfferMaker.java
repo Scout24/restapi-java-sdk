@@ -33,9 +33,8 @@ public class Is24ApiOfferMaker {
 		return price;
 	}
 
-	public static Price makeSimplePrice(double value) {
+	public static Price simplePrice(double value) {
 		Price price = new Price();
-		price.setCurrency(Currency.EUR);
 		price.setValue(value);
 		return price;
 	}
@@ -49,7 +48,7 @@ public class Is24ApiOfferMaker {
 	}
 
 	public static void setRealestateDefaults(RealestateFacade facade) {
-		facade.setPrice(rentPricePerMonth(0.0));
+		facade.setPrice(simplePrice(0.0));
 	}
 
 	public static void setRealestateMinimalFields(RealestateFacade facade) {
@@ -57,10 +56,4 @@ public class Is24ApiOfferMaker {
 		facade.setCourtage(new CourtageInfo());
 	}
 
-
-	public static FiringTypes makeFiringTypes(FiringType... types) {
-		FiringTypes firingTypes = new FiringTypes();
-		firingTypes.getFiringType().addAll(Arrays.asList(types));
-		return firingTypes;
-	}
 }

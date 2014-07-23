@@ -1,9 +1,10 @@
 //
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.7 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// �nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.04.11 um 01:54:30 PM CEST 
+// nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
+// Generiert: 2014.06.23 um 09:51:43 AM CEST 
 //
+
 
 package de.immobilienscout24.rest.schema.common._1;
 
@@ -12,15 +13,13 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
+
 /**
  * Definiert eine Informations- oder Fehlermeldung.
  * 
- * <p>
- * Java-Klasse f�r Message complex type.
+ * <p>Java-Klasse fr Message complex type.
  * 
- * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser
- * Klasse enthalten ist.
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
  * <pre>
  * &lt;complexType name="Message">
@@ -43,51 +42,57 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class Message {
 
-	@XmlElement(required = true)
-	protected MessageCode messageCode;
-	@XmlElement(required = true)
-	protected String message;
+    @XmlElement(required = true)
+    protected MessageCode messageCode;
+    @XmlElement(required = true)
+    protected String message;
 
-	/**
-	 * Ruft den Wert der messageCode-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link MessageCode }
-	 * 
-	 */
-	public MessageCode getMessageCode() {
-		return messageCode;
-	}
+    /**
+     * Ruft den Wert der messageCode-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link MessageCode }
+     *     
+     */
+    public MessageCode getMessageCode() {
+        return messageCode;
+    }
 
-	/**
-	 * Legt den Wert der messageCode-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link MessageCode }
-	 * 
-	 */
-	public void setMessageCode(MessageCode value) {
-		this.messageCode = value;
-	}
+    /**
+     * Legt den Wert der messageCode-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link MessageCode }
+     *     
+     */
+    public void setMessageCode(MessageCode value) {
+        this.messageCode = value;
+    }
 
-	/**
-	 * Ruft den Wert der message-Eigenschaft ab.
-	 * 
-	 * @return possible object is {@link String }
-	 * 
-	 */
-	public String getMessage() {
-		return message;
-	}
+    /**
+     * Ruft den Wert der message-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getMessage() {
+        return message;
+    }
 
-	/**
-	 * Legt den Wert der message-Eigenschaft fest.
-	 * 
-	 * @param value
-	 *            allowed object is {@link String }
-	 * 
-	 */
-	public void setMessage(String value) {
-		this.message = value;
-	}
+    /**
+     * Legt den Wert der message-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setMessage(String value) {
+        this.message = value;
+    }
 
 }

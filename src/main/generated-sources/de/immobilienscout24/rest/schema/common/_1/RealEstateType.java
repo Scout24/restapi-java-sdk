@@ -1,24 +1,22 @@
 //
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.7 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// �nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.04.11 um 01:54:30 PM CEST 
+// nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
+// Generiert: 2014.06.23 um 09:51:43 AM CEST 
 //
+
 
 package de.immobilienscout24.rest.schema.common._1;
 
 import javax.xml.bind.annotation.XmlEnum;
 import javax.xml.bind.annotation.XmlType;
 
+
 /**
- * <p>
- * Java-Klasse f�r RealEstateType.
+ * <p>Java-Klasse fr RealEstateType.
  * 
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * <p>
- * Das folgende Schemafragment gibt den erwarteten Content an, der in dieser
- * Klasse enthalten ist.
- * <p>
- * 
  * <pre>
  * &lt;simpleType name="RealEstateType">
  *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
@@ -52,138 +50,139 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum RealEstateType {
 
-	/**
-	 * Mietwohnung
-	 * 
-	 */
-	APARTMENT_RENT,
 
-	/**
-	 * Wohnung zum Kauf
-	 * 
-	 */
-	APARTMENT_BUY,
+    /**
+     * Mietwohnung
+     * 
+     */
+    APARTMENT_RENT,
 
-	/**
-	 * Haus zur Miete
-	 * 
-	 */
-	HOUSE_RENT,
+    /**
+     * Wohnung zum Kauf
+     * 
+     */
+    APARTMENT_BUY,
 
-	/**
-	 * Haus zum Kauf
-	 * 
-	 */
-	HOUSE_BUY,
+    /**
+     * Haus zur Miete
+     * 
+     */
+    HOUSE_RENT,
 
-	/**
-	 * Garage zur Miete
-	 * 
-	 */
-	GARAGE_RENT,
+    /**
+     * Haus zum Kauf
+     * 
+     */
+    HOUSE_BUY,
 
-	/**
-	 * Garage zum Kauf
-	 * 
-	 */
-	GARAGE_BUY,
+    /**
+     * Garage zur Miete
+     * 
+     */
+    GARAGE_RENT,
 
-	/**
-	 * Wohngrundst�ck zur Miete
-	 * 
-	 */
-	LIVING_RENT_SITE,
+    /**
+     * Garage zum Kauf
+     * 
+     */
+    GARAGE_BUY,
 
-	/**
-	 * Wohngrundst�ck zum Kauf
-	 * 
-	 */
-	LIVING_BUY_SITE,
+    /**
+     * Wohngrundstck zur Miete
+     * 
+     */
+    LIVING_RENT_SITE,
 
-	/**
-	 * Gewerbegrundst�ck
-	 * 
-	 */
-	TRADE_SITE,
+    /**
+     * Wohngrundstck zum Kauf
+     * 
+     */
+    LIVING_BUY_SITE,
 
-	/**
-	 * Typenhaus
-	 * 
-	 */
-	HOUSE_TYPE,
+    /**
+     * Gewerbegrundstck
+     * 
+     */
+    TRADE_SITE,
 
-	/**
-	 * WG-Zimmer
-	 * 
-	 */
-	FLAT_SHARE_ROOM,
+    /**
+     * Typenhaus
+     * 
+     */
+    HOUSE_TYPE,
 
-	/**
-	 * Altenpflege
-	 * 
-	 */
-	SENIOR_CARE,
+    /**
+     * WG-Zimmer
+     * 
+     */
+    FLAT_SHARE_ROOM,
 
-	/**
-	 * Seniorenwohnen
-	 * 
-	 */
-	ASSISTED_LIVING,
+    /**
+     * Altenpflege
+     * 
+     */
+    SENIOR_CARE,
 
-	/**
-	 * B�ro und Praxis
-	 * 
-	 */
-	OFFICE,
+    /**
+     * Seniorenwohnen
+     * 
+     */
+    ASSISTED_LIVING,
 
-	/**
-	 * Halle und Produktion
-	 * 
-	 */
-	INDUSTRY,
+    /**
+     * Bro und Praxis
+     * 
+     */
+    OFFICE,
 
-	/**
-	 * Einzelhandel
-	 * 
-	 */
-	STORE,
+    /**
+     * Halle und Produktion
+     * 
+     */
+    INDUSTRY,
 
-	/**
-	 * Gastronomie und Hotel
-	 * 
-	 */
-	GASTRONOMY,
+    /**
+     * Einzelhandel
+     * 
+     */
+    STORE,
 
-	/**
-	 * Spezialgewerbe
-	 * 
-	 */
-	SPECIAL_PURPOSE,
+    /**
+     * Gastronomie und Hotel
+     * 
+     */
+    GASTRONOMY,
 
-	/**
-	 * Anlageimmobilie
-	 * 
-	 */
-	INVESTMENT,
+    /**
+     * Spezialgewerbe
+     * 
+     */
+    SPECIAL_PURPOSE,
 
-	/**
-	 * Zwangsversteigerung
-	 * 
-	 */
-	COMPULSORY_AUCTION,
+    /**
+     * Anlageimmobilie
+     * 
+     */
+    INVESTMENT,
 
-	/**
-	 * Wohnen auf Zeit (WAZ)
-	 * 
-	 */
-	SHORT_TERM_ACCOMMODATION;
+    /**
+     * Zwangsversteigerung
+     * 
+     */
+    COMPULSORY_AUCTION,
 
-	public String value() {
-		return name();
-	}
+    /**
+     * Wohnen auf Zeit (WAZ)
+     * 
+     */
+    SHORT_TERM_ACCOMMODATION;
 
-	public static RealEstateType fromValue(String v) {
-		return valueOf(v);
-	}
+    public String value() {
+        return name();
+    }
+
+    public static RealEstateType fromValue(String v) {
+        return valueOf(v);
+    }
 
 }
