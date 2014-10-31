@@ -13,4 +13,4 @@ To generate the classes from the given xsd:
 	public JAXBElement<RealtorContactDetails> createRealtorContactDetails(RealtorContactDetails value)
 
 
-- //run "mvn clean generate-sources"
+- //run "mvn clean generate-sources" 
