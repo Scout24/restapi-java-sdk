@@ -11,10 +11,35 @@
 	<url>http://maven.apache.org</url>
 
 	<properties>
+		<nexus.baseUrl>http://devnex.rz.is24.loc</nexus.baseUrl>
 		<jaxb.output.directory>${basedir}/src/main/generated-sources/</jaxb.output.directory>
 		<resourcesDir>${basedir}/src/main/resources</resourcesDir>
 	</properties>
 
+	<distributionManagement>
+		<snapshotRepository>
+			<id>snapshots</id>
+			<name>Snapshots</name>
+			<url>${nexus.baseUrl}/content/repositories/snapshots</url>
+			<uniqueVersion>false</uniqueVersion>
+		</snapshotRepository>
+		<repository>
+			<id>releases</id>
+			<name>Releases</name>
+			<url>${nexus.baseUrl}/service/local/staging/deploy/maven2</url>
+		</repository>
+	</distributionManagement>
+
+	<developers>
+		<developer>
+			<id>mfluegge</id>
+			<name>Martin Flügge</name>
+			<email>martin.fluegge@immobilienscout24.de</email>
+			<organization>ImmobilienScout24</organization>
+			<organizationUrl>www.immobilienscout24.de</organizationUrl>
+		</developer>
+	</developers>
+	
 	<dependencies>
 
 		<dependency>
