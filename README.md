@@ -17,10 +17,14 @@ Who  		  | When 		  | What
 ------------- | ------------- | ------------- 
 mfluegge  	  | 10th June 2014| initial commit
 mfluegge  	  | 10th June 2014| v0.1 beta
-mfluegge  	  | 3th November 2014| v0.2 beta 
+mfluegge  	  | 3th November 2014| v0.2 beta
 
 
 
+v0.2.1
+----------
+
+Had to change artifactid to "restapi-java-sdk".
 
 v0.2 beta
 ----------
