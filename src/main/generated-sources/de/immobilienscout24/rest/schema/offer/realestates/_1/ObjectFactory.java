@@ -2,7 +2,7 @@
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.7 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.06.23 um 09:51:43 AM CEST 
+// Generiert: 2014.10.22 um 03:41:54 PM CEST 
 //
 
 
@@ -32,25 +32,26 @@ import javax.xml.namespace.QName;
 public class ObjectFactory {
 
     private final static QName _TradeSite_QNAME = new QName("http://rest.immobilienscout24.de/schema/offer/realestates/1.0", "tradeSite");
+    private final static QName _ApartmentBuy_QNAME = new QName("http://rest.immobilienscout24.de/schema/offer/realestates/1.0", "apartmentBuy");
+    private final static QName _Investment_QNAME = new QName("http://rest.immobilienscout24.de/schema/offer/realestates/1.0", "investment");
+    private final static QName _ShortTermAccommodation_QNAME = new QName("http://rest.immobilienscout24.de/schema/offer/realestates/1.0", "shortTermAccommodation");
+    private final static QName _AssistedLiving_QNAME = new QName("http://rest.immobilienscout24.de/schema/offer/realestates/1.0", "assistedLiving");
+    private final static QName _FlatShareRoom_QNAME = new QName("http://rest.immobilienscout24.de/schema/offer/realestates/1.0", "flatShareRoom");
+    private final static QName _Office_QNAME = new QName("http://rest.immobilienscout24.de/schema/offer/realestates/1.0", "office");
     private final static QName _Industry_QNAME = new QName("http://rest.immobilienscout24.de/schema/offer/realestates/1.0", "industry");
     private final static QName _HouseRent_QNAME = new QName("http://rest.immobilienscout24.de/schema/offer/realestates/1.0", "houseRent");
     private final static QName _LivingBuySite_QNAME = new QName("http://rest.immobilienscout24.de/schema/offer/realestates/1.0", "livingBuySite");
     private final static QName _SeniorCare_QNAME = new QName("http://rest.immobilienscout24.de/schema/offer/realestates/1.0", "seniorCare");
     private final static QName _HouseBuy_QNAME = new QName("http://rest.immobilienscout24.de/schema/offer/realestates/1.0", "houseBuy");
     private final static QName _Gastronomy_QNAME = new QName("http://rest.immobilienscout24.de/schema/offer/realestates/1.0", "gastronomy");
-    private final static QName _ApartmentBuy_QNAME = new QName("http://rest.immobilienscout24.de/schema/offer/realestates/1.0", "apartmentBuy");
     private final static QName _GarageBuy_QNAME = new QName("http://rest.immobilienscout24.de/schema/offer/realestates/1.0", "garageBuy");
-    private final static QName _Investment_QNAME = new QName("http://rest.immobilienscout24.de/schema/offer/realestates/1.0", "investment");
     private final static QName _SpecialPurpose_QNAME = new QName("http://rest.immobilienscout24.de/schema/offer/realestates/1.0", "specialPurpose");
     private final static QName _Store_QNAME = new QName("http://rest.immobilienscout24.de/schema/offer/realestates/1.0", "store");
     private final static QName _GarageRent_QNAME = new QName("http://rest.immobilienscout24.de/schema/offer/realestates/1.0", "garageRent");
-    private final static QName _ShortTermAccommodation_QNAME = new QName("http://rest.immobilienscout24.de/schema/offer/realestates/1.0", "shortTermAccommodation");
-    private final static QName _AssistedLiving_QNAME = new QName("http://rest.immobilienscout24.de/schema/offer/realestates/1.0", "assistedLiving");
-    private final static QName _FlatShareRoom_QNAME = new QName("http://rest.immobilienscout24.de/schema/offer/realestates/1.0", "flatShareRoom");
     private final static QName _ApartmentRent_QNAME = new QName("http://rest.immobilienscout24.de/schema/offer/realestates/1.0", "apartmentRent");
+    private final static QName _RealEstate_QNAME = new QName("http://rest.immobilienscout24.de/schema/offer/realestates/1.0", "realEstate");
     private final static QName _CompulsoryAuction_QNAME = new QName("http://rest.immobilienscout24.de/schema/offer/realestates/1.0", "compulsoryAuction");
     private final static QName _HouseType_QNAME = new QName("http://rest.immobilienscout24.de/schema/offer/realestates/1.0", "houseType");
-    private final static QName _Office_QNAME = new QName("http://rest.immobilienscout24.de/schema/offer/realestates/1.0", "office");
     private final static QName _LivingRentSite_QNAME = new QName("http://rest.immobilienscout24.de/schema/offer/realestates/1.0", "livingRentSite");
 
     /**
@@ -237,11 +238,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link de.immobilienscout24.rest.schema.offer.realestates._1.RealEstate.Contact }
+     * Create an instance of {@link RealEstate.Contact }
      * 
      */
-    public de.immobilienscout24.rest.schema.offer.realestates._1.RealEstate.Contact createRealEstateContact() {
-        return new de.immobilienscout24.rest.schema.offer.realestates._1.RealEstate.Contact();
+    public RealEstate.Contact createRealEstateContact() {
+        return new RealEstate.Contact();
     }
 
     /**
@@ -259,6 +260,60 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://rest.immobilienscout24.de/schema/offer/realestates/1.0", name = "tradeSite")
     public JAXBElement<TradeSite> createTradeSite(TradeSite value) {
         return new JAXBElement<TradeSite>(_TradeSite_QNAME, TradeSite.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ApartmentBuy }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://rest.immobilienscout24.de/schema/offer/realestates/1.0", name = "apartmentBuy")
+    public JAXBElement<ApartmentBuy> createApartmentBuy(ApartmentBuy value) {
+        return new JAXBElement<ApartmentBuy>(_ApartmentBuy_QNAME, ApartmentBuy.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Investment }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://rest.immobilienscout24.de/schema/offer/realestates/1.0", name = "investment")
+    public JAXBElement<Investment> createInvestment(Investment value) {
+        return new JAXBElement<Investment>(_Investment_QNAME, Investment.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ShortTermAccommodation }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://rest.immobilienscout24.de/schema/offer/realestates/1.0", name = "shortTermAccommodation")
+    public JAXBElement<ShortTermAccommodation> createShortTermAccommodation(ShortTermAccommodation value) {
+        return new JAXBElement<ShortTermAccommodation>(_ShortTermAccommodation_QNAME, ShortTermAccommodation.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AssistedLiving }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://rest.immobilienscout24.de/schema/offer/realestates/1.0", name = "assistedLiving")
+    public JAXBElement<AssistedLiving> createAssistedLiving(AssistedLiving value) {
+        return new JAXBElement<AssistedLiving>(_AssistedLiving_QNAME, AssistedLiving.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link FlatShareRoom }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://rest.immobilienscout24.de/schema/offer/realestates/1.0", name = "flatShareRoom")
+    public JAXBElement<FlatShareRoom> createFlatShareRoom(FlatShareRoom value) {
+        return new JAXBElement<FlatShareRoom>(_FlatShareRoom_QNAME, FlatShareRoom.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Office }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://rest.immobilienscout24.de/schema/offer/realestates/1.0", name = "office")
+    public JAXBElement<Office> createOffice(Office value) {
+        return new JAXBElement<Office>(_Office_QNAME, Office.class, null, value);
     }
 
     /**
@@ -316,30 +371,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ApartmentBuy }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://rest.immobilienscout24.de/schema/offer/realestates/1.0", name = "apartmentBuy")
-    public JAXBElement<ApartmentBuy> createApartmentBuy(ApartmentBuy value) {
-        return new JAXBElement<ApartmentBuy>(_ApartmentBuy_QNAME, ApartmentBuy.class, null, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link GarageBuy }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://rest.immobilienscout24.de/schema/offer/realestates/1.0", name = "garageBuy")
     public JAXBElement<GarageBuy> createGarageBuy(GarageBuy value) {
         return new JAXBElement<GarageBuy>(_GarageBuy_QNAME, GarageBuy.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Investment }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://rest.immobilienscout24.de/schema/offer/realestates/1.0", name = "investment")
-    public JAXBElement<Investment> createInvestment(Investment value) {
-        return new JAXBElement<Investment>(_Investment_QNAME, Investment.class, null, value);
     }
 
     /**
@@ -370,39 +407,21 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ShortTermAccommodation }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://rest.immobilienscout24.de/schema/offer/realestates/1.0", name = "shortTermAccommodation")
-    public JAXBElement<ShortTermAccommodation> createShortTermAccommodation(ShortTermAccommodation value) {
-        return new JAXBElement<ShortTermAccommodation>(_ShortTermAccommodation_QNAME, ShortTermAccommodation.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AssistedLiving }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://rest.immobilienscout24.de/schema/offer/realestates/1.0", name = "assistedLiving")
-    public JAXBElement<AssistedLiving> createAssistedLiving(AssistedLiving value) {
-        return new JAXBElement<AssistedLiving>(_AssistedLiving_QNAME, AssistedLiving.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link FlatShareRoom }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://rest.immobilienscout24.de/schema/offer/realestates/1.0", name = "flatShareRoom")
-    public JAXBElement<FlatShareRoom> createFlatShareRoom(FlatShareRoom value) {
-        return new JAXBElement<FlatShareRoom>(_FlatShareRoom_QNAME, FlatShareRoom.class, null, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link ApartmentRent }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://rest.immobilienscout24.de/schema/offer/realestates/1.0", name = "apartmentRent")
     public JAXBElement<ApartmentRent> createApartmentRent(ApartmentRent value) {
         return new JAXBElement<ApartmentRent>(_ApartmentRent_QNAME, ApartmentRent.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link RealEstate }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://rest.immobilienscout24.de/schema/offer/realestates/1.0", name = "realEstate")
+    public JAXBElement<RealEstate> createRealEstate(RealEstate value) {
+        return new JAXBElement<RealEstate>(_RealEstate_QNAME, RealEstate.class, null, value);
     }
 
     /**
@@ -421,15 +440,6 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://rest.immobilienscout24.de/schema/offer/realestates/1.0", name = "houseType")
     public JAXBElement<HouseType> createHouseType(HouseType value) {
         return new JAXBElement<HouseType>(_HouseType_QNAME, HouseType.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Office }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://rest.immobilienscout24.de/schema/offer/realestates/1.0", name = "office")
-    public JAXBElement<Office> createOffice(Office value) {
-        return new JAXBElement<Office>(_Office_QNAME, Office.class, null, value);
     }
 
     /**

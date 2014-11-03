@@ -2,7 +2,7 @@
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.7 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.06.23 um 09:51:43 AM CEST 
+// Generiert: 2014.10.22 um 03:41:54 PM CEST 
 //
 
 
@@ -38,6 +38,14 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;enumeration value="COAL_COKE"/>
  *     &lt;enumeration value="LOCAL_HEATING"/>
  *     &lt;enumeration value="HEAT_SUPPLY"/>
+ *     &lt;enumeration value="BIO_ENERGY"/>
+ *     &lt;enumeration value="WIND_ENERGY"/>
+ *     &lt;enumeration value="HYDRO_ENERGY"/>
+ *     &lt;enumeration value="ENVIRONMENTAL_THERMAL_ENERGY"/>
+ *     &lt;enumeration value="COMBINED_HEAT_AND_POWER_FOSSIL_FUELS"/>
+ *     &lt;enumeration value="COMBINED_HEAT_AND_POWER_RENEWABLE_ENERGY"/>
+ *     &lt;enumeration value="COMBINED_HEAT_AND_POWER_REGENERATIVE_ENERGY"/>
+ *     &lt;enumeration value="COMBINED_HEAT_AND_POWER_BIO_ENERGY"/>
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
@@ -154,7 +162,55 @@ public enum EnergySourceEnev2014 {
      * Wrmelieferung
      * 
      */
-    HEAT_SUPPLY;
+    HEAT_SUPPLY,
+
+    /**
+     * BIO Energie
+     * 
+     */
+    BIO_ENERGY,
+
+    /**
+     * Windenergie
+     * 
+     */
+    WIND_ENERGY,
+
+    /**
+     * Wasserenergie
+     * 
+     */
+    HYDRO_ENERGY,
+
+    /**
+     * Umweltwrme
+     * 
+     */
+    ENVIRONMENTAL_THERMAL_ENERGY,
+
+    /**
+     * KWK fossil
+     * 
+     */
+    COMBINED_HEAT_AND_POWER_FOSSIL_FUELS,
+
+    /**
+     * KWK erneuerbar
+     * 
+     */
+    COMBINED_HEAT_AND_POWER_RENEWABLE_ENERGY,
+
+    /**
+     * KWK regenerativ
+     * 
+     */
+    COMBINED_HEAT_AND_POWER_REGENERATIVE_ENERGY,
+
+    /**
+     * KWK bio
+     * 
+     */
+    COMBINED_HEAT_AND_POWER_BIO_ENERGY;
 
     public String value() {
         return name();

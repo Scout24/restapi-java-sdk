@@ -1,0 +1,178 @@
+//
+// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.7 generiert 
+// Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
+// Generiert: 2014.10.22 um 03:41:54 PM CEST 
+//
+
+
+package de.immobilienscout24.rest.schema.entitlement._1;
+
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
+
+
+/**
+ * <p>Java-Klasse fr entitlement complex type.
+ * 
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ * 
+ * <pre>
+ * &lt;complexType name="entitlement">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="openCredits" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="usedCredits" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="productPermission" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
+ *         &lt;element name="details" type="{http://www.w3.org/2001/XMLSchema}anySimpleType" maxOccurs="unbounded" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "entitlement", propOrder = {
+    "name",
+    "openCredits",
+    "usedCredits",
+    "productPermission",
+    "details"
+})
+public class Entitlement {
+
+    @XmlElement(required = true)
+    protected String name;
+    protected Integer openCredits;
+    protected Integer usedCredits;
+    protected boolean productPermission;
+    @XmlSchemaType(name = "anySimpleType")
+    protected List<Object> details;
+
+    /**
+     * Ruft den Wert der name-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * Legt den Wert der name-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setName(String value) {
+        this.name = value;
+    }
+
+    /**
+     * Ruft den Wert der openCredits-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
+     */
+    public Integer getOpenCredits() {
+        return openCredits;
+    }
+
+    /**
+     * Legt den Wert der openCredits-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
+     */
+    public void setOpenCredits(Integer value) {
+        this.openCredits = value;
+    }
+
+    /**
+     * Ruft den Wert der usedCredits-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
+     */
+    public Integer getUsedCredits() {
+        return usedCredits;
+    }
+
+    /**
+     * Legt den Wert der usedCredits-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
+     */
+    public void setUsedCredits(Integer value) {
+        this.usedCredits = value;
+    }
+
+    /**
+     * Ruft den Wert der productPermission-Eigenschaft ab.
+     * 
+     */
+    public boolean isProductPermission() {
+        return productPermission;
+    }
+
+    /**
+     * Legt den Wert der productPermission-Eigenschaft fest.
+     * 
+     */
+    public void setProductPermission(boolean value) {
+        this.productPermission = value;
+    }
+
+    /**
+     * Gets the value of the details property.
+     * 
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the details property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getDetails().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link Object }
+     * 
+     * 
+     */
+    public List<Object> getDetails() {
+        if (details == null) {
+            details = new ArrayList<Object>();
+        }
+        return this.details;
+    }
+
+}

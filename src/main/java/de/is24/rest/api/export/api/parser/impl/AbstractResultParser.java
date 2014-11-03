@@ -47,8 +47,19 @@ public abstract class AbstractResultParser implements IResultParser {
 			parseMessage = parseMessage(errorResponse);
 			throwException(throwable, parseMessage);
 		} else {
-			throw new RuntimeException(throwable);
+			throwDefaultException(throwable);
 		}
+	}
+
+	/**
+	 * This exception is usually thrown when the error response could not be
+	 * parsed. This indicates a 500 error response from the API. Subclasses can
+	 * throw own exceptions if they need to overwrite the behavior.
+	 * 
+	 * @param throwable
+	 */
+	protected void throwDefaultException(Throwable throwable) {
+		throw new RuntimeException(throwable);
 	}
 
 	/**
@@ -58,6 +69,7 @@ public abstract class AbstractResultParser implements IResultParser {
 	 * @param parseMessage
 	 */
 	protected void throwException(Throwable throwable, Message parseMessage) {
+
 		throw new RuntimeException(parseMessage.getMessageCode() + ": " + parseMessage.getMessage(), throwable);
 	}
 

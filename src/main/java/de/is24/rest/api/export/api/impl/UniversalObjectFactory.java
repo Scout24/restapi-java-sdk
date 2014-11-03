@@ -28,8 +28,6 @@ public class UniversalObjectFactory {
 
 		String methodName = "create" + className;
 		try {
-			System.out.println(methodName);
-
 			Method method = objectFactory.getClass().getDeclaredMethod(methodName, o.getClass());
 
 			return (JAXBElement<T>) method.invoke(objectFactory, o);

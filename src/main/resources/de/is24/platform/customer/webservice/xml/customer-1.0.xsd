@@ -21,6 +21,7 @@
             <xs:element name="billingDetails" type="BillingDetailsType"/>
             <xs:element name="customerNumber" type="xs:string" minOccurs="0"/>
             <xs:element name="commercial" type="xs:boolean"/>
+            <xs:element name="reducedRequiredData" type="xs:boolean" minOccurs="0"/>
             <xs:element name="professional" type="xs:boolean" minOccurs="0"/>
             <xs:element name="companyWideId" type="common:OIDType" minOccurs="0">
                 <xs:annotation>
@@ -28,13 +29,13 @@
                 </xs:annotation>
             </xs:element>
             <xs:element name="accountManager" type="AccountManagerType" minOccurs="0"/>
-          <xs:element name="users">
-            <xs:complexType>
-              <xs:sequence>
-                <xs:element name="username" type="common:TextField" maxOccurs="unbounded"/>
-              </xs:sequence>
-            </xs:complexType>
-          </xs:element>
+            <xs:element name="users">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="username" type="common:TextField" maxOccurs="unbounded"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
         </xs:sequence>
     </xs:complexType>
 

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema
+    xmlns="http://rest.immobilienscout24.de/schema/entitlement/1.0"
+	targetNamespace="http://rest.immobilienscout24.de/schema/entitlement/1.0"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="unqualified"
+	attributeFormDefault="unqualified"
+	version="1.0">
+
+	<xs:element name="userEntitlementsResponse">
+		<xs:annotation>
+			<xs:documentation>the given User's allowed activity accounts if any</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="entitlement" type="entitlement"
+					minOccurs="0" maxOccurs="unbounded"></xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="userEntitlementResponse">
+		<xs:annotation>
+			<xs:documentation>the given User's allowed activity account if any</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="entitlement" type="entitlement"
+					minOccurs="0" maxOccurs="1"></xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:complexType name="entitlement">
+	  <xs:sequence>
+			<xs:element name="name" type="xs:string"></xs:element>
+			<xs:element name="openCredits" type="xs:int" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="usedCredits" type="xs:int" minOccurs="0" maxOccurs="1"></xs:element>
+			<xs:element name="productPermission" type="xs:boolean" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="details" type="xs:anySimpleType" minOccurs="0" maxOccurs="unbounded"></xs:element>
+	  </xs:sequence>
+	</xs:complexType>
+</xs:schema>

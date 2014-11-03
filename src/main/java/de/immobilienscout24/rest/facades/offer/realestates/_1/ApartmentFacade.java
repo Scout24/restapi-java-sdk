@@ -1,10 +1,12 @@
 package de.immobilienscout24.rest.facades.offer.realestates._1;
 
-import de.immobilienscout24.rest.facades.offer.realestates._1.RealestateFacade;
-import de.immobilienscout24.rest.schema.common._1.*;
+import de.immobilienscout24.rest.schema.common._1.ApartmentType;
+import de.immobilienscout24.rest.schema.common._1.InteriorQuality;
+import de.immobilienscout24.rest.schema.common._1.ParkingSpaceType;
+import de.immobilienscout24.rest.schema.common._1.RealEstateCondition;
+import de.immobilienscout24.rest.schema.common._1.YesNotApplicableType;
 
-
-public interface ApartmentFacade extends RealestateFacade, EnergySavingFacade {
+public interface ApartmentFacade extends RealestateFacade, EnergyCertificateFacade {
 
 	Boolean isAssistedLiving();
 
@@ -99,4 +101,12 @@ public interface ApartmentFacade extends RealestateFacade, EnergySavingFacade {
 	Double getServiceCharge();
 
 	void setServiceCharge(Double value);
+
+	String getFreeFrom();
+
+	void setFreeFrom(String value);
+
+	Boolean isCertificateOfEligibilityNeeded();
+
+	void setCertificateOfEligibilityNeeded(Boolean value);
 }

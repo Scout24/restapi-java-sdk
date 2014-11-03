@@ -52,6 +52,12 @@
 					<xs:documentation xml:lang="de-DE">Informations- oder eine Fehlermeldung.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+            <xs:element name="id" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">id of created/deleted entyty.</xs:documentation>
+                    <xs:documentation xml:lang="de-DE">id von der erstellten bzw. gelöschten Instanz.</xs:documentation>
+                </xs:annotation>
+            </xs:element>           
 		</xs:all>
 	</xs:complexType>
 	

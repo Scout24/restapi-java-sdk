@@ -10,7 +10,7 @@ import de.immobilienscout24.rest.schema.common._1.YesNotApplicableType;
 /**
  * Created by rwill on 6/4/14.
  */
-public interface HouseFacade extends RealestateFacade, EnergySavingFacade {
+public interface HouseFacade extends RealestateFacade, EnergyCertificateFacade {
 	RealEstateCondition getCondition();
 
 	void setCondition(RealEstateCondition value);

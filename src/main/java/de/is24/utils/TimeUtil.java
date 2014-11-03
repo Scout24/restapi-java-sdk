@@ -17,6 +17,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * 
  */
 public class TimeUtil {
+
 	public static long toSeconds(long ms) {
 		return ms / 1000;
 	}

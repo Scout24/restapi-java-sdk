@@ -2,7 +2,7 @@
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.7 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.06.23 um 09:51:43 AM CEST 
+// Generiert: 2014.10.22 um 03:41:54 PM CEST 
 //
 
 
@@ -34,6 +34,7 @@ import de.immobilienscout24.rest.schema.common._1.MasterDataContactDetailsType;
  *         &lt;element name="billingDetails" type="{http://rest.immobilienscout24.de/schema/customer/1.0}BillingDetailsType"/>
  *         &lt;element name="customerNumber" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="commercial" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
+ *         &lt;element name="reducedRequiredData" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
  *         &lt;element name="professional" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
  *         &lt;element name="companyWideId" type="{http://rest.immobilienscout24.de/schema/common/1.0}OIDType" minOccurs="0"/>
  *         &lt;element name="accountManager" type="{http://rest.immobilienscout24.de/schema/customer/1.0}AccountManagerType" minOccurs="0"/>
@@ -63,6 +64,7 @@ import de.immobilienscout24.rest.schema.common._1.MasterDataContactDetailsType;
     "billingDetails",
     "customerNumber",
     "commercial",
+    "reducedRequiredData",
     "professional",
     "companyWideId",
     "accountManager",
@@ -76,6 +78,7 @@ public class CustomerType {
     protected BillingDetailsType billingDetails;
     protected String customerNumber;
     protected boolean commercial;
+    protected Boolean reducedRequiredData;
     protected Boolean professional;
     protected String companyWideId;
     protected AccountManagerType accountManager;
@@ -192,6 +195,30 @@ public class CustomerType {
      */
     public void setCommercial(boolean value) {
         this.commercial = value;
+    }
+
+    /**
+     * Ruft den Wert der reducedRequiredData-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
+     */
+    public Boolean isReducedRequiredData() {
+        return reducedRequiredData;
+    }
+
+    /**
+     * Legt den Wert der reducedRequiredData-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
+     */
+    public void setReducedRequiredData(Boolean value) {
+        this.reducedRequiredData = value;
     }
 
     /**

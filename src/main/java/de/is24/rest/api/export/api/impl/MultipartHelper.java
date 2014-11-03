@@ -111,6 +111,10 @@ public class MultipartHelper {
 		writer.flush();
 	}
 
+	public HttpURLConnection getHttpConnection() {
+		return httpConnection;
+	}
+
 	/**
 	 * Completes the request and receives response from the server.
 	 * 

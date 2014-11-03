@@ -11,8 +11,12 @@ import de.immobilienscout24.rest.schema.common._1.Picture;
 import de.immobilienscout24.rest.schema.common._1.RealtorContactDetails;
 import de.immobilienscout24.rest.schema.common._1.StreamingVideo;
 import de.immobilienscout24.rest.schema.common._1.VideoFile;
+import de.immobilienscout24.rest.schema.offer.placement.Placement;
+import de.immobilienscout24.rest.schema.offer.realestateproject._1.RealEstateProject;
+import de.immobilienscout24.rest.schema.offer.realestateproject._1.RealEstateProjectEntries;
 import de.immobilienscout24.rest.schema.offer.realestates._1.RealEstate;
 import de.is24.rest.api.export.api.impl.InternalId;
+import de.is24.rest.api.export.api.impl.OnTopPlacement;
 
 /**
  * @author Martin Fluegge
@@ -996,6 +1000,63 @@ public interface ObjectApi {
 	 */
 	public boolean existsRealestate(ObjectId realestateId);
 
+	/**
+	 * List all realestate for ME
+	 * 
+	 * @return
+	 */
+	public RealEstateProject getRealestateProject(String username, String realestateProjectId);
+
+	/**
+	 * Lists all realestates for the user "username"
+	 * 
+	 * @param username
+	 * @return
+	 */
+	public RealEstateProject getRealestateProject(String realestateProjectId);
+
+	/**
+	 * Updates the realestate project
+	 * 
+	 * @param username
+	 * @param realestate
+	 * @return the realestateProjektId
+	 */
+	public String updateRealestateProject(String username, RealEstateProject realestateProject);
+
+	/**
+	 * Updates the realestate project for the current user
+	 * 
+	 * @param username
+	 * @param realestate
+	 * @return the realestateProjektId
+	 */
+	public String updateRealestateProject(RealEstateProject realestateProject);
+
+	public void addRealestatesToRealestateProject(String username, String realestateProjectId, RealEstateProjectEntries realEstateProjectEntries);
+
+	public void addRealestatesToRealestateProject(String realestateProjectId, RealEstateProjectEntries realEstateProjectEntries);
+
+	public void addRealestatesToRealestateProject(String username, String realestateProjectId, List<RealEstate> realEstates);
+
+	public void addRealestatesToRealestateProject(String realestateProjectId, List<RealEstate> realEstates);
+
+	public void addRealestateToRealestateProject(String username, String realestateProjectId, RealEstate realEstate);
+
+	public void addRealestateToRealestateProject(String realestateProjectId, RealEstate realEstate);
+
+	public void deleteRealestatesFromRealestateProject(String username, String realestateProjectId, List<RealEstate> realEstates);
+
+	public void deleteRealestatesFromRealestateProject(String realestateProjectId, List<RealEstate> realEstates);
+
+	public void deleteRealestateFromRealestateProject(String username, String realestateProjectId, RealEstate realEstate);
+
+	public void deleteRealestateFromRealestateProject(String realestateProjectId, RealEstate realEstate);
+
+	public void deleteRealestateFromRealestateProject(String username, String realestateProjectId, ObjectId id);
+
+	public void deleteRealestateFromRealestateProject(String realestateProjectId, ObjectId id);
+
 	public List<RealtorContactDetails> getContacts();
 
 	public InputStream getAttachmentData(Picture picture);
@@ -1005,6 +1066,14 @@ public interface ObjectApi {
 	public InputStream getAttachmentData(StreamingVideo pdf);
 
 	public InputStream getAttachmentData(VideoFile video);
+
+	public void placeOnTopProduct(String username, ObjectId id, OnTopPlacement placement);
+
+	public void removeOnTopProduct(String username, ObjectId id, OnTopPlacement placement);
+
+	public List<Placement> getOnTopProduct(String username, ObjectId id, OnTopPlacement placement);
+
+	public List<Placement> getOnTopProducts(String username, ObjectId id, OnTopPlacement placement);
 
 	/**
 	 * 
@@ -1062,6 +1131,6 @@ public interface ObjectApi {
 		public String getId();
 	}
 
-	List<RealEstate> getAllRealestates(String username, int pageSize, int pageNumber, boolean includeArchived);
+	public List<RealEstate> getAllRealestates(String username, int pageSize, int pageNumber, boolean includeArchived);
 
 }

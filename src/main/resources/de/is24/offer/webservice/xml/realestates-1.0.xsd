@@ -14,7 +14,7 @@
     <xs:import namespace="http://www.w3.org/1999/xlink" />
     <xs:import namespace="http://rest.immobilienscout24.de/schema/offer/listelement/1.0" schemaLocation="offerListElement-1.0.xsd" />
     
-  <!--   <xs:element name="realEstate" type="RealEstate" />-->
+    <xs:element name="realEstate" type="RealEstate" />
     <xs:element name="houseBuy" type="HouseBuy" />
     <xs:element name="houseRent" type="HouseRent" />
     <xs:element name="garageRent" type="GarageRent" />

@@ -1,5 +1,6 @@
 package de.immobilienscout24.rest.facades.offer.realestates._1;
 
+import de.immobilienscout24.rest.schema.common._1.CommercializationType;
 import de.immobilienscout24.rest.schema.common._1.InteriorQuality;
 import de.immobilienscout24.rest.schema.common._1.Price;
 import de.immobilienscout24.rest.schema.common._1.RealEstateCondition;
@@ -8,7 +9,7 @@ import de.immobilienscout24.rest.schema.common._1.YesNotApplicableType;
 /**
  * Created by rwill on 6/3/14.
  */
-public interface CommercialFacade extends RealestateFacade, EnergySavingFacade {
+public interface CommercialFacade extends RealestateFacade, EnergyCertificateFacade {
 	InteriorQuality getInteriorQuality();
 
 	void setInteriorQuality(InteriorQuality value);
@@ -76,4 +77,12 @@ public interface CommercialFacade extends RealestateFacade, EnergySavingFacade {
 	String getFreeFrom();
 
 	void setFreeFrom(String value);
+
+	CommercializationType getCommercializationType();
+
+	void setCommercializationType(CommercializationType value);
+
+	void setPrice(Price price);
+
+	Price getPrice();
 }

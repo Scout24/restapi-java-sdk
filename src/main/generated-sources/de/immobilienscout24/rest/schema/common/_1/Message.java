@@ -2,7 +2,7 @@
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.7 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.06.23 um 09:51:43 AM CEST 
+// Generiert: 2014.10.22 um 03:41:54 PM CEST 
 //
 
 
@@ -28,6 +28,7 @@ import javax.xml.bind.annotation.XmlType;
  *       &lt;all>
  *         &lt;element name="messageCode" type="{http://rest.immobilienscout24.de/schema/common/1.0}MessageCode"/>
  *         &lt;element name="message" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *       &lt;/all>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -46,6 +47,8 @@ public class Message {
     protected MessageCode messageCode;
     @XmlElement(required = true)
     protected String message;
+    @XmlElement(required = true)
+    protected String id;
 
     /**
      * Ruft den Wert der messageCode-Eigenschaft ab.
@@ -93,6 +96,30 @@ public class Message {
      */
     public void setMessage(String value) {
         this.message = value;
+    }
+
+    /**
+     * Ruft den Wert der id-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getId() {
+        return id;
+    }
+
+    /**
+     * Legt den Wert der id-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setId(String value) {
+        this.id = value;
     }
 
 }

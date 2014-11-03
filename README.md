@@ -17,3 +17,23 @@ Who  		  | When 		  | What
 ------------- | ------------- | ------------- 
 mfluegge  	  | 10th June 2014| initial commit
 mfluegge  	  | 10th June 2014| v0.1 beta
+mfluegge  	  | 3th November 2014| v0.2 beta 
+
+
+
+
+v0.2 beta
+----------
+
+- createRealestate(String username, RealEstate realestate) uses energy certificate data by default
+- update realeste 
+- upload of FileMultimediaObject now throw MaximumNumberOfAttachmentsReachedException when trying to upload attchment #31
+- user can retrieve realestate project for a given realestate id
+- realestate projects can be upated
+- several methods to add realestates to a realestes projects were introduced
+- realestates can be deleted from realestate projects
+- On top products can be placed on realestates
+- user can retrieve a list of on top products placed an a specific realestate
+- On top products can be removed from realestates
+- user can get a list of entitlements for a given username
+- user can get a specific entitlement by name for a given user

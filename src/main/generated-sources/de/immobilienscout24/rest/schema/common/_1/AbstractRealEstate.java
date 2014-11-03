@@ -2,7 +2,7 @@
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.7 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.06.23 um 09:51:43 AM CEST 
+// Generiert: 2014.10.22 um 03:41:54 PM CEST 
 //
 
 
@@ -68,6 +68,7 @@ import de.immobilienscout24.rest.schema.offer.realestates._1.RealEstate;
  *         &lt;element name="attachments" type="{http://rest.immobilienscout24.de/schema/common/1.0}Attachments" minOccurs="0"/>
  *         &lt;element name="referencePriceServiceCall" type="{http://rest.immobilienscout24.de/schema/common/1.0}uri" minOccurs="0"/>
  *         &lt;element name="referencePriceApiCall" type="{http://rest.immobilienscout24.de/schema/common/1.0}uri" minOccurs="0"/>
+ *         &lt;element name="realEstateProjectId" type="{http://www.w3.org/2001/XMLSchema}long" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/extension>
  *   &lt;/complexContent>
@@ -85,7 +86,8 @@ import de.immobilienscout24.rest.schema.offer.realestates._1.RealEstate;
     "otherNote",
     "attachments",
     "referencePriceServiceCall",
-    "referencePriceApiCall"
+    "referencePriceApiCall",
+    "realEstateProjectId"
 })
 @XmlSeeAlso({
     RealEstate.class
@@ -106,6 +108,7 @@ public abstract class AbstractRealEstate
     protected Attachments attachments;
     protected String referencePriceServiceCall;
     protected String referencePriceApiCall;
+    protected Long realEstateProjectId;
 
     /**
      * Ruft den Wert der groupNumber-Eigenschaft ab.
@@ -297,6 +300,30 @@ public abstract class AbstractRealEstate
      */
     public void setReferencePriceApiCall(String value) {
         this.referencePriceApiCall = value;
+    }
+
+    /**
+     * Ruft den Wert der realEstateProjectId-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Long }
+     *     
+     */
+    public Long getRealEstateProjectId() {
+        return realEstateProjectId;
+    }
+
+    /**
+     * Legt den Wert der realEstateProjectId-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Long }
+     *     
+     */
+    public void setRealEstateProjectId(Long value) {
+        this.realEstateProjectId = value;
     }
 
 }

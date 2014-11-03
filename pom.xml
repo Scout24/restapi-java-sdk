@@ -6,7 +6,7 @@
 	<groupId>de.is24.rest.api</groupId>
 	<artifactId>common-api</artifactId>
 	<packaging>jar</packaging>
-	<version>0.1-beta-SNAPSHOT</version>
+	<version>0.2-beta-SNAPSHOT</version>
 	<name>REST :: Common :: API</name>
 	<url>http://maven.apache.org</url>
 

@@ -2,7 +2,7 @@
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.7 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.06.23 um 09:51:43 AM CEST 
+// Generiert: 2014.10.22 um 03:41:54 PM CEST 
 //
 
 
@@ -31,8 +31,8 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _Toplistings_QNAME = new QName("http://rest.immobilienscout24.de/schema/offer/toplisting/1.0", "toplistings");
     private final static QName _Toplisting_QNAME = new QName("http://rest.immobilienscout24.de/schema/offer/toplisting/1.0", "toplisting");
+    private final static QName _Toplistings_QNAME = new QName("http://rest.immobilienscout24.de/schema/offer/toplisting/1.0", "toplistings");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: de.immobilienscout24.rest.schema.offer.toplisting._1
@@ -58,21 +58,21 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Toplistings }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://rest.immobilienscout24.de/schema/offer/toplisting/1.0", name = "toplistings")
-    public JAXBElement<Toplistings> createToplistings(Toplistings value) {
-        return new JAXBElement<Toplistings>(_Toplistings_QNAME, Toplistings.class, null, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link Toplisting }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://rest.immobilienscout24.de/schema/offer/toplisting/1.0", name = "toplisting")
     public JAXBElement<Toplisting> createToplisting(Toplisting value) {
         return new JAXBElement<Toplisting>(_Toplisting_QNAME, Toplisting.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Toplistings }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://rest.immobilienscout24.de/schema/offer/toplisting/1.0", name = "toplistings")
+    public JAXBElement<Toplistings> createToplistings(Toplistings value) {
+        return new JAXBElement<Toplistings>(_Toplistings_QNAME, Toplistings.class, null, value);
     }
 
 }

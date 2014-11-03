@@ -2,7 +2,7 @@
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.7 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.06.23 um 09:51:43 AM CEST 
+// Generiert: 2014.10.22 um 03:41:54 PM CEST 
 //
 
 
@@ -27,9 +27,27 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="street" type="{http://rest.immobilienscout24.de/schema/common/1.0}TextField" minOccurs="0"/>
- *         &lt;element name="houseNumber" type="{http://rest.immobilienscout24.de/schema/common/1.0}TextField" minOccurs="0"/>
- *         &lt;element name="postcode" type="{http://rest.immobilienscout24.de/schema/common/1.0}TextField" minOccurs="0"/>
+ *         &lt;element name="street" minOccurs="0">
+ *           &lt;simpleType>
+ *             &lt;restriction base="{http://rest.immobilienscout24.de/schema/common/1.0}TextField">
+ *               &lt;maxLength value="100"/>
+ *             &lt;/restriction>
+ *           &lt;/simpleType>
+ *         &lt;/element>
+ *         &lt;element name="houseNumber" minOccurs="0">
+ *           &lt;simpleType>
+ *             &lt;restriction base="{http://rest.immobilienscout24.de/schema/common/1.0}TextField">
+ *               &lt;maxLength value="30"/>
+ *             &lt;/restriction>
+ *           &lt;/simpleType>
+ *         &lt;/element>
+ *         &lt;element name="postcode" minOccurs="0">
+ *           &lt;simpleType>
+ *             &lt;restriction base="{http://rest.immobilienscout24.de/schema/common/1.0}TextField">
+ *               &lt;maxLength value="20"/>
+ *             &lt;/restriction>
+ *           &lt;/simpleType>
+ *         &lt;/element>
  *         &lt;element name="city" minOccurs="0">
  *           &lt;simpleType>
  *             &lt;restriction base="{http://rest.immobilienscout24.de/schema/common/1.0}TextField">

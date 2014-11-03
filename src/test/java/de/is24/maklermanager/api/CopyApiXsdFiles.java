@@ -28,20 +28,6 @@ public class CopyApiXsdFiles {
 
 		initAcceptedFileList();
 
-		/**
-		 * Convention: checkout
-		 * https://subversion.iscout.local/int/is24/common/restapi/schema/trunk
-		 * into the same directory like mmm project itself and put into folder
-		 * rest-api
-		 * 
-		 * otherwise you cannot use this copy script!!
-		 */
-
-		// String sourceBasePath =
-		// "/data/home/rboettge/ImmoScout24/MMM/rest-api/schema/trunk/";
-		// String targetBasePath =
-		// "/data/home/rboettge/ImmoScout24/MMM/trunk/common/api/";
-
 		String sourceBasePath = "../../../rest-api/schema/trunk/";
 		String targetBasePath = "../../../trunk/common/api/";
 
@@ -91,6 +77,8 @@ public class CopyApiXsdFiles {
 					Path sourcePath = Paths.get(URI.create("file://" + f.getAbsolutePath()));
 					Path targetPath = Paths.get(URI.create("file://" + targetDir.getAbsolutePath() + "/" + fileName));
 
+					System.out.println("destination: " + targetPath);
+
 					Files.copy(sourcePath, targetPath, StandardCopyOption.REPLACE_EXISTING);
 				}
 			}
@@ -116,6 +104,10 @@ public class CopyApiXsdFiles {
 		acceptedFiles.add("videoupload-1.0.xsd");
 		acceptedFiles.add("xlink.xsd");
 		acceptedFiles.add("zipandlocationtoregion-1.0.xsd");
+		acceptedFiles.add("premiumplacement-1.0.xsd");
+		acceptedFiles.add("showcaseplacement-1.0.xsd");
+		acceptedFiles.add("topplacement-1.0.xsd");
+		acceptedFiles.add("user-entitlement-1.0.xsd");
 	}
 
 	public static List<String> initDirectories() {
@@ -125,8 +117,8 @@ public class CopyApiXsdFiles {
 		directories.add("src/main/resources/de/is24/offer/productrecommendation/webservice/xml");
 		directories.add("src/main/resources/de/is24/offer/webservice/xml");
 		directories.add("src/main/resources/de/is24/platform/customer/webservice/xml");
+		directories.add("src/main/resources/de/is24/platform/entitlement/webservice/xml");
 
 		return directories;
 	}
-
 }

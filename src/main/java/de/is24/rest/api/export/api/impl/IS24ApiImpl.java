@@ -18,6 +18,7 @@ import java.net.URLDecoder;
 import java.net.URLEncoder;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -58,29 +59,43 @@ import de.immobilienscout24.rest.schema.common._1.VideoFile;
 import de.immobilienscout24.rest.schema.common.adapter.AttachmentsAdapter;
 import de.immobilienscout24.rest.schema.customer._1.CustomerType;
 import de.immobilienscout24.rest.schema.customer._1.CustomerType.Users;
+import de.immobilienscout24.rest.schema.entitlement._1.Entitlement;
+import de.immobilienscout24.rest.schema.entitlement._1.UserEntitlementsResponse;
+import de.immobilienscout24.rest.schema.offer.placement.Placement;
+import de.immobilienscout24.rest.schema.offer.premiumplacement._1.Premiumplacements;
+import de.immobilienscout24.rest.schema.offer.realestateproject._1.RealEstateProject;
+import de.immobilienscout24.rest.schema.offer.realestateproject._1.RealEstateProjectEntries;
+import de.immobilienscout24.rest.schema.offer.realestateproject._1.RealEstateProjectEntry;
 import de.immobilienscout24.rest.schema.offer.realestates._1.RealEstate;
+import de.immobilienscout24.rest.schema.offer.showcaseplacement._1.Showcaseplacements;
+import de.immobilienscout24.rest.schema.offer.topplacement._1.Topplacements;
 import de.is24.rest.api.export.api.IMultimediaObject;
 import de.is24.rest.api.export.api.InternalObjectApi;
 import de.is24.rest.api.export.api.Is24Api;
 import de.is24.rest.api.export.api.ObjectApi;
 import de.is24.rest.api.export.api.User;
 import de.is24.rest.api.export.api.impl.video.VideoTicket;
+import de.is24.rest.api.export.api.parser.impl.AddRealestateToRealesteProjectResultParser;
 import de.is24.rest.api.export.api.parser.impl.ContactResultParser;
 import de.is24.rest.api.export.api.parser.impl.ContactResultParsingException;
 import de.is24.rest.api.export.api.parser.impl.CreateAttachmentResultParser;
 import de.is24.rest.api.export.api.parser.impl.CreateRealestateResultParser;
 import de.is24.rest.api.export.api.parser.impl.DeactivateRealestateResultParser;
 import de.is24.rest.api.export.api.parser.impl.DeleteAttachmentResultParser;
+import de.is24.rest.api.export.api.parser.impl.DeleteRealestateFromRealesteProjectResultParser;
 import de.is24.rest.api.export.api.parser.impl.DeleteRealestateResultParser;
 import de.is24.rest.api.export.api.parser.impl.GetContactResultparser;
 import de.is24.rest.api.export.api.parser.impl.GetContactResultparser.ContactDoesNotExistException;
+import de.is24.rest.api.export.api.parser.impl.GetRealestateProjectResultParser;
 import de.is24.rest.api.export.api.parser.impl.GetRealestateResultParser;
+import de.is24.rest.api.export.api.parser.impl.OnTopProductResultParser;
 import de.is24.rest.api.export.api.parser.impl.PublishRealestateResultParser;
-import de.is24.rest.api.export.api.parser.impl.UpdateRealestateResultParser;
+import de.is24.rest.api.export.api.parser.impl.UpdateRealestateProjectResultParser;
 import de.is24.rest.api.search.Searcher;
 
 /**
  * @author Martin Fluegge
+ * 
  * 
  */
 public class IS24ApiImpl implements Is24Api, InternalObjectApi {
@@ -111,14 +126,14 @@ public class IS24ApiImpl implements Is24Api, InternalObjectApi {
 
 	public String createRealestate(String username, String xml) {
 
-		URL url = createURL(baseUrl + "/offer/v1.0/user/" + username + "/realestate/");
+		URL url = createURL(baseUrl + "/offer/v1.0/user/" + username + "/realestate/" + "?usenewenergysourceenev2014values=true");
 
 		return sendPostRequest(url, xml, new CreateRealestateResultParser());
 	}
 
 	public String createRealestate(String username, RealEstate realestate) {
 
-		URL url = createURL(baseUrl + "/offer/v1.0/user/" + username + "/realestate/");
+		URL url = createURL(baseUrl + "/offer/v1.0/user/" + username + "/realestate/" + "?usenewenergysourceenev2014values=true");
 
 		String xml = marshall(realestate);
 
@@ -141,8 +156,8 @@ public class IS24ApiImpl implements Is24Api, InternalObjectApi {
 	@Override
 	public String updateRealestate(String username, String realestateId, String xml) {
 
-		URL url = createURL(baseUrl + "/offer/v1.0/user/" + username + "/realestate/" + encodeId(realestateId));
-		return sendPutRequest(url, xml, new UpdateRealestateResultParser());
+		URL url = createURL(baseUrl + "/offer/v1.0/user/" + username + "/realestate/" + encodeId(realestateId) + "?usenewenergysourceenev2014values=true");
+		return sendPutRequest(url, xml, new UpdateRealestateProjectResultParser());
 	}
 
 	@Override
@@ -545,25 +560,42 @@ public class IS24ApiImpl implements Is24Api, InternalObjectApi {
 
 			} else if (object instanceof FileMultimediaObject) {
 
-				return resultParser.getResult(uploadFile(object, url));
+				return resultParser.getResult(uploadFile((FileMultimediaObject) object, url, resultParser));
 
 			} else {
 				throw new RuntimeException("Unsupported object type " + object);
 			}
 
-		} catch (IOException e) {
+		} catch (IOException | NullPointerException e) {
 			throw new AddAttachmentException(object, e);
 		}
 	}
 
-	private String uploadFile(IMultimediaObject object, URL url) throws IOException {
-		MultipartHelper utility = new MultipartHelper(url, "UTF-8", this);
-		String value = object.getAttachmentXml();
+	protected String uploadFile(FileMultimediaObject object, URL url) throws IOException {
+		return uploadFile(object, url, null);
+	}
 
-		utility.addFormField("metadata", value);
-		utility.addFilePart("attachment", ((FileMultimediaObject) object).getFile());
-		String response = utility.finish();
-		return response;
+	private String uploadFile(FileMultimediaObject object, URL url, IResultParser resultParser) throws IOException {
+		MultipartHelper utility = new MultipartHelper(url, "UTF-8", this);
+		utility.addFormField("metadata", object.getAttachmentXml());
+		utility.addFilePart("attachment", object.getFile());
+
+		try {
+			return utility.finish();
+		} catch (IOException e) {
+
+			String response = getResponse(utility.getHttpConnection().getErrorStream());
+
+			if (resultParser != null) {
+				resultParser.handleException(e, response);
+				return null;
+			} else {
+
+				throw new RuntimeException(response, e);
+			}
+		} catch (Exception e) {
+			throw new RuntimeException(e);
+		}
 	}
 
 	private String uploadVideo(String username, String realEstateId, IMultimediaObject object) throws FileNotFoundException, IOException, HttpException {
@@ -619,14 +651,6 @@ public class IS24ApiImpl implements Is24Api, InternalObjectApi {
 		URL is24Upload = createURL(baseUrl + "/offer/v1.0/user/" + username + "/realestate/" + encodeId(realEstateId) + "/attachment");
 
 		return sendPostRequest(is24Upload, object.getAttachmentXml());
-	}
-
-	private void sleep(int milliseconds) {
-		try {
-			Thread.sleep(milliseconds);
-		} catch (InterruptedException e) {
-			throw new RuntimeException(e);
-		}
 	}
 
 	@Override
@@ -692,6 +716,8 @@ public class IS24ApiImpl implements Is24Api, InternalObjectApi {
 
 	private String sendBodyRequest(URL request, String body, IResultParser resultParser, String requestMethod) {
 		HttpURLConnection connection = null;
+		LOG.info(requestMethod + " REQUEST: " + request.toString());
+
 		try {
 			// body = new String(body.getBytes("utf-8"), "utf-8");
 			Charset.forName("UTF-8").encode(body);
@@ -996,13 +1022,12 @@ public class IS24ApiImpl implements Is24Api, InternalObjectApi {
 		return (Searcher) unmarshall(Searcher.class, xml);
 	}
 
-	@SuppressWarnings("unchecked")
 	protected <T> T unmarshall(Class<T> clazz, String xml) {
 		return unmarshall(clazz, xml, null);
 	}
 
 	@SuppressWarnings("unchecked")
-	protected <T> T unmarshall(Class<T> clazz, String xml, XmlAdapter adapter) {
+	protected <T> T unmarshall(Class<T> clazz, String xml, XmlAdapter<?, ?> adapter) {
 		try {
 
 			UniversalObjectFactory universalObjectFactory = new UniversalObjectFactory();
@@ -1035,7 +1060,7 @@ public class IS24ApiImpl implements Is24Api, InternalObjectApi {
 		}
 	}
 
-	protected <T> String marshall(T o) {
+	public <T> String marshall(T o) {
 		try {
 
 			UniversalObjectFactory universalObjectFactory = new UniversalObjectFactory();
@@ -1431,6 +1456,10 @@ public class IS24ApiImpl implements Is24Api, InternalObjectApi {
 			super(e);
 		}
 
+		public AddAttachmentException(String message, Throwable e) {
+			super(message, e);
+		}
+
 		public AddAttachmentException(IMultimediaObject object, Throwable e) {
 			super(e);
 			this.setObject(object);
@@ -1443,5 +1472,217 @@ public class IS24ApiImpl implements Is24Api, InternalObjectApi {
 		public void setObject(IMultimediaObject object) {
 			this.object = object;
 		}
+	}
+
+	@Override
+	public RealEstateProject getRealestateProject(String username, String realestateProjectId) {
+
+		URL url = createURL(baseUrl + "/offer/v1.0/user/" + username + "/realestateproject/" + realestateProjectId);
+
+		LOG.info(url);
+		String response = sendGetRequest(url, new GetRealestateProjectResultParser());
+		return unmarshall(RealEstateProject.class, response);
+	}
+
+	@Override
+	public RealEstateProject getRealestateProject(String realestateProjectId) {
+		return getRealestateProject(ME, realestateProjectId);
+	}
+
+	@Override
+	public String updateRealestateProject(String username, RealEstateProject realestateProject) {
+
+		URL url = createURL(baseUrl + "/offer/v1.0/user/" + username + "/realestateproject/" + realestateProject.getId() + "/" + "?usenewenergysourceenev2014values=true");
+
+		String xml = marshall(realestateProject);
+
+		return sendPutRequest(url, xml, new CreateRealestateResultParser());
+	}
+
+	@Override
+	public String updateRealestateProject(RealEstateProject realestateProject) {
+		return updateRealestateProject(ME, realestateProject);
+	}
+
+	@Override
+	public void addRealestatesToRealestateProject(String username, String realestateProjectId, RealEstateProjectEntries realEstateProjectEntries) {
+
+		URL url = createURL(baseUrl + "/offer/v1.0/user/" + username + "/realestateproject/" + realestateProjectId + "/realestateprojectentry");
+
+		String xml = marshall(realEstateProjectEntries);
+		sendPostRequest(url, xml, new AddRealestateToRealesteProjectResultParser());
+	}
+
+	@Override
+	public void addRealestatesToRealestateProject(String realestateProjectId, RealEstateProjectEntries realEstateProjectEntries) {
+		addRealestatesToRealestateProject(ME, realestateProjectId, realEstateProjectEntries);
+	}
+
+	@Override
+	public void addRealestatesToRealestateProject(String username, String realestateProjectId, List<RealEstate> realEstates) {
+		RealEstateProjectEntries entries = new RealEstateProjectEntries();
+
+		for (RealEstate realEstate : realEstates) {
+
+			RealEstateProjectEntry entry = new RealEstateProjectEntry();
+			entry.setRealEstateExternalId(realEstate.getExternalId());
+			entry.setRealEstateId(realEstate.getId());
+			entries.getRealEstateProjectEntry().add(entry);
+		}
+		addRealestatesToRealestateProject(username, realestateProjectId, entries);
+	}
+
+	@Override
+	public void addRealestatesToRealestateProject(String realestateProjectId, List<RealEstate> realEstates) {
+		addRealestatesToRealestateProject(ME, realestateProjectId, realEstates);
+	}
+
+	@Override
+	public void addRealestateToRealestateProject(String username, String realestateProjectId, RealEstate realEstate) {
+		addRealestatesToRealestateProject(username, realestateProjectId, Collections.singletonList(realEstate));
+	}
+
+	@Override
+	public void addRealestateToRealestateProject(String realestateProjectId, RealEstate realEstate) {
+		addRealestateToRealestateProject(ME, realestateProjectId, realEstate);
+	}
+
+	@Override
+	public void deleteRealestatesFromRealestateProject(String username, String realestateProjectId, List<RealEstate> realEstates) {
+		for (RealEstate realEstate : realEstates) {
+			deleteRealestateFromRealestateProject(username, realestateProjectId, realEstate);
+		}
+	}
+
+	@Override
+	public void deleteRealestatesFromRealestateProject(String realestateProjectId, List<RealEstate> realEstates) {
+		deleteRealestatesFromRealestateProject(ME, realestateProjectId, realEstates);
+	}
+
+	@Override
+	public void deleteRealestateFromRealestateProject(String username, String realestateProjectId, RealEstate realEstate) {
+
+		deleteRealestateFromRealestateProject(username, realestateProjectId, new InternalId(realEstate.getId() + ""));
+	}
+
+	@Override
+	public void deleteRealestateFromRealestateProject(String realestateProjectId, RealEstate realEstate) {
+		deleteRealestateFromRealestateProject(ME, realestateProjectId, realEstate);
+	}
+
+	@Override
+	public void deleteRealestateFromRealestateProject(String username, String realestateProjectId, ObjectId id) {
+		URL url = createURL(baseUrl + "/offer/v1.0/user/" + username + "/realestateproject/" + realestateProjectId + "/realestateprojectentry/" + id.getId());
+
+		sendDeleteRequest(url, new DeleteRealestateFromRealesteProjectResultParser());
+	}
+
+	@Override
+	public void deleteRealestateFromRealestateProject(String realestateProjectId, ObjectId id) {
+		deleteRealestateFromRealestateProject(ME, realestateProjectId, id);
+	}
+
+	@Override
+	public void placeOnTopProduct(String username, ObjectId id, OnTopPlacement placement) {
+
+		URL url = createURL(baseUrl + "/offer/v1.0/user/" + username + "/realestate/" + encodeId(id.getId()) + "/" + placement.getName() + "/");
+
+		LOG.info(url);
+		sendPostRequest(url, "", new OnTopProductResultParser());
+	}
+
+	@Override
+	public List<Placement> getOnTopProduct(String username, ObjectId id, OnTopPlacement placement) {
+
+		URL url = createURL(baseUrl + "/offer/v1.0/user/" + username + "/realestate/" + encodeId(id.getId()) + "/" + placement.getName() + "/");
+
+		LOG.info(url);
+		String xml = sendGetRequest(url, new OnTopProductResultParser());
+
+		if (OnTopPlacement.PREMIUM.equals(placement)) {
+			Premiumplacements placements = unmarshallPlacement(xml, Premiumplacements.class);
+			return new ArrayList<Placement>(placements.getPremiumplacement());
+		} else if (OnTopPlacement.SHOW_CASE.equals(placement)) {
+			Showcaseplacements placements = unmarshallPlacement(xml, Showcaseplacements.class);
+			return new ArrayList<Placement>(placements.getShowcaseplacement());
+		} else if (OnTopPlacement.TOP.equals(placement)) {
+			Topplacements placements = unmarshallPlacement(xml, Topplacements.class);
+			return new ArrayList<Placement>(placements.getTopplacement());
+		} else {
+			throw new RuntimeException("Unsupported placement " + placement);
+		}
+	}
+
+	@Override
+	public List<Placement> getOnTopProducts(String username, ObjectId id, OnTopPlacement placement) {
+
+		List<Placement> ret = new ArrayList<Placement>();
+
+		if (OnTopPlacement.ALL.equals(placement)) {
+			ret.addAll(getOnTopProducts(username, id, OnTopPlacement.PREMIUM));
+			ret.addAll(getOnTopProducts(username, id, OnTopPlacement.SHOW_CASE));
+			ret.addAll(getOnTopProducts(username, id, OnTopPlacement.TOP));
+			return ret;
+		} else {
+			URL url = createURL(baseUrl + "/offer/v1.0/user/" + username + "/" + placement.getName() + "/all");
+
+			LOG.info(url);
+			String xml = sendGetRequest(url, new OnTopProductResultParser());
+
+			if (OnTopPlacement.PREMIUM.equals(placement)) {
+				Premiumplacements placements = unmarshallPlacement(xml, Premiumplacements.class);
+				return new ArrayList<Placement>(placements.getPremiumplacement());
+			} else if (OnTopPlacement.SHOW_CASE.equals(placement)) {
+				Showcaseplacements placements = unmarshallPlacement(xml, Showcaseplacements.class);
+				return new ArrayList<Placement>(placements.getShowcaseplacement());
+			} else if (OnTopPlacement.TOP.equals(placement)) {
+				Topplacements placements = unmarshallPlacement(xml, Topplacements.class);
+				return new ArrayList<Placement>(placements.getTopplacement());
+			} else {
+				throw new RuntimeException("Unsupported placement " + placement);
+			}
+		}
+	}
+
+	private <T> T unmarshallPlacement(String xml, Class<T> clazz) {
+		return (T) unmarshall(clazz, xml);
+	}
+
+	@Override
+	public void removeOnTopProduct(String username, ObjectId id, OnTopPlacement placement) {
+
+		URL url = createURL(baseUrl + "/offer/v1.0/user/" + username + "/realestate/" + encodeId(id.getId()) + "/" + placement.getName() + "/");
+
+		LOG.info(url);
+		sendDeleteRequest(url, new OnTopProductResultParser());
+	}
+
+	@Override
+	public List<Entitlement> getEntitlement(String username) {
+
+		URL url = createURL(baseUrl + "/account/v1.0/user/" + username + "/entitlement");
+
+		String xml = sendGetRequest(url);
+
+		UserEntitlementsResponse userEntitlementsResponse = unmarshall(UserEntitlementsResponse.class, xml);
+		LOG.info(xml);
+		return userEntitlementsResponse.getEntitlement();
+	}
+
+	@Override
+	public Entitlement getEntitlement(String username, String name) {
+
+		URL url = createURL(baseUrl + "/account/v1.0/user/" + username + "/entitlement");
+
+		String xml = sendGetRequest(url);
+
+		UserEntitlementsResponse userEntitlementsResponse = unmarshall(UserEntitlementsResponse.class, xml);
+
+		for (Entitlement entitlement : userEntitlementsResponse.getEntitlement()) {
+			if (name.equals(entitlement.getName())) {
+				return entitlement;
+			}
+		}
+		return null;
 	}
 }

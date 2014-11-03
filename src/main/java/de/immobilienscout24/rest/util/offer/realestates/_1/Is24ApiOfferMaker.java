@@ -1,16 +1,21 @@
 package de.immobilienscout24.rest.util.offer.realestates._1;
 
-import de.immobilienscout24.rest.facades.offer.realestates._1.GarageBuyFacade;
-import de.immobilienscout24.rest.facades.offer.realestates._1.GarageFacade;
-import de.immobilienscout24.rest.facades.offer.realestates._1.GarageRentFacade;
-import de.immobilienscout24.rest.facades.offer.realestates._1.RealestateFacade;
-import de.immobilienscout24.rest.schema.common._1.*;
-import de.immobilienscout24.rest.schema.offer.realestates._1.GarageBuy;
-import de.immobilienscout24.rest.schema.offer.realestates._1.GarageRent;
+import de.immobilienscout24.rest.schema.common._1.CourtageInfo;
+import de.immobilienscout24.rest.schema.common._1.Currency;
+import de.immobilienscout24.rest.schema.common._1.EnergySourceEnev2014;
+import de.immobilienscout24.rest.schema.common._1.EnergySourcesEnev2014;
+import de.immobilienscout24.rest.schema.common._1.MarketingType;
+import de.immobilienscout24.rest.schema.common._1.Price;
+import de.immobilienscout24.rest.schema.common._1.PriceIntervalType;
+import de.immobilienscout24.rest.schema.common._1.YesNoNotApplicableType;
 
-import java.util.Arrays;
-
+/**
+ * 
+ * @author Robert Will
+ * 
+ */
 public class Is24ApiOfferMaker {
+
 	public static CourtageInfo noCourtage() {
 		CourtageInfo courtageInfo = new CourtageInfo();
 		courtageInfo.setHasCourtage(YesNoNotApplicableType.NO);
@@ -46,14 +51,4 @@ public class Is24ApiOfferMaker {
 		}
 		return energySources;
 	}
-
-	public static void setRealestateDefaults(RealestateFacade facade) {
-		facade.setPrice(simplePrice(0.0));
-	}
-
-	public static void setRealestateMinimalFields(RealestateFacade facade) {
-		facade.setPrice(new Price());
-		facade.setCourtage(new CourtageInfo());
-	}
-
 }

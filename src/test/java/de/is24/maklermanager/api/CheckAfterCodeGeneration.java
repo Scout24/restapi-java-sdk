@@ -1,9 +1,14 @@
 package de.is24.maklermanager.api;
 
+import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
 
 import de.immobilienscout24.rest.schema.common._1.ObjectFactory;
+import de.immobilienscout24.rest.schema.offer.placement.Placement;
+import de.immobilienscout24.rest.schema.offer.premiumplacement._1.Premiumplacement;
+import de.immobilienscout24.rest.schema.offer.showcaseplacement._1.Showcaseplacement;
+import de.immobilienscout24.rest.schema.offer.topplacement._1.Topplacement;
 
 /**
  * 
@@ -44,5 +49,19 @@ public class CheckAfterCodeGeneration {
 	public void testMethodAccess() throws Exception {
 		ObjectFactory of = new ObjectFactory();
 		of.createRealtorContactDetails(null);
+	}
+
+	@Ignore
+	@Test
+	public void testMethodAccessEntitlement() throws Exception {
+		de.immobilienscout24.rest.schema.entitlement._1.ObjectFactory of = new de.immobilienscout24.rest.schema.entitlement._1.ObjectFactory();
+		of.createEntitlement(null);
+	}
+
+	@Test
+	public void testPlacement() throws Exception {
+		Assert.assertTrue(new Topplacement() instanceof Placement);
+		Assert.assertTrue(new Premiumplacement() instanceof Placement);
+		Assert.assertTrue(new Showcaseplacement() instanceof Placement);
 	}
 }
