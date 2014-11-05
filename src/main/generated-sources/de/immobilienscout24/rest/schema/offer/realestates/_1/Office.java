@@ -1,8 +1,8 @@
 //
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.7 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.10.22 um 03:41:54 PM CEST 
+// Änderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
+// Generiert: 2014.11.05 um 11:03:21 AM CET 
 //
 
 
@@ -10,11 +10,13 @@ package de.immobilienscout24.rest.schema.offer.realestates._1;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+
 import de.immobilienscout24.rest.schema.common._1.Adapter1;
 import de.immobilienscout24.rest.schema.common._1.AirConditioningType;
 import de.immobilienscout24.rest.schema.common._1.BuildingEnergyRatingType;
@@ -36,9 +38,9 @@ import de.immobilienscout24.rest.schema.common._1.YesNotApplicableType;
 
 
 /**
- * Eigenschaften fr den Immobilientyp "Buero"
+ * Eigenschaften für den Immobilientyp "Buero"
  * 
- * <p>Java-Klasse fr Office complex type.
+ * <p>Java-Klasse für Office complex type.
  * 
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
@@ -1192,7 +1194,7 @@ public class Office
 
 
     /**
-     * <p>Java-Klasse fr anonymous complex type.
+     * <p>Java-Klasse für anonymous complex type.
      * 
      * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
      * 

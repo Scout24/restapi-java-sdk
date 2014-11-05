@@ -1,8 +1,8 @@
 //
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.7 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.10.22 um 03:41:54 PM CEST 
+// Änderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
+// Generiert: 2014.11.05 um 11:03:21 AM CET 
 //
 
 
@@ -13,7 +13,7 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java-Klasse fr RealEstateType.
+ * <p>Java-Klasse für RealEstateType.
  * 
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * <p>
@@ -88,19 +88,19 @@ public enum RealEstateType {
     GARAGE_BUY,
 
     /**
-     * Wohngrundstck zur Miete
+     * Wohngrundstück zur Miete
      * 
      */
     LIVING_RENT_SITE,
 
     /**
-     * Wohngrundstck zum Kauf
+     * Wohngrundstück zum Kauf
      * 
      */
     LIVING_BUY_SITE,
 
     /**
-     * Gewerbegrundstck
+     * Gewerbegrundstück
      * 
      */
     TRADE_SITE,
@@ -130,7 +130,7 @@ public enum RealEstateType {
     ASSISTED_LIVING,
 
     /**
-     * Bro und Praxis
+     * Büro und Praxis
      * 
      */
     OFFICE,

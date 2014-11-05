@@ -1,8 +1,8 @@
 //
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.7 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.10.22 um 03:41:54 PM CEST 
+// Änderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
+// Generiert: 2014.11.05 um 11:03:21 AM CET 
 //
 
 
@@ -13,7 +13,7 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java-Klasse fr MessageCode.
+ * <p>Java-Klasse für MessageCode.
  * 
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * <p>
@@ -51,6 +51,7 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;enumeration value="ERROR_RESOURCE_VALIDATION"/>
  *     &lt;enumeration value="ERROR_REQUESTED_DATA_NOT_FOUND"/>
  *     &lt;enumeration value="ERROR_RESOURCE_NOT_UNIQUE"/>
+ *     &lt;enumeration value="ERROR_RESOURCE_NO_LONGER_AVAILABLE"/>
  *     &lt;enumeration value="ERROR_DB_NOT_AVAILABLE"/>
  *     &lt;enumeration value="ERROR_CONTACT_DETAILS_MISSING"/>
  *     &lt;enumeration value="ERROR_INVALID_COORDINATES"/>
@@ -250,6 +251,12 @@ public enum MessageCode {
      * 
      */
     ERROR_RESOURCE_NOT_UNIQUE,
+
+    /**
+     * resource requested is no longer available and will not be available again.
+     * 
+     */
+    ERROR_RESOURCE_NO_LONGER_AVAILABLE,
 
     /**
      * The DB ist not reachable.

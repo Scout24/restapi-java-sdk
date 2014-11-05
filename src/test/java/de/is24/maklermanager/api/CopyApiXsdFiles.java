@@ -27,9 +27,11 @@ public class CopyApiXsdFiles {
 	public static void main(String[] args) throws IOException {
 
 		initAcceptedFileList();
+		// your basepath
+		String basePath = "/data/home/mfluegge";
 
-		String sourceBasePath = "../../../rest-api/schema/trunk/";
-		String targetBasePath = "../../../trunk/common/api/";
+		String sourceBasePath = basePath + "/ImmoScout24/MMM/rest-api/schema/trunk/";
+		String targetBasePath = basePath + "/work/git/restapi-java-sdk/";
 
 		File f1 = new File(sourceBasePath);
 		System.out.println(f1.getAbsolutePath());
@@ -44,6 +46,8 @@ public class CopyApiXsdFiles {
 			}
 
 			File sourceDir = new File(sourceBasePath + dir);
+
+			System.out.println(sourceDir.getAbsolutePath());
 			if (!sourceDir.exists()) {
 				System.out.println("**** skipping directory: " + dir);
 				continue;

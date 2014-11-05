@@ -1,8 +1,8 @@
 //
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.7 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.10.22 um 03:41:54 PM CEST 
+// Änderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
+// Generiert: 2014.11.05 um 11:03:21 AM CET 
 //
 
 
@@ -13,7 +13,7 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java-Klasse fr BuildingType.
+ * <p>Java-Klasse für BuildingType.
  * 
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * <p>
@@ -88,7 +88,7 @@ public enum BuildingType {
     FARMHOUSE,
 
     /**
-     * Doppelhaushlfte
+     * Doppelhaushälfte
      * 
      */
     SEMIDETACHED_HOUSE,

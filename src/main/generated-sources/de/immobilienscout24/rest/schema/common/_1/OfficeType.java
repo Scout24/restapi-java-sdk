@@ -1,8 +1,8 @@
 //
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.7 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.10.22 um 03:41:54 PM CEST 
+// Änderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
+// Generiert: 2014.11.05 um 11:03:21 AM CET 
 //
 
 
@@ -13,7 +13,7 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java-Klasse fr OfficeType.
+ * <p>Java-Klasse für OfficeType.
  * 
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * <p>
@@ -56,31 +56,31 @@ public enum OfficeType {
     STUDIO,
 
     /**
-     * Bro
+     * Büro
      * 
      */
     OFFICE,
 
     /**
-     * Broetage
+     * Büroetage
      * 
      */
     OFFICE_FLOOR,
 
     /**
-     * Brohaus
+     * Bürohaus
      * 
      */
     OFFICE_BUILDING,
 
     /**
-     * Brozentrum
+     * Bürozentrum
      * 
      */
     OFFICE_CENTRE,
 
     /**
-     * Bro-/ Lagergebude
+     * Büro-/ Lagergebäude
      * 
      */
     OFFICE_STORAGE_BUILDING,
@@ -110,13 +110,13 @@ public enum OfficeType {
     COMMERCIAL_CENTRE,
 
     /**
-     * Wohn- und Geschftsgebude
+     * Wohn- und Geschäftsgebäude
      * 
      */
     LIVING_AND_COMMERCIAL_BUILDING,
 
     /**
-     * Bro- und Geschftsgebude
+     * Büro- und Geschäftsgebäude
      * 
      */
     OFFICE_AND_COMMERCIAL_BUILDING;

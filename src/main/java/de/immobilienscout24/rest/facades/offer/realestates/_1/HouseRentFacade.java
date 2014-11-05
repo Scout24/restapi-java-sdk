@@ -1,6 +1,18 @@
 package de.immobilienscout24.rest.facades.offer.realestates._1;
 
-import de.immobilienscout24.rest.schema.common._1.*;
+import de.immobilienscout24.rest.schema.common._1.BuildingEnergyRatingType;
+import de.immobilienscout24.rest.schema.common._1.BuildingType;
+import de.immobilienscout24.rest.schema.common._1.CourtageInfo;
+import de.immobilienscout24.rest.schema.common._1.EnergyPerformanceCertificate;
+import de.immobilienscout24.rest.schema.common._1.EnergySourcesEnev2014;
+import de.immobilienscout24.rest.schema.common._1.FiringTypes;
+import de.immobilienscout24.rest.schema.common._1.HeatingType;
+import de.immobilienscout24.rest.schema.common._1.HeatingTypeEnev2014;
+import de.immobilienscout24.rest.schema.common._1.InteriorQuality;
+import de.immobilienscout24.rest.schema.common._1.ParkingSpaceType;
+import de.immobilienscout24.rest.schema.common._1.Price;
+import de.immobilienscout24.rest.schema.common._1.RealEstateCondition;
+import de.immobilienscout24.rest.schema.common._1.YesNotApplicableType;
 import de.immobilienscout24.rest.schema.offer.realestates._1.HouseRent;
 
 public class HouseRentFacade implements HouseFacade {

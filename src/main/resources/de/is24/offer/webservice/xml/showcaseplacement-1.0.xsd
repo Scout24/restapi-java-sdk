@@ -48,8 +48,14 @@
 	                <xs:documentation xml:lang="en">the period in which a service is active/available</xs:documentation>
 	                <xs:documentation xml:lang="de-DE">Leistung gebucht von/bis</xs:documentation>
 	            </xs:annotation>	                
-	        </xs:element>                  
- 		</xs:sequence>
+	        </xs:element>
+             <xs:element name="externalId" type="xs:string" minOccurs="0" maxOccurs="0">
+                 <xs:annotation>
+                     <xs:documentation xml:lang="en">external id of real estate OUTPUT ONLY</xs:documentation>
+                     <xs:documentation xml:lang="de-DE">kunden referenznummer der immobilie (nur Ausgabe)</xs:documentation>
+                 </xs:annotation>
+             </xs:element>
+         </xs:sequence>
         <xs:attribute name="realestateid" type="xs:string" use="required">
             <xs:annotation>
                 <xs:documentation xml:lang="en">Id of realestate.</xs:documentation>

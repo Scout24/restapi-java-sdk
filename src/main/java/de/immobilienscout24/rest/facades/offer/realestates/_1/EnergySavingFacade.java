@@ -1,6 +1,11 @@
 package de.immobilienscout24.rest.facades.offer.realestates._1;
 
-import de.immobilienscout24.rest.schema.common._1.*;
+import de.immobilienscout24.rest.schema.common._1.BuildingEnergyRatingType;
+import de.immobilienscout24.rest.schema.common._1.EnergyPerformanceCertificate;
+import de.immobilienscout24.rest.schema.common._1.EnergySourcesEnev2014;
+import de.immobilienscout24.rest.schema.common._1.FiringTypes;
+import de.immobilienscout24.rest.schema.common._1.HeatingTypeEnev2014;
+import de.immobilienscout24.rest.schema.common._1.YesNotApplicableType;
 
 
 public interface EnergySavingFacade extends RealestateFacade {

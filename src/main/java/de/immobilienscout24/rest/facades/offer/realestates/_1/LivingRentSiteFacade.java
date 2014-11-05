@@ -1,7 +1,12 @@
 package de.immobilienscout24.rest.facades.offer.realestates._1;
 
 
-import de.immobilienscout24.rest.schema.common._1.*;
+import de.immobilienscout24.rest.schema.common._1.CommercializationType;
+import de.immobilienscout24.rest.schema.common._1.CourtageInfo;
+import de.immobilienscout24.rest.schema.common._1.LeaseIntervalType;
+import de.immobilienscout24.rest.schema.common._1.Price;
+import de.immobilienscout24.rest.schema.common._1.SiteConstructibleType;
+import de.immobilienscout24.rest.schema.common._1.SiteDevelopmentType;
 import de.immobilienscout24.rest.schema.offer.realestates._1.LivingRentSite;
 
 public class LivingRentSiteFacade implements SiteFacade {
