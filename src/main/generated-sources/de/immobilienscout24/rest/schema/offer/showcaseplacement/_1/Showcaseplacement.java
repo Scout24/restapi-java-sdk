@@ -2,7 +2,7 @@
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.7 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Änderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.11.05 um 11:03:21 AM CET 
+// Generiert: 2014.11.05 um 11:50:50 AM CET 
 //
 
 package de.immobilienscout24.rest.schema.offer.showcaseplacement._1;
@@ -30,10 +30,10 @@ import de.immobilienscout24.rest.schema.offer.placement.Placement;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="messageCode" type="{http://www.w3.org/2001/XMLSchema}string" maxOccurs="0" minOccurs="0"/>
- *         &lt;element name="message" type="{http://www.w3.org/2001/XMLSchema}string" maxOccurs="0" minOccurs="0"/>
+ *         &lt;element name="messageCode" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="message" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="servicePeriod" type="{http://rest.immobilienscout24.de/schema/common/1.0}DateRange" minOccurs="0"/>
- *         &lt;element name="externalId" type="{http://www.w3.org/2001/XMLSchema}string" maxOccurs="0" minOccurs="0"/>
+ *         &lt;element name="externalId" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *       &lt;/sequence>
  *       &lt;attribute name="realestateid" use="required" type="{http://www.w3.org/2001/XMLSchema}string" />
  *       &lt;attribute name="voucher" type="{http://www.w3.org/2001/XMLSchema}string" />
@@ -45,14 +45,59 @@ import de.immobilienscout24.rest.schema.offer.placement.Placement;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Showcaseplacement", propOrder = { "servicePeriod" })
+@XmlType(name = "Showcaseplacement", propOrder = { "messageCode", "message", "servicePeriod", "externalId" })
 public class Showcaseplacement implements Placement {
 
+	protected String messageCode;
+	protected String message;
 	protected DateRange servicePeriod;
+	protected String externalId;
 	@XmlAttribute(name = "realestateid", required = true)
 	protected String realestateid;
 	@XmlAttribute(name = "voucher")
 	protected String voucher;
+
+	/**
+	 * Ruft den Wert der messageCode-Eigenschaft ab.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getMessageCode() {
+		return messageCode;
+	}
+
+	/**
+	 * Legt den Wert der messageCode-Eigenschaft fest.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setMessageCode(String value) {
+		this.messageCode = value;
+	}
+
+	/**
+	 * Ruft den Wert der message-Eigenschaft ab.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getMessage() {
+		return message;
+	}
+
+	/**
+	 * Legt den Wert der message-Eigenschaft fest.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setMessage(String value) {
+		this.message = value;
+	}
 
 	/**
 	 * Ruft den Wert der servicePeriod-Eigenschaft ab.
@@ -73,6 +118,27 @@ public class Showcaseplacement implements Placement {
 	 */
 	public void setServicePeriod(DateRange value) {
 		this.servicePeriod = value;
+	}
+
+	/**
+	 * Ruft den Wert der externalId-Eigenschaft ab.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getExternalId() {
+		return externalId;
+	}
+
+	/**
+	 * Legt den Wert der externalId-Eigenschaft fest.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setExternalId(String value) {
+		this.externalId = value;
 	}
 
 	/**

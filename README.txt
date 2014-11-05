@@ -2,15 +2,10 @@ TODO:
 
 To generate the classes from the given xsd:
 
-- before generating be sure to have to latest version of all xsd files 
-	--> copying possible with CopyApiXsdFiles.java(update api project before :-) )
+1.) before generating be sure to have to latest version of all xsd files !
+	- checkout(or update!) https://subversion.iscout.local/int/is24/common/restapi/schema/trunk
+		 into the same directory like mmm project itself and put it into folder "rest-api"
+		 
+	--> copying from rest-api all relevant files into mmm/common/api/... with CopyApiXsdFiles.java
 
-- remove all binding files 
-- remove the realestate definition from the realestates.xsd
-- run "mvn clean install -P generateSources"
-- refresh your project
-- de.immobilienscout24.rest.schema.common._1.ObjectFactory.createRealtorContactDetail -->de.immobilienscout24.rest.schema.common._1.ObjectFactory.createRealtorContactDetails umbennen
-	public JAXBElement<RealtorContactDetails> createRealtorContactDetails(RealtorContactDetails value)
-
-
-- //run "mvn clean generate-sources" 
+2.) run generateSources.sh

@@ -17,4 +17,16 @@ public interface Placement {
 	public void setRealestateid(String value);
 
 	public String getVoucher();
+
+	public String getExternalId();
+
+	public void setExternalId(String value);
+
+	public String getMessageCode();
+
+	public void setMessageCode(String value);
+
+	public String getMessage();
+
+	public void setMessage(String value);
 }

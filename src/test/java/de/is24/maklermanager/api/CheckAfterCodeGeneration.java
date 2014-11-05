@@ -63,5 +63,10 @@ public class CheckAfterCodeGeneration {
 		Assert.assertTrue(new Topplacement() instanceof Placement);
 		Assert.assertTrue(new Premiumplacement() instanceof Placement);
 		Assert.assertTrue(new Showcaseplacement() instanceof Placement);
+
+		new Topplacement().getExternalId();
+		new Premiumplacement().getExternalId();
+		new Showcaseplacement().getExternalId();
 	}
+
 }

@@ -23,7 +23,6 @@
             <xs:documentation xml:lang="de-DE">Showcaseplacement</xs:documentation>
         </xs:annotation>
     </xs:element>
-
     
     <xs:complexType name="Showcaseplacement">
         <xs:annotation>
@@ -31,13 +30,13 @@
             <xs:documentation xml:lang="de-DE">Schaufensterplatzierung</xs:documentation>
         </xs:annotation>
          <xs:sequence>
-            <xs:element name="messageCode" type="xs:string" minOccurs="0" maxOccurs="0">
+            <xs:element name="messageCode" type="xs:string" minOccurs="0">
                 <xs:annotation>
                     <xs:documentation xml:lang="en">result code of the operation</xs:documentation>
                     <xs:documentation xml:lang="de-DE">Schaufensterplatzierung-Ergebnis</xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <xs:element name="message" type="xs:string" minOccurs="0" maxOccurs="0">
+            <xs:element name="message" type="xs:string" minOccurs="0" >
                 <xs:annotation>
                     <xs:documentation xml:lang="en">message result of the operation</xs:documentation>
                     <xs:documentation xml:lang="de-DE">Schaufensterplatzierung-Ergebnis Nachricht</xs:documentation>
@@ -49,7 +48,7 @@
 	                <xs:documentation xml:lang="de-DE">Leistung gebucht von/bis</xs:documentation>
 	            </xs:annotation>	                
 	        </xs:element>
-             <xs:element name="externalId" type="xs:string" minOccurs="0" maxOccurs="0">
+             <xs:element name="externalId" type="xs:string" minOccurs="0" >
                  <xs:annotation>
                      <xs:documentation xml:lang="en">external id of real estate OUTPUT ONLY</xs:documentation>
                      <xs:documentation xml:lang="de-DE">kunden referenznummer der immobilie (nur Ausgabe)</xs:documentation>
