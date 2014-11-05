@@ -18,8 +18,13 @@ Who  		  | When 		  | What
 mfluegge  	  | 10th June 2014| initial commit
 mfluegge  	  | 10th June 2014| v0.1 beta
 mfluegge  	  | 3th November 2014| v0.2 beta
+mfluegge  	  | 4th November 2014| v0.2.3
 
 
+v0.2.3
+----------
+
+Added externalId, message and messageCode to ShowcasePlacement, TopPlacment and PremiumPlacement.
 
 v0.2.1
 ----------
