@@ -1594,34 +1594,43 @@ public class IS24ApiImpl implements Is24Api, InternalObjectApi {
 	@Override
 	public List<Placement> getOnTopProduct(String username, ObjectId id, OnTopPlacement placement) {
 
-		URL url = createURL(baseUrl + "/offer/v1.0/user/" + username + "/realestate/" + encodeId(id.getId()) + "/" + placement.getName() + "/");
-
-		LOG.info(url);
-		String xml = sendGetRequest(url, new OnTopProductResultParser());
-
-		if (OnTopPlacement.PREMIUM.equals(placement)) {
-			Premiumplacements placements = unmarshallPlacement(xml, Premiumplacements.class);
-			return new ArrayList<Placement>(placements.getPremiumplacement());
-		} else if (OnTopPlacement.SHOW_CASE.equals(placement)) {
-			Showcaseplacements placements = unmarshallPlacement(xml, Showcaseplacements.class);
-			return new ArrayList<Placement>(placements.getShowcaseplacement());
-		} else if (OnTopPlacement.TOP.equals(placement)) {
-			Topplacements placements = unmarshallPlacement(xml, Topplacements.class);
-			return new ArrayList<Placement>(placements.getTopplacement());
+		if (OnTopPlacement.ALL.equals(placement)) {
+			List<Placement> ret = new ArrayList<Placement>();
+			ret.addAll(getOnTopProduct(username, id, OnTopPlacement.PREMIUM));
+			ret.addAll(getOnTopProduct(username, id, OnTopPlacement.SHOW_CASE));
+			ret.addAll(getOnTopProduct(username, id, OnTopPlacement.TOP));
+			return ret;
 		} else {
-			throw new RuntimeException("Unsupported placement " + placement);
+
+			URL url = createURL(baseUrl + "/offer/v1.0/user/" + username + "/realestate/" + encodeId(id.getId()) + "/" + placement.getName() + "/");
+
+			LOG.info(url);
+			String xml = sendGetRequest(url, new OnTopProductResultParser());
+
+			if (OnTopPlacement.PREMIUM.equals(placement)) {
+				Premiumplacements placements = unmarshallPlacement(xml, Premiumplacements.class);
+				return new ArrayList<Placement>(placements.getPremiumplacement());
+			} else if (OnTopPlacement.SHOW_CASE.equals(placement)) {
+				Showcaseplacements placements = unmarshallPlacement(xml, Showcaseplacements.class);
+				return new ArrayList<Placement>(placements.getShowcaseplacement());
+			} else if (OnTopPlacement.TOP.equals(placement)) {
+				Topplacements placements = unmarshallPlacement(xml, Topplacements.class);
+				return new ArrayList<Placement>(placements.getTopplacement());
+			} else {
+				throw new RuntimeException("Unsupported placement " + placement);
+			}
 		}
 	}
 
 	@Override
-	public List<Placement> getOnTopProducts(String username, ObjectId id, OnTopPlacement placement) {
+	public List<Placement> getOnTopProducts(String username, OnTopPlacement placement) {
 
 		List<Placement> ret = new ArrayList<Placement>();
 
 		if (OnTopPlacement.ALL.equals(placement)) {
-			ret.addAll(getOnTopProducts(username, id, OnTopPlacement.PREMIUM));
-			ret.addAll(getOnTopProducts(username, id, OnTopPlacement.SHOW_CASE));
-			ret.addAll(getOnTopProducts(username, id, OnTopPlacement.TOP));
+			ret.addAll(getOnTopProducts(username, OnTopPlacement.PREMIUM));
+			ret.addAll(getOnTopProducts(username, OnTopPlacement.SHOW_CASE));
+			ret.addAll(getOnTopProducts(username, OnTopPlacement.TOP));
 			return ret;
 		} else {
 			URL url = createURL(baseUrl + "/offer/v1.0/user/" + username + "/" + placement.getName() + "/all");

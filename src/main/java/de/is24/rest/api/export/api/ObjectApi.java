@@ -1073,7 +1073,7 @@ public interface ObjectApi {
 
 	public List<Placement> getOnTopProduct(String username, ObjectId id, OnTopPlacement placement);
 
-	public List<Placement> getOnTopProducts(String username, ObjectId id, OnTopPlacement placement);
+	public List<Placement> getOnTopProducts(String username, OnTopPlacement placement);
 
 	/**
 	 * 
