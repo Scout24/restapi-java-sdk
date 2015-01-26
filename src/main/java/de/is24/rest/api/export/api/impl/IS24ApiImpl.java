@@ -733,7 +733,10 @@ public class IS24ApiImpl implements Is24Api, InternalObjectApi {
 			connection.setDoInput(true);
 			connection.setDoOutput(true);
 
-			signRequest(connection);
+			if (this.accessToken != null) {
+				signRequest(connection);
+			}
+
 			// Send request
 			DataOutputStream wr = new DataOutputStream(connection.getOutputStream());
 
