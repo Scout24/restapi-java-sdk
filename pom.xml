@@ -5,7 +5,8 @@
 	<groupId>de.is24.rest.api</groupId>
 	<artifactId>restapi-java-sdk</artifactId>
 	<packaging>jar</packaging>
-	<version>0.2.8</version>
+	<!-- manuel increment -->
+    <version>0.2.8</version>
 	<name>REST :: Common :: API</name>
 	<url>http://maven.apache.org</url>
 
