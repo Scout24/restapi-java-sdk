@@ -38,6 +38,7 @@ import org.apache.commons.httpclient.methods.multipart.MultipartRequestEntity;
 import org.apache.commons.httpclient.methods.multipart.Part;
 import org.apache.commons.httpclient.methods.multipart.StringPart;
 import org.apache.commons.httpclient.util.URIUtil;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.jdom.Element;
@@ -595,56 +596,58 @@ public class IS24ApiImpl implements Is24Api, InternalObjectApi {
 
   private String uploadVideo(String username, String realEstateId, IMultimediaObject object)
                       throws FileNotFoundException, IOException, HttpException {
-    URL videoUrl = createURL(baseUrl + "/offer/v1.0/user/" + username + "/videouploadticket");
-    String ticketXml = sendGetRequest(videoUrl);
-    VideoTicket ticket = unmarshall(VideoTicket.class, ticketXml);
+    String videoId = ((VideoMultimediaObject) object).getVideoId();
+    if (StringUtils.isBlank(videoId)) {
+      URL videoUrl = createURL(baseUrl + "/offer/v1.0/user/" + username + "/videouploadticket");
+      String ticketXml = sendGetRequest(videoUrl);
+      VideoTicket ticket = unmarshall(VideoTicket.class, ticketXml);
+      videoId = ticket.getVideoId();
+      LOG.info("uploadVideo response " + ticket.getAuth());
 
-    LOG.info("uploadVideo response " + ticket.getAuth());
+      LOG.info("Uploading video to " + ticket.getUploadUrl());
 
-    LOG.info("Uploading video to " + ticket.getUploadUrl());
+      PostMethod filePost = new PostMethod(ticket.getUploadUrl());
+      StringPart part1 = new StringPart("auth", ticket.getAuth());
+      FilePart part2 = new FilePart("videofile",
+        object.getTitle(),
+        ((FileMultimediaObject) object).getFile(),
+        "multipart/form-data",
+        null);
+      Part[] parts = { part1, part2 };
+      filePost.setRequestEntity(new MultipartRequestEntity(parts, filePost.getParams()));
 
-    PostMethod filePost = new PostMethod(ticket.getUploadUrl());
-    StringPart part1 = new StringPart("auth", ticket.getAuth());
-    FilePart part2 = new FilePart("videofile",
-      object.getTitle(),
-      ((FileMultimediaObject) object).getFile(),
-      "multipart/form-data",
-      null);
-    Part[] parts = { part1, part2 };
-    filePost.setRequestEntity(new MultipartRequestEntity(parts, filePost.getParams()));
+      HttpClient client = new HttpClient();
 
-    HttpClient client = new HttpClient();
+      if ((proxyHost != null) && (proxyHost.length() > 0)) {
+        LOG.info("Using proxy " + proxyHost + ":" + proxyPort);
 
-    if ((proxyHost != null) && (proxyHost.length() > 0)) {
-      LOG.info("Using proxy " + proxyHost + ":" + proxyPort);
+        client.getHostConfiguration().setProxy(proxyHost, proxyPort);
+      }
 
-      client.getHostConfiguration().setProxy(proxyHost, proxyPort);
+      // int retryCount = 0;
+      // int retryMax = 5;
+      // while (retryCount <= retryMax) {
+      //
+      // try {
+      client.executeMethod(filePost);
+      // break;
+      // } catch (java.net.ConnectException e) {
+      // sleep(5000);
+      // LOG.warn("Connection problems during video upload. Going for retry "
+      // + (++retryCount), e);
+      //
+      // if (retryCount == retryMax) {
+      // throw e;
+      // }
+      //
+      // continue;
+      // }
+      // }
+
+      String responseVideoUpload = filePost.getResponseBodyAsString();
+      LOG.info("uploadVideo resp: " + responseVideoUpload);
     }
-
-    // int retryCount = 0;
-    // int retryMax = 5;
-    // while (retryCount <= retryMax) {
-    //
-    // try {
-    client.executeMethod(filePost);
-    // break;
-    // } catch (java.net.ConnectException e) {
-    // sleep(5000);
-    // LOG.warn("Connection problems during video upload. Going for retry "
-    // + (++retryCount), e);
-    //
-    // if (retryCount == retryMax) {
-    // throw e;
-    // }
-    //
-    // continue;
-    // }
-    // }
-
-    String responseVideoUpload = filePost.getResponseBodyAsString();
-    LOG.info("uploadVideo resp: " + responseVideoUpload);
-
-    ((VideoMultimediaObject) object).setVideoId(ticket.getVideoId());
+    ((VideoMultimediaObject) object).setVideoId(videoId);
 
     LOG.info("uploadVideo response " + object.getAttachmentXml());
 
