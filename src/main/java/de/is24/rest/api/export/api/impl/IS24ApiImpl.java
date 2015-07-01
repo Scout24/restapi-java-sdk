@@ -2,7 +2,6 @@ package de.is24.rest.api.export.api.impl;
 
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -11,11 +10,7 @@ import java.io.StringReader;
 import java.io.StringWriter;
 import java.io.UnsupportedEncodingException;
 import java.io.Writer;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.net.URLDecoder;
-import java.net.URLEncoder;
+import java.net.*;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -31,7 +26,6 @@ import javax.xml.bind.annotation.adapters.XmlAdapter;
 import oauth.signpost.OAuthConsumer;
 import oauth.signpost.basic.DefaultOAuthConsumer;
 import org.apache.commons.httpclient.HttpClient;
-import org.apache.commons.httpclient.HttpException;
 import org.apache.commons.httpclient.methods.PostMethod;
 import org.apache.commons.httpclient.methods.multipart.FilePart;
 import org.apache.commons.httpclient.methods.multipart.MultipartRequestEntity;
@@ -114,7 +108,19 @@ public class IS24ApiImpl implements Is24Api, InternalObjectApi {
     this.apiConsumerKey = apiConsumerKey;
     this.apiConsumerSecret = apiConsumerSecret;
     this.baseUrl = baseUrl;
+    checkHttpS();
   }
+
+  public static final String HTTPS = "https://";
+
+  private void checkHttpS() {
+    if (!StringUtils.contains(baseUrl, "://")) {
+      baseUrl = HTTPS + baseUrl;
+    } else {
+      baseUrl = HTTPS + StringUtils.substringAfter(baseUrl, "://");
+    }
+  }
+
 
   @Override
   public String search(String realestateType, String geoCodes) {
@@ -594,8 +600,7 @@ public class IS24ApiImpl implements Is24Api, InternalObjectApi {
     }
   }
 
-  private String uploadVideo(String username, String realEstateId, IMultimediaObject object)
-                      throws FileNotFoundException, IOException, HttpException {
+  private String uploadVideo(String username, String realEstateId, IMultimediaObject object) throws IOException {
     String videoId = ((VideoMultimediaObject) object).getVideoId();
     if (StringUtils.isBlank(videoId)) {
       URL videoUrl = createURL(baseUrl + "/offer/v1.0/user/" + username + "/videouploadticket");
