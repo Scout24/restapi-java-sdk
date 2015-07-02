@@ -19,6 +19,8 @@ mfluegge  	  | 10th June 2014| initial commit
 mfluegge  	  | 10th June 2014| v0.1 beta
 mfluegge  	  | 3th November 2014| v0.2 beta
 mfluegge  	  | 4th November 2014| v0.2.3
+dsostin  	  | 26th February 2015| v0.2.9
+dsostin  	  | 02th July 2015| v0.2.10
 
 
 v0.2.3
@@ -46,3 +48,11 @@ v0.2 beta
 - On top products can be removed from realestates
 - user can get a list of entitlements for a given username
 - user can get a specific entitlement by name for a given user
+
+v0.2.9 
+----------
+bug fix for create video attachment
+
+v0.2.10 
+----------
+sdk make all requests using https. 
