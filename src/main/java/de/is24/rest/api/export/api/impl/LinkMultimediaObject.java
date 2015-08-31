@@ -29,7 +29,7 @@ public class LinkMultimediaObject extends AbstractMultimediaObject {
 		buffer.append("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>" + NL);
 		buffer.append("<common:attachment xsi:type=\"common:Link\" xmlns:common=\"http://rest.immobilienscout24.de/schema/common/1.0\" xmlns:ns3=\"http://rest.immobilienscout24.de/schema/platform/gis/1.0\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">"
 				+ NL);
-		buffer.append("<title>" + getTitle() + "</title>" + NL);
+		buffer.append("<title>" + StringEscapeUtils.escapeXml(getTitle()) + "</title>" + NL);
 		buffer.append("<url>" + encode(getLink()) + "</url>" + NL);
 		buffer.append("</common:attachment>");
 		return buffer.toString();
