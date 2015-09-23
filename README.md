@@ -58,6 +58,6 @@ v0.2.10
 ----------
 sdk make all requests using https.
 
-v0.2.10
+v0.2.11
 ----------
 bugfix POST attachment(url)
