@@ -14,13 +14,14 @@ History
 
 
 Who  		  | When 		  | What
-------------- | ------------- | ------------- 
+------------- | ------------- | -------------
 mfluegge  	  | 10th June 2014| initial commit
 mfluegge  	  | 10th June 2014| v0.1 beta
 mfluegge  	  | 3th November 2014| v0.2 beta
 mfluegge  	  | 4th November 2014| v0.2.3
 dsostin  	  | 26th February 2015| v0.2.9
 dsostin  	  | 02th July 2015| v0.2.10
+fmielke       | 31th August 2015| v0.2.11
 
 
 v0.2.3
@@ -37,7 +38,7 @@ v0.2 beta
 ----------
 
 - createRealestate(String username, RealEstate realestate) uses energy certificate data by default
-- update realeste 
+- update realeste
 - upload of FileMultimediaObject now throw MaximumNumberOfAttachmentsReachedException when trying to upload attchment #31
 - user can retrieve realestate project for a given realestate id
 - realestate projects can be upated
@@ -49,10 +50,14 @@ v0.2 beta
 - user can get a list of entitlements for a given username
 - user can get a specific entitlement by name for a given user
 
-v0.2.9 
+v0.2.9
 ----------
 bug fix for create video attachment
 
-v0.2.10 
+v0.2.10
 ----------
-sdk make all requests using https. 
+sdk make all requests using https.
+
+v0.2.10
+----------
+bugfix POST attachment(url)
