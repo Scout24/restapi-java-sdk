@@ -39,12 +39,7 @@ public class LinkMultimediaObject extends AbstractMultimediaObject {
 		return link;
 	}
 
-	public void setLink(String link) {
-		if (!link.startsWith("http://")) {
-			link = "http://" + link;
-		}
-		this.link = link;
-	}
+	public void setLink(String link) { this.link=link; }
 
 	private String encode(String link) {
 		return StringEscapeUtils.escapeXml(link);
