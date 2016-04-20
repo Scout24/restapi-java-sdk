@@ -1,7 +1,7 @@
 //
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.7 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// Änderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
+// nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
 // Generiert: 2016.04.19 um 09:36:45 AM CEST 
 //
 
@@ -13,7 +13,7 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java-Klasse für IndustryType.
+ * <p>Java-Klasse fr IndustryType.
  * 
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * <p>
@@ -44,7 +44,7 @@ public enum IndustryType {
 
 
     /**
-     * Ausstellungsfläche
+     * Ausstellungsflche
      * 
      */
     SHOWROOM_SPACE,
@@ -68,31 +68,31 @@ public enum IndustryType {
     INDUSTRY_HALL,
 
     /**
-     * Industriehalle mit Freifläche
+     * Industriehalle mit Freiflche
      * 
      */
     INDUSTRY_HALL_WITH_OPEN_AREA,
 
     /**
-     * Kühlhaus
+     * Khlhaus
      * 
      */
     COLD_STORAGE,
 
     /**
-     * Kühlregallager
+     * Khlregallager
      * 
      */
     MULTIDECK_CABINET_STORAGE,
 
     /**
-     * Lager mit Freifläche
+     * Lager mit Freiflche
      * 
      */
     STORAGE_WITH_OPEN_AREA,
 
     /**
-     * Lagerfläche
+     * Lagerflche
      * 
      */
     STORAGE_AREA,
@@ -104,7 +104,7 @@ public enum IndustryType {
     STORAGE_HALL,
 
     /**
-     * Servicefläche
+     * Serviceflche
      * 
      */
     SERVICE_AREA,
