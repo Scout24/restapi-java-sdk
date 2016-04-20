@@ -1,8 +1,8 @@
 //
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.7 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// Ã„nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.11.05 um 11:50:50 AM CET 
+// Änderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
+// Generiert: 2016.04.19 um 09:36:45 AM CEST 
 //
 
 
@@ -15,7 +15,6 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import javax.xml.datatype.XMLGregorianCalendar;
-
 import de.immobilienscout24.rest.schema.common._1.Adapter1;
 import de.immobilienscout24.rest.schema.common._1.BuildingEnergyRatingType;
 import de.immobilienscout24.rest.schema.common._1.CompulsoryAuctionType;
@@ -28,9 +27,9 @@ import de.immobilienscout24.rest.schema.common._1.YesNotApplicableType;
 
 
 /**
- * Eigenschaften fÃ¼r den Immobilientyp "Zwangsversteigerungsobjekte"
+ * Eigenschaften für den Immobilientyp "Zwangsversteigerungsobjekte"
  * 
- * <p>Java-Klasse fÃ¼r CompulsoryAuction complex type.
+ * <p>Java-Klasse für CompulsoryAuction complex type.
  * 
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
@@ -40,6 +39,7 @@ import de.immobilienscout24.rest.schema.common._1.YesNotApplicableType;
  *     &lt;extension base="{http://rest.immobilienscout24.de/schema/offer/realestates/1.0}RealEstate">
  *       &lt;sequence>
  *         &lt;group ref="{http://rest.immobilienscout24.de/schema/common/1.0}ExtendedCompulsoryAuctionGroup"/>
+ *         &lt;element name="customLowestBid" type="{http://rest.immobilienscout24.de/schema/common/1.0}Price" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/extension>
  *   &lt;/complexContent>
@@ -71,7 +71,8 @@ import de.immobilienscout24.rest.schema.common._1.YesNotApplicableType;
     "thermalCharacteristic",
     "energyConsumptionContainsWarmWater",
     "constructionYear",
-    "constructionYearUnknown"
+    "constructionYearUnknown",
+    "customLowestBid"
 })
 public class CompulsoryAuction
     extends RealEstate
@@ -111,6 +112,7 @@ public class CompulsoryAuction
     protected YesNotApplicableType energyConsumptionContainsWarmWater;
     protected Integer constructionYear;
     protected Boolean constructionYearUnknown;
+    protected Price customLowestBid;
 
     /**
      * Ruft den Wert der marketValue-Eigenschaft ab.
@@ -630,6 +632,30 @@ public class CompulsoryAuction
      */
     public void setConstructionYearUnknown(Boolean value) {
         this.constructionYearUnknown = value;
+    }
+
+    /**
+     * Ruft den Wert der customLowestBid-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Price }
+     *     
+     */
+    public Price getCustomLowestBid() {
+        return customLowestBid;
+    }
+
+    /**
+     * Legt den Wert der customLowestBid-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Price }
+     *     
+     */
+    public void setCustomLowestBid(Price value) {
+        this.customLowestBid = value;
     }
 
 }

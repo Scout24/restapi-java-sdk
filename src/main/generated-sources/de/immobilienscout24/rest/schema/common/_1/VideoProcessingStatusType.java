@@ -13,63 +13,56 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java-Klasse für CompulsoryAuctionType.
+ * <p>Java-Klasse für videoProcessingStatusType.
  * 
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * <p>
  * <pre>
- * &lt;simpleType name="CompulsoryAuctionType">
+ * &lt;simpleType name="videoProcessingStatusType">
  *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *     &lt;enumeration value="FREEHOLD_FLAT"/>
- *     &lt;enumeration value="FAMILY_HOUSE"/>
- *     &lt;enumeration value="BUSINESS_AND_YIELD"/>
- *     &lt;enumeration value="LOT"/>
- *     &lt;enumeration value="GARAGE_AND_OTHER"/>
+ *     &lt;enumeration value="INCOMING"/>
+ *     &lt;enumeration value="PROCESSING"/>
+ *     &lt;enumeration value="SUCCESSFUL"/>
+ *     &lt;enumeration value="FAILED"/>
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
  * 
  */
-@XmlType(name = "CompulsoryAuctionType")
+@XmlType(name = "videoProcessingStatusType")
 @XmlEnum
-public enum CompulsoryAuctionType {
+public enum VideoProcessingStatusType {
 
 
     /**
-     * Eigentumswohnungen
+     * media status is incomming
      * 
      */
-    FREEHOLD_FLAT,
+    INCOMING,
 
     /**
-     *  1+2 Familienhäuser
+     * media status is processing
      * 
      */
-    FAMILY_HOUSE,
+    PROCESSING,
 
     /**
-     * Gewerbe + Rendite
+     * media status is successful
      * 
      */
-    BUSINESS_AND_YIELD,
+    SUCCESSFUL,
 
     /**
-     * Grundstücke
+     * media status is failed
      * 
      */
-    LOT,
-
-    /**
-     * Garagen + Sonstiges
-     * 
-     */
-    GARAGE_AND_OTHER;
+    FAILED;
 
     public String value() {
         return name();
     }
 
-    public static CompulsoryAuctionType fromValue(String v) {
+    public static VideoProcessingStatusType fromValue(String v) {
         return valueOf(v);
     }
 

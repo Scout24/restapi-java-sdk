@@ -281,6 +281,16 @@
               <xs:documentation xml:lang="de-DE">Eigenschaften für den Immobilientyp "Zwangsversteigerungsobjekte"</xs:documentation>
             </xs:annotation>
           </xs:group>
+          <xs:element name="customLowestBid" type="common:Price" minOccurs="0">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The lowest bid for the real estate, the attributes named the type,
+                the currency and the interval, that can be set other than "lowestBid" which is calculated.
+              </xs:documentation>
+              <xs:documentation xml:lang="de-DE">Mindestangebot zur Immobilie, die Attribute geben die Art, die
+                Währung und den Intervall an. Das Feld wird gesetzt im Gegensatz zu "lowestBid" welches berechnet wird.
+              </xs:documentation>
+            </xs:annotation>
+          </xs:element>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>

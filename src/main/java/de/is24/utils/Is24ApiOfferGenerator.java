@@ -553,6 +553,13 @@ public class Is24ApiOfferGenerator {
 		return courtageInfo;
 	}
 
+	public static Price createPrice(double value) {
+		Price price = new Price();
+		price.setCurrency(Currency.EUR);
+		price.setValue(value);
+		return price;
+	}
+
 	private static Price fillPrice() {
 		Price price = new Price();
 		price.setCurrency(Currency.EUR);

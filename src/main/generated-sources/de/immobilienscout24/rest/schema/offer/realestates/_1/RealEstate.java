@@ -1,8 +1,8 @@
 //
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.7 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// Ã„nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.11.05 um 11:50:50 AM CET 
+// Änderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
+// Generiert: 2016.04.19 um 09:36:45 AM CEST 
 //
 
 
@@ -15,17 +15,16 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-
 import de.immobilienscout24.rest.schema.common._1.AbstractRealEstate;
 import de.immobilienscout24.rest.schema.common._1.Adapter1;
 import de.immobilienscout24.rest.schema.common._1.PublishChannels;
 
 
 /**
- * Allgemeine Elemente fÃ¼r
+ * Allgemeine Elemente für
  * 				alle Immobilienarten.
  * 
- * <p>Java-Klasse fÃ¼r RealEstate complex type.
+ * <p>Java-Klasse für RealEstate complex type.
  * 
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
@@ -61,27 +60,27 @@ import de.immobilienscout24.rest.schema.common._1.PublishChannels;
     "publishChannels"
 })
 @XmlSeeAlso({
-    Office.class,
-    SpecialPurpose.class,
-    LivingRentSite.class,
-    Store.class,
-    GarageRent.class,
-    Gastronomy.class,
-    ApartmentBuy.class,
-    HouseBuy.class,
-    GarageBuy.class,
-    Investment.class,
-    FlatShareRoom.class,
-    ApartmentRent.class,
     CompulsoryAuction.class,
-    LivingBuySite.class,
-    SeniorCare.class,
-    HouseType.class,
-    ShortTermAccommodation.class,
-    Industry.class,
+    LivingRentSite.class,
     AssistedLiving.class,
+    LivingBuySite.class,
+    HouseRent.class,
+    HouseType.class,
+    Investment.class,
+    Gastronomy.class,
+    Industry.class,
+    Office.class,
+    Store.class,
+    ApartmentBuy.class,
     TradeSite.class,
-    HouseRent.class
+    GarageRent.class,
+    ShortTermAccommodation.class,
+    SpecialPurpose.class,
+    ApartmentRent.class,
+    FlatShareRoom.class,
+    SeniorCare.class,
+    HouseBuy.class,
+    GarageBuy.class
 })
 public abstract class RealEstate
     extends AbstractRealEstate
@@ -161,7 +160,7 @@ public abstract class RealEstate
     /**
      * Verweis auf einen Anbieterkontakt.
      * 
-     * <p>Java-Klasse fÃ¼r anonymous complex type.
+     * <p>Java-Klasse für anonymous complex type.
      * 
      * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
      * 

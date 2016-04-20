@@ -6,7 +6,7 @@
 	<artifactId>restapi-java-sdk</artifactId>
 	<packaging>jar</packaging>
 	<!-- manuel increment -->
-    <version>0.2.12</version>
+    <version>0.2.13</version>
 	<name>REST :: Common :: API</name>
 	<url>http://maven.apache.org</url>
 

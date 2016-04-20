@@ -1,8 +1,8 @@
 //
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.7 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// Ã„nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.11.05 um 11:50:50 AM CET 
+// Änderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
+// Generiert: 2016.04.19 um 09:36:45 AM CEST 
 //
 
 
@@ -31,22 +31,14 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _Topplacement_QNAME = new QName("http://rest.immobilienscout24.de/schema/offer/topplacement/1.0", "topplacement");
     private final static QName _Topplacements_QNAME = new QName("http://rest.immobilienscout24.de/schema/offer/topplacement/1.0", "topplacements");
+    private final static QName _Topplacement_QNAME = new QName("http://rest.immobilienscout24.de/schema/offer/topplacement/1.0", "topplacement");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: de.immobilienscout24.rest.schema.offer.topplacement._1
      * 
      */
     public ObjectFactory() {
-    }
-
-    /**
-     * Create an instance of {@link Topplacements }
-     * 
-     */
-    public Topplacements createTopplacements() {
-        return new Topplacements();
     }
 
     /**
@@ -58,12 +50,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Topplacement }{@code >}}
+     * Create an instance of {@link Topplacements }
      * 
      */
-    @XmlElementDecl(namespace = "http://rest.immobilienscout24.de/schema/offer/topplacement/1.0", name = "topplacement")
-    public JAXBElement<Topplacement> createTopplacement(Topplacement value) {
-        return new JAXBElement<Topplacement>(_Topplacement_QNAME, Topplacement.class, null, value);
+    public Topplacements createTopplacements() {
+        return new Topplacements();
     }
 
     /**
@@ -73,6 +64,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://rest.immobilienscout24.de/schema/offer/topplacement/1.0", name = "topplacements")
     public JAXBElement<Topplacements> createTopplacements(Topplacements value) {
         return new JAXBElement<Topplacements>(_Topplacements_QNAME, Topplacements.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Topplacement }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://rest.immobilienscout24.de/schema/offer/topplacement/1.0", name = "topplacement")
+    public JAXBElement<Topplacement> createTopplacement(Topplacement value) {
+        return new JAXBElement<Topplacement>(_Topplacement_QNAME, Topplacement.class, null, value);
     }
 
 }

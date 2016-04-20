@@ -11,23 +11,24 @@ package de.immobilienscout24.rest.schema.common._1;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java-Klasse für anonymous complex type.
+ * eine Entität einer screen9 streaming video url mit dem video Format
+ * 
+ * <p>Java-Klasse für videoUrlList complex type.
  * 
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
  * <pre>
- * &lt;complexType>
+ * &lt;complexType name="videoUrlList">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="parent" type="{http://rest.immobilienscout24.de/schema/common/1.0}GeoHierarchyElement"/>
- *         &lt;element name="children" type="{http://rest.immobilienscout24.de/schema/common/1.0}GeoHierarchyElements"/>
- *       &lt;/sequence>
+ *       &lt;all>
+ *         &lt;element name="format" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="url" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *       &lt;/all>
  *     &lt;/restriction>
  *   &lt;/complexContent>
  * &lt;/complexType>
@@ -36,64 +37,62 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {
-    "parent",
-    "children"
+@XmlType(name = "videoUrlList", propOrder = {
+
 })
-@XmlRootElement(name = "geoHierarchyElementsStatistic")
-public class GeoHierarchyElementsStatistic {
+public class VideoUrlList {
 
     @XmlElement(required = true)
-    protected GeoHierarchyElement parent;
+    protected String format;
     @XmlElement(required = true)
-    protected GeoHierarchyElements children;
+    protected String url;
 
     /**
-     * Ruft den Wert der parent-Eigenschaft ab.
+     * Ruft den Wert der format-Eigenschaft ab.
      * 
      * @return
      *     possible object is
-     *     {@link GeoHierarchyElement }
+     *     {@link String }
      *     
      */
-    public GeoHierarchyElement getParent() {
-        return parent;
+    public String getFormat() {
+        return format;
     }
 
     /**
-     * Legt den Wert der parent-Eigenschaft fest.
+     * Legt den Wert der format-Eigenschaft fest.
      * 
      * @param value
      *     allowed object is
-     *     {@link GeoHierarchyElement }
+     *     {@link String }
      *     
      */
-    public void setParent(GeoHierarchyElement value) {
-        this.parent = value;
+    public void setFormat(String value) {
+        this.format = value;
     }
 
     /**
-     * Ruft den Wert der children-Eigenschaft ab.
+     * Ruft den Wert der url-Eigenschaft ab.
      * 
      * @return
      *     possible object is
-     *     {@link GeoHierarchyElements }
+     *     {@link String }
      *     
      */
-    public GeoHierarchyElements getChildren() {
-        return children;
+    public String getUrl() {
+        return url;
     }
 
     /**
-     * Legt den Wert der children-Eigenschaft fest.
+     * Legt den Wert der url-Eigenschaft fest.
      * 
      * @param value
      *     allowed object is
-     *     {@link GeoHierarchyElements }
+     *     {@link String }
      *     
      */
-    public void setChildren(GeoHierarchyElements value) {
-        this.children = value;
+    public void setUrl(String value) {
+        this.url = value;
     }
 
 }

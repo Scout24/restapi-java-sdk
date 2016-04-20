@@ -1,8 +1,8 @@
 //
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.7 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// Ã„nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.11.05 um 11:50:50 AM CET 
+// Änderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
+// Generiert: 2016.04.19 um 09:36:45 AM CEST 
 //
 
 
@@ -15,10 +15,10 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * ErmÃ¶glicht die seitenweise Iteration Ã¼ber Daten(1-basiert).
+ * Ermöglicht die seitenweise Iteration über Daten(1-basiert).
  *             
  * 
- * <p>Java-Klasse fÃ¼r Paging complex type.
+ * <p>Java-Klasse für Paging complex type.
  * 
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
@@ -33,6 +33,7 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="pageSize" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
  *         &lt;element name="numberOfPages" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
  *         &lt;element name="numberOfHits" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="numberOfListings" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -48,7 +49,8 @@ import javax.xml.bind.annotation.XmlType;
     "pageNumber",
     "pageSize",
     "numberOfPages",
-    "numberOfHits"
+    "numberOfHits",
+    "numberOfListings"
 })
 public class Paging {
 
@@ -59,6 +61,8 @@ public class Paging {
     protected Integer numberOfPages;
     @XmlElement(defaultValue = "0")
     protected int numberOfHits;
+    @XmlElement(defaultValue = "0")
+    protected int numberOfListings;
 
     /**
      * Ruft den Wert der next-Eigenschaft ab.
@@ -194,6 +198,22 @@ public class Paging {
      */
     public void setNumberOfHits(int value) {
         this.numberOfHits = value;
+    }
+
+    /**
+     * Ruft den Wert der numberOfListings-Eigenschaft ab.
+     * 
+     */
+    public int getNumberOfListings() {
+        return numberOfListings;
+    }
+
+    /**
+     * Legt den Wert der numberOfListings-Eigenschaft fest.
+     * 
+     */
+    public void setNumberOfListings(int value) {
+        this.numberOfListings = value;
     }
 
 }

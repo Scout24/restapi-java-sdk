@@ -52,7 +52,7 @@
         </xs:complexType>
     </xs:element>
 
-    <xs:element name="realtorLogo" type="RealtorLogo">
+  <xs:element name="realtorLogo" type="RealtorLogo">
         <xs:annotation>
             <xs:documentation xml:lang="en">The logo of a realtor.</xs:documentation>
             <xs:documentation xml:lang="de-DE">Das Logo eines Anbieters</xs:documentation>
@@ -169,7 +169,7 @@
                     <xs:documentation xml:lang="de-DE">Die Adresse der Immobilie</xs:documentation>
                 </xs:annotation>
             </xs:element>
-
+            
             <xs:element name="apiSearchData" type="ApiSearchData"
                         minOccurs="0">
                 <xs:annotation>
@@ -179,12 +179,12 @@
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <xs:element name="realEstateState" type="RealEstateState" minOccurs="0">
-                <xs:annotation>
-                    <xs:documentation xml:lang="en">Publication state of a real Estate.</xs:documentation>
-                    <xs:documentation xml:lang="de-DE">Veröffentlichungsstatus einer Immobilie.</xs:documentation>
-                </xs:annotation>
-            </xs:element>
+			<xs:element name="realEstateState" type="RealEstateState" minOccurs="0">
+		        <xs:annotation>
+		            <xs:documentation xml:lang="en">Publication state of a real Estate.</xs:documentation>
+		            <xs:documentation xml:lang="de-DE">Veröffentlichungsstatus einer Immobilie.</xs:documentation>
+       			</xs:annotation>		
+			</xs:element>            
         </xs:sequence>
         <xs:attribute name="id" type="xs:long"
                       use="optional"><!-- optional because	POST for a realestate CANNOT have an id -->
@@ -223,7 +223,7 @@
                         </xs:annotation>
                         <xs:simpleType>
                             <xs:restriction base="TextField">
-                                <xs:maxLength value="2000"/>
+                                <xs:maxLength value="3999"/>
                             </xs:restriction>
                         </xs:simpleType>
                     </xs:element>
@@ -234,7 +234,7 @@
                         </xs:annotation>
                         <xs:simpleType>
                             <xs:restriction base="TextField">
-                                <xs:maxLength value="2000"/>
+                                <xs:maxLength value="3999"/>
                             </xs:restriction>
                         </xs:simpleType>
                     </xs:element>
@@ -245,7 +245,7 @@
                         </xs:annotation>
                         <xs:simpleType>
                             <xs:restriction base="TextField">
-                                <xs:maxLength value="2000"/>
+                                <xs:maxLength value="3999"/>
                             </xs:restriction>
                         </xs:simpleType>
                     </xs:element>
@@ -256,7 +256,7 @@
                         </xs:annotation>
                         <xs:simpleType>
                             <xs:restriction base="TextField">
-                                <xs:maxLength value="2000"/>
+                                <xs:maxLength value="3999"/>
                             </xs:restriction>
                         </xs:simpleType>
                     </xs:element>
@@ -272,23 +272,23 @@
                             <xs:documentation xml:lang="de-DE">ReferencePrice Service Call</xs:documentation>
                         </xs:annotation>
                     </xs:element>
-                    <xs:element name="referencePriceApiCall" type="uri" minOccurs="0">
-                        <xs:annotation>
-                            <xs:documentation xml:lang="en">reference price api call</xs:documentation>
-                            <xs:documentation xml:lang="de-DE">ReferencePrice API Call</xs:documentation>
-                        </xs:annotation>
-                    </xs:element>
+                  <xs:element name="referencePriceApiCall" type="uri" minOccurs="0">
+                    <xs:annotation>
+                      <xs:documentation xml:lang="en">reference price api call</xs:documentation>
+                      <xs:documentation xml:lang="de-DE">ReferencePrice API Call</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
                     <xs:element name="realEstateProjectId" type="xs:long" minOccurs="0">
                         <xs:annotation>
                             <xs:documentation xml:lang="en">
                                 Read Only: Represents an id of real estate project.
                             </xs:documentation>
                             <xs:documentation xml:lang="de-DE">
-                                Nur lesend: Immobilien-Projekt Id
+                                Nur lesend: Immobilien-Projekt Id 
                             </xs:documentation>
                         </xs:annotation>
                     </xs:element>
-
+                   
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
@@ -394,7 +394,7 @@
                     <xs:restriction base="TextField">
                         <xs:maxLength value="100"/>
                     </xs:restriction>
-                </xs:simpleType>
+                </xs:simpleType>                
             </xs:element>
             <xs:element name="houseNumber" minOccurs="0">
                 <xs:annotation>
@@ -419,7 +419,7 @@
                     <xs:restriction base="TextField">
                         <xs:maxLength value="20"/>
                     </xs:restriction>
-                </xs:simpleType>
+                </xs:simpleType>               
             </xs:element>
             <xs:element name="city" minOccurs="0">
                 <xs:annotation>
@@ -433,46 +433,74 @@
                 </xs:simpleType>
             </xs:element>
             <xs:element name="internationalCountryRegion" type="CountryRegion" minOccurs="0">
-                <xs:annotation>
-                    <xs:documentation xml:lang="en">Only for locations (of real estates) outside germany:
-                        country and region.</xs:documentation>
-                    <xs:documentation xml:lang="de-DE">Nur für Ortsangaben (von Immobilien) außerhalb
-                        Deutschlands: Land und Region.</xs:documentation>
-                </xs:annotation>
-            </xs:element>
+	                <xs:annotation>
+	                    <xs:documentation xml:lang="en">Only for locations (of real estates) outside germany:
+                            country and region.</xs:documentation>
+	                    <xs:documentation xml:lang="de-DE">Nur für Ortsangaben (von Immobilien) außerhalb
+                            Deutschlands: Land und Region.</xs:documentation>
+	                </xs:annotation>		           
+            </xs:element>            
         </xs:sequence>
     </xs:complexType>
-    <xs:complexType name="CountryRegion">
+	<xs:complexType name="CountryRegion">
+		<xs:sequence>
+			<xs:element name="country" type="CountryCode">
+	                <xs:annotation>
+	                    <xs:documentation xml:lang="en">The ISO-3 countrycode.</xs:documentation>
+	                    <xs:documentation xml:lang="de-DE">Der ISO-3 Ländercode.</xs:documentation>
+	                </xs:annotation>		
+			</xs:element>
+			<xs:element name="region" nillable="false">
+	                <xs:annotation>
+	                    <xs:documentation xml:lang="en">German name of the region (province, federal state) of the country.
+                            Valid names are published (CSV-file) by is24, see online API documentation.</xs:documentation>
+	                    <xs:documentation xml:lang="de-DE">Deutscher Name der Region des Landes. Mögliche Namen
+                            sind über die Online-API-Dokumentation abrufbar.</xs:documentation>
+	                </xs:annotation>
+	                <xs:simpleType>
+	                    <xs:restriction base="TextField">                       
+							<xs:minLength value="1"/>	                        
+	                    </xs:restriction>
+	                </xs:simpleType>                		
+			</xs:element>	
+		</xs:sequence>
+	</xs:complexType>
+    
+  <xs:complexType name="RealtorLogo">
         <xs:sequence>
-            <xs:element name="country" type="CountryCode">
-                <xs:annotation>
-                    <xs:documentation xml:lang="en">The ISO-3 countrycode.</xs:documentation>
-                    <xs:documentation xml:lang="de-DE">Der ISO-3 Ländercode.</xs:documentation>
-                </xs:annotation>
-            </xs:element>
-            <xs:element name="region" nillable="false">
-                <xs:annotation>
-                    <xs:documentation xml:lang="en">German name of the region (province, federal state) of the country.
-                        Valid names are published (CSV-file) by is24, see online API documentation.</xs:documentation>
-                    <xs:documentation xml:lang="de-DE">Deutscher Name der Region des Landes. Mögliche Namen
-                        sind über die Online-API-Dokumentation abrufbar.</xs:documentation>
-                </xs:annotation>
-                <xs:simpleType>
-                    <xs:restriction base="TextField">
-                        <xs:minLength value="1"/>
-                    </xs:restriction>
-                </xs:simpleType>
-            </xs:element>
-        </xs:sequence>
-    </xs:complexType>
-    <xs:complexType name="RealtorLogo">
-        <xs:sequence>
-            <xs:element name="realtorLogoUrl" type="xs:anyURI" minOccurs="0">
-                <xs:annotation>
-                    <xs:documentation xml:lang="en">URL to realtor's logo</xs:documentation>
-                    <xs:documentation xml:lang="de-DE">URL zum Relatorlogo</xs:documentation>
-                </xs:annotation>
-            </xs:element>
+          <xs:element name="urls" minOccurs="0">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="url" minOccurs="1" maxOccurs="unbounded">
+                    <xs:annotation>
+                      <xs:documentation xml:lang="en">URL for the picture.</xs:documentation>
+                      <xs:documentation xml:lang="de-DE">URL des Bildes.</xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                      <xs:attribute name="scale" type="PictureScaleType">
+                        <xs:annotation>
+                          <xs:documentation xml:lang="en">picture scale</xs:documentation>
+                          <xs:documentation xml:lang="de-DE">Bildergröße</xs:documentation>
+                        </xs:annotation>
+                      </xs:attribute>
+                      <xs:attribute name="href" type="xs:anyURI">
+                        <xs:annotation>
+                          <xs:documentation xml:lang="en">URL to scaled picture</xs:documentation>
+                          <xs:documentation xml:lang="de-DE">URL zum skaliertem Bild
+                          </xs:documentation>
+                        </xs:annotation>
+                      </xs:attribute>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+          </xs:element>
+          <xs:element name="realtorLogoUrl" type="xs:anyURI" minOccurs="0">
+              <xs:annotation>
+                  <xs:documentation xml:lang="en">URL to realtor's logo</xs:documentation>
+                  <xs:documentation xml:lang="de-DE">URL zum Relatorlogo</xs:documentation>
+              </xs:annotation>
+          </xs:element>
         </xs:sequence>
     </xs:complexType>
 
@@ -550,7 +578,7 @@
                         <xs:pattern value="\d{1,10}"/>
                     </xs:restriction>
                 </xs:simpleType>
-            </xs:element>
+            </xs:element>          
             <xs:element name="faxNumberSubscriber" minOccurs="0">
                 <xs:annotation>
                     <xs:documentation xml:lang="en">Facsimile subscriber number of this contact.</xs:documentation>
@@ -561,19 +589,19 @@
                         <xs:pattern value="[\d][\d \-]{0,24}[\d]"/>
                     </xs:restriction>
                 </xs:simpleType>
-            </xs:element>
-            <xs:element name="faxNumber" minOccurs="0">
-                <xs:annotation>
-                    <xs:documentation xml:lang="en">Whole facsimile number of this contact.</xs:documentation>
-                    <xs:documentation xml:lang="de-DE">Komplette Faxnummer des Kontakts.</xs:documentation>
-                </xs:annotation>
-                <xs:simpleType>
-                    <xs:restriction base="xs:string">
-                        <xs:pattern
-                                value="(\+[1-9]\d{0,3}) +\d{1,10} +([\d][\d \-]{0,24}[\d])"/>
-                    </xs:restriction>
-                </xs:simpleType>
-            </xs:element>
+            </xs:element>           
+           <xs:element name="faxNumber" minOccurs="0">
+               <xs:annotation>
+                   <xs:documentation xml:lang="en">Whole facsimile number of this contact.</xs:documentation>
+                   <xs:documentation xml:lang="de-DE">Komplette Faxnummer des Kontakts.</xs:documentation>
+               </xs:annotation>
+               <xs:simpleType>
+                   <xs:restriction base="xs:string">
+                       <xs:pattern
+                               value="(\+[1-9]\d{0,3}) +\d{1,10} +([\d][\d \-]{0,24}[\d])"/>
+                   </xs:restriction>
+               </xs:simpleType>
+           </xs:element>
             <xs:element name="phoneNumberCountryCode" minOccurs="0">
                 <xs:annotation>
                     <xs:documentation xml:lang="en">Phonenumber country code of this contact.</xs:documentation>
@@ -720,21 +748,32 @@
                         <xs:maxLength value="300"/>
                     </xs:restriction>
                 </xs:simpleType>
-            </xs:element>
+            </xs:element> 
             <xs:element name="portraitUrl" minOccurs="0">
+               <xs:annotation>
+                   <xs:documentation xml:lang="en">Url to Contacts Portrait</xs:documentation>
+                   <xs:documentation xml:lang="de-DE">Url zum Bild des Anbieters</xs:documentation>
+               </xs:annotation>
+               <xs:simpleType>
+                   <xs:restriction base="xs:anyURI">
+                       <xs:maxLength value="300"/>
+                   </xs:restriction>
+               </xs:simpleType>
+            </xs:element>
+            <xs:element name="position" minOccurs="0">
                 <xs:annotation>
-                    <xs:documentation xml:lang="en">Url to Contacts Portrait</xs:documentation>
-                    <xs:documentation xml:lang="de-DE">Url zum Bild des Anbieters</xs:documentation>
+                    <xs:documentation xml:lang="en">The position or function in the company</xs:documentation>
+                    <xs:documentation xml:lang="de-DE">Die Position oder Taetigkeit im Unternehmen</xs:documentation>
                 </xs:annotation>
                 <xs:simpleType>
-                    <xs:restriction base="xs:anyURI">
-                        <xs:maxLength value="300"/>
+                    <xs:restriction base="TextField">
+                        <xs:maxLength value="100"/>
                     </xs:restriction>
                 </xs:simpleType>
             </xs:element>
         </xs:sequence>
     </xs:complexType>
-    <xs:complexType name="ContactMailCustomStyle">
+    <xs:complexType name="ContactMailCustomStyle">      
         <xs:sequence>
             <xs:element name="header1Color" type="HexadecimalColorCode" minOccurs="1">
                 <xs:annotation>
@@ -745,7 +784,7 @@
                 <xs:annotation>
                     <xs:documentation xml:lang="en">color for font of the mail header 1</xs:documentation>
                 </xs:annotation>
-            </xs:element>
+            </xs:element>           
             <xs:element name="header2Color" type="HexadecimalColorCode" minOccurs="1">
                 <xs:annotation>
                     <xs:documentation xml:lang="en">color for mail header 2</xs:documentation>
@@ -755,7 +794,7 @@
                 <xs:annotation>
                     <xs:documentation xml:lang="en">color for font of the mail header 2</xs:documentation>
                 </xs:annotation>
-            </xs:element>
+            </xs:element>           
             <xs:element name="header3Color" type="HexadecimalColorCode" minOccurs="1">
                 <xs:annotation>
                     <xs:documentation xml:lang="en">color for mail header 3</xs:documentation>
@@ -863,6 +902,12 @@
                             </xs:documentation>
                         </xs:annotation>
                     </xs:element>
+                    <xs:element name="showOnProfilePage" type="xs:boolean" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation xml:lang="en">Contact is visible on Profile Page</xs:documentation>
+                            <xs:documentation xml:lang="de-DE">Kontakt ist sichtbar in Profile Page</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
@@ -881,8 +926,8 @@
                             <xs:documentation xml:lang="en">URL to realtor's logo</xs:documentation>
                             <xs:documentation xml:lang="de-DE">URL zum Relatorlogo</xs:documentation>
                         </xs:annotation>
-                    </xs:element>
-                </xs:sequence>
+                    </xs:element>                   
+                </xs:sequence>                
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
@@ -933,13 +978,13 @@
         </xs:attribute>
     </xs:complexType>
 
-    <xs:complexType name="Wgs84AddressDescription">
-        <xs:sequence>
-            <xs:element name="text" type="xs:string" minOccurs="1"/>
-        </xs:sequence>
-    </xs:complexType>
+  <xs:complexType name="Wgs84AddressDescription">
+    <xs:sequence>
+      <xs:element name="text" type="xs:string" minOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
 
-    <xs:complexType name="Wgs84Address">
+  <xs:complexType name="Wgs84Address">
         <xs:annotation>
             <xs:documentation xml:lang="en">Base address enriched with WGS84 geocoordinates.</xs:documentation>
             <xs:documentation xml:lang="de-DE">Adresse erweitert mit WGS84 Geokoordinaten.</xs:documentation>
@@ -1014,7 +1059,7 @@
                                                 <xs:documentation xml:lang="de-DE">Bildergröße</xs:documentation>
                                             </xs:annotation>
                                         </xs:attribute>
-                                        <xs:attribute name="href" type="xs:anyURI">
+                                        <xs:attribute name="href" type="xs:string">
                                             <xs:annotation>
                                                 <xs:documentation xml:lang="en">URL to scaled picture</xs:documentation>
                                                 <xs:documentation xml:lang="de-DE">URL zum skaliertem Bild
@@ -1062,10 +1107,102 @@
                             <xs:documentation xml:lang="de-DE">Die Identifikationsnummer des Videos</xs:documentation>
                         </xs:annotation>
                     </xs:element>
+                    <xs:element name="videoInfo" type="VideoInfo" minOccurs="0" maxOccurs="0"/>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
+
+
+    <xs:complexType name="VideoInfo">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">screen9 streaming video urls</xs:documentation>
+            <xs:documentation xml:lang="de-DE">streaming video urls von screen9</xs:documentation>
+        </xs:annotation>
+            <xs:sequence>
+                <xs:element name="videoUrlList" type="videoUrlList" minOccurs="1" maxOccurs="2">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en">screen9 streaming video url list</xs:documentation>
+                        <xs:documentation xml:lang="de-DE">streaming video url Liste von screen9</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element type="xs:int" name="duration" minOccurs="0" maxOccurs="1">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en">Video duration in ms</xs:documentation>
+                        <xs:documentation xml:lang="de-DE">Video Abspieldauer in ms</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element type="xs:anyURI" name="teaserUrl" minOccurs="0" maxOccurs="1">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en">Picture teaser for this video</xs:documentation>
+                        <xs:documentation xml:lang="de-DE">Teaser Bild für das gegebene Video</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element type="TextField" name="title" minOccurs="0" maxOccurs="1">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en">Title of the video</xs:documentation>
+                        <xs:documentation xml:lang="de-DE">Titel vom Video</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element type="percentType" name="processingProgress" minOccurs="0" maxOccurs="1">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="de-DE">Progress in percent information for media which is either processing or re-processing.</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element type="videoProcessingStatusType" name="processingStatus" minOccurs="0" maxOccurs="1">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="de-DE">The status of this media</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+
+            </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="videoProcessingStatusType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="INCOMING">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">media status is incomming</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="PROCESSING">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">media status is processing</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="SUCCESSFUL">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">media status is successful</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="FAILED">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">media status is failed</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="percentType">
+        <xs:restriction base="xs:int">
+            <xs:minInclusive value="0"/>
+            <xs:maxExclusive value="100"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="videoUrlList">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">screen9 single entity for one url</xs:documentation>
+            <xs:documentation xml:lang="de-DE">eine Entität einer screen9 streaming video url mit dem video Format</xs:documentation>
+        </xs:annotation>
+        <xs:all>
+            <xs:element type="xs:string" name="format"/>
+            <xs:element type="xs:string" name="url"/>
+        </xs:all>
+    </xs:complexType>
+
+
+
     <xs:complexType name="PDFDocument">
         <xs:annotation>
             <xs:documentation xml:lang="en">A pdf document</xs:documentation>
@@ -1298,20 +1435,26 @@
                     <xs:documentation xml:lang="de-DE">Vergleichssumme dieses Anhangs.</xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <xs:element name="externalId" maxOccurs="1" minOccurs="0">
+	        <xs:element name="externalId" maxOccurs="1" minOccurs="0">
+	            <xs:annotation>
+                            <xs:documentation xml:lang="en">
+                                Represents a customer specific identifier for the attachment.
+                            </xs:documentation>
+                            <xs:documentation xml:lang="de-DE">
+                                Repräsentiert eine kundenspezifische Referenz eines Anhangs.
+                            </xs:documentation>
+	            </xs:annotation>
+	            <xs:simpleType>
+	                 <xs:restriction base="TextField">
+	                     <xs:maxLength value="50"/>
+	                 </xs:restriction>
+	            </xs:simpleType>            
+	        </xs:element>
+            <xs:element name="externalCheckSum" type="xs:string" minOccurs="0">
                 <xs:annotation>
-                    <xs:documentation xml:lang="en">
-                        Represents a customer specific identifier for the attachment.
-                    </xs:documentation>
-                    <xs:documentation xml:lang="de-DE">
-                        Repräsentiert eine kundenspezifische Referenz eines Anhangs.
-                    </xs:documentation>
+                    <xs:documentation xml:lang="en">A customer specific checksum of this attachment</xs:documentation>
+                    <xs:documentation xml:lang="de-DE">Eine kundenspezifische Vergleichssumme dieses Anhangs</xs:documentation>
                 </xs:annotation>
-                <xs:simpleType>
-                    <xs:restriction base="TextField">
-                        <xs:maxLength value="50"/>
-                    </xs:restriction>
-                </xs:simpleType>
             </xs:element>
         </xs:sequence>
         <xs:attributeGroup ref="Reference"/>
@@ -1378,7 +1521,7 @@
                     <xs:restriction base="TextField">
                         <xs:maxLength value="16"/>
                     </xs:restriction>
-                </xs:simpleType>
+                </xs:simpleType>            
             </xs:element>
             <xs:element name="name" minOccurs="0">
                 <xs:simpleType>
@@ -1578,6 +1721,12 @@
                 <xs:annotation>
                     <xs:documentation xml:lang="en">Number of the hits.</xs:documentation>
                     <xs:documentation xml:lang="de-DE">Anzahl der Suchergebnisse.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="numberOfListings" type="xs:int" default="0">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">Number of the listingss.</xs:documentation>
+                    <xs:documentation xml:lang="de-DE">Anzahl der Sucheinträge.</xs:documentation>
                 </xs:annotation>
             </xs:element>
         </xs:sequence>
@@ -1896,7 +2045,7 @@
             </xs:enumeration>
         </xs:restriction>
     </xs:simpleType>
-
+  
     <xs:simpleType name="MandatoryOptionalType">
         <xs:annotation>
             <xs:documentation xml:lang="en">Enumeration for optional or mandatory elements</xs:documentation>
@@ -1917,9 +2066,9 @@
             </xs:enumeration>
         </xs:restriction>
     </xs:simpleType>
-
-
-
+    
+    
+    
     <xs:simpleType name="ApartmentType">
         <xs:annotation>
             <xs:documentation xml:lang="en">Enumeration for apartment types</xs:documentation>
@@ -2721,18 +2870,24 @@
                     <xs:documentation xml:lang="de-DE">Template für Scaling und Cropping</xs:documentation>
                 </xs:annotation>
             </xs:enumeration>
-            <xs:enumeration value="SCALE">
-                <xs:annotation>
-                    <xs:documentation xml:lang="en">template for scaling image</xs:documentation>
-                    <xs:documentation xml:lang="de-DE">Template für Scaling</xs:documentation>
-                </xs:annotation>
-            </xs:enumeration>
-            <xs:enumeration value="WHITE_FILLING">
-                <xs:annotation>
-                    <xs:documentation xml:lang="en">template for white filling image</xs:documentation>
-                    <xs:documentation xml:lang="de-DE">Template für White filling</xs:documentation>
-                </xs:annotation>
-            </xs:enumeration>
+          <xs:enumeration value="SCALE">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">template for scaling image</xs:documentation>
+              <xs:documentation xml:lang="de-DE">Template für Scaling</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="WHITE_FILLING">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">template for white filling image</xs:documentation>
+              <xs:documentation xml:lang="de-DE">Template für White filling</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="SCALE_MAX">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">heighest pictures dimension</xs:documentation>
+                <xs:documentation xml:lang="de-DE">Bild in höchster Auflösung</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
         </xs:restriction>
     </xs:simpleType>
     <xs:simpleType name="HeatingType" >
@@ -2856,10 +3011,10 @@
                     <xs:documentation xml:lang="en">heat pump</xs:documentation>
                     <xs:documentation xml:lang="de-DE">Wärmepumpe</xs:documentation>
                 </xs:annotation>
-            </xs:enumeration>
+            </xs:enumeration>                       
         </xs:restriction>
     </xs:simpleType>
-
+    
     <xs:simpleType name="MarketingType">
         <xs:annotation>
             <xs:documentation xml:lang="en">Supported marketing types (rent, buy or lease)</xs:documentation>
@@ -3841,7 +3996,7 @@
                     <xs:documentation xml:lang="en">steam district heating</xs:documentation>
                     <xs:documentation xml:lang="de-DE">Fernwärme Dampf</xs:documentation>
                 </xs:annotation>
-            </xs:enumeration>
+            </xs:enumeration>            
             <xs:enumeration value="WOOD">
                 <xs:annotation>
                     <xs:documentation xml:lang="en">wood</xs:documentation>
@@ -5637,6 +5792,12 @@
                     <xs:documentation xml:lang="de-DE">Zimbabwe</xs:documentation>
                 </xs:annotation>
             </xs:enumeration>
+            <xs:enumeration value="XKO">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">Kosovo</xs:documentation>
+                    <xs:documentation xml:lang="de-DE">Kosovo</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
         </xs:restriction>
     </xs:simpleType>
 
@@ -5679,14 +5840,14 @@
                     <xs:documentation xml:lang="de-DE">Gebäudeart</xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <xs:element name="energyCertificate" type="EnergyPerformanceCertificate" minOccurs="0">
-                <xs:annotation>
-                    <xs:documentation xml:lang="en">energy performance certificate</xs:documentation>
-                    <xs:documentation xml:lang="de-DE">Energieausweis</xs:documentation>
-                </xs:annotation>
-            </xs:element>
+		    <xs:element name="energyCertificate" type="EnergyPerformanceCertificate" minOccurs="0">
+		        <xs:annotation>
+		            <xs:documentation xml:lang="en">energy performance certificate</xs:documentation>
+		            <xs:documentation xml:lang="de-DE">Energieausweis</xs:documentation>
+		        </xs:annotation>
+		    </xs:element>                                    
         </xs:sequence>
-    </xs:group>
+    </xs:group>    
 
     <xs:group name="ExtendedApartment">
         <xs:annotation>
@@ -5731,12 +5892,12 @@
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <xs:element name="energyCertificate" type="EnergyPerformanceCertificate" minOccurs="0">
-                <xs:annotation>
-                    <xs:documentation xml:lang="en">energy performance certificate</xs:documentation>
-                    <xs:documentation xml:lang="de-DE">Energieausweis</xs:documentation>
-                </xs:annotation>
-            </xs:element>
+		    <xs:element name="energyCertificate" type="EnergyPerformanceCertificate" minOccurs="0">
+		        <xs:annotation>
+		            <xs:documentation xml:lang="en">energy performance certificate</xs:documentation>
+		            <xs:documentation xml:lang="de-DE">Energieausweis</xs:documentation>
+		        </xs:annotation>
+		    </xs:element>                                     
         </xs:sequence>
     </xs:group>
 
@@ -5903,20 +6064,20 @@
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <xs:choice minOccurs="0">
-                <xs:element name="constructionYear" type="xs:int" minOccurs="0">
-                    <xs:annotation>
-                        <xs:documentation xml:lang="en">construction year</xs:documentation>
-                        <xs:documentation xml:lang="de-DE">Baujahr</xs:documentation>
-                    </xs:annotation>
-                </xs:element>
-                <xs:element name="constructionYearUnknown" type="xs:boolean" minOccurs="0">
-                    <xs:annotation>
-                        <xs:documentation xml:lang="en">construction year unknown: true value only expected, instead of false set construction year</xs:documentation>
-                        <xs:documentation xml:lang="de-DE">Baujahr ist unbekannt</xs:documentation>
-                    </xs:annotation>
-                </xs:element>
-            </xs:choice>
+			<xs:choice minOccurs="0">
+	            <xs:element name="constructionYear" type="xs:int" minOccurs="0">
+		                <xs:annotation>
+		                    <xs:documentation xml:lang="en">construction year</xs:documentation>
+		                    <xs:documentation xml:lang="de-DE">Baujahr</xs:documentation>
+		                </xs:annotation>
+		            </xs:element>
+		            <xs:element name="constructionYearUnknown" type="xs:boolean" minOccurs="0">
+		                <xs:annotation>
+		                    <xs:documentation xml:lang="en">construction year unknown: true value only expected, instead of false set construction year</xs:documentation>
+		                    <xs:documentation xml:lang="de-DE">Baujahr ist unbekannt</xs:documentation>
+		                </xs:annotation>            
+		            </xs:element>
+			</xs:choice>		            
             <xs:element name="roomAvailableFrom" type="xs:double" minOccurs="0">
                 <xs:annotation>
                     <xs:documentation xml:lang="en">DEPRECATED use numberOfRoomsFrom</xs:documentation>
@@ -6026,26 +6187,26 @@
                     <xs:documentation xml:lang="en">count of rooms to</xs:documentation>
                     <xs:documentation xml:lang="de-DE">Zimmeranzahl bis</xs:documentation>
                 </xs:annotation>
-            </xs:element>
-            <xs:element name="energyCertificate" type="EnergyPerformanceCertificate" minOccurs="0">
-                <xs:annotation>
-                    <xs:documentation xml:lang="en">energy performance certificate</xs:documentation>
-                    <xs:documentation xml:lang="de-DE">Energieausweis</xs:documentation>
-                </xs:annotation>
-            </xs:element>
-            <!-- ####################################################################################################### -->
-            <xs:element name="heatingTypeEnev2014" type="HeatingTypeEnev2014" minOccurs="0">
-                <xs:annotation>
-                    <xs:documentation xml:lang="en">heating type</xs:documentation>
-                    <xs:documentation xml:lang="de-DE">Heizungsart</xs:documentation>
-                </xs:annotation>
-            </xs:element>
-            <xs:element name="energySourcesEnev2014" type="EnergySourcesEnev2014" minOccurs="0">
-                <xs:annotation>
-                    <xs:documentation xml:lang="en">energy sources</xs:documentation>
-                    <xs:documentation xml:lang="de-DE">wesentliche Energieträger</xs:documentation>
-                </xs:annotation>
-            </xs:element>
+            </xs:element>           
+		    <xs:element name="energyCertificate" type="EnergyPerformanceCertificate" minOccurs="0">
+		        <xs:annotation>
+		            <xs:documentation xml:lang="en">energy performance certificate</xs:documentation>
+		            <xs:documentation xml:lang="de-DE">Energieausweis</xs:documentation>
+		        </xs:annotation>
+		    </xs:element>
+<!-- ####################################################################################################### -->
+	            <xs:element name="heatingTypeEnev2014" type="HeatingTypeEnev2014" minOccurs="0">
+	                <xs:annotation>
+	                    <xs:documentation xml:lang="en">heating type</xs:documentation>
+	                    <xs:documentation xml:lang="de-DE">Heizungsart</xs:documentation>
+	                </xs:annotation>
+	            </xs:element>
+                <xs:element name="energySourcesEnev2014" type="EnergySourcesEnev2014" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en">energy sources</xs:documentation>
+                        <xs:documentation xml:lang="de-DE">wesentliche Energieträger</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
             <xs:element name="buildingEnergyRatingType" type="BuildingEnergyRatingType" minOccurs="0">
                 <xs:annotation>
                     <xs:documentation xml:lang="en">building energy rating type</xs:documentation>
@@ -6070,7 +6231,7 @@
                     <xs:documentation xml:lang="de-DE">Energieverbrauch für Warmwasser enthalten</xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <!-- ####################################################################################################### -->
+<!-- ####################################################################################################### -->
         </xs:sequence>
     </xs:group>
 
@@ -6135,7 +6296,7 @@
                     <xs:documentation xml:lang="en">usable as flat share room</xs:documentation>
                     <xs:documentation xml:lang="de-DE">"WG-geeigne</xs:documentation>
                 </xs:annotation>
-            </xs:element>
+            </xs:element>           
         </xs:sequence>
     </xs:group>
 
@@ -6408,12 +6569,12 @@
             </xs:element>
             <xs:element name="lastRefurbishment" minOccurs="0">
                 <xs:annotation>
-                    <xs:documentation xml:lang="en">last refurbishment</xs:documentation>
-                    <xs:documentation xml:lang="de-DE">Letzte Modernisierung</xs:documentation>
+                    <xs:documentation xml:lang="en">Year of last refurbishment</xs:documentation>
+                    <xs:documentation xml:lang="de-DE">Jahr der letzte Modernisierung</xs:documentation>
                 </xs:annotation>
                 <xs:simpleType>
                     <xs:restriction base="xs:int">
-                        <xs:minInclusive value="0"/>
+                        <xs:minInclusive value="1000"/>
                         <xs:maxInclusive value="9999"/>
                     </xs:restriction>
                 </xs:simpleType>
@@ -6425,25 +6586,25 @@
                 </xs:annotation>
             </xs:element>
             <xs:choice minOccurs="0">
-                <xs:element name="constructionYear" minOccurs="0">
-                    <xs:annotation>
-                        <xs:documentation xml:lang="en">construction year</xs:documentation>
-                        <xs:documentation xml:lang="de-DE">Baujahr</xs:documentation>
-                    </xs:annotation>
-                    <xs:simpleType>
-                        <xs:restriction base="xs:int">
-                            <xs:minInclusive value="0"/>
-                            <xs:maxInclusive value="9999"/>
-                        </xs:restriction>
-                    </xs:simpleType>
-                </xs:element>
-                <xs:element name="constructionYearUnknown" type="xs:boolean" minOccurs="0">
-                    <xs:annotation>
-                        <xs:documentation xml:lang="en">construction year unknown: true value only expected, instead of false set construction year</xs:documentation>
-                        <xs:documentation xml:lang="de-DE">Baujahr ist unbekannt</xs:documentation>
-                    </xs:annotation>
-                </xs:element>
-            </xs:choice>
+	            <xs:element name="constructionYear" minOccurs="0">
+	                <xs:annotation>
+	                    <xs:documentation xml:lang="en">construction year</xs:documentation>
+	                    <xs:documentation xml:lang="de-DE">Baujahr</xs:documentation>
+	                </xs:annotation>
+	                <xs:simpleType>
+	                    <xs:restriction base="xs:int">
+	                        <xs:minInclusive value="0"/>
+	                        <xs:maxInclusive value="9999"/>
+	                    </xs:restriction>
+	                </xs:simpleType>
+	            </xs:element>
+	            <xs:element name="constructionYearUnknown" type="xs:boolean" minOccurs="0">
+	                <xs:annotation>
+	                    <xs:documentation xml:lang="en">construction year unknown: true value only expected, instead of false set construction year</xs:documentation>
+	                    <xs:documentation xml:lang="de-DE">Baujahr ist unbekannt</xs:documentation>
+	                </xs:annotation>            
+	            </xs:element>
+			</xs:choice>			            
             <xs:element name="freeFrom" minOccurs="0">
                 <xs:annotation>
                     <xs:documentation xml:lang="en">free from</xs:documentation>
@@ -6454,31 +6615,31 @@
                         <xs:maxLength value="50"/>
                     </xs:restriction>
                 </xs:simpleType>
-            </xs:element>
-            <xs:element name="heatingType" type="HeatingType" minOccurs="0">
-                <xs:annotation>
-                    <xs:documentation xml:lang="en">DEPRECATED use heatingTypeEnev2014 heating type</xs:documentation>
-                    <xs:documentation xml:lang="de-DE">DEPRECATED benutze heatingTypeEnev2014 Heizungsart</xs:documentation>
-                </xs:annotation>
-            </xs:element>
-            <xs:element name="heatingTypeEnev2014" type="HeatingTypeEnev2014" minOccurs="0">
-                <xs:annotation>
-                    <xs:documentation xml:lang="en">heating type</xs:documentation>
-                    <xs:documentation xml:lang="de-DE">Heizungsart</xs:documentation>
-                </xs:annotation>
-            </xs:element>
-            <xs:element name="firingTypes" type="FiringTypes" minOccurs="0">
-                <xs:annotation>
-                    <xs:documentation xml:lang="en">firing types</xs:documentation>
-                    <xs:documentation xml:lang="de-DE">Befeuerungsarten</xs:documentation>
-                </xs:annotation>
-            </xs:element>
-            <xs:element name="energySourcesEnev2014" type="EnergySourcesEnev2014" minOccurs="0">
-                <xs:annotation>
-                    <xs:documentation xml:lang="en">energy sources</xs:documentation>
-                    <xs:documentation xml:lang="de-DE">wesentliche Energieträger</xs:documentation>
-                </xs:annotation>
-            </xs:element>
+            </xs:element>           
+	            <xs:element name="heatingType" type="HeatingType" minOccurs="0">
+	                <xs:annotation>
+	                    <xs:documentation xml:lang="en">DEPRECATED use heatingTypeEnev2014 heating type</xs:documentation>
+	                    <xs:documentation xml:lang="de-DE">DEPRECATED benutze heatingTypeEnev2014 Heizungsart</xs:documentation>
+	                </xs:annotation>
+	            </xs:element>
+	            <xs:element name="heatingTypeEnev2014" type="HeatingTypeEnev2014" minOccurs="0">
+	                <xs:annotation>
+	                    <xs:documentation xml:lang="en">heating type</xs:documentation>
+	                    <xs:documentation xml:lang="de-DE">Heizungsart</xs:documentation>
+	                </xs:annotation>
+	            </xs:element>
+                <xs:element name="firingTypes" type="FiringTypes" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en">firing types</xs:documentation>
+                        <xs:documentation xml:lang="de-DE">Befeuerungsarten</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="energySourcesEnev2014" type="EnergySourcesEnev2014" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en">energy sources</xs:documentation>
+                        <xs:documentation xml:lang="de-DE">wesentliche Energieträger</xs:documentation>
+                    </xs:annotation>
+                </xs:element>          
             <xs:element name="buildingEnergyRatingType" type="BuildingEnergyRatingType" minOccurs="0">
                 <xs:annotation>
                     <xs:documentation xml:lang="en">building energy rating type</xs:documentation>
@@ -6789,7 +6950,7 @@
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <xs:element name="courtage" type="CourtageInfo" minOccurs="1">
+			<xs:element name="courtage" type="CourtageInfo" minOccurs="1">
                 <xs:annotation>
                     <xs:documentation xml:lang="en">courtage elements</xs:documentation>
                     <xs:documentation xml:lang="de-DE">Provisionselemente</xs:documentation>
@@ -6813,10 +6974,10 @@
             <xs:element name="lowestBid" type="Price" minOccurs="0">
                 <xs:annotation>
                     <xs:documentation xml:lang="en">The lowest bid for the real estate, the attributes named the type,
-                        the currency and the interval.
+                        the currency and the interval, that is calculated by 5/10 of the market value.
                     </xs:documentation>
                     <xs:documentation xml:lang="de-DE">Mindestangebot zur Immobilie, die Attribute geben die Art, die
-                        Währung und den Intervall an
+                        Währung und den Intervall an. Das Feld wird berechnet mit 5/10 des Markpreises.
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
@@ -6937,15 +7098,15 @@
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <!-- 		    
-                        <xs:element name="energyCertificate" type="EnergyPerformanceCertificate" minOccurs="0">
-                            <xs:annotation>
-                                <xs:documentation xml:lang="en">energy performance certificate</xs:documentation>
-                                <xs:documentation xml:lang="de-DE">Energieausweis</xs:documentation>
-                            </xs:annotation>
-                        </xs:element>                         
-             -->
-            <xs:element name="builtInKitchen" type="xs:boolean" minOccurs="0">
+<!-- 		    
+			<xs:element name="energyCertificate" type="EnergyPerformanceCertificate" minOccurs="0">
+		        <xs:annotation>
+		            <xs:documentation xml:lang="en">energy performance certificate</xs:documentation>
+		            <xs:documentation xml:lang="de-DE">Energieausweis</xs:documentation>
+		        </xs:annotation>
+		    </xs:element>                         
+ -->        
+ 		    <xs:element name="builtInKitchen" type="xs:boolean" minOccurs="0">
                 <xs:annotation>
                     <xs:documentation xml:lang="en">has a built-in kitchen</xs:documentation>
                     <xs:documentation xml:lang="de-DE">Einbauküche</xs:documentation>
@@ -7022,14 +7183,14 @@
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <!-- 		  
-                      <xs:element name="energyCertificate" type="EnergyPerformanceCertificate" minOccurs="0">
-                            <xs:annotation>
-                                <xs:documentation xml:lang="en">energy performance certificate</xs:documentation>
-                                <xs:documentation xml:lang="de-DE">Energieausweis</xs:documentation>
-                            </xs:annotation>
-                        </xs:element>                         
-             -->
+<!-- 		  
+		  <xs:element name="energyCertificate" type="EnergyPerformanceCertificate" minOccurs="0">
+		        <xs:annotation>
+		            <xs:documentation xml:lang="en">energy performance certificate</xs:documentation>
+		            <xs:documentation xml:lang="de-DE">Energieausweis</xs:documentation>
+		        </xs:annotation>
+		    </xs:element>                         
+ -->            
             <xs:element name="courtage" type="CourtageInfo" minOccurs="1">
                 <xs:annotation>
                     <xs:documentation xml:lang="en">courtage elements</xs:documentation>
@@ -7066,7 +7227,7 @@
             </xs:element>
         </xs:sequence>
     </xs:group>
-
+    
     <xs:group name="BaseGarage">
         <xs:sequence>
             <xs:element name="price" type="Price">
@@ -7168,6 +7329,24 @@
         </xs:annotation>
         <xs:sequence>
             <xs:group ref="BaseHouse"/>
+            <xs:element name="guestToilet" type="xs:boolean" minOccurs="0">
+              <xs:annotation>
+                <xs:documentation xml:lang="en">has a guest toilet</xs:documentation>
+                <xs:documentation xml:lang="de-DE">Gäste WC</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="cellar" type="xs:boolean" minOccurs="0">
+              <xs:annotation>
+                <xs:documentation xml:lang="en">has a cellar</xs:documentation>
+                <xs:documentation xml:lang="de-DE">Keller</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="isBarrierFree" type="xs:boolean" minOccurs="0">
+              <xs:annotation>
+                <xs:documentation xml:lang="en">is barrier free</xs:documentation>
+                <xs:documentation xml:lang="de-DE">Barrierefrei</xs:documentation>
+              </xs:annotation>
+            </xs:element>
         </xs:sequence>
     </xs:group>
 
@@ -7225,6 +7404,30 @@
         </xs:annotation>
         <xs:sequence>
             <xs:group ref="BaseApartment"/>
+            <xs:element name="lift" type="xs:boolean" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">has a lift</xs:documentation>
+                    <xs:documentation xml:lang="de-DE">Aufzug</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="guestToilet" type="xs:boolean" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">has a guest toilet</xs:documentation>
+                    <xs:documentation xml:lang="de-DE">Gäste WC</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="cellar" type="xs:boolean" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">has a cellar</xs:documentation>
+                    <xs:documentation xml:lang="de-DE">Keller</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="isBarrierFree" type="xs:boolean" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">is barrier free</xs:documentation>
+                    <xs:documentation xml:lang="de-DE">Barrierefrei</xs:documentation>
+                </xs:annotation>
+            </xs:element>
         </xs:sequence>
     </xs:group>
 
@@ -7239,16 +7442,16 @@
             <xs:group ref="ExtendedApartment"/>
             <xs:group ref="LivingInformation"/>
             <xs:group ref="LivingBuy"/>
-            <xs:group ref="BaseApartment"/>
+            <xs:group ref="BaseApartment"/>            
             <xs:element name="serviceCharge" type="xs:double" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation xml:lang="en">serviceCharge</xs:documentation>
                     <xs:documentation xml:lang="de-DE">Hausgeld</xs:documentation>
                 </xs:annotation>
-            </xs:element>
+            </xs:element>                      
         </xs:sequence>
     </xs:group>
-
+    
     <xs:group name="BaseApartmentRentGroup">
         <xs:annotation>
             <xs:documentation xml:lang="en">Bundle of the Elements for the Apartment-Rent realestate type for List.
@@ -8044,52 +8247,52 @@
             </xs:element>
             <xs:choice minOccurs="0">
                 <xs:element name="constructionYear" type="xs:int" minOccurs="0" maxOccurs="1">
-                    <xs:annotation>
-                        <xs:documentation xml:lang="en">construction year</xs:documentation>
-                        <xs:documentation xml:lang="de-DE">Baujahr</xs:documentation>
-                    </xs:annotation>
-                </xs:element>
-                <xs:element name="constructionYearUnknown" type="xs:boolean" minOccurs="0">
-                    <xs:annotation>
-                        <xs:documentation xml:lang="en">construction year unknown: true value only expected, instead of false set construction year</xs:documentation>
-                        <xs:documentation xml:lang="de-DE">Baujahr ist unbekannt</xs:documentation>
-                    </xs:annotation>
-                </xs:element>
-            </xs:choice>
+	                <xs:annotation>
+	                    <xs:documentation xml:lang="en">construction year</xs:documentation>
+	                    <xs:documentation xml:lang="de-DE">Baujahr</xs:documentation>
+	                </xs:annotation>
+	            </xs:element>
+	            <xs:element name="constructionYearUnknown" type="xs:boolean" minOccurs="0">
+	                <xs:annotation>
+	                    <xs:documentation xml:lang="en">construction year unknown: true value only expected, instead of false set construction year</xs:documentation>
+	                    <xs:documentation xml:lang="de-DE">Baujahr ist unbekannt</xs:documentation>
+	                </xs:annotation>            
+	            </xs:element>
+			</xs:choice>                       
             <xs:element name="freeFrom" type="TextField" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation xml:lang="en">free from</xs:documentation>
                     <xs:documentation xml:lang="de-DE">Bezugsfrei ab</xs:documentation>
                 </xs:annotation>
             </xs:element>
+            
+	            <xs:element name="heatingType" type="HeatingType" minOccurs="0">
+	                <xs:annotation>
+	                    <xs:documentation xml:lang="en">DEPRECATED use heatingTypeEnev2014 heating type</xs:documentation>
+	                    <xs:documentation xml:lang="de-DE">DEPRECATED benutze heatingTypeEnev2014 Heizungsart </xs:documentation>
+	                </xs:annotation>
+	            </xs:element>
+	            <xs:element name="heatingTypeEnev2014" type="HeatingTypeEnev2014" minOccurs="0">
+	                <xs:annotation>
+	                    <xs:documentation xml:lang="en">heating type</xs:documentation>
+	                    <xs:documentation xml:lang="de-DE">Heizungsart</xs:documentation>
+	                </xs:annotation>
+	            </xs:element>
+            
 
-            <xs:element name="heatingType" type="HeatingType" minOccurs="0">
-                <xs:annotation>
-                    <xs:documentation xml:lang="en">DEPRECATED use heatingTypeEnev2014 heating type</xs:documentation>
-                    <xs:documentation xml:lang="de-DE">DEPRECATED benutze heatingTypeEnev2014 Heizungsart </xs:documentation>
-                </xs:annotation>
-            </xs:element>
-            <xs:element name="heatingTypeEnev2014" type="HeatingTypeEnev2014" minOccurs="0">
-                <xs:annotation>
-                    <xs:documentation xml:lang="en">heating type</xs:documentation>
-                    <xs:documentation xml:lang="de-DE">Heizungsart</xs:documentation>
-                </xs:annotation>
-            </xs:element>
-
-
-            <xs:element name="firingTypes" type="FiringTypes" minOccurs="0">
-                <xs:annotation>
-                    <xs:documentation xml:lang="en">firing types</xs:documentation>
-                    <xs:documentation xml:lang="de-DE">Befeuerungsarten</xs:documentation>
-                </xs:annotation>
-            </xs:element>
-            <xs:element name="energySourcesEnev2014" type="EnergySourcesEnev2014" minOccurs="0">
-                <xs:annotation>
-                    <xs:documentation xml:lang="en">energy sources</xs:documentation>
-                    <xs:documentation xml:lang="de-DE">wesentliche Energieträger</xs:documentation>
-                </xs:annotation>
-            </xs:element>
-
+                <xs:element name="firingTypes" type="FiringTypes" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en">firing types</xs:documentation>
+                        <xs:documentation xml:lang="de-DE">Befeuerungsarten</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="energySourcesEnev2014" type="EnergySourcesEnev2014" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en">energy sources</xs:documentation>
+                        <xs:documentation xml:lang="de-DE">wesentliche Energieträger</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+            
             <xs:element name="thermalCharacteristic" type="xs:double" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation xml:lang="en">thermal characteristic</xs:documentation>
@@ -8968,36 +9171,36 @@
     </xs:complexType>
 
     <xs:complexType name="FloorRange">
-        <xs:annotation>
-            <xs:documentation xml:lang="en">floor range</xs:documentation>
-            <xs:documentation xml:lang="de-DE">Bereich der Etage</xs:documentation>
-        </xs:annotation>
-        <xs:all>
-            <xs:element name="minimal" minOccurs="0">
-                <xs:annotation>
-                    <xs:documentation xml:lang="en">minimal floor</xs:documentation>
-                    <xs:documentation xml:lang="de-DE">Minimale Nummer der Etage</xs:documentation>
-                </xs:annotation>
-                <xs:simpleType>
-                    <xs:restriction base="xs:int">
-                        <xs:minInclusive value="0"/>
-                        <xs:maxInclusive value="999"/>
-                    </xs:restriction>
-                </xs:simpleType>
-            </xs:element>
-            <xs:element name="maximal" minOccurs="0">
-                <xs:annotation>
-                    <xs:documentation xml:lang="en">maximal floor</xs:documentation>
-                    <xs:documentation xml:lang="de-DE">Maximale Nummer der Etage</xs:documentation>
-                </xs:annotation>
-                <xs:simpleType>
-                    <xs:restriction base="xs:int">
-                        <xs:minInclusive value="0"/>
-                        <xs:maxInclusive value="999"/>
-                    </xs:restriction>
-                </xs:simpleType>
-            </xs:element>
-        </xs:all>
+      <xs:annotation>
+        <xs:documentation xml:lang="en">floor range</xs:documentation>
+        <xs:documentation xml:lang="de-DE">Bereich der Etage</xs:documentation>
+      </xs:annotation>
+      <xs:all>
+        <xs:element name="minimal" minOccurs="0">
+          <xs:annotation>
+            <xs:documentation xml:lang="en">minimal floor</xs:documentation>
+            <xs:documentation xml:lang="de-DE">Minimale Nummer der Etage</xs:documentation>
+          </xs:annotation>
+          <xs:simpleType>
+            <xs:restriction base="xs:int">
+              <xs:minInclusive value="0"/>
+              <xs:maxInclusive value="999"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="maximal" minOccurs="0">
+          <xs:annotation>
+            <xs:documentation xml:lang="en">maximal floor</xs:documentation>
+            <xs:documentation xml:lang="de-DE">Maximale Nummer der Etage</xs:documentation>
+          </xs:annotation>
+          <xs:simpleType>
+            <xs:restriction base="xs:int">
+              <xs:minInclusive value="0"/>
+              <xs:maxInclusive value="999"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+      </xs:all>
     </xs:complexType>
 
     <xs:complexType name="PriceRange">
@@ -9388,12 +9591,12 @@
                     </xs:sequence>
                 </xs:complexType>
             </xs:element>
-            <xs:element name="energyCertificate" type="EnergyPerformanceCertificate" minOccurs="0">
-                <xs:annotation>
-                    <xs:documentation xml:lang="en">energy performance certificate</xs:documentation>
-                    <xs:documentation xml:lang="de-DE">Energieausweis</xs:documentation>
-                </xs:annotation>
-            </xs:element>
+		    <xs:element name="energyCertificate" type="EnergyPerformanceCertificate" minOccurs="0">
+		        <xs:annotation>
+		            <xs:documentation xml:lang="en">energy performance certificate</xs:documentation>
+		            <xs:documentation xml:lang="de-DE">Energieausweis</xs:documentation>
+		        </xs:annotation>
+		    </xs:element>                                     
         </xs:sequence>
     </xs:group>
     <xs:group name="ExtendedStore">
@@ -9482,12 +9685,12 @@
                     <xs:documentation xml:lang="de-DE">Mietkaution</xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <xs:element name="energyCertificate" type="EnergyPerformanceCertificate" minOccurs="0">
-                <xs:annotation>
-                    <xs:documentation xml:lang="en">energy performance certificate</xs:documentation>
-                    <xs:documentation xml:lang="de-DE">Energieausweis</xs:documentation>
-                </xs:annotation>
-            </xs:element>
+		    <xs:element name="energyCertificate" type="EnergyPerformanceCertificate" minOccurs="0">
+		        <xs:annotation>
+		            <xs:documentation xml:lang="en">energy performance certificate</xs:documentation>
+		            <xs:documentation xml:lang="de-DE">Energieausweis</xs:documentation>
+		        </xs:annotation>
+		    </xs:element>                                     
         </xs:sequence>
     </xs:group>
     <xs:group name="ExtendedGastronomy">
@@ -9534,12 +9737,12 @@
                     <xs:documentation xml:lang="de-DE">Mietkaution</xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <xs:element name="energyCertificate" type="EnergyPerformanceCertificate" minOccurs="0">
-                <xs:annotation>
-                    <xs:documentation xml:lang="en">energy performance certificate</xs:documentation>
-                    <xs:documentation xml:lang="de-DE">Energieausweis</xs:documentation>
-                </xs:annotation>
-            </xs:element>
+		    <xs:element name="energyCertificate" type="EnergyPerformanceCertificate" minOccurs="0">
+		        <xs:annotation>
+		            <xs:documentation xml:lang="en">energy performance certificate</xs:documentation>
+		            <xs:documentation xml:lang="de-DE">Energieausweis</xs:documentation>
+		        </xs:annotation>
+		    </xs:element>                                    
         </xs:sequence>
     </xs:group>
     <xs:group name="ExtendedTradeSite">
@@ -9664,12 +9867,12 @@
                     <xs:documentation xml:lang="de-DE">Mietkaution</xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <xs:element name="energyCertificate" type="EnergyPerformanceCertificate" minOccurs="0">
-                <xs:annotation>
-                    <xs:documentation xml:lang="en">energy performance certificate</xs:documentation>
-                    <xs:documentation xml:lang="de-DE">Energieausweis</xs:documentation>
-                </xs:annotation>
-            </xs:element>
+		    <xs:element name="energyCertificate" type="EnergyPerformanceCertificate" minOccurs="0">
+		        <xs:annotation>
+		            <xs:documentation xml:lang="en">energy performance certificate</xs:documentation>
+		            <xs:documentation xml:lang="de-DE">Energieausweis</xs:documentation>
+		        </xs:annotation>
+		    </xs:element>                                    
         </xs:sequence>
     </xs:group>
     <xs:group name="ExtendedSpecialPurpose">
@@ -9722,12 +9925,12 @@
                     <xs:documentation xml:lang="de-DE">Mietkaution</xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <xs:element name="energyCertificate" type="EnergyPerformanceCertificate" minOccurs="0">
-                <xs:annotation>
-                    <xs:documentation xml:lang="en">energy performance certificate</xs:documentation>
-                    <xs:documentation xml:lang="de-DE">Energieausweis</xs:documentation>
-                </xs:annotation>
-            </xs:element>
+		    <xs:element name="energyCertificate" type="EnergyPerformanceCertificate" minOccurs="0">
+		        <xs:annotation>
+		            <xs:documentation xml:lang="en">energy performance certificate</xs:documentation>
+		            <xs:documentation xml:lang="de-DE">Energieausweis</xs:documentation>
+		        </xs:annotation>
+		    </xs:element>                                     
         </xs:sequence>
     </xs:group>
 
@@ -9787,12 +9990,12 @@
                     <xs:documentation xml:lang="de-DE">Personenaufzug</xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <xs:element name="energyCertificate" type="EnergyPerformanceCertificate" minOccurs="0">
-                <xs:annotation>
-                    <xs:documentation xml:lang="en">energy performance certificate</xs:documentation>
-                    <xs:documentation xml:lang="de-DE">Energieausweis</xs:documentation>
-                </xs:annotation>
-            </xs:element>
+		    <xs:element name="energyCertificate" type="EnergyPerformanceCertificate" minOccurs="0">
+		        <xs:annotation>
+		            <xs:documentation xml:lang="en">energy performance certificate</xs:documentation>
+		            <xs:documentation xml:lang="de-DE">Energieausweis</xs:documentation>
+		        </xs:annotation>
+		    </xs:element>                                     
         </xs:sequence>
     </xs:group>
 
@@ -9841,19 +10044,19 @@
                 </xs:annotation>
             </xs:element>
 
-            <xs:element name="firingTypes" type="FiringTypes" minOccurs="0">
-                <xs:annotation>
-                    <xs:documentation xml:lang="en">firing types</xs:documentation>
-                    <xs:documentation xml:lang="de-DE">Befeuerungsarten</xs:documentation>
-                </xs:annotation>
-            </xs:element>
-            <xs:element name="energySourcesEnev2014" type="EnergySourcesEnev2014" minOccurs="0">
-                <xs:annotation>
-                    <xs:documentation xml:lang="en">energy sources</xs:documentation>
-                    <xs:documentation xml:lang="de-DE">wesentliche Energieträger</xs:documentation>
-                </xs:annotation>
-            </xs:element>
-
+                <xs:element name="firingTypes" type="FiringTypes" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en">firing types</xs:documentation>
+                        <xs:documentation xml:lang="de-DE">Befeuerungsarten</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="energySourcesEnev2014" type="EnergySourcesEnev2014" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en">energy sources</xs:documentation>
+                        <xs:documentation xml:lang="de-DE">wesentliche Energieträger</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+            
             <xs:element name="floor" type="TextField" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation xml:lang="en">floor</xs:documentation>
@@ -9884,20 +10087,20 @@
                     <xs:documentation xml:lang="de-DE">Moeblierung</xs:documentation>
                 </xs:annotation>
             </xs:element>
-
-            <xs:element name="heatingType" type="HeatingType" minOccurs="0">
-                <xs:annotation>
-                    <xs:documentation xml:lang="en">DEPRECATED use heatingTypeEnev2014 heating type</xs:documentation>
-                    <xs:documentation xml:lang="de-DE">DEPRECATED benutze heatingTypeEnev2014 Heizungsart </xs:documentation>
-                </xs:annotation>
-            </xs:element>
-            <xs:element name="heatingTypeEnev2014" type="HeatingTypeEnev2014" minOccurs="0">
-                <xs:annotation>
-                    <xs:documentation xml:lang="en">heating type</xs:documentation>
-                    <xs:documentation xml:lang="de-DE">Heizungsart</xs:documentation>
-                </xs:annotation>
-            </xs:element>
-
+            
+	            <xs:element name="heatingType" type="HeatingType" minOccurs="0">
+	                <xs:annotation>
+	                    <xs:documentation xml:lang="en">DEPRECATED use heatingTypeEnev2014 heating type</xs:documentation>
+	                    <xs:documentation xml:lang="de-DE">DEPRECATED benutze heatingTypeEnev2014 Heizungsart </xs:documentation>
+	                </xs:annotation>
+	            </xs:element>
+	            <xs:element name="heatingTypeEnev2014" type="HeatingTypeEnev2014" minOccurs="0">
+	                <xs:annotation>
+	                    <xs:documentation xml:lang="en">heating type</xs:documentation>
+	                    <xs:documentation xml:lang="de-DE">Heizungsart</xs:documentation>
+	                </xs:annotation>
+	            </xs:element>
+            
             <xs:element name="lift" type="xs:boolean"  minOccurs="0">
                 <xs:annotation>
                     <xs:documentation xml:lang="en">lift</xs:documentation>
@@ -9963,7 +10166,7 @@
                     <xs:documentation xml:lang="en">thermal characteristic</xs:documentation>
                     <xs:documentation xml:lang="de-DE">Energieverbrauchskennwert</xs:documentation>
                 </xs:annotation>
-            </xs:element>
+            </xs:element>            
             <xs:element name="totalRent" type="xs:double" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation xml:lang="en">DEPRECATED total rent, use the element "price" in BaseShortTermAccommodation</xs:documentation>
@@ -9971,26 +10174,26 @@
                 </xs:annotation>
             </xs:element>
             <xs:choice minOccurs="0">
-                <xs:element name="constructionYear" type="xs:int" minOccurs="0">
-                    <xs:annotation>
-                        <xs:documentation xml:lang="en">construction year</xs:documentation>
-                        <xs:documentation xml:lang="de-DE">Baujahr</xs:documentation>
-                    </xs:annotation>
-                </xs:element>
-                <xs:element name="constructionYearUnknown" type="xs:boolean" minOccurs="0">
-                    <xs:annotation>
-                        <xs:documentation xml:lang="en">construction year unknown: true value only expected, instead of false set construction year</xs:documentation>
-                        <xs:documentation xml:lang="de-DE">Baujahr ist unbekannt</xs:documentation>
-                    </xs:annotation>
-                </xs:element>
-            </xs:choice>
-            <xs:element name="energyCertificate" type="EnergyPerformanceCertificate" minOccurs="0">
-                <xs:annotation>
-                    <xs:documentation xml:lang="en">energy performance certificate</xs:documentation>
-                    <xs:documentation xml:lang="de-DE">Energieausweis</xs:documentation>
-                </xs:annotation>
-            </xs:element>
-        </xs:sequence>
+	            <xs:element name="constructionYear" type="xs:int" minOccurs="0">
+		                <xs:annotation>
+		                    <xs:documentation xml:lang="en">construction year</xs:documentation>
+		                    <xs:documentation xml:lang="de-DE">Baujahr</xs:documentation>
+		                </xs:annotation>
+		            </xs:element>
+		            <xs:element name="constructionYearUnknown" type="xs:boolean" minOccurs="0">
+		                <xs:annotation>
+		                    <xs:documentation xml:lang="en">construction year unknown: true value only expected, instead of false set construction year</xs:documentation>
+		                    <xs:documentation xml:lang="de-DE">Baujahr ist unbekannt</xs:documentation>
+		                </xs:annotation>            
+		            </xs:element>
+			</xs:choice>		                       
+		    <xs:element name="energyCertificate" type="EnergyPerformanceCertificate" minOccurs="0">
+		        <xs:annotation>
+		            <xs:documentation xml:lang="en">energy performance certificate</xs:documentation>
+		            <xs:documentation xml:lang="de-DE">Energieausweis</xs:documentation>
+		        </xs:annotation>
+		    </xs:element>                                     
+       </xs:sequence>
     </xs:group>
 
     <xs:group name="ExtendedHouseType">
@@ -10084,20 +10287,20 @@
                     <xs:documentation xml:lang="de-DE">Keller verfügbar</xs:documentation>
                 </xs:annotation>
             </xs:element>
-
-            <xs:element name="heatingType" type="HeatingType" minOccurs="0">
-                <xs:annotation>
-                    <xs:documentation xml:lang="en">DEPRECATED use heatingTypeEnev2014 heating type</xs:documentation>
-                    <xs:documentation xml:lang="de-DE">DEPRECATED benutze heatingTypeEnev2014 Heizungsart </xs:documentation>
-                </xs:annotation>
-            </xs:element>
-            <xs:element name="heatingTypeEnev2014" type="HeatingTypeEnev2014" minOccurs="0">
-                <xs:annotation>
-                    <xs:documentation xml:lang="en">heating type</xs:documentation>
-                    <xs:documentation xml:lang="de-DE">Heizungsart</xs:documentation>
-                </xs:annotation>
-            </xs:element>
-
+            
+	            <xs:element name="heatingType" type="HeatingType" minOccurs="0">
+	                <xs:annotation>
+	                    <xs:documentation xml:lang="en">DEPRECATED use heatingTypeEnev2014 heating type</xs:documentation>
+	                    <xs:documentation xml:lang="de-DE">DEPRECATED benutze heatingTypeEnev2014 Heizungsart </xs:documentation>
+	                </xs:annotation>
+	            </xs:element>
+	            <xs:element name="heatingTypeEnev2014" type="HeatingTypeEnev2014" minOccurs="0">
+	                <xs:annotation>
+	                    <xs:documentation xml:lang="en">heating type</xs:documentation>
+	                    <xs:documentation xml:lang="de-DE">Heizungsart</xs:documentation>
+	                </xs:annotation>
+	            </xs:element>
+            
             <xs:element name="barrierFree" type="YesNotApplicableType" minOccurs="0">
                 <xs:annotation>
                     <xs:documentation xml:lang="en">barriere free</xs:documentation>
@@ -10110,13 +10313,13 @@
                     <xs:documentation xml:lang="de-DE">Provisionselemente</xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <xs:element name="energyCertificate" type="EnergyPerformanceCertificate" minOccurs="0">
-                <xs:annotation>
-                    <xs:documentation xml:lang="en">energy performance certificate</xs:documentation>
-                    <xs:documentation xml:lang="de-DE">Energieausweis</xs:documentation>
-                </xs:annotation>
-            </xs:element>
-            <!-- ####################################################################################################### -->
+		    <xs:element name="energyCertificate" type="EnergyPerformanceCertificate" minOccurs="0">
+		        <xs:annotation>
+		            <xs:documentation xml:lang="en">energy performance certificate</xs:documentation>
+		            <xs:documentation xml:lang="de-DE">Energieausweis</xs:documentation>
+		        </xs:annotation>
+		    </xs:element>
+<!-- ####################################################################################################### -->
             <xs:element name="energySourcesEnev2014" type="EnergySourcesEnev2014" minOccurs="0">
                 <xs:annotation>
                     <xs:documentation xml:lang="en">energy sources</xs:documentation>
@@ -10148,27 +10351,27 @@
                 </xs:annotation>
             </xs:element>
             <xs:choice minOccurs="0">
-                <xs:element name="constructionYear" minOccurs="0">
-                    <xs:annotation>
-                        <xs:documentation xml:lang="en">construction year</xs:documentation>
-                        <xs:documentation xml:lang="de-DE">Baujahr</xs:documentation>
-                    </xs:annotation>
-                    <xs:simpleType>
-                        <xs:restriction base="xs:int">
-                            <xs:minInclusive value="0"/>
-                            <xs:maxInclusive value="9999"/>
-                        </xs:restriction>
-                    </xs:simpleType>
-                </xs:element>
-                <xs:element name="constructionYearUnknown" type="xs:boolean" minOccurs="0">
-                    <xs:annotation>
+	            <xs:element name="constructionYear" minOccurs="0">
+	                <xs:annotation>
+	                    <xs:documentation xml:lang="en">construction year</xs:documentation>
+	                    <xs:documentation xml:lang="de-DE">Baujahr</xs:documentation>
+	                </xs:annotation>
+	                <xs:simpleType>
+	                    <xs:restriction base="xs:int">
+	                        <xs:minInclusive value="0"/>
+	                        <xs:maxInclusive value="9999"/>
+	                    </xs:restriction>
+	                </xs:simpleType>
+	            </xs:element>
+	            <xs:element name="constructionYearUnknown" type="xs:boolean" minOccurs="0">
+	                <xs:annotation>
                         <xs:documentation xml:lang="en">construction year unknown: true value only expected, instead of false set construction year</xs:documentation>
-                        <xs:documentation xml:lang="de-DE">Baujahr ist unbekannt</xs:documentation>
-                    </xs:annotation>
-                </xs:element>
-            </xs:choice>
-            <!-- ####################################################################################################### -->
-
+	                    <xs:documentation xml:lang="de-DE">Baujahr ist unbekannt</xs:documentation>
+	                </xs:annotation>            
+	            </xs:element>
+			</xs:choice>                       
+<!-- ####################################################################################################### -->
+	                                         
         </xs:sequence>
     </xs:group>
 
@@ -10238,12 +10441,12 @@
                             <xs:documentation xml:lang="de-DE">Title des Elements.</xs:documentation>
                         </xs:annotation>
                     </xs:attribute>
-                    <xs:attribute name="firstActivationDate" type="xs:dateTime" use="optional">
-                        <xs:annotation>
-                            <xs:documentation xml:lang="en">date of the first publication on is24 channel</xs:documentation>
-                            <xs:documentation xml:lang="de-DE">Veröffentlichungsatum auf IS24</xs:documentation>
-                        </xs:annotation>
-                    </xs:attribute>
+		            <xs:attribute name="firstActivationDate" type="xs:dateTime" use="optional">
+		                <xs:annotation>
+		                    <xs:documentation xml:lang="en">date of the first publication on is24 channel</xs:documentation>
+		                    <xs:documentation xml:lang="de-DE">Veröffentlichungsatum auf IS24</xs:documentation>
+		                </xs:annotation>
+		            </xs:attribute>                                                 
                 </xs:complexType>
             </xs:element>
             <xs:element name="publishChannel" type="PublishChannel" minOccurs="1" maxOccurs="1">
@@ -10263,15 +10466,15 @@
                     <xs:documentation xml:lang="en">result of the operation message</xs:documentation>
                     <xs:documentation xml:lang="de-DE">Publizierung-Ergebnis Meldung</xs:documentation>
                 </xs:annotation>
+            </xs:element>                       
+<!--
+             <xs:element name="message" type="Message" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en">Defines an information or error message for publication.</xs:documentation>
+                    <xs:documentation xml:lang="de-DE">Definiert eine Informations- oder Fehlermeldung für die Publizierung.</xs:documentation>
+                </xs:annotation>
             </xs:element>
-            <!--
-                         <xs:element name="message" type="Message" minOccurs="0" maxOccurs="1">
-                            <xs:annotation>
-                                <xs:documentation xml:lang="en">Defines an information or error message for publication.</xs:documentation>
-                                <xs:documentation xml:lang="de-DE">Definiert eine Informations- oder Fehlermeldung für die Publizierung.</xs:documentation>
-                            </xs:annotation>
-                        </xs:element>
-             -->        </xs:sequence>
+ -->        </xs:sequence>
         <xs:attribute name="id" type="xs:string"
                       use="optional"><!-- optional because POST for a realestate CANNOT have an id -->
             <xs:annotation>
@@ -10346,7 +10549,7 @@
                     <xs:restriction base="TextField">
                         <xs:maxLength value="40"/>
                     </xs:restriction>
-                </xs:simpleType>
+                </xs:simpleType>                
             </xs:element>
             <xs:element name="splittingAuction" type="xs:boolean" minOccurs="0" default="false">
                 <xs:annotation>
@@ -10365,25 +10568,25 @@
                     </xs:restriction>
                 </xs:simpleType>
             </xs:element>
-            <xs:element name="energyCertificate" type="EnergyPerformanceCertificate" minOccurs="0">
-                <xs:annotation>
-                    <xs:documentation xml:lang="en">energy performance certificate</xs:documentation>
-                    <xs:documentation xml:lang="de-DE">Energieausweis</xs:documentation>
-                </xs:annotation>
-            </xs:element>
-            <!-- ####################################################################################################### -->
-            <xs:element name="heatingTypeEnev2014" type="HeatingTypeEnev2014" minOccurs="0">
-                <xs:annotation>
-                    <xs:documentation xml:lang="en">heating type</xs:documentation>
-                    <xs:documentation xml:lang="de-DE">Heizungsart</xs:documentation>
-                </xs:annotation>
-            </xs:element>
-            <xs:element name="energySourcesEnev2014" type="EnergySourcesEnev2014" minOccurs="0">
-                <xs:annotation>
-                    <xs:documentation xml:lang="en">energy sources</xs:documentation>
-                    <xs:documentation xml:lang="de-DE">wesentliche Energieträger</xs:documentation>
-                </xs:annotation>
-            </xs:element>
+		    <xs:element name="energyCertificate" type="EnergyPerformanceCertificate" minOccurs="0">
+		        <xs:annotation>
+		            <xs:documentation xml:lang="en">energy performance certificate</xs:documentation>
+		            <xs:documentation xml:lang="de-DE">Energieausweis</xs:documentation>
+		        </xs:annotation>
+		    </xs:element>      
+<!-- ####################################################################################################### -->           
+	            <xs:element name="heatingTypeEnev2014" type="HeatingTypeEnev2014" minOccurs="0">
+	                <xs:annotation>
+	                    <xs:documentation xml:lang="en">heating type</xs:documentation>
+	                    <xs:documentation xml:lang="de-DE">Heizungsart</xs:documentation>
+	                </xs:annotation>
+	            </xs:element>
+                <xs:element name="energySourcesEnev2014" type="EnergySourcesEnev2014" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en">energy sources</xs:documentation>
+                        <xs:documentation xml:lang="de-DE">wesentliche Energieträger</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
             <xs:element name="buildingEnergyRatingType" type="BuildingEnergyRatingType" minOccurs="0">
                 <xs:annotation>
                     <xs:documentation xml:lang="en">building energy rating type</xs:documentation>
@@ -10409,26 +10612,26 @@
                 </xs:annotation>
             </xs:element>
             <xs:choice minOccurs="0">
-                <xs:element name="constructionYear" minOccurs="0">
-                    <xs:annotation>
-                        <xs:documentation xml:lang="en">construction year</xs:documentation>
-                        <xs:documentation xml:lang="de-DE">Baujahr</xs:documentation>
-                    </xs:annotation>
-                    <xs:simpleType>
-                        <xs:restriction base="xs:int">
-                            <xs:minInclusive value="0"/>
-                            <xs:maxInclusive value="9999"/>
-                        </xs:restriction>
-                    </xs:simpleType>
-                </xs:element>
-                <xs:element name="constructionYearUnknown" type="xs:boolean" minOccurs="0">
-                    <xs:annotation>
-                        <xs:documentation xml:lang="en">construction year unknown: true value only expected, instead of false set construction year</xs:documentation>
-                        <xs:documentation xml:lang="de-DE">Baujahr ist unbekannt</xs:documentation>
-                    </xs:annotation>
-                </xs:element>
-            </xs:choice>
-            <!-- ####################################################################################################### -->
+	            <xs:element name="constructionYear" minOccurs="0">
+	                <xs:annotation>
+	                    <xs:documentation xml:lang="en">construction year</xs:documentation>
+	                    <xs:documentation xml:lang="de-DE">Baujahr</xs:documentation>
+	                </xs:annotation>
+	                <xs:simpleType>
+	                    <xs:restriction base="xs:int">
+	                        <xs:minInclusive value="0"/>
+	                        <xs:maxInclusive value="9999"/>
+	                    </xs:restriction>
+	                </xs:simpleType>
+	            </xs:element>
+	            <xs:element name="constructionYearUnknown" type="xs:boolean" minOccurs="0">
+	                <xs:annotation>
+	                    <xs:documentation xml:lang="en">construction year unknown: true value only expected, instead of false set construction year</xs:documentation>
+	                    <xs:documentation xml:lang="de-DE">Baujahr ist unbekannt</xs:documentation>
+	                </xs:annotation>            
+	            </xs:element>
+			</xs:choice>                       
+<!-- ####################################################################################################### -->
         </xs:sequence>
     </xs:group>
     <xs:element name="publishObjects">
@@ -10851,13 +11054,13 @@
             </xs:element>
         </xs:all>
     </xs:complexType>
-
+    
     <xs:complexType name="EnergyPerformanceCertificate">
         <xs:annotation>
             <xs:documentation xml:lang="en">energy certificate</xs:documentation>
             <xs:documentation xml:lang="de-DE">Energieausweis</xs:documentation>
         </xs:annotation>
-        <xs:all>
+        <xs:all>            
             <xs:element name="energyCertificateAvailability" type="EnergyCertificateAvailability" minOccurs="0">
                 <xs:annotation>
                     <xs:documentation xml:lang="en">availibility of the energy certificate</xs:documentation>
@@ -10886,7 +11089,7 @@
                         <xs:minInclusive value="0"/>
                         <xs:maxInclusive value="1999.99"/>
                     </xs:restriction>
-                </xs:simpleType>
+                </xs:simpleType>               
             </xs:element>
             <xs:element name="heatingConsumption" minOccurs="0">
                 <xs:annotation>
@@ -10898,7 +11101,7 @@
                         <xs:minInclusive value="0"/>
                         <xs:maxInclusive value="1999.99"/>
                     </xs:restriction>
-                </xs:simpleType>
+                </xs:simpleType>               
             </xs:element>
             <xs:element name="energyConsumptionElectricity" minOccurs="0">
                 <xs:annotation>
@@ -10910,7 +11113,7 @@
                         <xs:minInclusive value="0"/>
                         <xs:maxInclusive value="1999.99"/>
                     </xs:restriction>
-                </xs:simpleType>
+                </xs:simpleType>               
             </xs:element>
             <xs:element name="energyConsumptionHeating" minOccurs="0">
                 <xs:annotation>
@@ -10922,7 +11125,7 @@
                         <xs:minInclusive value="0"/>
                         <xs:maxInclusive value="1999.99"/>
                     </xs:restriction>
-                </xs:simpleType>
+                </xs:simpleType>               
             </xs:element>
             <xs:element name="thermalCharacteristicElectricity" minOccurs="0">
                 <xs:annotation>
@@ -10934,7 +11137,7 @@
                         <xs:minInclusive value="0"/>
                         <xs:maxInclusive value="1999.99"/>
                     </xs:restriction>
-                </xs:simpleType>
+                </xs:simpleType>               
             </xs:element>
             <xs:element name="thermalCharacteristicHeating" minOccurs="0">
                 <xs:annotation>
@@ -10946,8 +11149,8 @@
                         <xs:minInclusive value="0"/>
                         <xs:maxInclusive value="1999.99"/>
                     </xs:restriction>
-                </xs:simpleType>
-            </xs:element>
+                </xs:simpleType>               
+            </xs:element>            
         </xs:all>
     </xs:complexType>
     <xs:simpleType name="EnergyCertificateCreationDate">
@@ -11041,10 +11244,10 @@
                     <xs:documentation xml:lang="en"></xs:documentation>
                     <xs:documentation xml:lang="de-DE"></xs:documentation>
                 </xs:annotation>
-            </xs:enumeration>
+            </xs:enumeration>            
         </xs:restriction>
     </xs:simpleType>
-
+    
     <xs:simpleType name="EnergyCertificateAvailability">
         <xs:annotation>
             <xs:documentation xml:lang="en"></xs:documentation>
@@ -11068,7 +11271,7 @@
                     <xs:documentation xml:lang="en">certificate is not required</xs:documentation>
                     <xs:documentation xml:lang="de-DE">nicht notwendig</xs:documentation>
                 </xs:annotation>
-            </xs:enumeration>
+            </xs:enumeration>            
         </xs:restriction>
     </xs:simpleType>
 
@@ -11082,4 +11285,5 @@
             <xs:element name="tolerance" type="xs:nonNegativeInteger" minOccurs="1" maxOccurs="1" />
         </xs:sequence>
     </xs:complexType>
+
 </xs:schema>

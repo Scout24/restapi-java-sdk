@@ -1,8 +1,8 @@
 //
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.7 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// Ã„nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.11.05 um 11:50:50 AM CET 
+// Änderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
+// Generiert: 2016.04.19 um 09:36:45 AM CEST 
 //
 
 
@@ -16,7 +16,6 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
-
 import de.immobilienscout24.rest.schema.common._1.AbstractRealEstateForList;
 import de.immobilienscout24.rest.schema.common._1.Picture;
 import de.immobilienscout24.rest.schema.common._1.PublishChannels;
@@ -24,9 +23,9 @@ import de.immobilienscout24.rest.schema.common._1.RealEstateState;
 
 
 /**
- * Allgemeine Elemente fÃ¼r alle Immobilienarten.
+ * Allgemeine Elemente für alle Immobilienarten.
  * 
- * <p>Java-Klasse fÃ¼r OfferRealEstateForList complex type.
+ * <p>Java-Klasse für OfferRealEstateForList complex type.
  * 
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
@@ -58,27 +57,27 @@ import de.immobilienscout24.rest.schema.common._1.RealEstateState;
     "publishChannels"
 })
 @XmlSeeAlso({
+    OfferCompulsoryAuction.class,
     OfferTradeSite.class,
-    OfferHouseBuy.class,
     OfferGarageRent.class,
+    OfferApartmentBuy.class,
+    OfferFlatShareRoom.class,
     OfferSpecialPurpose.class,
+    OfferOffice.class,
+    OfferIndustry.class,
+    OfferInvestment.class,
+    OfferAssistedLiving.class,
+    OfferStore.class,
+    OfferLivingBuySite.class,
+    OfferShortTermAccommodation.class,
     OfferLivingRentSite.class,
     OfferGarageBuy.class,
-    OfferApartmentBuy.class,
-    OfferStore.class,
-    OfferApartmentRent.class,
-    OfferFlatShareRoom.class,
-    OfferIndustry.class,
-    OfferCompulsoryAuction.class,
-    OfferSeniorCare.class,
-    OfferAssistedLiving.class,
-    OfferHouseType.class,
-    OfferInvestment.class,
-    OfferHouseRent.class,
     OfferGastronomy.class,
-    OfferShortTermAccommodation.class,
-    OfferOffice.class,
-    OfferLivingBuySite.class
+    OfferHouseType.class,
+    OfferHouseRent.class,
+    OfferSeniorCare.class,
+    OfferHouseBuy.class,
+    OfferApartmentRent.class
 })
 public abstract class OfferRealEstateForList
     extends AbstractRealEstateForList

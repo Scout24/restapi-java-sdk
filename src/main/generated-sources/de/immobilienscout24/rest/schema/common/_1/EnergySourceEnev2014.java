@@ -1,8 +1,8 @@
 //
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.7 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// √Ñnderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.11.05 um 11:50:50 AM CET 
+// ƒnderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
+// Generiert: 2016.04.19 um 09:36:45 AM CEST 
 //
 
 
@@ -13,7 +13,7 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java-Klasse f√ºr EnergySourceEnev2014.
+ * <p>Java-Klasse f¸r EnergySourceEnev2014.
  * 
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * <p>
@@ -63,7 +63,7 @@ public enum EnergySourceEnev2014 {
     NO_INFORMATION,
 
     /**
-     * Erdw√§rme
+     * Erdw‰rme
      * 
      */
     GEOTHERMAL,
@@ -87,13 +87,13 @@ public enum EnergySourceEnev2014 {
     GAS,
 
     /**
-     * √ñl
+     * ÷l
      * 
      */
     OIL,
 
     /**
-     * Fernw√§rme
+     * Fernw‰rme
      * 
      */
     DISTRICT_HEATING,
@@ -123,13 +123,13 @@ public enum EnergySourceEnev2014 {
     SOUR_GAS,
 
     /**
-     * Fl√ºssiggas
+     * Fl¸ssiggas
      * 
      */
     LIQUID_GAS,
 
     /**
-     * Fernw√§rme Dampf
+     * Fernw‰rme Dampf
      * 
      */
     STEAM_DISTRICT_HEATING,
@@ -153,13 +153,13 @@ public enum EnergySourceEnev2014 {
     COAL_COKE,
 
     /**
-     * Nahw√§rme
+     * Nahw‰rme
      * 
      */
     LOCAL_HEATING,
 
     /**
-     * W√§rmelieferung
+     * W‰rmelieferung
      * 
      */
     HEAT_SUPPLY,
@@ -183,7 +183,7 @@ public enum EnergySourceEnev2014 {
     HYDRO_ENERGY,
 
     /**
-     * Umweltw√§rme
+     * Umweltw‰rme
      * 
      */
     ENVIRONMENTAL_THERMAL_ENERGY,

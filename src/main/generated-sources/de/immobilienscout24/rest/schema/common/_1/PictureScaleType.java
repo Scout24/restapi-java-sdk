@@ -1,8 +1,8 @@
 //
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.7 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// Ã„nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.11.05 um 11:50:50 AM CET 
+// Änderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
+// Generiert: 2016.04.19 um 09:36:45 AM CEST 
 //
 
 
@@ -14,7 +14,7 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java-Klasse fÃ¼r PictureScaleType.
+ * <p>Java-Klasse für PictureScaleType.
  * 
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * <p>
@@ -35,6 +35,7 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;enumeration value="SCALE_AND_CROP"/>
  *     &lt;enumeration value="SCALE"/>
  *     &lt;enumeration value="WHITE_FILLING"/>
+ *     &lt;enumeration value="SCALE_MAX"/>
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
@@ -46,99 +47,105 @@ public enum PictureScaleType {
 
 
     /**
-     * BildgrÃ¶ÃŸe 60 x 40
+     * Bildgröße 60 x 40
      * 
      */
     @XmlEnumValue("SCALE_60x40")
     SCALE_60_X_40("SCALE_60x40"),
 
     /**
-     * BildgrÃ¶ÃŸe 60 x 60
+     * Bildgröße 60 x 60
      * 
      */
     @XmlEnumValue("SCALE_60x60")
     SCALE_60_X_60("SCALE_60x60"),
 
     /**
-     * BildgrÃ¶ÃŸe 73 x 73
+     * Bildgröße 73 x 73
      * 
      */
     @XmlEnumValue("SCALE_73x73")
     SCALE_73_X_73("SCALE_73x73"),
 
     /**
-     * BildgrÃ¶ÃŸe 118 x 118
+     * Bildgröße 118 x 118
      * 
      */
     @XmlEnumValue("SCALE_118x118")
     SCALE_118_X_118("SCALE_118x118"),
 
     /**
-     * BildgrÃ¶ÃŸe 155 x 40
+     * Bildgröße 155 x 40
      * 
      */
     @XmlEnumValue("SCALE_155x40")
     SCALE_155_X_40("SCALE_155x40"),
 
     /**
-     * BildgrÃ¶ÃŸe 200 x 200
+     * Bildgröße 200 x 200
      * 
      */
     @XmlEnumValue("SCALE_200x200")
     SCALE_200_X_200("SCALE_200x200"),
 
     /**
-     * BildgrÃ¶ÃŸe 210 x 210
+     * Bildgröße 210 x 210
      * 
      */
     @XmlEnumValue("SCALE_210x210")
     SCALE_210_X_210("SCALE_210x210"),
 
     /**
-     * BildgrÃ¶ÃŸe 300 x 300
+     * Bildgröße 300 x 300
      * 
      */
     @XmlEnumValue("SCALE_300x300")
     SCALE_300_X_300("SCALE_300x300"),
 
     /**
-     * BildgrÃ¶ÃŸe 400 x 300
+     * Bildgröße 400 x 300
      * 
      */
     @XmlEnumValue("SCALE_400x300")
     SCALE_400_X_300("SCALE_400x300"),
 
     /**
-     * BildgrÃ¶ÃŸe 540 x 540
+     * Bildgröße 540 x 540
      * 
      */
     @XmlEnumValue("SCALE_540x540")
     SCALE_540_X_540("SCALE_540x540"),
 
     /**
-     * BildgrÃ¶ÃŸe 1000 x 1000
+     * Bildgröße 1000 x 1000
      * 
      */
     @XmlEnumValue("SCALE_1000x1000")
     SCALE_1000_X_1000("SCALE_1000x1000"),
 
     /**
-     * Template fÃ¼r Scaling und Cropping
+     * Template für Scaling und Cropping
      * 
      */
     SCALE_AND_CROP("SCALE_AND_CROP"),
 
     /**
-     * Template fÃ¼r Scaling
+     * Template für Scaling
      * 
      */
     SCALE("SCALE"),
 
     /**
-     * Template fÃ¼r White filling
+     * Template für White filling
      * 
      */
-    WHITE_FILLING("WHITE_FILLING");
+    WHITE_FILLING("WHITE_FILLING"),
+
+    /**
+     * Bild in höchster Auflösung
+     * 
+     */
+    SCALE_MAX("SCALE_MAX");
     private final String value;
 
     PictureScaleType(String v) {

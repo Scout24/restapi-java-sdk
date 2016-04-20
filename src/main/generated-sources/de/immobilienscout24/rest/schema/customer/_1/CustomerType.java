@@ -1,8 +1,8 @@
 //
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.7 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// Ã„nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.11.05 um 11:50:50 AM CET 
+// Änderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
+// Generiert: 2016.04.19 um 09:36:45 AM CEST 
 //
 
 
@@ -10,19 +10,19 @@ package de.immobilienscout24.rest.schema.customer._1;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-
+import javax.xml.datatype.XMLGregorianCalendar;
 import de.immobilienscout24.rest.schema.common._1.Adapter1;
 import de.immobilienscout24.rest.schema.common._1.MasterDataContactDetailsType;
 
 
 /**
- * <p>Java-Klasse fÃ¼r CustomerType complex type.
+ * <p>Java-Klasse für CustomerType complex type.
  * 
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
@@ -45,12 +45,14 @@ import de.immobilienscout24.rest.schema.common._1.MasterDataContactDetailsType;
  *             &lt;complexContent>
  *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *                 &lt;sequence>
- *                   &lt;element name="username" type="{http://rest.immobilienscout24.de/schema/common/1.0}TextField" maxOccurs="unbounded"/>
+ *                   &lt;element name="username" type="{http://rest.immobilienscout24.de/schema/common/1.0}TextField" maxOccurs="unbounded" minOccurs="0"/>
+ *                   &lt;element name="ssoId" type="{http://www.w3.org/2001/XMLSchema}long" maxOccurs="unbounded" minOccurs="0"/>
  *                 &lt;/sequence>
  *               &lt;/restriction>
  *             &lt;/complexContent>
  *           &lt;/complexType>
  *         &lt;/element>
+ *         &lt;element name="creationDate" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -70,7 +72,8 @@ import de.immobilienscout24.rest.schema.common._1.MasterDataContactDetailsType;
     "professional",
     "companyWideId",
     "accountManager",
-    "users"
+    "users",
+    "creationDate"
 })
 public class CustomerType {
 
@@ -86,6 +89,8 @@ public class CustomerType {
     protected AccountManagerType accountManager;
     @XmlElement(required = true)
     protected CustomerType.Users users;
+    @XmlSchemaType(name = "dateTime")
+    protected XMLGregorianCalendar creationDate;
 
     /**
      * Ruft den Wert der contractContactDetails-Eigenschaft ab.
@@ -319,9 +324,33 @@ public class CustomerType {
         this.users = value;
     }
 
+    /**
+     * Ruft den Wert der creationDate-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public XMLGregorianCalendar getCreationDate() {
+        return creationDate;
+    }
 
     /**
-     * <p>Java-Klasse fÃ¼r anonymous complex type.
+     * Legt den Wert der creationDate-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public void setCreationDate(XMLGregorianCalendar value) {
+        this.creationDate = value;
+    }
+
+
+    /**
+     * <p>Java-Klasse für anonymous complex type.
      * 
      * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
      * 
@@ -330,7 +359,8 @@ public class CustomerType {
      *   &lt;complexContent>
      *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
      *       &lt;sequence>
-     *         &lt;element name="username" type="{http://rest.immobilienscout24.de/schema/common/1.0}TextField" maxOccurs="unbounded"/>
+     *         &lt;element name="username" type="{http://rest.immobilienscout24.de/schema/common/1.0}TextField" maxOccurs="unbounded" minOccurs="0"/>
+     *         &lt;element name="ssoId" type="{http://www.w3.org/2001/XMLSchema}long" maxOccurs="unbounded" minOccurs="0"/>
      *       &lt;/sequence>
      *     &lt;/restriction>
      *   &lt;/complexContent>
@@ -341,13 +371,15 @@ public class CustomerType {
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "username"
+        "username",
+        "ssoId"
     })
     public static class Users {
 
-        @XmlElement(required = true)
         @XmlJavaTypeAdapter(Adapter1 .class)
         protected List<String> username;
+        @XmlElement(type = Long.class)
+        protected List<Long> ssoId;
 
         /**
          * Gets the value of the username property.
@@ -376,6 +408,35 @@ public class CustomerType {
                 username = new ArrayList<String>();
             }
             return this.username;
+        }
+
+        /**
+         * Gets the value of the ssoId property.
+         * 
+         * <p>
+         * This accessor method returns a reference to the live list,
+         * not a snapshot. Therefore any modification you make to the
+         * returned list will be present inside the JAXB object.
+         * This is why there is not a <CODE>set</CODE> method for the ssoId property.
+         * 
+         * <p>
+         * For example, to add a new item, do as follows:
+         * <pre>
+         *    getSsoId().add(newItem);
+         * </pre>
+         * 
+         * 
+         * <p>
+         * Objects of the following type(s) are allowed in the list
+         * {@link Long }
+         * 
+         * 
+         */
+        public List<Long> getSsoId() {
+            if (ssoId == null) {
+                ssoId = new ArrayList<Long>();
+            }
+            return this.ssoId;
         }
 
     }

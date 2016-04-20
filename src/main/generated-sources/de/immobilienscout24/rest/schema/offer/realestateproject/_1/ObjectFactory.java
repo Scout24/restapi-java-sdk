@@ -1,8 +1,8 @@
 //
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.7 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// Ã„nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.11.05 um 11:50:50 AM CET 
+// Änderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
+// Generiert: 2016.04.19 um 09:36:45 AM CEST 
 //
 
 
@@ -32,8 +32,8 @@ import javax.xml.namespace.QName;
 public class ObjectFactory {
 
     private final static QName _RealEstateProjectEntry_QNAME = new QName("http://rest.immobilienscout24.de/schema/offer/realestateproject/1.0", "realEstateProjectEntry");
-    private final static QName _RealEstateProjectEntries_QNAME = new QName("http://rest.immobilienscout24.de/schema/offer/realestateproject/1.0", "realEstateProjectEntries");
     private final static QName _RealEstateProjects_QNAME = new QName("http://rest.immobilienscout24.de/schema/offer/realestateproject/1.0", "realEstateProjects");
+    private final static QName _RealEstateProjectEntries_QNAME = new QName("http://rest.immobilienscout24.de/schema/offer/realestateproject/1.0", "realEstateProjectEntries");
     private final static QName _RealEstateProject_QNAME = new QName("http://rest.immobilienscout24.de/schema/offer/realestateproject/1.0", "realEstateProject");
 
     /**
@@ -60,19 +60,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link RealEstateProjectEntries }
-     * 
-     */
-    public RealEstateProjectEntries createRealEstateProjectEntries() {
-        return new RealEstateProjectEntries();
-    }
-
-    /**
      * Create an instance of {@link RealEstateProject }
      * 
      */
     public RealEstateProject createRealEstateProject() {
         return new RealEstateProject();
+    }
+
+    /**
+     * Create an instance of {@link RealEstateProjectEntries }
+     * 
+     */
+    public RealEstateProjectEntries createRealEstateProjectEntries() {
+        return new RealEstateProjectEntries();
     }
 
     /**
@@ -85,21 +85,21 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link RealEstateProjectEntries }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://rest.immobilienscout24.de/schema/offer/realestateproject/1.0", name = "realEstateProjectEntries")
-    public JAXBElement<RealEstateProjectEntries> createRealEstateProjectEntries(RealEstateProjectEntries value) {
-        return new JAXBElement<RealEstateProjectEntries>(_RealEstateProjectEntries_QNAME, RealEstateProjectEntries.class, null, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link RealEstateProjects }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://rest.immobilienscout24.de/schema/offer/realestateproject/1.0", name = "realEstateProjects")
     public JAXBElement<RealEstateProjects> createRealEstateProjects(RealEstateProjects value) {
         return new JAXBElement<RealEstateProjects>(_RealEstateProjects_QNAME, RealEstateProjects.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link RealEstateProjectEntries }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://rest.immobilienscout24.de/schema/offer/realestateproject/1.0", name = "realEstateProjectEntries")
+    public JAXBElement<RealEstateProjectEntries> createRealEstateProjectEntries(RealEstateProjectEntries value) {
+        return new JAXBElement<RealEstateProjectEntries>(_RealEstateProjectEntries_QNAME, RealEstateProjectEntries.class, null, value);
     }
 
     /**

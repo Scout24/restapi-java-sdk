@@ -13,6 +13,11 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+/**
+ * 
+ * @author Martin Fluegge
+ *
+ */
 public class CopyApiXsdFiles {
 
 	public static Set<String> acceptedFiles = new HashSet<String>();
@@ -28,10 +33,10 @@ public class CopyApiXsdFiles {
 
 		initAcceptedFileList();
 		// your basepath
-		String basePath = "/data/home/mfluegge";
+		// String basePath = "/data/home/mfluegge";
 
-		String sourceBasePath = basePath + "/ImmoScout24/MMM/rest-api/schema/trunk/";
-		String targetBasePath = basePath + "/work/git/restapi-java-sdk/";
+		String sourceBasePath = "C:/svn/int/is24/common/restapi/schema/trunk/";
+		String targetBasePath = "C:/git/restapi-java-sdk/";
 
 		File f1 = new File(sourceBasePath);
 		System.out.println(f1.getAbsolutePath());
@@ -78,8 +83,10 @@ public class CopyApiXsdFiles {
 				if (f.isFile()) {
 					System.out.println("sourceFile: " + f.getAbsolutePath());
 					String fileName = f.getName();
-					Path sourcePath = Paths.get(URI.create("file://" + f.getAbsolutePath()));
-					Path targetPath = Paths.get(URI.create("file://" + targetDir.getAbsolutePath() + "/" + fileName));
+
+					Path sourcePath = f.toPath();// Paths.get(URI.create("file:///"
+													// + f.getAbsolutePath()));
+					Path targetPath = Paths.get(URI.create("file:///" + targetDir.getAbsolutePath().replace("\\", "/") + "/" + fileName));
 
 					System.out.println("destination: " + targetPath);
 
@@ -87,7 +94,6 @@ public class CopyApiXsdFiles {
 				}
 			}
 		}
-
 	}
 
 	public static void initAcceptedFileList() {

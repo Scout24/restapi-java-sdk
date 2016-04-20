@@ -1,8 +1,8 @@
 //
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.7 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// Ã„nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.11.05 um 11:50:50 AM CET 
+// Änderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
+// Generiert: 2016.04.19 um 09:36:45 AM CEST 
 //
 
 
@@ -13,12 +13,11 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-
 import de.immobilienscout24.rest.schema.common._1.Adapter1;
 
 
 /**
- * <p>Java-Klasse fÃ¼r BillingDetailsType complex type.
+ * <p>Java-Klasse für BillingDetailsType complex type.
  * 
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
@@ -32,6 +31,8 @@ import de.immobilienscout24.rest.schema.common._1.Adapter1;
  *         &lt;element name="bankAccount" type="{http://rest.immobilienscout24.de/schema/customer/1.0}BankAccountType" minOccurs="0"/>
  *         &lt;element name="collectiveBilling" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
  *         &lt;element name="emailBilling" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="postage" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="invoicingOptOut" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -46,7 +47,9 @@ import de.immobilienscout24.rest.schema.common._1.Adapter1;
     "paymentMethod",
     "bankAccount",
     "collectiveBilling",
-    "emailBilling"
+    "emailBilling",
+    "postage",
+    "invoicingOptOut"
 })
 public class BillingDetailsType {
 
@@ -57,6 +60,8 @@ public class BillingDetailsType {
     protected BankAccountType bankAccount;
     protected Boolean collectiveBilling;
     protected Boolean emailBilling;
+    protected Boolean postage;
+    protected Boolean invoicingOptOut;
 
     /**
      * Ruft den Wert der taxNumber-Eigenschaft ab.
@@ -176,6 +181,54 @@ public class BillingDetailsType {
      */
     public void setEmailBilling(Boolean value) {
         this.emailBilling = value;
+    }
+
+    /**
+     * Ruft den Wert der postage-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
+     */
+    public Boolean isPostage() {
+        return postage;
+    }
+
+    /**
+     * Legt den Wert der postage-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
+     */
+    public void setPostage(Boolean value) {
+        this.postage = value;
+    }
+
+    /**
+     * Ruft den Wert der invoicingOptOut-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
+     */
+    public Boolean isInvoicingOptOut() {
+        return invoicingOptOut;
+    }
+
+    /**
+     * Legt den Wert der invoicingOptOut-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
+     */
+    public void setInvoicingOptOut(Boolean value) {
+        this.invoicingOptOut = value;
     }
 
 }

@@ -1,8 +1,8 @@
 //
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.7 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// Ã„nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.11.05 um 11:50:50 AM CET 
+// Änderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
+// Generiert: 2016.04.19 um 09:36:45 AM CEST 
 //
 
 
@@ -12,15 +12,14 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
-
 import de.immobilienscout24.rest.schema.common._1.CourtageInfo;
 import de.immobilienscout24.rest.schema.common._1.Price;
 
 
 /**
- * Eigenschaften fÃ¼r den Wohnung-Kauf Immobilientyp.
+ * Eigenschaften für den Wohnung-Kauf Immobilientyp.
  * 
- * <p>Java-Klasse fÃ¼r OfferApartmentBuy complex type.
+ * <p>Java-Klasse für OfferApartmentBuy complex type.
  * 
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
@@ -46,7 +45,11 @@ import de.immobilienscout24.rest.schema.common._1.Price;
     "balcony",
     "certificateOfEligibilityNeeded",
     "garden",
-    "courtage"
+    "courtage",
+    "lift",
+    "guestToilet",
+    "cellar",
+    "isBarrierFree"
 })
 public class OfferApartmentBuy
     extends OfferRealEstateForList
@@ -62,6 +65,10 @@ public class OfferApartmentBuy
     protected Boolean garden;
     @XmlElement(required = true)
     protected CourtageInfo courtage;
+    protected Boolean lift;
+    protected Boolean guestToilet;
+    protected Boolean cellar;
+    protected Boolean isBarrierFree;
 
     /**
      * Ruft den Wert der price-Eigenschaft ab.
@@ -261,6 +268,102 @@ public class OfferApartmentBuy
      */
     public void setCourtage(CourtageInfo value) {
         this.courtage = value;
+    }
+
+    /**
+     * Ruft den Wert der lift-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
+     */
+    public Boolean isLift() {
+        return lift;
+    }
+
+    /**
+     * Legt den Wert der lift-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
+     */
+    public void setLift(Boolean value) {
+        this.lift = value;
+    }
+
+    /**
+     * Ruft den Wert der guestToilet-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
+     */
+    public Boolean isGuestToilet() {
+        return guestToilet;
+    }
+
+    /**
+     * Legt den Wert der guestToilet-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
+     */
+    public void setGuestToilet(Boolean value) {
+        this.guestToilet = value;
+    }
+
+    /**
+     * Ruft den Wert der cellar-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
+     */
+    public Boolean isCellar() {
+        return cellar;
+    }
+
+    /**
+     * Legt den Wert der cellar-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
+     */
+    public void setCellar(Boolean value) {
+        this.cellar = value;
+    }
+
+    /**
+     * Ruft den Wert der isBarrierFree-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
+     */
+    public Boolean isIsBarrierFree() {
+        return isBarrierFree;
+    }
+
+    /**
+     * Legt den Wert der isBarrierFree-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
+     */
+    public void setIsBarrierFree(Boolean value) {
+        this.isBarrierFree = value;
     }
 
 }

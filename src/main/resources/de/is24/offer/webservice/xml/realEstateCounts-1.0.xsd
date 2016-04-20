@@ -9,10 +9,20 @@
 
     <xs:element name="realEstateCounts">
         <xs:complexType>
-            <xs:all minOccurs="1" maxOccurs="1">
+            <xs:sequence>
                 <xs:element name="is24publishedRealEstatesCount" type="xs:long" minOccurs="1" maxOccurs="1"/>
                 <xs:element name="is24notPublishedRealEstatesCount" type="xs:long" minOccurs="1" maxOccurs="1"/>
-            </xs:all>
+                <xs:element name="homepagePublishedRealEstatesCount" type="xs:long" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="marketPlacePublishedRealEstatesCount" minOccurs="0" maxOccurs="unbounded">
+                  <xs:complexType>
+                    <xs:simpleContent>
+                      <xs:extension base="xs:long">
+                        <xs:attribute name="name" type="xs:string" use="required"/>
+                      </xs:extension>
+                    </xs:simpleContent>
+                  </xs:complexType>
+                </xs:element>
+            </xs:sequence>
         </xs:complexType>
     </xs:element>
 

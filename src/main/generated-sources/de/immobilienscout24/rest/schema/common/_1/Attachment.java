@@ -1,8 +1,8 @@
 //
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.7 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// Ã„nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.11.05 um 11:50:50 AM CET 
+// Änderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
+// Generiert: 2016.04.19 um 09:36:45 AM CEST 
 //
 
 
@@ -21,7 +21,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
 /**
  * Ein Anhang
  * 
- * <p>Java-Klasse fÃ¼r Attachment complex type.
+ * <p>Java-Klasse für Attachment complex type.
  * 
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
@@ -45,6 +45,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *             &lt;/restriction>
  *           &lt;/simpleType>
  *         &lt;/element>
+ *         &lt;element name="externalCheckSum" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *       &lt;/sequence>
  *       &lt;attGroup ref="{http://rest.immobilienscout24.de/schema/common/1.0}Reference"/>
  *     &lt;/restriction>
@@ -58,12 +59,13 @@ import javax.xml.datatype.XMLGregorianCalendar;
 @XmlType(name = "Attachment", propOrder = {
     "title",
     "checkSum",
-    "externalId"
+    "externalId",
+    "externalCheckSum"
 })
 @XmlSeeAlso({
-    StreamingVideo.class,
     Picture.class,
     Link.class,
+    StreamingVideo.class,
     ExtendedAttachment.class
 })
 public abstract class Attachment {
@@ -73,6 +75,7 @@ public abstract class Attachment {
     protected String checkSum;
     @XmlJavaTypeAdapter(Adapter1 .class)
     protected String externalId;
+    protected String externalCheckSum;
     @XmlAttribute(name = "href", namespace = "http://www.w3.org/1999/xlink")
     @XmlSchemaType(name = "anyURI")
     protected String href;
@@ -160,6 +163,30 @@ public abstract class Attachment {
      */
     public void setExternalId(String value) {
         this.externalId = value;
+    }
+
+    /**
+     * Ruft den Wert der externalCheckSum-Eigenschaft ab.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getExternalCheckSum() {
+        return externalCheckSum;
+    }
+
+    /**
+     * Legt den Wert der externalCheckSum-Eigenschaft fest.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setExternalCheckSum(String value) {
+        this.externalCheckSum = value;
     }
 
     /**

@@ -1,8 +1,8 @@
 //
 // Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.7 generiert 
 // Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// Ã„nderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
-// Generiert: 2014.11.05 um 11:50:50 AM CET 
+// Änderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
+// Generiert: 2016.04.19 um 09:36:45 AM CEST 
 //
 
 
@@ -37,19 +37,19 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link OfferCompulsoryAuction }
+     * 
+     */
+    public OfferCompulsoryAuction createOfferCompulsoryAuction() {
+        return new OfferCompulsoryAuction();
+    }
+
+    /**
      * Create an instance of {@link OfferTradeSite }
      * 
      */
     public OfferTradeSite createOfferTradeSite() {
         return new OfferTradeSite();
-    }
-
-    /**
-     * Create an instance of {@link OfferHouseBuy }
-     * 
-     */
-    public OfferHouseBuy createOfferHouseBuy() {
-        return new OfferHouseBuy();
     }
 
     /**
@@ -61,11 +61,83 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link OfferApartmentBuy }
+     * 
+     */
+    public OfferApartmentBuy createOfferApartmentBuy() {
+        return new OfferApartmentBuy();
+    }
+
+    /**
+     * Create an instance of {@link OfferFlatShareRoom }
+     * 
+     */
+    public OfferFlatShareRoom createOfferFlatShareRoom() {
+        return new OfferFlatShareRoom();
+    }
+
+    /**
      * Create an instance of {@link OfferSpecialPurpose }
      * 
      */
     public OfferSpecialPurpose createOfferSpecialPurpose() {
         return new OfferSpecialPurpose();
+    }
+
+    /**
+     * Create an instance of {@link OfferOffice }
+     * 
+     */
+    public OfferOffice createOfferOffice() {
+        return new OfferOffice();
+    }
+
+    /**
+     * Create an instance of {@link OfferIndustry }
+     * 
+     */
+    public OfferIndustry createOfferIndustry() {
+        return new OfferIndustry();
+    }
+
+    /**
+     * Create an instance of {@link OfferInvestment }
+     * 
+     */
+    public OfferInvestment createOfferInvestment() {
+        return new OfferInvestment();
+    }
+
+    /**
+     * Create an instance of {@link OfferAssistedLiving }
+     * 
+     */
+    public OfferAssistedLiving createOfferAssistedLiving() {
+        return new OfferAssistedLiving();
+    }
+
+    /**
+     * Create an instance of {@link OfferStore }
+     * 
+     */
+    public OfferStore createOfferStore() {
+        return new OfferStore();
+    }
+
+    /**
+     * Create an instance of {@link OfferLivingBuySite }
+     * 
+     */
+    public OfferLivingBuySite createOfferLivingBuySite() {
+        return new OfferLivingBuySite();
+    }
+
+    /**
+     * Create an instance of {@link OfferShortTermAccommodation }
+     * 
+     */
+    public OfferShortTermAccommodation createOfferShortTermAccommodation() {
+        return new OfferShortTermAccommodation();
     }
 
     /**
@@ -85,67 +157,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OfferApartmentBuy }
+     * Create an instance of {@link OfferGastronomy }
      * 
      */
-    public OfferApartmentBuy createOfferApartmentBuy() {
-        return new OfferApartmentBuy();
-    }
-
-    /**
-     * Create an instance of {@link OfferStore }
-     * 
-     */
-    public OfferStore createOfferStore() {
-        return new OfferStore();
-    }
-
-    /**
-     * Create an instance of {@link OfferApartmentRent }
-     * 
-     */
-    public OfferApartmentRent createOfferApartmentRent() {
-        return new OfferApartmentRent();
-    }
-
-    /**
-     * Create an instance of {@link OfferFlatShareRoom }
-     * 
-     */
-    public OfferFlatShareRoom createOfferFlatShareRoom() {
-        return new OfferFlatShareRoom();
-    }
-
-    /**
-     * Create an instance of {@link OfferIndustry }
-     * 
-     */
-    public OfferIndustry createOfferIndustry() {
-        return new OfferIndustry();
-    }
-
-    /**
-     * Create an instance of {@link OfferCompulsoryAuction }
-     * 
-     */
-    public OfferCompulsoryAuction createOfferCompulsoryAuction() {
-        return new OfferCompulsoryAuction();
-    }
-
-    /**
-     * Create an instance of {@link OfferSeniorCare }
-     * 
-     */
-    public OfferSeniorCare createOfferSeniorCare() {
-        return new OfferSeniorCare();
-    }
-
-    /**
-     * Create an instance of {@link OfferAssistedLiving }
-     * 
-     */
-    public OfferAssistedLiving createOfferAssistedLiving() {
-        return new OfferAssistedLiving();
+    public OfferGastronomy createOfferGastronomy() {
+        return new OfferGastronomy();
     }
 
     /**
@@ -157,14 +173,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OfferInvestment }
-     * 
-     */
-    public OfferInvestment createOfferInvestment() {
-        return new OfferInvestment();
-    }
-
-    /**
      * Create an instance of {@link OfferHouseRent }
      * 
      */
@@ -173,35 +181,27 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link OfferGastronomy }
+     * Create an instance of {@link OfferSeniorCare }
      * 
      */
-    public OfferGastronomy createOfferGastronomy() {
-        return new OfferGastronomy();
+    public OfferSeniorCare createOfferSeniorCare() {
+        return new OfferSeniorCare();
     }
 
     /**
-     * Create an instance of {@link OfferShortTermAccommodation }
+     * Create an instance of {@link OfferHouseBuy }
      * 
      */
-    public OfferShortTermAccommodation createOfferShortTermAccommodation() {
-        return new OfferShortTermAccommodation();
+    public OfferHouseBuy createOfferHouseBuy() {
+        return new OfferHouseBuy();
     }
 
     /**
-     * Create an instance of {@link OfferOffice }
+     * Create an instance of {@link OfferApartmentRent }
      * 
      */
-    public OfferOffice createOfferOffice() {
-        return new OfferOffice();
-    }
-
-    /**
-     * Create an instance of {@link OfferLivingBuySite }
-     * 
-     */
-    public OfferLivingBuySite createOfferLivingBuySite() {
-        return new OfferLivingBuySite();
+    public OfferApartmentRent createOfferApartmentRent() {
+        return new OfferApartmentRent();
     }
 
     /**
