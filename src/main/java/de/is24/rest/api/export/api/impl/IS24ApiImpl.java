@@ -1592,15 +1592,15 @@ public class IS24ApiImpl implements Is24Api, InternalObjectApi {
 			ArrayList<Placement> ret = new ArrayList<>();
 			if (OnTopPlacement.PREMIUM.equals(placement)) {
 				Premiumplacements placements = unmarshallPlacement(xml, Premiumplacements.class);
-				ret.add((Placement) placements.getPremiumplacement());
+				ret.addAll(placements.getPremiumplacement());
 				return ret;
 			} else if (OnTopPlacement.SHOW_CASE.equals(placement)) {
 				Showcaseplacements placements = unmarshallPlacement(xml, Showcaseplacements.class);
-				ret.add((Placement) placements.getShowcaseplacement());
+				ret.addAll(placements.getShowcaseplacement());
 				return ret;
 			} else if (OnTopPlacement.TOP.equals(placement)) {
 				Topplacements placements = unmarshallPlacement(xml, Topplacements.class);
-				ret.add((Placement) placements.getTopplacement());
+				ret.addAll(placements.getTopplacement());
 				return ret;
 			} else {
 				throw new RuntimeException("Unsupported placement " + placement);

@@ -17,6 +17,8 @@ public class CreateAttachmentResultParser extends AbstractRegExpResultParser {
 		String message = parseMessage.getMessage();
 		if (message != null && message.contains("The maximum number of attachments has been reached")) {
 			throw new MaximumNumberOfAttachmentsReachedException(parseMessage, throwable);
+		} else if (message != null && message.contains("is not supported")) {
+			throw new UnsupportedAttachmentTypeException(parseMessage, throwable);
 		}
 
 		throw new RuntimeException(parseMessage.getMessageCode() + ": " + parseMessage.getMessage(), throwable);
@@ -41,4 +43,11 @@ public class CreateAttachmentResultParser extends AbstractRegExpResultParser {
 			super(parseMessage.getMessageCode() + ": " + parseMessage.getMessage(), throwable);
 		}
 	}
+
+	/**
+	 * 
+	 * @author Martin Fluegge
+	 * 
+	 */
+
 }

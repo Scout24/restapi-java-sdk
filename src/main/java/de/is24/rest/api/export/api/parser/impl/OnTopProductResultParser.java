@@ -21,7 +21,7 @@ public class OnTopProductResultParser extends AbstractResultParser {
 			if (parseMessage.getMessage() != null) {
 				if (parseMessage.getMessage().contains("No tally found to ontop realestate")) {
 					throw new NoOnTopContingentAvailableException(parseMessage.getMessage(), throwable);
-				} else if (parseMessage.getMessage().contains("Not allowed to perform ontop for unpublished realestate")) {
+				} else if (parseMessage.getMessage().contains("Not allowed to produce OnTopService")) {
 					throw new CouldNotPlaceOnTopOnUnpublishedObjectException(parseMessage.getMessage(), throwable);
 				} else if (parseMessage.getMessage().contains("is already top placed")) {
 					throw new ObjectIsAlreadyPlacedException(parseMessage.getMessage(), throwable);
