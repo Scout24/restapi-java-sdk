@@ -1006,6 +1006,25 @@ public class IS24ApiImpl implements Is24Api, InternalObjectApi {
 		return deleteRealestate(username, objectId.getId());
 	}
 
+	//method deletes xml-non-complient characters
+	public String stripNonValidXMLCharacters(String in) {
+		StringBuffer out = new StringBuffer(); // Used to hold the output.
+		char current; // Used to reference the current character.
+
+		if (in == null || ("".equals(in))) return ""; // vacancy test.
+		for (int i = 0; i < in.length(); i++) {
+			current = in.charAt(i); // NOTE: No IndexOutOfBoundsException caught here; it should not happen.
+			if ((current == 0x9) ||
+					(current == 0xA) ||
+					(current == 0xD) ||
+					((current >= 0x20) && (current <= 0xD7FF)) ||
+					((current >= 0xE000) && (current <= 0xFFFD)) ||
+					((current >= 0x10000) && (current <= 0x10FFFF)))
+				out.append(current);
+		}
+		return out.toString();
+	}
+
 	@Override
 	public Searcher getSearcher(String username) {
 		URL url = createURL(baseUrl + "/search/v1.0/searcher/me");
@@ -1017,6 +1036,7 @@ public class IS24ApiImpl implements Is24Api, InternalObjectApi {
 	}
 
 	protected <T> T unmarshall(Class<T> clazz, String xml) {
+		xml = stripNonValidXMLCharacters(xml);
 		return unmarshall(clazz, xml, null);
 	}
 
