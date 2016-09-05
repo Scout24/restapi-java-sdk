@@ -1,4 +1,4 @@
-IS24 API SDK v0.1 beta (restapi-java-sdk)
+IS24 API SDK v0.2.5 (restapi-java-sdk)
 ==========================
 Author:     Martin Flügge
 
@@ -22,7 +22,12 @@ mfluegge  	  | 4th November 2014| v0.2.3
 dsostin  	  | 26th February 2015| v0.2.9
 dsostin  	  | 02th July 2015| v0.2.10
 fmielke       | 31th August 2015| v0.2.11
+fmielke       | 5th September 2016| v0.2.15
 
+v0.2.5
+----------
+
+Delete xml-non-confirm characters at reading response bodies as xml.
 
 v0.2.3
 ----------
