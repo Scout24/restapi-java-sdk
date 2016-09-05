@@ -11,7 +11,7 @@
 	<url>http://maven.apache.org</url>
 
 	<properties>
-		<nexus.baseUrl>http://devnexus.rz.is/</nexus.baseUrl>
+		<nexus.baseUrl>http://nexus.rz.is/</nexus.baseUrl>
 		<jaxb.output.directory>${basedir}/src/main/generated-sources/</jaxb.output.directory>
 		<resourcesDir>${basedir}/src/main/resources</resourcesDir>
 	</properties>
