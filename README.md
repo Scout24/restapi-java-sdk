@@ -1,4 +1,4 @@
-IS24 API SDK v0.2.5 (restapi-java-sdk)
+IS24 API SDK v0.2.15 (restapi-java-sdk)
 ==========================
 Author:     Martin Flügge
 
@@ -24,10 +24,25 @@ dsostin  	  | 02th July 2015| v0.2.10
 fmielke       | 31th August 2015| v0.2.11
 fmielke       | 5th September 2016| v0.2.15
 
-v0.2.5
+
+v0.2.15
 ----------
 
 Delete xml-non-confirm characters at reading response bodies as xml.
+
+v0.2.11
+----------
+
+bugfix POST attachment(url)
+
+v0.2.10
+----------
+sdk make all requests using https.
+
+v0.2.9
+----------
+
+bug fix for create video attachment
 
 v0.2.3
 ----------
@@ -54,15 +69,3 @@ v0.2 beta
 - On top products can be removed from realestates
 - user can get a list of entitlements for a given username
 - user can get a specific entitlement by name for a given user
-
-v0.2.9
-----------
-bug fix for create video attachment
-
-v0.2.10
-----------
-sdk make all requests using https.
-
-v0.2.11
-----------
-bugfix POST attachment(url)
