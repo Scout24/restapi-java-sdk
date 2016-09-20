@@ -1,7 +1,13 @@
 package de.is24.utils;
 
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.List;
+
+import javax.xml.datatype.DatatypeConfigurationException;
+import javax.xml.datatype.DatatypeFactory;
+import javax.xml.datatype.XMLGregorianCalendar;
 
 import de.immobilienscout24.rest.schema.common._1.ApartmentType;
 import de.immobilienscout24.rest.schema.common._1.Attachment;
@@ -17,16 +23,20 @@ import de.immobilienscout24.rest.schema.common._1.EnergyCertificateCreationDate;
 import de.immobilienscout24.rest.schema.common._1.EnergyPerformanceCertificate;
 import de.immobilienscout24.rest.schema.common._1.EnergySourceEnev2014;
 import de.immobilienscout24.rest.schema.common._1.EnergySourcesEnev2014;
+import de.immobilienscout24.rest.schema.common._1.FlatMateGenderType;
 import de.immobilienscout24.rest.schema.common._1.GarageType;
 import de.immobilienscout24.rest.schema.common._1.GastronomyType;
 import de.immobilienscout24.rest.schema.common._1.HeatingTypeEnev2014;
 import de.immobilienscout24.rest.schema.common._1.IndustryType;
 import de.immobilienscout24.rest.schema.common._1.InteriorQuality;
+import de.immobilienscout24.rest.schema.common._1.InternetConnectionType;
 import de.immobilienscout24.rest.schema.common._1.InvestmentType;
 import de.immobilienscout24.rest.schema.common._1.Link;
 import de.immobilienscout24.rest.schema.common._1.MarketingType;
 import de.immobilienscout24.rest.schema.common._1.OfficeType;
+import de.immobilienscout24.rest.schema.common._1.ParkingSituationType;
 import de.immobilienscout24.rest.schema.common._1.ParkingSpaceType;
+import de.immobilienscout24.rest.schema.common._1.PetsAllowedType;
 import de.immobilienscout24.rest.schema.common._1.Picture;
 import de.immobilienscout24.rest.schema.common._1.Picture.Urls;
 import de.immobilienscout24.rest.schema.common._1.Picture.Urls.Url;
@@ -35,7 +45,10 @@ import de.immobilienscout24.rest.schema.common._1.Price;
 import de.immobilienscout24.rest.schema.common._1.RealEstateCondition;
 import de.immobilienscout24.rest.schema.common._1.RealtorContactDetails;
 import de.immobilienscout24.rest.schema.common._1.ShortTermAccommodationType;
+import de.immobilienscout24.rest.schema.common._1.SmokingAllowedType;
 import de.immobilienscout24.rest.schema.common._1.SpecialPurposeType;
+import de.immobilienscout24.rest.schema.common._1.TelephoneConnectionType;
+import de.immobilienscout24.rest.schema.common._1.TvConnectionType;
 import de.immobilienscout24.rest.schema.common._1.UtilizationTradeSite;
 import de.immobilienscout24.rest.schema.common._1.Wgs84Address;
 import de.immobilienscout24.rest.schema.common._1.YesNoNotApplicableType;
@@ -134,6 +147,40 @@ public class Is24ApiOfferGenerator {
 		realestate.setBaseRent(123.1);
 		realestate.setLivingSpace(123.1);
 		realestate.setNumberOfRooms(1);
+		return realestate;
+	}
+
+	public static de.immobilienscout24.rest.schema.offer.realestates._1.FlatShareRoom createFlatShareRoomTestObject() {
+		de.immobilienscout24.rest.schema.offer.realestates._1.FlatShareRoom realestate = new de.immobilienscout24.rest.schema.offer.realestates._1.FlatShareRoom();
+
+		realestate.setTitle("TestAPI - Immobilienscout24 Testobjekt! +++BITTE+++ NICHT kontaktieren - " + realestate.getClass().getSimpleName());
+
+		realestate.setAddress(fillAddress());
+		realestate.setShowAddress(true);
+		realestate.setCourtage(fillCourtage());
+		realestate.setRoomSize(77);
+		realestate.setBaseRent(123.1);
+
+		GregorianCalendar c = new GregorianCalendar();
+		c.setTime(new Date());
+		XMLGregorianCalendar date2;
+		try {
+			date2 = DatatypeFactory.newInstance().newXMLGregorianCalendar(c);
+		} catch (DatatypeConfigurationException e) {
+			throw new RuntimeException(e);
+		}
+
+		realestate.setFreeFrom(date2);
+		realestate.setPetsAllowed(PetsAllowedType.YES);
+		realestate.setInternetConnection(InternetConnectionType.DSL);
+		realestate.setSmokingAllowed(SmokingAllowedType.OWN_ROOM_ONLY);
+		realestate.setRequestedGender(FlatMateGenderType.FEMALE);
+		realestate.setFurnishing(YesNoNotApplicableType.NOT_APPLICABLE);
+		realestate.setTvConnection(TvConnectionType.CABLE);
+		realestate.setTelephoneConnection(TelephoneConnectionType.ANALOG);
+		realestate.setParkingSituation(ParkingSituationType.GOOD);
+		realestate.setFlatShareSize(2);
+
 		return realestate;
 	}
 
