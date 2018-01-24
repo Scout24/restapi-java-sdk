@@ -6,12 +6,12 @@
 	<artifactId>restapi-java-sdk</artifactId>
 	<packaging>jar</packaging>
 	<!-- manuel increment -->
-    <version>0.2.14</version>
+    <version>0.2.15</version>
 	<name>REST :: Common :: API</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>
-		<nexus.baseUrl>http://devnex.rz.is24.loc</nexus.baseUrl>
+		<nexus.baseUrl>http://nexus.rz.is/</nexus.baseUrl>
 		<jaxb.output.directory>${basedir}/src/main/generated-sources/</jaxb.output.directory>
 		<resourcesDir>${basedir}/src/main/resources</resourcesDir>
 	</properties>
