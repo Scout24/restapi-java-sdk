@@ -23,7 +23,13 @@ dsostin  	  | 26th February 2015| v0.2.9
 dsostin  	  | 02th July 2015| v0.2.10
 fmielke       | 31th August 2015| v0.2.11
 fmielke       | 5th September 2016| v0.2.15
+mfluegge      | 5th February 2018| v0.2.16
 
+
+v0.2.16
+----------
+
+Ensured that "https" is mandatory as IS24 will not support "http" anymore.
 
 v0.2.15
 ----------
