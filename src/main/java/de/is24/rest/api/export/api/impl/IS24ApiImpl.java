@@ -70,6 +70,7 @@ import de.is24.rest.api.export.api.InternalObjectApi;
 import de.is24.rest.api.export.api.Is24Api;
 import de.is24.rest.api.export.api.ObjectApi;
 import de.is24.rest.api.export.api.User;
+import de.is24.rest.api.export.api.exceptions.UnsupportedProtocolException;
 import de.is24.rest.api.export.api.impl.video.VideoTicket;
 import de.is24.rest.api.export.api.parser.impl.AddRealestateToRealesteProjectResultParser;
 import de.is24.rest.api.export.api.parser.impl.ContactResultParser;
@@ -120,6 +121,15 @@ public class IS24ApiImpl implements Is24Api, InternalObjectApi {
 	public static final String HTTPS = "https://";
 
 	private void checkHttpS() {
+
+		if (null == baseUrl) {
+			throw new RuntimeException("Invalid baseUrl. BaseUrl must not be null!");
+		}
+
+		if (baseUrl.startsWith("http://")) {
+			throw new UnsupportedProtocolException("ImmobilienScout does not support HTTP anymore. Use HTTPS instead.");
+		}
+
 		if (!StringUtils.contains(baseUrl, "://")) {
 			baseUrl = HTTPS + baseUrl;
 		} else {
@@ -1006,20 +1016,18 @@ public class IS24ApiImpl implements Is24Api, InternalObjectApi {
 		return deleteRealestate(username, objectId.getId());
 	}
 
-	//method deletes xml-non-complient characters
+	// method deletes xml-non-complient characters
 	public String stripNonValidXMLCharacters(String in) {
 		StringBuffer out = new StringBuffer(); // Used to hold the output.
 		char current; // Used to reference the current character.
 
-		if (in == null || ("".equals(in))) return ""; // vacancy test.
+		if (in == null || ("".equals(in)))
+			return ""; // vacancy test.
 		for (int i = 0; i < in.length(); i++) {
-			current = in.charAt(i); // NOTE: No IndexOutOfBoundsException caught here; it should not happen.
-			if ((current == 0x9) ||
-					(current == 0xA) ||
-					(current == 0xD) ||
-					((current >= 0x20) && (current <= 0xD7FF)) ||
-					((current >= 0xE000) && (current <= 0xFFFD)) ||
-					((current >= 0x10000) && (current <= 0x10FFFF)))
+			current = in.charAt(i); // NOTE: No IndexOutOfBoundsException caught
+									// here; it should not happen.
+			if ((current == 0x9) || (current == 0xA) || (current == 0xD) || ((current >= 0x20) && (current <= 0xD7FF)) || ((current >= 0xE000) && (current <= 0xFFFD))
+					|| ((current >= 0x10000) && (current <= 0x10FFFF)))
 				out.append(current);
 		}
 		return out.toString();
