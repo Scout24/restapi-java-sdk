@@ -1,4 +1,4 @@
-IS24 API SDK v0.2.15 (restapi-java-sdk)
+IS24 API SDK v0.2.16 (restapi-java-sdk)
 ==========================
 Author:     Martin Flügge
 
